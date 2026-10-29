@@ -1,0 +1,102 @@
+{
+  "sanitizer_cases": [
+    {
+      "prompt_index": 0,
+      "kv_bits": 16,
+      "kv_frac": 10,
+      "sanitized_output_equal": true,
+      "sha256": "faa60f90e57760f3f7a1ed5c07b0fac7d5623702c5c04d8bdb8cff2b161edb8c"
+    },
+    {
+      "prompt_index": 0,
+      "kv_bits": 8,
+      "kv_frac": 4,
+      "sanitized_output_equal": true,
+      "sha256": "9e03454525edf378fe9b57cccd0731cc1cf2be80f7d59f9170e493ad7c73ae08"
+    },
+    {
+      "prompt_index": 0,
+      "kv_bits": 8,
+      "kv_frac": 3,
+      "sanitized_output_equal": true,
+      "sha256": "d3a58dd20387741dcc1b8cf4b2079ef9c7f262a174b8b188fe497e040803dc42"
+    },
+    {
+      "prompt_index": 0,
+      "kv_bits": 8,
+      "kv_frac": 2,
+      "sanitized_output_equal": true,
+      "sha256": "d810de70e466fffee45d23ca26ac2f6dbc3c892b7635745cb734bd07e1900a67"
+    },
+    {
+      "prompt_index": 1,
+      "kv_bits": 16,
+      "kv_frac": 10,
+      "sanitized_output_equal": true,
+      "sha256": "12022d705b8ff1abaf6c18feecc3a164f16bf7d392c2055be1e1dfac96abdc1b"
+    },
+    {
+      "prompt_index": 1,
+      "kv_bits": 8,
+      "kv_frac": 4,
+      "sanitized_output_equal": true,
+      "sha256": "14e1080020782f0bbb819aee8e16228648e83988a7209822c26d4e7a46aeb22b"
+    },
+    {
+      "prompt_index": 1,
+      "kv_bits": 8,
+      "kv_frac": 3,
+      "sanitized_output_equal": true,
+      "sha256": "387ec2a15113ae137fcef9b6cf092e750edd202810aa2309cb9e79dab30f9447"
+    },
+    {
+      "prompt_index": 1,
+      "kv_bits": 8,
+      "kv_frac": 2,
+      "sanitized_output_equal": true,
+      "sha256": "87b78785d381e11275b4668b515508fac5db8298885df96f62b2bb88137f9579"
+    },
+    {
+      "prompt_index": 2,
+      "kv_bits": 16,
+      "kv_frac": 10,
+      "sanitized_output_equal": true,
+      "sha256": "0d58a9084146bbe7aabf48b3fa7c139f61aab4101925641e1c61221a6f43094c"
+    },
+    {
+      "prompt_index": 2,
+      "kv_bits": 8,
+      "kv_frac": 4,
+      "sanitized_output_equal": true,
+      "sha256": "025fe85dd359ae4a6cb6632d70d0f9a8c2ad80735f2d4c9bf2f082f52c9ec8e4"
+    },
+    {
+      "prompt_index": 2,
+      "kv_bits": 8,
+      "kv_frac": 3,
+      "sanitized_output_equal": true,
+      "sha256": "24e2e8150232bccdee77c3f479912cd4189c5dcd0fdcbb92a213e79e36947ef8"
+    },
+    {
+      "prompt_index": 2,
+      "kv_bits": 8,
+      "kv_frac": 2,
+      "sanitized_output_equal": true,
+      "sha256": "b69ebf875f839ea91aa37addd1c26e5824e16eaeda708774776a4aa41aa7c1c9"
+    }
+  ],
+  "context_rejections": [
+    {
+      "kv_bits": 16,
+      "context": 130,
+      "returncode": 1,
+      "gate": "packer RAM budget"
+    },
+    {
+      "kv_bits": 8,
+      "context": 256,
+      "returncode": 1,
+      "gate": "linker static-RAM margin"
+    }
+  ]
+}

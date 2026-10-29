@@ -1,0 +1,10 @@
+ts	phase	decision	why	evidence	result
+2026-10-29T00:00:00Z	frame	Run M1 then M2 then M3 inline and stop at the first failed acceptance gate	The approved design requires ordered exactness and stock gates	../neural-accelerator-design/DESIGN.md	open
+2026-10-29T00:00:01Z	architecture	Use an independent byte oracle and subclass the frozen scalar Machine	Keep the independent correctness source separate and preserve the scalar record method	SPEC.md	selected
+2026-10-29T17:06:00.357133+00:00	audit	The first two log timestamps were placeholders rather than measured event times	Preserve the earlier rows and correct their timestamp interpretation	decisions.tsv	supersedes timestamp precision of rows 2 and 3
+2026-10-29T17:06:00.357133+00:00	M1	Retained M0, independent ISA, intrinsic, and full fixture replays	Check actual records and architectural state before building the neural extension	evidence.json	M1 pass
+2026-10-29T17:06:00.357133+00:00	harness	Bound Doom to the matching design counts fixture after an initial older-report hash mismatch	The existing ELF is the one bound by counts-legacy.json	../one-instr-design/counts-legacy.json	precondition corrected before replay
+2026-10-29T17:06:00.357133+00:00	M2	Built W=4 with wider DROM columns, striped RAM reads, and bounded nibble arithmetic	Preserve the map and avoid RAM replication or scalar full-word arithmetic	ir-w4.json	positive checks passed; 21 added layers
+2026-10-29T17:06:00.357133+00:00	M2	Stopped on the token-family corruption assertion	The required observer did not detect its injected output-code change	test_ir.py:221	M2 fail; W=8 and M3 not run
+2026-10-29T17:06:00.357133+00:00	audit	Removed unexecuted test additions made while the last test process was running	Restore the tested source and disambiguate the traceback line display	README.md	no post-failure neural run
+2026-10-29T17:06:00.357133+00:00	handoff	Publish the verification defect and unestablished milestones without fixing past the gate	The user explicitly required stopping after a failed gate	evidence.json	stopped; no independent review

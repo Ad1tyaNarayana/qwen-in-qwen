@@ -1,0 +1,31 @@
+{
+  "protocol": "First 256 stories in held-out shard 0. Each story starts with BOS, no EOS. Nonoverlapping chunks predict every text token, with previous token as input at each 128-token boundary. Padded targets are ignored. bf16 autocast.",
+  "heldout_sha256": "71e5703fa7012d05f59f1b0948e9da25c3fd56b2b8dd03f9ace30305fe0ea0d4",
+  "custom": {
+    "nats_per_token": 1.2826279089878097,
+    "bits_per_byte": 0.606079920398675,
+    "tokens": 64596,
+    "utf8_bytes": 197220,
+    "stories": 256,
+    "context": 128,
+    "total_nll": 82852.63240897655
+  },
+  "custom_q8_dequantized": {
+    "nats_per_token": 1.2829075415766757,
+    "bits_per_byte": 0.6062120551323833,
+    "tokens": 64596,
+    "utf8_bytes": 197220,
+    "stories": 256,
+    "context": 128,
+    "total_nll": 82870.69555568695
+  },
+  "stories260K": {
+    "nats_per_token": 1.3773927993225812,
+    "bits_per_byte": 0.9521470139600443,
+    "tokens": 94498,
+    "utf8_bytes": 197220,
+    "stories": 256,
+    "context": 128,
+    "total_nll": 130160.86475038528
+  }
+}

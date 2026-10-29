@@ -1,0 +1,164 @@
+{
+  "architecture": {
+    "dim": 192,
+    "hidden_dim": 512,
+    "layers": 6,
+    "heads": 12,
+    "kv_heads": 1,
+    "head_dim": 16,
+    "kv_dim": 16,
+    "vocab": 1024,
+    "training_context": 256,
+    "shared_classifier": true
+  },
+  "parameter_count": 2447808,
+  "matrix_weights": 2445312,
+  "norm_weights": 2496,
+  "group_size": 64,
+  "q8_scale_bytes": 152832,
+  "q8_file_bytes": 2608384,
+  "int8_kv_bytes_at_128": 24576,
+  "export": {
+    "training_process_seconds": 875.1433606147766,
+    "checkpoint_step": 60000,
+    "parameter_count": 2447808,
+    "artifacts": {
+      "model-args.json": {
+        "bytes": 161,
+        "sha256": "e6a1c6ca68cba538a82909d6e2b1cd1bbe70c4b5b7207e95e7be12d060d0888c"
+      },
+      "model-q8.bin": {
+        "bytes": 2608384,
+        "sha256": "43a5b711c7d728f4fea7585e65dcffe92667b14d0490c5c4aef0d8fb45295075"
+      },
+      "model.bin": {
+        "bytes": 9807644,
+        "sha256": "e64104e52703cf58df7270ee96de385b903aa85e4cda5983a288a29ef1a33c4e"
+      },
+      "tok1024.bin": {
+        "bytes": 12401,
+        "sha256": "c41549f4ca412eab26549ee8e22d8e8527802850a2ff1b13b8d1d23c75d1f3e1"
+      },
+      "tok1024.model": {
+        "bytes": 14865,
+        "sha256": "74dd6b293cb95be06b604276613be9b76120fe86fa6bc5d7e3298d79ed95aff2"
+      },
+      "tok1024.vocab": {
+        "bytes": 11320,
+        "sha256": "105acacbdb46a811c9c29501d9424fdf1199eb41720a97c253890da15b0cfc26"
+      },
+      "training-config.json": {
+        "bytes": 795,
+        "sha256": "1cb4bfab6e3a4d97f91d047bc6affe8ead192ffc2576aad75e003672666be91b"
+      }
+    }
+  },
+  "loss": {
+    "protocol": "First 256 stories in held-out shard 0. Each story starts with BOS, no EOS. Nonoverlapping chunks predict every text token, with previous token as input at each 128-token boundary. Padded targets are ignored. bf16 autocast.",
+    "heldout_sha256": "71e5703fa7012d05f59f1b0948e9da25c3fd56b2b8dd03f9ace30305fe0ea0d4",
+    "custom": {
+      "nats_per_token": 1.2826279089878097,
+      "bits_per_byte": 0.606079920398675,
+      "tokens": 64596,
+      "utf8_bytes": 197220,
+      "stories": 256,
+      "context": 128,
+      "total_nll": 82852.63240897655
+    },
+    "custom_q8_dequantized": {
+      "nats_per_token": 1.2829075415766757,
+      "bits_per_byte": 0.6062120551323833,
+      "tokens": 64596,
+      "utf8_bytes": 197220,
+      "stories": 256,
+      "context": 128,
+      "total_nll": 82870.69555568695
+    },
+    "stories260K": {
+      "nats_per_token": 1.3773927993225812,
+      "bits_per_byte": 0.9521470139600443,
+      "tokens": 94498,
+      "utf8_bytes": 197220,
+      "stories": 256,
+      "context": 128,
+      "total_nll": 130160.86475038528
+    }
+  },
+  "final_training_loss": {
+    "step": 60000,
+    "train": 1.2425944805145264,
+    "val": 1.2363231182098389,
+    "elapsed_seconds": 870.9039778709412,
+    "peak_vram_bytes": 718949888
+  },
+  "source_commit": "350e04fe35433e6d2941dce5a1f53308f87058eb",
+  "run_c_sha256": "9c4f2d5c6ae01b71726d1cc37530d71e60bff0ec7cc012565f16a43c1ca658bd",
+  "baseline": {
+    "tok512.bin": {
+      "bytes": 6227,
+      "sha256": "037cb335abb25d1fa9e8ecae30ed2a3a8ace9302862ebcdc05d51a6bbb10c312"
+    },
+    "stories260K.pt": {
+      "bytes": 1061090,
+      "sha256": "eec953f9d0f139e894ef8996302680e64b24813c7a98425424f5c85f7cf4abb1"
+    },
+    "stories260K.bin": {
+      "bytes": 1056540,
+      "sha256": "b0a507e7ad0f626624f17112325e66691f9076d622e1d3274d103d00299f2696"
+    },
+    "tok512.model": {
+      "bytes": 7645,
+      "sha256": "dfff07d929db979913f166ec94a6f5ecad4c70cfed8eb5c9cbe7e464455e46f5"
+    }
+  },
+  "samples": {
+    "custom": [
+      {
+        "prompt": "Once upon a time, there was a little",
+        "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big, red ball in the sky. She wanted to play with it, but it was too high up in the sky.\nLily asked her mom, \"Can you help me get the ball?\" Her mom said, \"Sure, let's go get it.\" They went to the store and found the ball. Lily was so happy! She said, \"Thank you, Mom!\"\nLater, Lily and her mom went to the park. They saw"
+      },
+      {
+        "prompt": "Lily found a small bird in the garden.",
+        "text": "Lily found a small bird in the garden. It was a small bird with a broken wing. Lily wanted to help the bird, so she took it to her mom.\n\"Mom, can we help the bird?\" Lily asked.\n\"Of course, Lily. Let's go to the garden and see what we can find,\" her mom said.\nThey went to the garden and found a big, red apple. Lily picked it up and took a bite. It was sweet and juicy. She smiled and"
+      },
+      {
+        "prompt": "Tom was sad because he lost his toy.",
+        "text": "Tom was sad because he lost his toy. He looked everywhere, but he could not find it. He asked his mom, \"Mom, where is my toy?\"\nHis mom said, \"I don't know, Tom. Maybe it is in the box. Maybe it is in the box.\"\nTom wanted to help his mom. He said, \"Mom, can you help me look for my toy? I can't find it.\"\nHis mom said, \"Okay, Tom. Let's look for it together.\"\nT"
+      }
+    ],
+    "stories260K": [
+      {
+        "prompt": "Once upon a time, there was a little",
+        "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big, red ball. She wanted to play with it, but it was too high.\nLily's mom said, \"Lily, let's go to the park.\" Lily was sad and didn't know what to do. She said, \"I want to play with your ball, but I can't find"
+      },
+      {
+        "prompt": "Lily found a small bird in the garden.",
+        "text": "Lily found a small bird in the garden. She was very happy and wanted to see what was inside. She wanted to see what was inside.\n\"Hello, little bird!\" Lily said. \"I am sorry, Lily. I didn't know what to do.\"\n\"I'm sorry,\" Lily said.\n\"I don't know,\" Lily said.\n\""
+      },
+      {
+        "prompt": "Tom was sad because he lost his toy.",
+        "text": "Tom was sad because he lost his toy. He wanted to play with his toys and show his friends. He wanted to play with his toys, but he was too shy.\nTom's friend, a little bird named Bob, saw a big, red ball. Bob was scared and did not know what to do. He wanted to play with the ball. Bob was sad.\nThe bird said,"
+      }
+    ]
+  },
+  "native_loss": {
+    "custom": {
+      "stories": 256,
+      "utf8_bytes": 197220,
+      "tokens": 64596,
+      "total_nll": 82851.719809687,
+      "nats_per_token": 1.282613781,
+      "bits_per_byte": 0.606073245,
+      "context": 128
+    },
+    "stories260K": {
+      "stories": 256,
+      "utf8_bytes": 197220,
+      "tokens": 94498,
+      "total_nll": 130143.128838944,
+      "nats_per_token": 1.377205114,
+      "bits_per_byte": 0.952017273,
+      "context": 128
+    }
+  }
+}

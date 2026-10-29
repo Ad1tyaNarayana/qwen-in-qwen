@@ -1,0 +1,24 @@
+{
+  "scope": "Original unchanged emitter versus layer-streaming dictionary packaging, first/middle/last layer at full geometry",
+  "layers": [
+    {
+      "layer": 0,
+      "tensors": 14,
+      "bf16_word_mismatches": 0,
+      "sha256": "1611cda9108b60fe00eca2b36d2929687df7eb88730bf02ce01392ba00258d00"
+    },
+    {
+      "layer": 22,
+      "tensors": 14,
+      "bf16_word_mismatches": 0,
+      "sha256": "9cb6f0868867c0730d19eddf72f1fefe48a1f0676a4cd0bcb324eb72cb8e284f"
+    },
+    {
+      "layer": 43,
+      "tensors": 14,
+      "bf16_word_mismatches": 0,
+      "sha256": "d113fe0cc429d9e58d15589844f0735d25b5d2c8422fb3b17352eb3d121e598f"
+    }
+  ],
+  "source_sha256": "1fff1f24277fc8b19bfe0e4d6c336a51b6992ac41d35156225acfc66880b1055"
+}

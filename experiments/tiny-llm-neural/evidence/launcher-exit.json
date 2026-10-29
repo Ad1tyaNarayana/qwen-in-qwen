@@ -1,0 +1,17 @@
+{
+  "controls": [
+    {
+      "expected": 0,
+      "actual": 0,
+      "has_exited": true
+    },
+    {
+      "expected": 7,
+      "actual": 7,
+      "has_exited": true
+    }
+  ],
+  "fix": "Retain Process.Handle before WaitForExit so ExitCode remains available",
+  "historical_hf_exit_code": null,
+  "historical_exit_code_not_inferred": true
+}

@@ -1,0 +1,112 @@
+--- a/train.py
++++ b/train.py
+@@ -70,6 +70,7 @@
+ # system
+ device = "cuda"  # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1' etc., or try 'mps' on macbooks
+ dtype = "bfloat16"  # float32|bfloat16|float16
++max_wall_seconds = 4200
+ compile = True  # use PyTorch 2.0 to compile the model to be faster
+ # -----------------------------------------------------------------------------
+ config_keys = [
+@@ -116,6 +117,7 @@
+ 
+ if master_process:
+     os.makedirs(out_dir, exist_ok=True)
++torch.set_num_threads(4)
+ torch.manual_seed(1337 + seed_offset)
+ torch.backends.cuda.matmul.allow_tf32 = True  # allow tf32 on matmul
+ torch.backends.cudnn.allow_tf32 = True  # allow tf32 on cudnn
+@@ -163,7 +165,7 @@
+     print(f"Resuming training from {out_dir}")
+     # resume training from a checkpoint.
+     ckpt_path = os.path.join(out_dir, "ckpt.pt")
+-    checkpoint = torch.load(ckpt_path, map_location=device)
++    checkpoint = torch.load(ckpt_path, map_location=device, weights_only=False)
+     checkpoint_model_args = checkpoint["model_args"]
+     # force these config attributes to be equal otherwise we can't even resume training
+     # the rest of the attributes (e.g. dropout) can stay as desired from command line
+@@ -248,6 +250,7 @@
+ train_batch_iter = iter_batches(split="train")
+ X, Y = next(train_batch_iter)  # fetch the very first batch
+ t0 = time.time()
++training_started = time.time()
+ local_iter_num = 0  # number of iterations in the lifetime of this process
+ raw_model = model.module if ddp else model  # unwrap DDP container if needed
+ running_mfu = -1.0
+@@ -258,9 +261,13 @@
+         param_group["lr"] = lr
+ 
+     # evaluate the loss on train/val sets and write checkpoints
+-    if iter_num % eval_interval == 0 and master_process:
++    stop_for_time = time.time() - training_started >= max_wall_seconds or iter_num >= max_iters
++    if (iter_num % eval_interval == 0 or stop_for_time) and master_process:
+         losses = estimate_loss()
+         print(f"step {iter_num}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
++        with open(os.path.join(out_dir, "loss.jsonl"), "a") as loss_log:
++            import json
++            loss_log.write(json.dumps({"step": iter_num, "train": float(losses["train"]), "val": float(losses["val"]), "elapsed_seconds": time.time() - training_started, "peak_vram_bytes": torch.cuda.max_memory_allocated()}) + "\n")
+         if wandb_log:
+             try:
+                 wandb.log(
+@@ -289,7 +296,7 @@
+                 print(f"saving checkpoint to {out_dir}")
+                 torch.save(checkpoint, os.path.join(out_dir, "ckpt.pt"))
+                 model_export(raw_model, os.path.join(out_dir, "model.bin"), version=0)
+-    if iter_num == 0 and eval_only:
++    if stop_for_time or (iter_num == 0 and eval_only):
+         break
+ 
+     # forward backward update, with optional gradient accumulation to simulate larger batch size
+@@ -335,9 +342,6 @@
+     iter_num += 1
+     local_iter_num += 1
+ 
+-    # termination conditions
+-    if iter_num > max_iters:
+-        break
+ 
+ if ddp:
+     destroy_process_group()
+--- a/tinystories.py
++++ b/tinystories.py
+@@ -24,7 +24,8 @@
+ 
+ def download_file(url: str, fname: str, chunk_size=1024):
+     """Helper function to download a file from a given url"""
+-    resp = requests.get(url, stream=True)
++    resp = requests.get(url, stream=True, timeout=120)
++    resp.raise_for_status()
+     total = int(resp.headers.get("content-length", 0))
+     with open(fname, "wb") as file, tqdm(
+         desc=fname,
+@@ -89,7 +90,7 @@
+ 
+     print(f"Writing temporary file {tiny_file} with {num_shards} shards...")
+     with open(tiny_file, "w", encoding="utf-8") as of:
+-        for shard in tqdm(shard_filenames[:num_shards]):
++        for shard in tqdm(shard_filenames[1:num_shards + 1]):
+             with open(shard, "r") as f:
+                 data = json.load(f)
+             for example in data:
+@@ -167,8 +168,8 @@
+ 
+     # process all the shards in a process pool
+     fun = partial(process_shard, vocab_size=vocab_size)
+-    with ProcessPoolExecutor() as executor:
+-        executor.map(fun, enumerate(shard_filenames))
++    with ProcessPoolExecutor(max_workers=4) as executor:
++        list(executor.map(fun, enumerate(shard_filenames)))
+     print("Done.")
+ 
+ 
+--- a/export.py
++++ b/export.py
+@@ -356,7 +356,7 @@
+ def load_checkpoint(checkpoint):
+ 
+     # load the provided model checkpoint
+-    checkpoint_dict = torch.load(checkpoint, map_location='cpu')
++    checkpoint_dict = torch.load(checkpoint, map_location='cpu', weights_only=False)
+     gptconf = ModelArgs(**checkpoint_dict['model_args'])
+     model = Transformer(gptconf)
+     state_dict = checkpoint_dict['model']

@@ -1,0 +1,64 @@
+{
+  "scope": "IR bf16-safe nibble product and digit adder; Python limb arithmetic only for full dots",
+  "nibble_pairs": 256,
+  "digit_additions": 512,
+  "product_graph": {
+    "layers": 1,
+    "dims": 10,
+    "heads": 0,
+    "ffn_units": 15,
+    "max_units": 15,
+    "max_heads": 0
+  },
+  "digit_graph": {
+    "layers": 2,
+    "dims": 12,
+    "heads": 0,
+    "ffn_units": 3,
+    "max_units": 2,
+    "max_heads": 0
+  },
+  "integer_checks": [
+    {
+      "operand_bits": [
+        8,
+        16
+      ],
+      "products": 10025,
+      "dot_vectors": 3000
+    },
+    {
+      "operand_bits": [
+        16,
+        16
+      ],
+      "products": 10025,
+      "dot_vectors": 3000
+    },
+    {
+      "operand_bits": [
+        32,
+        16
+      ],
+      "products": 10025,
+      "dot_vectors": 3000
+    }
+  ],
+  "stock_HF_supplied_inputs": [
+    {
+      "decode": 11,
+      "prefill": 11,
+      "hidden": 64
+    },
+    {
+      "decode": 9,
+      "prefill": 9,
+      "hidden": 64
+    }
+  ],
+  "full_dot_IR_checked": false,
+  "autonomous_generation_checked": false,
+  "torch": "2.15.0",
+  "transformers": "5.21.0",
+  "script_sha256": "66044c55ecf0a8eb0ade243f1e2dcb0409d7655f8d494a2d714324af2d7197ea"
+}

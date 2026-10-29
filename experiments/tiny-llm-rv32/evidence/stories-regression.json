@@ -1,0 +1,12 @@
+{
+  "scope": "Default stories260K int16 Q10 engine after KV-format and stack-budget integration",
+  "native_output_equal_phase0": true,
+  "output_sha256": "3e5d30301e9671ac5ecaf35fc751d9f533aa313211a9debacacefc35afa8021f",
+  "ram": {
+    "static_bytes": 46272,
+    "bottom_reserved": 256,
+    "stack_reserved": 1024,
+    "total_reserved": 47552,
+    "margin_bytes": 17984
+  }
+}

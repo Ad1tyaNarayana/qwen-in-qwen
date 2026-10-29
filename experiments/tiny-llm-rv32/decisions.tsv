@@ -1,0 +1,13 @@
+ts	phase	decision	why	evidence	result
+2026-10-29	frame	Run Phase 0 inline without CPU changes	User scope requires software reference only	experiments/tiny-llm-rv32/README.md	open
+2026-10-29	design	Use a packed model descriptor and compile-time scratch dimensions	Model the Domain keeps geometry in generated metadata rather than model-specific loops	experiments/tiny-llm-rv32/pack.py	open
+2026-10-29	design	Choose per-row int8 scales over group scales	Per-row scales need one rescale per output; quality comparison will test the tradeoff	experiments/tiny-llm-rv32/verify.py	open
+2026-10-29	design	Use a ROM blob with offsets instead of generated C arrays	Native and guest read the identical bytes; link limits enforce the existing map	experiments/tiny-llm-rv32/build.py	open
+2026-10-29T14:27:16.902574+00:00	verification	Keep per-row scales	Three prompts agree at 170 of 173 generated predictions and 172 of 173 with common history	.cache/tiny-llm/quality/quality.json	VERIFIED
+2026-10-29T14:27:16.902688+00:00	profiling	Use the compiled backward branch to delimit the whole dot loop	The compiler scheduled MUL and ADD beyond the source end label	experiments/tiny-llm-rv32/run_reference.py	reran reference with corrected observer
+2026-10-29T14:27:16.902691+00:00	arithmetic	Bound matvec input magnitude by width	The same engine must support wider custom matrices without overflowing int32 accumulation	experiments/tiny-llm-rv32/engine.c	quality unchanged after rebuild
+2026-10-29T14:27:16.902693+00:00	verification	Run ASan and UBSan on the native engine	Actual arithmetic and memory errors would invalidate bit-exactness as evidence of useful inference	.cache/tiny-llm/quality/quality.json	VERIFIED
+2026-10-29T14:27:16.902694+00:00	projection	Use memory-reading int8 by int16 dots for the cost estimate	Replacing scalar loads requires an explicit accelerator memory interface assumption	experiments/tiny-llm-rv32/report.py	hypothetical only
+2026-10-29T14:29:25.086891+00:00	verification	Accept the complete software reference run	All 64 positions match native token IDs, logits hashes, clipping counts and text; HALT succeeded	experiments/tiny-llm-rv32/evidence/evidence.json	VERIFIED
+2026-10-29T14:29:25.087001+00:00	accounting	Tie quality and reference evidence through ROM and output hashes	ELF hashes differ across build directories because debug paths differ; their native output is identical	experiments/tiny-llm-rv32/report.py	VERIFIED
+2026-10-29T14:29:25.087004+00:00	handoff	Retain projections as assumptions rather than accelerator evidence	No neural execution or new ISA work is authorized in Phase 0	experiments/tiny-llm-rv32/README.md	complete; custom model and neural execution remain untested

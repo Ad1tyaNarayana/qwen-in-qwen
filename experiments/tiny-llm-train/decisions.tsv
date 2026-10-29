@@ -1,0 +1,9 @@
+decision	reason	evidence	result
+6 layers, dim 192, one KV head	meet hard memory limits	6*2*16*128=24576; weight calculation in README	selected
+exclude shard 0 from vocab training	prevent validation text entering tokenizer training	upstream train_vocab uses shards 0 through 9	use shards 1 through 10
+inline execution	user instruction	AGENTS.md supplied in session	no delegates
+60000 main updates, batch 32	fit time budget with 491520000 token presentations	pilot 50 successful updates; steady logged steps 12.38 to 12.84 ms; peak allocation 718949888 bytes	4200 second hard cap retained
+WMI detached process	Start-Process died on SSH disconnect	later SSH saw WMI process and advancing heartbeat	use Win32_Process.Create
+retain final checkpoint at 60000	completed schedule and lower validation loss	loss.jsonl final val 1.2363231182098389, train 1.2425944805145264	verified
+native exported-file evaluation	check actual v0 weights and C tokenizer on identical stories	evidence.json native_loss; exact token counts match SentencePiece	verified
+Q8 deployment size	verify storage independently of parameter estimate	model-q8.bin size 2608384 bytes and post-transfer SHA-256 match	verified; integer-only execution remains open

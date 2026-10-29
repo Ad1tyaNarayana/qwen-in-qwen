@@ -1,0 +1,12 @@
+{
+  "kind": "Interrupted first stock-HF attempt, not accepted for the VRAM headroom requirement",
+  "generated_tokens": 14544,
+  "mismatches": 0,
+  "independent_mac_comparison": true,
+  "elapsed_seconds": 655.8690852999971,
+  "observed_nvidia_free_mib": 927,
+  "stop_reason": "Operator stopped the process after physical free VRAM fell below 1 GiB",
+  "actual_prefix_sha256": "b1b6d4d844f78cc84a7a2d78a2d40531d72eda42febe73a58940c1840a388f4d",
+  "peak_torch_memory_available": false,
+  "next_action": "Rerun from boot with unused-cache release and proactive physical-headroom guard"
+}

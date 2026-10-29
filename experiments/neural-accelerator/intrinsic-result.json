@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "words": [
+    "40c5850b",
+    "40c5950b"
+  ],
+  "decoded": [
+    {
+      "funct7": 32,
+      "funct3": 0,
+      "rd": 10,
+      "rs1": 11,
+      "rs2": 12
+    },
+    {
+      "funct7": 32,
+      "funct3": 1,
+      "rd": 10,
+      "rs1": 11,
+      "rs2": 12
+    }
+  ],
+  "zig": "0.17.0",
+  "command": [
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.venv/lib/python3.13/site-packages/ziglang/zig",
+    "cc",
+    "-target",
+    "riscv32-freestanding",
+    "-mcpu=generic_rv32+m",
+    "-O2",
+    "-c",
+    "-I",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/neural-accelerator",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/neural-accelerator/intrinsic-8os65xvi/intrinsic.c",
+    "-o",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/neural-accelerator/intrinsic-8os65xvi/intrinsic.o"
+  ]
+}

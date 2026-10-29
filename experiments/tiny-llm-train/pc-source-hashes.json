@@ -1,0 +1,30 @@
+[
+    {
+        "sha256":  "ced1835f35b0372875e5e85cfba21b9efa99401036d525ab727111270c62b71a",
+        "file":  "train.py"
+    },
+    {
+        "sha256":  "c5c7fa33adbab7c2746c819833ef1f11972a173e9213622ac61c983a4603402d",
+        "file":  "tinystories.py"
+    },
+    {
+        "sha256":  "54f35dbd347100c0066da93dfdf9f19c2ec1e8758bfffcedbdfdb09d5c343e1f",
+        "file":  "model.py"
+    },
+    {
+        "sha256":  "1051a54aedbcd947902e31fb1e015f828ce47a8df3075c6b9ebc7ac421dcbcfc",
+        "file":  "export.py"
+    },
+    {
+        "sha256":  "585d1c34be6f387d3143297c7fbbce49ad362dc9cecd9f68037bbed8126bcf33",
+        "file":  "tokenizer.py"
+    },
+    {
+        "sha256":  "5cc23aca26b4ab3c0d9e5f82740f4781f9444f42718c15abcee70d93c5aabe8f",
+        "file":  "configurator.py"
+    },
+    {
+        "sha256":  "9c4f2d5c6ae01b71726d1cc37530d71e60bff0ec7cc012565f16a43c1ca658bd",
+        "file":  "run.c"
+    }
+]

@@ -1,0 +1,441 @@
+{
+  "scope": "Conditional fused-executor sensitivity, not stock-HF timing",
+  "base_us": 228.155,
+  "custom_row_ratio": 3.079726651480638,
+  "rows": [
+    {
+      "model": "stories260K",
+      "position": 4,
+      "width": 4,
+      "qk_accelerated": false,
+      "token_range": [
+        984157,
+        1048989
+      ],
+      "transition_growth": [
+        1.15,
+        1.45
+      ],
+      "minutes": [
+        4.303689856420833,
+        5.7838587279625
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 63,
+      "width": 4,
+      "qk_accelerated": false,
+      "token_range": [
+        2047574,
+        2112406
+      ],
+      "transition_growth": [
+        1.15,
+        1.45
+      ],
+      "minutes": [
+        8.953981381091666,
+        11.647269780808333
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 4,
+      "width": 8,
+      "qk_accelerated": false,
+      "token_range": [
+        758365,
+        790941
+      ],
+      "transition_growth": [
+        1.25,
+        1.7
+      ],
+      "minutes": [
+        3.6046826369791667,
+        5.112952409225
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 63,
+      "width": 8,
+      "qk_accelerated": false,
+      "token_range": [
+        1821782,
+        1854358
+      ],
+      "transition_growth": [
+        1.25,
+        1.7
+      ],
+      "minutes": [
+        8.659347337708333,
+        11.987296402216668
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 4,
+      "width": 16,
+      "qk_accelerated": false,
+      "token_range": [
+        644349,
+        660637
+      ],
+      "transition_growth": [
+        1.5,
+        2.2
+      ],
+      "minutes": [
+        3.6752861523749996,
+        5.526679940283334
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 63,
+      "width": 16,
+      "qk_accelerated": false,
+      "token_range": [
+        1707766,
+        1724054
+      ],
+      "transition_growth": [
+        1.5,
+        2.2
+      ],
+      "minutes": [
+        9.740883793250001,
+        14.42288981356667
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 4,
+      "width": 4,
+      "qk_accelerated": false,
+      "token_range": [
+        5548743.194077449,
+        6709288.99407745
+      ],
+      "transition_growth": [
+        1.15,
+        1.45
+      ],
+      "minutes": [
+        24.264492149357523,
+        36.99331423572374
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 63,
+      "width": 4,
+      "qk_accelerated": false,
+      "token_range": [
+        8552147.816856492,
+        10536872.216856493
+      ],
+      "transition_growth": [
+        1.15,
+        1.45
+      ],
+      "minutes": [
+        37.398292965468784,
+        58.097635282058256
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 4,
+      "width": 8,
+      "qk_accelerated": false,
+      "token_range": [
+        3409095.194077449,
+        4263976.994077449
+      ],
+      "transition_growth": [
+        1.25,
+        1.7
+      ],
+      "minutes": [
+        16.20421070843209,
+        27.564017347372644
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 63,
+      "width": 8,
+      "qk_accelerated": false,
+      "token_range": [
+        6412499.816856492,
+        8091560.216856493
+      ],
+      "transition_growth": [
+        1.25,
+        1.7
+      ],
+      "minutes": [
+        30.48008116072694,
+        52.30701443617863
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 4,
+      "width": 16,
+      "qk_accelerated": false,
+      "token_range": [
+        2339271.194077449,
+        3041320.9940774487
+      ],
+      "transition_growth": [
+        1.5,
+        2.2
+      ],
+      "minutes": [
+        13.342910482118508,
+        25.44272835147048
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 63,
+      "width": 16,
+      "qk_accelerated": false,
+      "token_range": [
+        5342675.816856492,
+        6868904.216856493
+      ],
+      "transition_growth": [
+        1.5,
+        2.2
+      ],
+      "minutes": [
+        30.47395502487233,
+        57.46307752521942
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 4,
+      "width": 4,
+      "qk_accelerated": true,
+      "token_range": [
+        965357,
+        1031789
+      ],
+      "transition_growth": [
+        1.45,
+        1.9
+      ],
+      "minutes": [
+        5.322733136429167,
+        7.454580944341665
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 63,
+      "width": 4,
+      "qk_accelerated": true,
+      "token_range": [
+        1806934,
+        1892246
+      ],
+      "transition_growth": [
+        1.45,
+        1.9
+      ],
+      "minutes": [
+        9.962974813608332,
+        13.671303894116665
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 4,
+      "width": 8,
+      "qk_accelerated": true,
+      "token_range": [
+        736165,
+        769541
+      ],
+      "transition_growth": [
+        1.6,
+        2.3
+      ],
+      "minutes": [
+        4.478926015333333,
+        6.730360696108332
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 63,
+      "width": 8,
+      "qk_accelerated": true,
+      "token_range": [
+        1537622,
+        1580438
+      ],
+      "transition_growth": [
+        1.6,
+        2.3
+      ],
+      "minutes": [
+        9.355097264266668,
+        13.822418555783331
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 4,
+      "width": 16,
+      "qk_accelerated": true,
+      "token_range": [
+        622149,
+        639237
+      ],
+      "transition_growth": [
+        1.9,
+        3.1
+      ],
+      "minutes": [
+        4.494969494675,
+        7.535331082975001
+      ]
+    },
+    {
+      "model": "stories260K",
+      "position": 63,
+      "width": 16,
+      "qk_accelerated": true,
+      "token_range": [
+        1423606,
+        1450134
+      ],
+      "transition_growth": [
+        1.9,
+        3.1
+      ],
+      "minutes": [
+        10.285422852783332,
+        17.09419167645
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 4,
+      "width": 4,
+      "qk_accelerated": true,
+      "token_range": [
+        5481063.194077449,
+        6647368.99407745
+      ],
+      "transition_growth": [
+        1.45,
+        1.9
+      ],
+      "minutes": [
+        30.221189348581227,
+        48.026631640051775
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 63,
+      "width": 4,
+      "qk_accelerated": true,
+      "token_range": [
+        7685843.816856492,
+        9744296.216856493
+      ],
+      "transition_growth": [
+        1.45,
+        1.9
+      ],
+      "minutes": [
+        42.37778932084324,
+        70.40164693963494
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 4,
+      "width": 8,
+      "qk_accelerated": true,
+      "token_range": [
+        3329175.194077449,
+        4186936.9940774487
+      ],
+      "transition_growth": [
+        1.6,
+        2.3
+      ],
+      "minutes": [
+        20.255145770793078,
+        36.61870671221004
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 63,
+      "width": 8,
+      "qk_accelerated": true,
+      "token_range": [
+        5389523.816856492,
+        7105448.216856493
+      ],
+      "transition_growth": [
+        1.6,
+        2.3
+      ],
+      "minutes": [
+        32.79058150493048,
+        62.14383562014756
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 4,
+      "width": 16,
+      "qk_accelerated": true,
+      "token_range": [
+        2253231.194077449,
+        2956720.9940774487
+      ],
+      "transition_growth": [
+        1.9,
+        3.1
+      ],
+      "minutes": [
+        16.279388831016778,
+        34.85385171752658
+      ]
+    },
+    {
+      "model": "custom",
+      "position": 63,
+      "width": 16,
+      "qk_accelerated": true,
+      "token_range": [
+        4241363.816856492,
+        5786024.216856493
+      ],
+      "transition_growth": [
+        1.9,
+        3.1
+      ],
+      "minutes": [
+        30.643464785104946,
+        68.2057016851728
+      ]
+    }
+  ],
+  "script_sha256": "aa7a1b0c51542e6e5664233c342baf7a7a45bfe47d8d82d5679d9b0b7155ae59",
+  "source_evidence_sha256": "c652eb16b76e75a238af3d354bc296c00d0d039ac8fa1c8b0bad1e29bae79760"
+}

@@ -1,0 +1,144 @@
+{
+  "kind": "Independent Mac validation of actual self-fed GPU trace and recurrent RAM",
+  "verified_utc": "2026-10-29T16:00:26.102872+00:00",
+  "tokens_checked": 16213774,
+  "mismatches": 0,
+  "all_ram_bytes_equal": true,
+  "ram_bytes_checked": 65536,
+  "output_bytes_equal": true,
+  "generated_text": "Once upon a time,",
+  "prompt_tokens": [
+    1,
+    403
+  ],
+  "prediction_ids": [
+    403,
+    407,
+    261,
+    378,
+    432
+  ],
+  "generated_prediction_ids": [
+    407,
+    261,
+    378,
+    432
+  ],
+  "llm_records": [
+    [
+      0,
+      1,
+      403,
+      2531150448,
+      0
+    ],
+    [
+      1,
+      403,
+      407,
+      110482425,
+      0
+    ],
+    [
+      2,
+      407,
+      261,
+      1076894511,
+      0
+    ],
+    [
+      3,
+      261,
+      378,
+      2928627636,
+      0
+    ],
+    [
+      4,
+      378,
+      432,
+      3057963026,
+      0
+    ]
+  ],
+  "positions": [
+    {
+      "position": 0,
+      "instructions": 2122366,
+      "trace_tokens": 3193567,
+      "end_token": 3193725,
+      "phase": "prefill",
+      "minutes_from_whole_run_rate": 13.845651109295478,
+      "phase0_projected_minutes": 12.152081430745815,
+      "measured_compute_minutes_bracket": [
+        13.888055529999958,
+        13.96333615166659
+      ]
+    },
+    {
+      "position": 1,
+      "instructions": 2136726,
+      "trace_tokens": 3218248,
+      "end_token": 6412566,
+      "phase": "decode",
+      "minutes_from_whole_run_rate": 13.952655131765813,
+      "phase0_projected_minutes": 12.245996955859969,
+      "measured_compute_minutes_bracket": [
+        14.01444013333415,
+        14.08597723833415
+      ]
+    },
+    {
+      "position": 2,
+      "instructions": 2150990,
+      "trace_tokens": 3249380,
+      "end_token": 9662537,
+      "phase": "decode",
+      "minutes_from_whole_run_rate": 14.087627346325453,
+      "phase0_projected_minutes": 12.364459665144597,
+      "measured_compute_minutes_bracket": [
+        14.157353833333158,
+        14.22894011999985
+      ]
+    },
+    {
+      "position": 3,
+      "instructions": 2164866,
+      "trace_tokens": 3262735,
+      "end_token": 12925883,
+      "phase": "decode",
+      "minutes_from_whole_run_rate": 14.145527703689064,
+      "phase0_projected_minutes": 12.415277777777778,
+      "measured_compute_minutes_bracket": [
+        14.186131591667133,
+        14.257735063333893
+      ]
+    },
+    {
+      "position": 4,
+      "instructions": 2179478,
+      "trace_tokens": 3286637,
+      "end_token": 16213156,
+      "phase": "decode",
+      "minutes_from_whole_run_rate": 14.249154385958258,
+      "phase0_projected_minutes": 12.506229071537291,
+      "measured_compute_minutes_bracket": [
+        13.859992781667158,
+        13.901671570000568
+      ]
+    }
+  ],
+  "inference_positions": 5,
+  "prefill_positions": 1,
+  "generated_predictions": 4,
+  "tokens_per_second": 3844.248005854528,
+  "compute_minutes": 70.29451956666828,
+  "retained_worker_minutes": 70.49914512333332,
+  "mean_minutes_per_inference_position": 14.058903913333658,
+  "trace_sha256": "68c7738430dbc024b3d78711be5fee39f8e5c8b6c7cda5de45c8c8f76836efa5",
+  "ram_sha256": "12df2b61385c166fd54b3d6d8da94b8d6981eefb9dfddd75f4a798b812142353",
+  "chunk_timing_sha256": "607b94e2e2b2493feb7660f10a49801e9ee37b612ef939b341bae975f755debf",
+  "position_timing_scope": "Bounds use the actual cumulative generation timers on either side of each reference instruction marker. No within-chunk interpolation.",
+  "output_source": "Actual GPU trace BYTE records. Reference used only for comparison.",
+  "rate_scope": "One retained full execution. Generation timer includes CUDA graph replay, feedback, token copies and CPU transfer; excludes setup, checks, IO, observation, checkpoints and restart downtime."
+}

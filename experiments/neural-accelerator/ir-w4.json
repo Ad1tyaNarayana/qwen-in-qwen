@@ -1,0 +1,137 @@
+{
+  "status": "fail",
+  "width": 4,
+  "stats": {
+    "layers": 65,
+    "dims": 4794,
+    "heads": 627,
+    "ffn_units": 66492,
+    "max_units": 7995,
+    "max_heads": 16,
+    "logical_value_heads": 1247,
+    "hidden": 5120
+  },
+  "additions": {
+    "layers": 21,
+    "dims": 2115,
+    "heads": 0,
+    "ffn_units": 24478,
+    "logical_value_heads": 0,
+    "hidden": 2304
+  },
+  "source_manifest": {
+    "base_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+    "constructor_sha256": "fb2c2c3e27f99a2bd9f8c18d23b5122160c0141f7927fcd349cb97c1bab4d57f",
+    "generated_sha256": "d5884f85fbfd98cac8498e1fc2d9086db383219b3f0b61116447696a23495742",
+    "replacement_sites": [
+      "from chipformer.rv import ref as RF",
+      "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+      "    n_plain = len(srcs)",
+      "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+      "\"imm\": imm, \"r\": r, \"val\": val,"
+    ]
+  },
+  "prepare_manifest": {
+    "rv/spec.py": {
+      "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+      "scratch_sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016",
+      "replacements": [
+        [
+          "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+          "DROM_BASE, DROM_WORDS = 0x02000000, 1048576"
+        ],
+        [
+          "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+          "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+        ],
+        [
+          "DATA_BASE = 0x100",
+          "DATA_BASE = RAM_BASE + 0x100"
+        ]
+      ]
+    },
+    "rv/core.py": {
+      "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+      "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+      "replacements": [
+        [
+          "def build(target:",
+          "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+        ],
+        [
+          "    c = RvCore(target, text)",
+          "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+        ],
+        [
+          "hl = lits_of(EA[13:17], h)",
+          "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+        ],
+        [
+          "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+          "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+        ],
+        [
+          "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+          "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+        ],
+        [
+          "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+          "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+        ]
+      ]
+    },
+    "rv/ref.py": {
+      "original_sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638",
+      "scratch_sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638",
+      "replacements": []
+    },
+    "q35/ir.py": {
+      "original_sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b",
+      "scratch_sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b",
+      "replacements": []
+    },
+    "q35/prims.py": {
+      "original_sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01",
+      "scratch_sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01",
+      "replacements": []
+    }
+  },
+  "checks": [
+    {
+      "case": "last-drom-bank",
+      "tokens": 4,
+      "operands_exact": true,
+      "result_bits_exact": true,
+      "records_exact": true,
+      "kernel": true
+    },
+    {
+      "case": "first-span",
+      "tokens": 3,
+      "operands_exact": true,
+      "result_bits_exact": true,
+      "records_exact": true,
+      "kernel": true
+    },
+    {
+      "case": "dependent-dot-and-partial-store-sequence",
+      "instructions": 380,
+      "tokens": 940,
+      "dot_positions": 210,
+      "records_exact": true,
+      "operands_exact": true,
+      "result_bits_exact": true,
+      "kernel": true
+    }
+  ],
+  "torch": "2.15.0",
+  "numpy": "2.5.4",
+  "transformers": "5.21.0",
+  "full_map": true,
+  "stock_generate": false,
+  "active_case": "dependent-dot-and-partial-store-sequence",
+  "failure_type": "AssertionError",
+  "failure": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/aditya/Me/qwenputer/qwenputer-games/experiments/neural-accelerator/test_ir.py\", line 221, in main\n    machine.anchor ^= 1\n    ^^^^^^^^^^^^^^^\nAssertionError\n",
+  "stop": "M2 gate failed. Do not run W=8 or M3."
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Every PT_LOAD byte, address, memory extent and permission",
+  "loadable_segments_equal": true,
+  "includes_code_ram_drom": true,
+  "entry_address": 262144,
+  "elf_flags": 0,
+  "elf_sha256": [
+    "2c5f7a05fa47bd20e95268101115de22b9d0f9d7522da264122c3cc5a42f459d",
+    "e79fcbb0850f6804850f3e3e9ce851496910ee18f43a6c320913770c515705a4"
+  ],
+  "segments": [
+    {
+      "address": 262144,
+      "file_bytes": 5920,
+      "memory_bytes": 5920,
+      "flags": 5,
+      "sha256": "b92de0003625d70d8e37d95a1c65e316993d0e3fe2597e811fdbc293edee3d27"
+    },
+    {
+      "address": 33554432,
+      "file_bytes": 299867,
+      "memory_bytes": 299867,
+      "flags": 4,
+      "sha256": "da9659b7415641b49219278661546d5630dae772e67558f1c69e3745557bce88"
+    },
+    {
+      "address": 16777472,
+      "file_bytes": 0,
+      "memory_bytes": 46272,
+      "flags": 6,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
