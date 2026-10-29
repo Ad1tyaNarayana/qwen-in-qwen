@@ -349,3 +349,128 @@ Additional width or depth reduction is needed before a safe full-map stock
 allocation on the sampled GPU configuration. Attention remains deferred.
 No upstream edits, commits, installations, or changes to the other thread's
 directories were made.
+
+## 2026-10-30 reduced-circuit autonomous legacy regression
+
+Gate A passes for both reduced widths. Each run starts from the unchanged ELF
+boot snapshot and GO, then feeds back only its own generated tokens. The backend
+is the unfused upstream Executor2 and FreeRun on the new constructor's IR.
+The Phase 1 ROM/feedback fusion extensions were not installed for these runs.
+The retained standalone vocabulary adapter removes the merged-chat-only Q family,
+as in Phase 1; it changes neither the graph nor its arithmetic.
+
+| Width | Unmodified guest | Tokens checked from boot | Mismatches |
+| --- | --- | ---: | ---: |
+| 4 | Doom first frame | 262,144 | 0 |
+| 4 | stories260K Phase 1 | 262,144 | 0 |
+| 8 | Doom first frame | 262,144 | 0 |
+| 8 | stories260K Phase 1 | 262,144 | 0 |
+
+[legacy_neural.py](legacy_neural.py) recreates each complete independent original
+scalar trace and requires its historical ELF and complete trace hashes before
+generation. Doom reproduces 6,342,933 reference tokens and stories reproduces
+16,213,774. Those complete reference replays are fixture validation; the new
+neural runs cover only the bounded prefixes above. Reference tokens never enter
+the recurrent state or feedback path. The worker resets all histories and scratch
+after CUDA graph capture and reloads the boot snapshot before generation.
+
+[legacy-neural-validation.json](legacy-neural-validation.json) independently
+compares all four exported actual token files on the Mac. The per-run reports
+are [W4 Doom](legacy-neural-w4-doom.json),
+[W4 stories](legacy-neural-w4-stories.json),
+[W8 Doom](legacy-neural-w8-doom.json), and
+[W8 stories](legacy-neural-w8-stories.json). Each detached worker exited zero.
+Private GPU outputs are under
+`C:/Users/Admin/qwenputer-games-work/artifacts/neural-accelerator-legacy-20261030`.
+
+```sh
+.venv/bin/python experiments/neural-accelerator/legacy_neural.py \
+  --prepare-fixtures --out .cache/neural-accelerator/legacy-inputs-FRESH
+.venv/bin/python experiments/neural-accelerator/launch_legacy.py \
+  --inputs .cache/neural-accelerator/legacy-inputs-FRESH --include-w8 --label FRESH
+.venv/bin/python experiments/neural-accelerator/verify_legacy.py \
+  --actual EXPORTED_DIRECTORY --inputs .cache/neural-accelerator/legacy-inputs-FRESH \
+  --out LOCAL_VALIDATION.json
+```
+
+The launch scripts sync through tar over `ssh gpu` and detach a PowerShell
+parent with `Invoke-CimMethod Win32_Process Create`. They use the existing GPU
+virtual environment. A command-length limit in the initial private launcher
+required syncing a script before launching its short encoded invocation. A
+stray character in the new stock launcher prevented its first launch before
+Python started and was corrected. Neither launch defect is numerical evidence.
+
+## 2026-10-30 M3 stops at exact cached/chunked state comparison
+
+[stock-m3.json](stock-m3.json) retains the failed gate and source hashes.
+[stock-m3-exit.json](stock-m3-exit.json) records exit code 1. No further neural
+execution followed this failure. M4 was not attempted, so there is no new
+full-map stock allocated/reserved peak, OOM result, or bounded stock prefix.
+The newly authorized 15 GiB allocator cap and 512 MiB free-memory guard remain
+available for M4 after M3 passes; the historical 14 GiB restriction is superseded.
+
+The generic small map has 16 KiB RAM, 8 KiB DROM and the original 256 KiB code
+window, at the original base addresses. The W=4 constructor has 30 chip layers,
+2,152 physical residual dimensions, hidden size 2,304, 68 key heads in its graph,
+and 68,686 graph FFN units. Its stock config retains 16 key and 32 value heads
+per linear layer, width 9,216 MLPs, the complete chip vocabulary with tied output
+head, and the appended zero full-attention layer. This is a bounded-map result.
+
+[stock.py](stock.py) streams the existing emitter's layer dictionaries into the
+ordinary stock model. It changes materialization only. A zero PAD forward and
+the constructor's initial snapshot injection precede unmodified
+`Qwen3_5ForCausalLM.generate(do_sample=False)` from GO. Read-only forward hooks
+inspect cache commits and a streamer compares generated tokens. Neither changes
+forward outputs, weights, model inputs, or cache state. No host guest result is
+injected after boot. The run uses the installed stock PyTorch convolution and
+DeltaNet fallbacks without installing optional kernels.
+
+The first guest's independent trace has 1,416 instructions, 128 NDOT4 operations,
+and 1,804 tokens through HALT. Each dot is independently checked with the raw-byte
+oracle before the extended reference supplies comparison records. The generated
+stock trace matches all 1,804 tokens. At all 1,415 consumed non-HALT record
+commits, all three register copies, the exact PC anchor/count, and every one of
+the 16,384 RAM bytes match. The model stops when it generates HALT; no extra
+forward drains that terminal token into the cache. The guest exercises dots
+followed by dependent addresses, stores, immediate loads, and branches.
+
+A fresh boot cache then replays that actual generated sequence in chunks of
+16 input tokens. All 1,804 next-token predictions match. Exact comparison of
+every linear layer's recurrent and convolution tensors stops at tensor index 0,
+the first layer's recurrent state, with exactly one unequal element. The retained
+assertion is `('chunk cache mismatch', 0, 1)`. The coordinate and two values were
+not saved, and the cause is unknown. No tolerance was applied. The nested run's
+`status` remains `running` because it is marked passed only after cache equality;
+the report's overall `status: fail` and exit code 1 are authoritative.
+
+The second program, changed-DROM variants, and all five stock corruption controls
+were not reached. Their code in [stock_m3.py](stock_m3.py) is unaccepted. The
+separate [test_stock_observer.py](test_stock_observer.py) passes extraction from
+synthetic snapshots and detects deliberate register, PC and RAM changes. That
+unit test is observer evidence only, not autonomous execution or stock controls.
+Identical network weights across multiple workloads are not yet established.
+
+```sh
+.venv/bin/python experiments/neural-accelerator/test_stock_observer.py
+.venv/bin/python experiments/neural-accelerator/launch_stock.py --label FRESH
+```
+
+Private stock outputs are under
+`C:/Users/Admin/qwenputer-games-work/artifacts/neural-accelerator-m3-20261030`.
+The GPU has no Python jobs after the failed worker exits. All work remains
+uncommitted and within this experiment directory. No upstream changes,
+installations, memory replication, hidden accumulator, new feedback path, or
+changes to `experiments/doom-showcase/` or `docs/articles/` were made.
+
+The next gate is a bounded diagnosis of the exact cache difference, followed by
+the remaining M3 cases and controls. M4 then needs an actual full-map stock
+allocation under the authorized limits and both 8,192-token bounded prefixes.
+M5 still needs an aligned stories260K guest rebuilt with NDOT4, a bounded
+per-dot comparison, then all 64 integer-engine predictions, every-position logit
+hashes, decoded bytes, KV clipping counts, and final architectural state checked
+bit for bit. Attention remains scalar.
+
+Model the Domain shaped the fixture-bound reports and explicit commit observers.
+Prove It Works required independent actual-token comparisons and retained the
+negative cache gate. The decision trail is [decisions.tsv](decisions.tsv).
+Work ran inline. No independent agent review was performed.

@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "fixture": "doom",
+      "width": 4,
+      "generated_tokens": 262144,
+      "mismatches": 0,
+      "actual_sha256": "b18355d382d138762967505df52db4cff2a4ea75743c735576dab0280b685f13",
+      "worker_status": "pass",
+      "backend": "unfused Executor2 / FreeRun"
+    },
+    {
+      "fixture": "stories",
+      "width": 4,
+      "generated_tokens": 262144,
+      "mismatches": 0,
+      "actual_sha256": "8ae2be703b962ed74670a5b9007e0e40960bf0e39cc2bfe69e808d8d0a05a1f2",
+      "worker_status": "pass",
+      "backend": "unfused Executor2 / FreeRun"
+    },
+    {
+      "fixture": "doom",
+      "width": 8,
+      "generated_tokens": 262144,
+      "mismatches": 0,
+      "actual_sha256": "b18355d382d138762967505df52db4cff2a4ea75743c735576dab0280b685f13",
+      "worker_status": "pass",
+      "backend": "unfused Executor2 / FreeRun"
+    },
+    {
+      "fixture": "stories",
+      "width": 8,
+      "generated_tokens": 262144,
+      "mismatches": 0,
+      "actual_sha256": "8ae2be703b962ed74670a5b9007e0e40960bf0e39cc2bfe69e808d8d0a05a1f2",
+      "worker_status": "pass",
+      "backend": "unfused Executor2 / FreeRun"
+    }
+  ],
+  "verification": "independent local token-file comparison"
+}
