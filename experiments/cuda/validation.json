@@ -1,0 +1,26 @@
+{
+  "actual_generated_tokens": 5415,
+  "reference_prefix_tokens_compared": 5415,
+  "mismatches": 0,
+  "complete_output_frames": 1,
+  "frame_id": 0,
+  "frame_sha256": "cced94524310534bd6f39abffed4af3e6a7e4024ba349ba0dfc2cfe93f99551b",
+  "matches_compact_first_frame": true,
+  "actual_output_hex": "51460005000049306020682070207820",
+  "trace_u32_sha256": "38a4a54bfb199040be4dc4a02f449673320733c313663be522ac2b8c5b541d9d",
+  "timed_work_clarification": "PAD prefill, state injection, stock greedy generation, online token comparison, progress printing and checkpoints; excludes compilation and reference generation",
+  "parameter_dtype": "bfloat16",
+  "architecture": "stock transformers Qwen3_5ForCausalLM constructed with compiled RISC-V weights; no pretrained Qwen weights",
+  "gpu-prefix-observation": {
+    "samples": 33,
+    "max_gpu_utilization_percent": 47.0
+  },
+  "gpu-smoke-observation": {
+    "samples": 34,
+    "max_gpu_utilization_percent": 23.0
+  },
+  "gpu-first-frame-observation": {
+    "samples": 92,
+    "max_gpu_utilization_percent": 75.0
+  }
+}

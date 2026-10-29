@@ -1,0 +1,4 @@
+# Preserve the original Windows execution reports and GPU samples byte for byte.
+artifacts/hf-cuda-*/report.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/cuda/gpu-environment.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/cuda/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,6 +1,6 @@
 # Qwenputer games
 
-An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](https://github.com/divagr18/qwenputer)'s compiled CPU circuit. This repository contains the source, execution trace, inputs, and frames from an Apple M4 Pro with 24 GB unified memory.
+An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](https://github.com/divagr18/qwenputer)'s compiled CPU circuit. This repository contains the source, execution trace, inputs, and frames from an Apple M4 Pro with 24 GB unified memory and an RTX 5070 Ti with 16 GB VRAM.
 
 ![Verified CHIP-8 output, replayed at four frames per second](artifacts/compact-game/replay.gif)
 
@@ -13,11 +13,12 @@ An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](ht
 | Weight Paddle | CHIP-8 ROM → C interpreter compiled to RV32IM → upstream compact tensor circuit executor | 54,570 self-generated tokens, zero reference mismatches, 12 distinct frames |
 | RISC-V hello | Stock Hugging Face `Qwen3_5ForCausalLM` with locally compiled CPU weights | Five generated tokens, output `H`, successful halt |
 | Game boot prefix | Stock Hugging Face model, same game firmware | First 16 generated tokens match exactly; this prefix does not contain a frame |
+| First neural game frame on RTX 5070 Ti | Stock Hugging Face model with bf16 compiled CPU weights on CUDA | 5,415 generated tokens, zero mismatches, one complete frame matching the Mac run |
 | Input behavior | Reference execution of two key schedules | Hit schedule gives one hit; miss schedule gives one miss |
 
 The complete game run uses upstream's optimized circuit executor. It uses compiled tensor operations and specialized Gated DeltaNet memory operations. It is distinct from executing stock Hugging Face layers. The separate stock-model checks establish only the bounded results shown above.
 
-The pretrained Qwen3.5-4B language model was not loaded. No full game frame has yet been generated through the stock Hugging Face model. The Python reference emulator checks generated tokens and does not supply the executor's next token or game frames. Python renders only bytes emitted by the RISC-V firmware.
+The pretrained Qwen3.5-4B language model was not loaded. The stock Hugging Face model generated one complete frame on the RTX 5070 Ti in a single 76.37-second correctness run, with 4.36 GB of peak PyTorch CUDA allocation. The complete 12-frame replay still uses the compact CPU executor. The Python reference emulator checks generated tokens and does not supply the executor's next token or game frames. Python renders only bytes emitted by the RISC-V firmware.
 
 ## Run the experiment
 
@@ -48,23 +49,28 @@ Run the stock neural model checks separately:
 
 To generate a miss instead of a hit, build with `--controls miss`. The guest interpreter supports the instructions used by this original ROM. It is not a general CHIP-8 compatibility implementation.
 
+For the tested native Windows CUDA path, use [the GPU reproduction instructions](experiments/cuda/README.md). Its tested PyTorch version is 2.14.1+cu130, distinct from the Mac lockfile. It does not require Ollama or WSL.
+
 ## Inspect the evidence
 
 - [Complete compact execution report](artifacts/compact-game/report.json), [frames](artifacts/compact-game/frames.json), and [input schedule with ROM bytes](artifacts/compact-game/game.json).
 - [Stock-model hello result](artifacts/hf-smoke/report.json) and [game-prefix result](artifacts/hf-game-prefix/report.json).
+- [Stock-model CUDA first frame](artifacts/hf-cuda-first-frame/frame.png), [annotated execution report](artifacts/hf-cuda-first-frame/report.annotated.json), and [trace](artifacts/hf-cuda-first-frame/trace.u32).
 - [Saved RISC-V firmware](artifacts/compact-game/weight-paddle.elf) and [generated token trace](artifacts/compact-game/trace.u32).
 - [Firmware source](firmware/chip8.c), [original ROM generator](tools/build_game.py), and [independent artifact checks](tools/check_game.py).
 - [Verification scope and review](docs/verification.md).
 
-The timing is one observed run, not a controlled hardware benchmark. It excludes compilation and the reference run. No RTX 5070 Ti performance measurement has been made.
+Timings are individual correctness runs, not a controlled hardware comparison. They exclude compilation and reference generation. The CUDA first-frame timing also includes online checking and checkpoint writes. Its dense execution path is different from the Mac compact executor, so these runs do not establish a hardware speed ratio.
 
 ## Next milestones
 
-1. **CHIP-8 execution proof.** Complete for the compact circuit path, with an accelerated replay and bounded stock-model checks.
+1. **CHIP-8 execution proof.** Complete for the compact circuit path, with an accelerated replay and one complete stock-model frame on the GPU.
 2. **First Doom frame.** Run the actual Doom engine through the compiled RISC-V CPU and capture one frame, regardless of speed. Not yet complete.
 3. **Playable Doom.** Produce continuing frames with input, then measure and improve responsiveness. Not yet complete.
 
 [The Doom feasibility audit](docs/doom-feasibility.md) identifies the first blocker. The released CPU has 32,768 writable bytes. Doom's 320×200 indexed framebuffer alone takes 64,000 bytes. Expanding the compiled memory map and supplying Doom's platform services are required. This is a limitation of the current machine, not proof that a Doom port is impossible. No Doom executable has run here, and no WAD is included.
+
+[A standalone 64 KiB memory prototype](experiments/ram64/README.md) has now passed actual stock-model generation, including upper-bank reads, writes, and alias sentinels. It is not compatible with the current text bridge. Scaling the existing dense memory representation to the provisional Doom map remains too large for these GPUs; the experiment records that calculation and the next memory design work.
 
 For the full pretrained model, the author reports an approximately 18.8 GB checkpoint and recommends a 24 GB GPU. The Mac's 24 GB is shared with the OS. A desktop RTX 5070 Ti has 16 GB VRAM and benefits from upstream CUDA support, but cannot hold that unchanged checkpoint entirely in VRAM. We have not validated quantization, offloading, or a Mac GPU port. See [the author's write-up](https://divagr.com/blog/qwenputer) and [NVIDIA's specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/).
 

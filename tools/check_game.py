@@ -44,6 +44,16 @@ def main():
     assert hf['mismatches'] == report['mismatches'] == 0
     print(f"saved compact execution: {len(generated)} exact tokens, {len(images)} verified frames")
     print(f"stock HF execution: {hf['generated_tokens']} exact prefix tokens, matching firmware SHA")
+    cuda_dir = ROOT / "artifacts/hf-cuda-first-frame"
+    cuda = json.loads((cuda_dir / "report.annotated.json").read_text())
+    cuda_tokens = np.fromfile(cuda_dir / "trace.u32", dtype="<u4").tolist()
+    assert cuda['completed_target'] and cuda['firmware_sha256'] == digest
+    assert cuda_tokens == cuda['tokens'] == generated[:cuda['generated_tokens']]
+    cuda_bytes = bytes(spec.family(t)[1] for t in cuda_tokens if spec.family(t)[0] == "BYTE")
+    assert cuda_bytes == (cuda_dir / "actual-output.bin").read_bytes()
+    assert frames(cuda_bytes) == json.loads((cuda_dir / "frames.json").read_text()) == images[:1]
+    assert cuda['mismatches'] == 0 and cuda['frame_sha256'] == images[0]['sha256']
+    print(f"stock HF CUDA: {len(cuda_tokens)} exact tokens and one complete matching frame")
 
 
 if __name__ == "__main__":
