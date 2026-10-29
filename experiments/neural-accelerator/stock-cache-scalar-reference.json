@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "scalar_instructions": 3336,
+  "scalar_tokens": 4620,
+  "scalar_token_sha256": "34588c41f283d495505a4a82b040bd29967aef72e10dfde4dcec1375b6f1390c",
+  "all_ram_equal": true,
+  "all_drom_equal": true,
+  "registers_equal_except_scalar_scratch": [
+    28,
+    29
+  ],
+  "fault": null,
+  "scope": "CPU reference establishes scalar control guest equivalence; not a stock execution result"
+}

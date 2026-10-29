@@ -474,3 +474,250 @@ Model the Domain shaped the fixture-bound reports and explicit commit observers.
 Prove It Works required independent actual-token comparisons and retained the
 negative cache gate. The decision trail is [decisions.tsv](decisions.tsv).
 Work ran inline. No independent agent review was performed.
+
+## 2026-10-30 exact counter fix, M3 and bounded M4 stock checks pass
+
+The original mismatch is a readable counter value. It is neither signed zero
+nor unreachable state, so the documented exception cannot pass it. The new
+opt-in stock counter construction fixes the mismatch exactly. No tolerance or
+exception was used. [stock-cache-diagnosis.json](stock-cache-diagnosis.json)
+summarizes the retained negative and fixed evidence.
+
+[stock-cache-accelerator.json](stock-cache-accelerator.json) reproduces the
+original final 16-token-replay difference at zero-based layer 0, value head 2,
+key head 1, key row 0, value column 2, table `count`. Cached is 4.0,
+`0x40800000`; chunked is 4.000028610229492, `0x4080003c`. This is the only
+unequal final element. Across all boundaries, the differing cells are row 0,
+column 2 of `count`, `j` and `vcnt`, at value heads 2, 4 and 6. Their queries
+read both rows 0 and 1 on every non-reset token and project column 2. Reference
+ballast occupies columns 0 and 1. No padding cell, unused key row, convolution
+cell or signed-zero difference explains the failure.
+
+[cache_diagnosis.py](cache_diagnosis.py) records every boundary's coordinates,
+values and raw bits while replaying only inputs actually consumed by ordinary
+stock greedy `generate()`. Chunk sizes 1, 2, 4, 8, 16 and 64 are checked. The
+first unequal fixed boundaries are respectively none, 2, 4, 8, 32 and 64 inputs.
+GO is input 1. After GO and V(0), at input 2, `j` and `vcnt` are cached 64.0,
+`0x42800000`, versus chunked 64.00009155273438, `0x4280000c`. With fixed
+16-token chunks, boundary 16 is exact; refinement of the second block finds
+input 17 exact and input 18 unequal. Prefixes 19, 21 and 24 become exact again.
+The saved bisection probes and enumeration of prefixes 17 through 32 expose
+this non-monotonic equality. Bisection alone would miss transient differences.
+
+The original circuit control in [stock-cache-original.json](stock-cache-original.json)
+replaces every dot with four scalar LB/LH/MUL/ADD groups. It generates all 4,620
+tokens and checks all 3,335 non-HALT commits. All six chunk sizes are checked;
+the same readable counter differences occur. The CPU control in
+[stock-cache-scalar-reference.json](stock-cache-scalar-reference.json) establishes
+equivalent final RAM, DROM and every register except the scalar implementation's
+t3/t4 scratch registers. The preliminary add-only 64-token control is retained
+as [stock-cache-original-probe.json](stock-cache-original-probe.json), but is not
+used as evidence of scalar guest equivalence.
+
+The installed stock-kernel isolation in
+[counter_kernel_diagnosis.py](counter_kernel_diagnosis.py),
+[counter-kernel-cpu.json](counter-kernel-cpu.json) and
+[counter-kernel-gpu.json](counter-kernel-gpu.json) reproduces the mechanism without
+an accelerator. CPU and GPU fallback source hashes agree. Cached recurrence
+applies each decay separately. `exp(-softplus(0))` rounds to exactly 0.5 and
+`exp(-128)` underflows to zero. Chunk mode uses fp32 cumulative log decays,
+subtraction, exponentiation, triangular solves and matrix reductions. After
+-128 and -0.6931471824645996, the cumulative value is -128.69314575195312.
+Its pairwise exponential is 0.5000007152557373, `0x3f00000c`. This explains the
+two-input difference exactly. Cumulative log-half rounding also differs without
+the large reset. One-hot key normalization and saturated beta are exact here;
+this is not an inexact dot-product value or a write gate that failed to saturate.
+Query normalization affects the read, not this state update. No unchanged-token
+argument is used to declare these readable cells harmless.
+
+Removing reset decay was rejected because cumulative halving still differs.
+Moving halving to beta=0.5 was rejected because chunk summation cancels the live
+value to zero at lengths 32 and 64. These isolated synthetic-channel checks are
+primitive evidence, separate from autonomous generation.
+
+[integer_counters.py](integer_counters.py) supplies the accepted stock-only
+variant. Row 0, column 2 stores `181*n`; both reference columns store
+`181*2^17`. Reset writes zero with beta=1, idle uses beta=0, and a step uses
+beta=`2^-44` with value `181*2^44` and no log decay. The bf16 step logit -30.5
+produces exactly that beta on both installed CPU and GPU kernels. Independent
+reset/step embedding features keep every emitted projection coefficient bf16
+representable. The host only loads the initial counter state.
+
+For the tested count range, fp32 subtraction of the small state from the huge
+step value rounds back to that value, so each actual stock update adds exactly
+181. Reset cancellation and the chunk reductions remain exact. The reference
+scale makes the bf16 attention read round to power-of-two reference values and
+`16*n` data values; the stock gated norm and existing output projection then
+return exactly n. [test_integer_counter_stock.py](test_integer_counter_stock.py)
+checks 38 sequences with initial counts 0 and 63, resets, idle steps and seeded
+patterns, against independent integer counts, at all six chunk sizes. Both
+[CPU](integer-counter-cpu-v2.json) and [GPU](integer-counter-gpu-v2.json) pass.
+The stock normalized read is separately exact for every count 0 through 127,
+covering the valid PC and record-counter ranges.
+
+`constructor.build(..., stock_integer_counters=True)` selects the variant;
+stock M3 and M4 select it explicitly. The legacy constructor default remains
+available. The frozen IR evaluator assumes saturated beta gates and cannot
+evaluate this new primitive. No IR checker was weakened and no new compact
+backend equivalence is claimed. Supporting the new encoding in IR and compact
+execution is an open follow-up. Prior M2 IR evidence applies to the legacy
+counter variant. The new stock result is established by its independent
+integer primitive checks and full autonomous stock checks.
+
+[stock-cache-fixed.json](stock-cache-fixed.json) reruns the full original trace
+with the fix. All 1,804 tokens and 1,415 cached commits match. Every recurrent
+and convolution word matches bit for bit after every boundary at all six chunk
+sizes. Prefix refinements also match. This is the root-cause-fixed acceptance
+case; no signed-zero or unreachable-state exception, and no paired continuation
+to justify such an exception, is used.
+
+[stock-m3-fixed.json](stock-m3-fixed.json) and its
+[exit report](stock-m3-fixed-exit.json) complete M3 with one unchanged model.
+Each workload retires 1,416 dependent instructions and includes 128 dots,
+dependent addresses, stores, immediate loads and branches. Program 0 uses SW/LW;
+program 1 uses SH/LH. Initial DROM bytes change from 7 to -13 with identical
+weights. Every commit compares all register copies, PC anchor/count and every
+one of the 16,384 RAM bytes. Generated HALT is not drained into the cache.
+
+| Program | First DROM byte | Generated tokens | Checked commits | Exact cache replay |
+| --- | --- | --- | --- | --- |
+| 0 | 7 | 1,804 | 1,415 | pass |
+| 0 | -13 | 1,804 | 1,415 | pass |
+| 1 | 7 | 2,332 | 1,415 | pass |
+| 1 | -13 | 2,316 | 1,415 | pass |
+
+All five stock controls fail at the independently predicted first token
+boundary, indexed from zero. Memory is detected at 10, accumulator at 9, PC at
+0, disabled write gate at 16 and token-family bit at 0. Positive runs retain
+zero raw-bit cache differences. There are 8,256 checked generated tokens,
+5,660 commit checks and 512 independent raw-byte dot checks across the four
+runs. These stock controls are distinct from synthetic observer tests.
+
+The requested M4 stock checks pass in [stock-m4.json](stock-m4.json), with
+[exit code zero](stock-m4-exit.json). [stock_m4.py](stock_m4.py) verifies the
+passed M3 report and its implementation hashes before allocating. The generic
+map is 64 KiB RAM and 4 MiB DROM at the unchanged addresses, with the original
+256 KiB code window. The graph has 64 chip layers, 2,113 physical dimensions,
+627 key heads and 68,923 FFN units. The stock model has hidden width 2,304,
+16 key / 32 value heads per linear layer, 128-dimensional heads, 9,216 MLP
+units and the appended zero full-attention layer. Its 7,115,541,760 parameters
+require 14,231,083,520 bf16 parameter bytes. Every parameter is materialized on
+CUDA; there is no offload.
+
+These are actual PyTorch CUDA allocator measurements from construction and
+both bounded guests in one completed run. They exclude other applications and
+CUDA driver allocations; global free memory is separately guarded and recorded.
+
+| Scope | Allocated bytes | Reserved bytes |
+| --- | --- | --- |
+| After model materialization | 14,231,158,272 | 14,547,943,424 |
+| Completed-run peaks | 14,488,735,232 | 15,061,745,664 |
+
+The peaks are 13.494 / 14.027 GiB, below the 15 GiB allocator cap. Global free
+VRAM immediately after materialization is 1,060,372,480 bytes. The worker checks
+a 512 MiB free-memory threshold. Tasklist and NVIDIA process inventory were
+retained; only desktop graphics applications were present alongside this job.
+There was no concurrent compute job. No Python worker remains after exit.
+
+| Full-map guest | Autonomous tokens | Checked commits | Independent dot checks | Result |
+| --- | --- | --- | --- | --- |
+| Small ndot loop | 8,192 | 6,433 | 585 | exact |
+| Original stories260K ELF prefix | 8,192 | 5,632 | 0 | exact |
+
+Both guests use the same materialized weights and native greedy `generate()`.
+The small guest increases the ordinary guest loop count to 2,048; it does not
+specialize model weights. Every observable commit checks all register copies,
+PC and all 65,536 RAM bytes. The final generated token is not secretly drained.
+[verify_stock_m4.py](verify_stock_m4.py) independently regenerates both bounded
+prefixes on the CPU and compares the exported stock token files byte for byte.
+[stock-m4-validation.json](stock-m4-validation.json) passes. The stories prefix
+also matches the first 8,192 tokens of the retained original legacy trace,
+whose complete historical hash is verified. The prefix token hashes are
+`fee6f01606bb8eaa7d68e70583ecc6d939e11787ac80e824670b0608a1c77bdb`
+for ndot and
+`cc73b4f82c12660cf964528dcfb251a5edc0af06101d597a129d542d9dbf2421`
+for stories. These are CPU-model protocol tokens, not 8,192 LLM predictions.
+No full integer-LLM quality or speed claim follows.
+
+The first full-map attempt in [stock-m4-guard-stop.json](stock-m4-guard-stop.json)
+stopped after 6,655 exact tokens and 5,226 checked commits. Global free VRAM
+fell to 533,987,328 bytes, below 536,870,912. It was a guard failure, not OOM or
+a numerical mismatch; [its exit code](stock-m4-guard-stop-exit.json) is one.
+Its nested run still says `running`; the overall `fail` and exit code are
+authoritative. At that point 644,463,104 bytes were reserved but unallocated.
+The successful retry starts from boot and releases only unused CUDA allocator
+blocks when the guard needs headroom, then checks the same threshold again.
+One reclamation releases 314,572,800 bytes and restores free VRAM from
+533,987,328 to 848,560,128. Active weights, recurrent states and KV tensors stay
+on GPU. No model-cache clearing, injection or offload occurs. Peak counters are
+not reset by reclamation. This resource-management change is recorded in the
+report and does not replace any model or generation operation.
+
+The failed interrupted diagnosis in
+[stock-cache-interrupted.json](stock-cache-interrupted.json) and its
+[exit report](stock-cache-interrupted-exit.json) is also retained. Copying a live
+Windows report briefly locked the target during atomic replacement.
+`stock_m3.save()` now retries replacement for at most two seconds; its synthetic
+reader-lock check passes. Subsequent progress collection uses stdout and waits
+for exit before exporting final reports. The first GPU source export required
+explicit UTF-8 and was rerun. Two integer-counter construction probes stopped
+before generation, on a Python coefficient type and a non-bf16 combined weight;
+independent Boolean embedding features fix the latter without rounding weights.
+The initial increment-128 normalization candidate has 19 unequal reads in
+[integer-counter-normalization-cpu.json](integer-counter-normalization-cpu.json);
+the accepted scale 181 has none. Negative evidence was preserved.
+
+[test_stock_observer.py](test_stock_observer.py) checks synthetic extraction,
+register/PC/RAM corruption, exact mismatch coordinate and hex-bit retention,
+signed zero, and an integer counter at n=17 with a one-unit corruption. These
+checks and Python compilation pass. They do not substitute for the five actual
+stock corruption controls. No upstream file, excluded directory, installed
+package or native opcode executor was changed. No commit was made. Work ran
+inline and no independent agent review was performed.
+
+M5 remains open. First model the stock-only counter primitive in IR and the
+compact backend with its actual fp32 update and bf16 read contract, then prove
+that representation agrees with stock. Rebuild an aligned stories260K ndot
+guest, compare each dot in a bounded prefix, and compare all 64 integer-engine
+predicted IDs, every-position logit hashes, decoded bytes, KV clipping counts
+and final architectural state bit for bit. Attention remains scalar. The two
+bounded M4 prefixes do not replace that regression or establish new compact
+backend triangulation for these counter weights.
+
+Reproduction uses fresh labels and the existing environments.
+
+```sh
+.venv/bin/python experiments/neural-accelerator/launch_stock.py \
+  --label FRESH-diagnosis --diagnosis accelerator --integer-counters --tokens 1804
+# Wait for diagnostic exit before starting M3.
+.venv/bin/python experiments/neural-accelerator/launch_stock.py --label FRESH-m3
+# Only after that report passes, use its remote path for M4.
+.venv/bin/python experiments/neural-accelerator/launch_stock.py \
+  --label FRESH-m4 --m4-report REMOTE_PASSED_M3_REPORT \
+  --stories .cache/tiny-llm/neural-stories/engine.elf
+.venv/bin/python experiments/neural-accelerator/verify_stock_m4.py \
+  --actual EXPORTED_M4_RUN_DIRECTORY \
+  --legacy-inputs .cache/neural-accelerator/legacy-neural-inputs-20261030 \
+  --out FRESH_VALIDATION_DIRECTORY
+.venv/bin/python experiments/neural-accelerator/test_stock_observer.py
+```
+
+The launcher syncs with tar over `ssh gpu` and detaches encoded PowerShell with
+`Invoke-CimMethod Win32_Process Create`. Private outputs are below
+`C:/Users/Admin/qwenputer-games-work/artifacts`, in
+`neural-accelerator-m3-diagnosis-full-retry-20261030`,
+`neural-accelerator-m3-diagnosis-original-scalar-20261030`,
+`neural-accelerator-m3-integer-counter-full-20261030`,
+`neural-accelerator-m3-integer-counters-m3-20261030`,
+`neural-accelerator-m4-integer-counters-full-map-20261030` and
+`neural-accelerator-m4-integer-counters-reclaim-20261030`.
+First-difference `.pt` cache pairs remain in the diagnosis directories. Source
+snapshots and the completed M4 raw token files are retained privately. Local
+raw token exports are under `.cache/neural-accelerator/m4-actual`.
+
+Model the Domain shaped explicit state coordinates and the counter encoding.
+Fix Root Causes required changing the readable counter instead of waiving it.
+Prove It Works required actual GPU generation, raw-bit cache comparisons and
+independent token-file checks. Explain the Number kept memory claims tied to
+measured allocator peaks in one completed run. The append-only trail is
+[decisions.tsv](decisions.tsv).

@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import struct
 import sys
+import time
 import traceback
 
 from prepare import ROOT
@@ -16,7 +17,14 @@ from prepare import ROOT
 def save(path, value):
     temporary = path.with_suffix('.tmp')
     temporary.write_text(json.dumps(value, indent=2) + '\n')
-    temporary.replace(path)
+    for attempt in range(101):
+        try:
+            temporary.replace(path)
+            break
+        except PermissionError:
+            if attempt == 100:
+                raise
+            time.sleep(0.02)
 
 
 def workload(variant, data):
@@ -101,7 +109,8 @@ def state_observer(circuit):
         pc_bits = table(cache, 'pc')[0, 2:18] / A_BIT
         assert np.array_equal(pc_bits, [(anchor >> b) & 1 for b in range(16)]), ('PC anchor', offset, pc_bits.tolist(), anchor)
         count_value = table(cache, 'count')[0, 2]
-        assert count_value == A_BIT * 2.0**-count, ('PC count', offset, float(count_value), count)
+        wanted_count = 181 * count if getattr(circuit, 'stock_integer_counters', False) else A_BIT * 2.0**-count
+        assert count_value == wanted_count, ('PC count', offset, float(count_value), count)
         assert pc == spec.ROM_BASE + 4 * (anchor + count)
         decoded = np.zeros((spec.RAM_WORDS, 32))
         for bank in range(spec.RAM_WORDS >> 8):
@@ -133,7 +142,7 @@ def main():
                   started_utc=datetime.now(timezone.utc).isoformat(),
                   reference_tokens_used_as_inputs=False, boot_injection_only=True)
     report['script_sha256'] = {name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
-                              for name in ('stock_m3.py', 'stock.py', 'constructor.py', 'reuse.py', 'oracle.py', 'reference.py')}
+                              for name in ('stock_m3.py', 'stock.py', 'constructor.py', 'integer_counters.py', 'reuse.py', 'oracle.py', 'reference.py')}
     output = a.out / 'report.json'
     save(output, report)
     try:
@@ -155,7 +164,7 @@ def main():
         exact_matmuls()
         if a.device == 'cuda':
             torch.cuda.set_per_process_memory_fraction(12 * 2**30 / torch.cuda.get_device_properties(0).total_memory)
-        circuit = build(4)
+        circuit = build(4, stock_integer_counters=True)
         model, metadata = build_model(circuit, a.device)
         report.update(model=metadata, geometry=circuit.stats(), constructor=circuit.source_manifest,
                       torch=torch.__version__, transformers=__import__('transformers').__version__,
@@ -228,7 +237,7 @@ def main():
                 assert tokens == streamer.tokens == wanted
                 assert run['checked_commits'] == len(commits)
                 saved_cache = cache_words(cache, circuit.n_layers())
-                del cache, generated
+                del generated
                 sequence = [spec.tok('GO')] + tokens[:-1]
                 replay = boot_cache(model, circuit, initial)
                 replay_predictions = []
@@ -238,6 +247,10 @@ def main():
                     replay_predictions.extend(out.logits.argmax(-1)[0].tolist())
                 assert replay_predictions == tokens, ('chunk token mismatch', variant, data)
                 replay_cache = cache_words(replay, circuit.n_layers())
+                from cache_diagnosis import differences
+                run['cached_chunked_differences'] = differences(circuit, cache, replay)
+                save(output, report)
+                assert not run['cached_chunked_differences'], ('chunk cache bit mismatch', run['cached_chunked_differences'])
                 assert len(saved_cache) == len(replay_cache)
                 for index, (cached, chunked) in enumerate(zip(saved_cache, replay_cache)):
                     assert torch.equal(cached, chunked), ('chunk cache mismatch', index,
@@ -249,7 +262,7 @@ def main():
                            program_source=source)
                 save(output, report)
                 print(json.dumps({k: v for k, v in run.items() if k != 'program_source'}), flush=True)
-                del replay, out, saved_cache, replay_cache
+                del cache, replay, out, saved_cache, replay_cache
             from chipformer.rv import hf
             from chipformer.q35.emit import row
             from chipformer.dsl.graph import Expr
@@ -281,6 +294,17 @@ def main():
                     selected = model.model.norm.weight[model.layout.dim(dim)]
                     restore.append((selected, selected.clone()))
                     selected.neg_()
+                if control == 'token-family-bit':
+                    expected_boundary = 0
+                else:
+                    predicted = copy.deepcopy(initial)
+                    corrupted_tokens = []
+                    while not predicted.halted and len(corrupted_tokens) < 64:
+                        original_ram = predicted.ram.copy()
+                        corrupted_tokens.extend(predicted.record())
+                        if control == 'write-gate-bit':
+                            predicted.ram = original_ram
+                    expected_boundary = next(i for i, (x, y) in enumerate(zip(wanted, corrupted_tokens)) if x != y)
                 checker = Checker(wanted)
                 detected = None
                 try:
@@ -297,10 +321,12 @@ def main():
                     for selected, original in restore:
                         selected.copy_(original)
                 result = dict(control=control, detected=detected is not None,
-                              mismatch=detected, generated_tokens=len(checker.tokens))
+                              mismatch=detected, expected_boundary=expected_boundary,
+                              generated_tokens=len(checker.tokens))
                 report['controls'].append(result)
                 save(output, report)
                 assert result['detected'], result
+                assert detected[1] == expected_boundary, result
                 del cache
         report['status'] = 'pass'
         save(output, report)

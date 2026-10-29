@@ -1,0 +1,113 @@
+{
+  "scope": "stock gated norm after bf16 core-attention read; CPU primitive only",
+  "runs": [
+    {
+      "scale": 128,
+      "ballast": 16777216,
+      "counts": 128,
+      "unequal_reads": [
+        {
+          "count": 7,
+          "actual": 6.96875,
+          "actual_bits": "0x40df0000"
+        },
+        {
+          "count": 14,
+          "actual": 13.9375,
+          "actual_bits": "0x415f0000"
+        },
+        {
+          "count": 25,
+          "actual": 24.875,
+          "actual_bits": "0x41c70000"
+        },
+        {
+          "count": 28,
+          "actual": 27.875,
+          "actual_bits": "0x41df0000"
+        },
+        {
+          "count": 49,
+          "actual": 49.25,
+          "actual_bits": "0x42450000"
+        },
+        {
+          "count": 50,
+          "actual": 49.75,
+          "actual_bits": "0x42470000"
+        },
+        {
+          "count": 55,
+          "actual": 55.25,
+          "actual_bits": "0x425d0000"
+        },
+        {
+          "count": 56,
+          "actual": 55.75,
+          "actual_bits": "0x425f0000"
+        },
+        {
+          "count": 61,
+          "actual": 61.25,
+          "actual_bits": "0x42750000"
+        },
+        {
+          "count": 93,
+          "actual": 93.5,
+          "actual_bits": "0x42bb0000"
+        },
+        {
+          "count": 98,
+          "actual": 98.5,
+          "actual_bits": "0x42c50000"
+        },
+        {
+          "count": 100,
+          "actual": 99.5,
+          "actual_bits": "0x42c70000"
+        },
+        {
+          "count": 105,
+          "actual": 104.5,
+          "actual_bits": "0x42d10000"
+        },
+        {
+          "count": 110,
+          "actual": 110.5,
+          "actual_bits": "0x42dd0000"
+        },
+        {
+          "count": 112,
+          "actual": 111.5,
+          "actual_bits": "0x42df0000"
+        },
+        {
+          "count": 115,
+          "actual": 115.5,
+          "actual_bits": "0x42e70000"
+        },
+        {
+          "count": 117,
+          "actual": 116.5,
+          "actual_bits": "0x42e90000"
+        },
+        {
+          "count": 122,
+          "actual": 122.5,
+          "actual_bits": "0x42f50000"
+        },
+        {
+          "count": 127,
+          "actual": 127.5,
+          "actual_bits": "0x42ff0000"
+        }
+      ]
+    },
+    {
+      "scale": 181,
+      "ballast": 23724032,
+      "counts": 128,
+      "unequal_reads": []
+    }
+  ]
+}

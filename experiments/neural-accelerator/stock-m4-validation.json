@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "actual_checked": true,
+  "runs": [
+    {
+      "guest": "ndot",
+      "tokens": 8192,
+      "expected_observable_commits": 6433,
+      "independent_dot_checks": 585,
+      "token_sha256": "fee6f01606bb8eaa7d68e70583ecc6d939e11787ac80e824670b0608a1c77bdb",
+      "actual_stock_tokens_exact": true
+    },
+    {
+      "guest": "stories260K",
+      "tokens": 8192,
+      "expected_observable_commits": 5632,
+      "independent_dot_checks": 0,
+      "token_sha256": "cc73b4f82c12660cf964528dcfb251a5edc0af06101d597a129d542d9dbf2421",
+      "historical_original_reference_prefix_exact": true,
+      "actual_stock_tokens_exact": true
+    }
+  ]
+}

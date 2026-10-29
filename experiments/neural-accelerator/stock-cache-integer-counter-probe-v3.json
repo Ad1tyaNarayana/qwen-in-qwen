@@ -1,0 +1,1190 @@
+{
+  "status": "diagnosed",
+  "kind": "accelerator",
+  "started_utc": "2026-10-29T19:47:18.088456+00:00",
+  "generated_tokens": 64,
+  "comparisons": [
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 1,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 2,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 2,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 3,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 4,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 4,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 4,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 5,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 6,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 6,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 7,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 8,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 8,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 8,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 8,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 9,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 10,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 10,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 11,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 12,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 12,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 12,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 13,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 14,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 14,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 15,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 16,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 16,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 16,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 16,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 16,
+      "consumed_inputs": 16,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 17,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 18,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 18,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 19,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 20,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 20,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 20,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 21,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 22,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 22,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 23,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 24,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 24,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 24,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 24,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 25,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 26,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 26,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 27,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 28,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 28,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 28,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 29,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 30,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 30,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 31,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 32,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 32,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 32,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 32,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 16,
+      "consumed_inputs": 32,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 33,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 34,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 34,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 35,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 36,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 36,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 36,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 37,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 38,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 38,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 39,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 40,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 40,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 40,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 40,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 41,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 42,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 42,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 43,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 44,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 44,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 44,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 45,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 46,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 46,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 47,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 48,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 48,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 48,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 48,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 16,
+      "consumed_inputs": 48,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 49,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 50,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 50,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 51,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 52,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 52,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 52,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 53,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 54,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 54,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 55,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 56,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 56,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 56,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 56,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 57,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 58,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 58,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 59,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 60,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 60,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 60,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 61,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 62,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 62,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 63,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 1,
+      "consumed_inputs": 64,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 2,
+      "consumed_inputs": 64,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 4,
+      "consumed_inputs": 64,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 8,
+      "consumed_inputs": 64,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 16,
+      "consumed_inputs": 64,
+      "differences": [],
+      "numerical_differences": 0
+    },
+    {
+      "chunk_size": 64,
+      "consumed_inputs": 64,
+      "differences": [],
+      "numerical_differences": 0
+    }
+  ],
+  "boot_injection_only": true,
+  "replay_inputs": "only inputs consumed by authoritative stock generate",
+  "script_sha256": "72ed8cbdb6c57a81783c11bc4901f3f851dcf017cf43c4aa3ddaf79deec0a882",
+  "prepare_manifest": {
+    "rv/spec.py": {
+      "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+      "scratch_sha256": "7d75ab5d728949839ca2d307d9e87848ce666ca948ac33aedb09f825fc840f0e",
+      "replacements": [
+        [
+          "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+          "DROM_BASE, DROM_WORDS = 0x02000000, 2048"
+        ],
+        [
+          "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+          "RAM_BASE, RAM_WORDS = 0x01000000, 4096"
+        ],
+        [
+          "DATA_BASE = 0x100",
+          "DATA_BASE = RAM_BASE + 0x100"
+        ]
+      ]
+    },
+    "rv/core.py": {
+      "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+      "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+      "replacements": [
+        [
+          "def build(target:",
+          "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+        ],
+        [
+          "    c = RvCore(target, text)",
+          "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+        ],
+        [
+          "hl = lits_of(EA[13:17], h)",
+          "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+        ],
+        [
+          "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+          "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+        ],
+        [
+          "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+          "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+        ],
+        [
+          "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+          "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+        ]
+      ]
+    }
+  },
+  "model": {
+    "parameters": 3659960192,
+    "bf16_parameter_bytes": 7319920384,
+    "hidden": 2304,
+    "config": {
+      "transformers_version": "5.21.0",
+      "architectures": null,
+      "output_hidden_states": false,
+      "return_dict": true,
+      "dtype": null,
+      "chunk_size_feed_forward": 0,
+      "is_encoder_decoder": false,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "problem_type": null,
+      "vocab_size": 230336,
+      "hidden_size": 2304,
+      "intermediate_size": 9216,
+      "num_hidden_layers": 31,
+      "num_attention_heads": 8,
+      "num_key_value_heads": 2,
+      "hidden_act": "silu",
+      "max_position_embeddings": 262144,
+      "initializer_range": 0.02,
+      "rms_norm_eps": 1e-06,
+      "use_cache": true,
+      "tie_word_embeddings": true,
+      "rope_parameters": {
+        "rope_type": "default",
+        "rope_theta": 10000000,
+        "partial_rotary_factor": 0.25,
+        "mrope_section": [
+          11,
+          11,
+          10
+        ],
+        "mrope_interleaved": true
+      },
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "head_dim": 256,
+      "linear_conv_kernel_dim": 4,
+      "linear_key_head_dim": 128,
+      "linear_value_head_dim": 128,
+      "linear_num_key_heads": 16,
+      "linear_num_value_heads": 32,
+      "layer_types": [
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention"
+      ],
+      "pad_token_id": 230324,
+      "bos_token_id": 230324,
+      "eos_token_id": 230321,
+      "_name_or_path": "",
+      "attn_output_gate": true,
+      "model_type": "qwen3_5_text",
+      "output_attentions": false
+    },
+    "streamed_emitter": "def iter_layers(g: Graph, lay: Layout, tc: dict, first: int, prefix: str,\n                alloc: Alloc | None = None, keep: set[int] | None = None) -> dict:\n    \"\"\"Weights of the chip layers, named ``{prefix}layers.{first + i}.*``.\n\n    With ``keep``, the MLP sublayer of the nodes named ``exit.*`` also clears every chip dim\n    except ``keep`` (and the ballast), so nothing of the circuit is left for later layers.\n    \"\"\"\n    h, nk, nv = tc[\"hidden_size\"], tc[\"linear_num_key_heads\"], tc[\"linear_num_value_heads\"]\n    inter = tc[\"intermediate_size\"]\n    # With more value heads than key heads (4B: 32 vs 16), value head i reads key head\n    # i // r; a circuit head uses the first value head of its group and leaves the rest at zero.\n    r = nv // nk\n    assert r * nk == nv\n    f32 = torch.float32\n    out = {}\n    exit_level = None\n    if keep is not None:\n        exit_level = max(n.level for n in g.nodes if n.name.startswith(\"exit.\"))\n        assert all(n.level < exit_level for n in g.nodes if not n.name.startswith(\"exit.\"))\n        live = alloc.final if alloc else list(range(1, len(g.dims)))\n        exit_clear = [d for d in live if d not in keep]\n    one = Expr({ONE: 1})\n    for L in range(g.n_layers()):\n        p = f\"{prefix}layers.{first + L}.\"\n        qkv = torch.zeros(2 * nk * HD + nv * HD, h, dtype=f32)\n        convw = torch.zeros(2 * nk * HD + nv * HD, 1, tc[\"linear_conv_kernel_dim\"], dtype=f32)\n        zw = torch.zeros(nv * HD, h, dtype=f32)\n        bw = torch.zeros(nv, h, dtype=f32)\n        aw = torch.zeros(nv, h, dtype=f32)\n        ow = torch.zeros(h, nv * HD, dtype=f32)\n        gate = torch.zeros(inter, h, dtype=f32)\n        up = torch.zeros(inter, h, dtype=f32)\n        down = torch.zeros(h, inter, dtype=f32)\n        heads = [n for n in g.nodes if isinstance(n, Head) and n.level == 2 * L + 1]\n        for j, n in enumerate(heads):\n            vhs = n.vheads()\n            assert len(vhs) <= r, (n.name, len(vhs), r)\n            for base, chans in ((j * HD, n.q), (nk * HD + j * HD, n.k)):\n                for i, ch in chans.items():\n                    row(ch.expr, lay, qkv[base + i])\n                    for lag, w in enumerate(ch.taps):\n                        convw[base + i, 0, -1 - lag] = w\n            for x, vhd in enumerate(vhs):\n                vh = j * r + x  # value head x of this key head\n                base = 2 * nk * HD + vh * HD\n                for i, ch in vhd.v.items():\n                    row(ch.expr, lay, qkv[base + i])\n                    for lag, w in enumerate(ch.taps):\n                        convw[base + i, 0, -1 - lag] = w\n                # beta = sigmoid(128) = 1, or a write gate: sigmoid(256 g - 128), 1 or exactly 0\n                beta = Expr({ONE: 128}) if vhd.beta is None else 256 * vhd.beta - 128 * one\n                row(beta, lay, bw[vh])\n                row(vhd.a, lay, aw[vh])\n                for col, e in vhd.z.items():\n                    row(e, lay, zw[vh * HD + col])\n                for col, d, w in vhd.out:\n                    ow[lay.dim(d), vh * HD + col] += w\n        one = Expr({ONE: 1})\n        units = []  # (coef, a, b, output dim)\n        for n in g.nodes:\n            if not (isinstance(n, FFN) and n.level == 2 * L + 2):\n                continue\n            units += [(coef, a, b, n.out) for coef, a, b in n.terms]\n            if alloc and n.out in alloc.subtract:  # hand the slot over: remove the old value\n                units.append((-1, Expr({alloc.subtract[n.out]: 1}), one, n.out))\n        units += [(-1, Expr({o: 1}), one, o) for o in (alloc.clears.get(2 * L + 2, [])\n                                                       if alloc else [])]\n        if exit_level == 2 * L + 2:\n            units += [(-1, Expr({o: 1}), one, o) for o in exit_clear]\n        assert len(units) <= inter, (L, len(units), inter)\n        for u, (coef, a, b, d) in enumerate(units):\n            row(b, lay, gate[u], K)\n            row(a, lay, up[u], 1 / K)\n            down[lay.dim(d), u] = float(coef)\n        if exit_level == 2 * L + 2:  # the ballast goes too: -B per ballast dim\n            for i in range(lay.m):\n                u = len(units) + i\n                row(Expr({ONE: K}), lay, gate[u])\n                up[u, lay.off + i] = (lay.ballast / K) / (lay.ballast * lay.scale)\n                down[lay.off + i, u] = -1.0\n        layer = {\n            \"input_layernorm.weight\": torch.zeros(h, dtype=f32),\n            \"post_attention_layernorm.weight\": torch.zeros(h, dtype=f32),\n            \"linear_attn.in_proj_qkv.weight\": qkv,\n            \"linear_attn.in_proj_z.weight\": zw,\n            \"linear_attn.in_proj_a.weight\": aw,\n            \"linear_attn.in_proj_b.weight\": bw,\n            \"linear_attn.conv1d.weight\": convw,\n            \"linear_attn.dt_bias\": torch.full((nv,), -110.0, dtype=f32),\n            \"linear_attn.A_log\": torch.zeros(nv, dtype=f32),\n            \"linear_attn.norm.weight\": torch.ones(HD, dtype=f32),\n            \"linear_attn.out_proj.weight\": ow,\n            \"mlp.gate_proj.weight\": gate,\n            \"mlp.up_proj.weight\": up,\n            \"mlp.down_proj.weight\": down,\n        }\n        for k, t in layer.items():\n            check_bf16(p + k, t)\n        yield {p + k: t for k, t in layer.items()}\n\n"
+  },
+  "geometry": {
+    "layers": 30,
+    "dims": 2152,
+    "heads": 68,
+    "ffn_units": 68692,
+    "max_units": 8125,
+    "max_heads": 16
+  },
+  "torch": "2.14.1+cu130",
+  "transformers": "5.21.0",
+  "program_source": "_start:\nla s1, weights\nla s2, values\nli s3, 128\nloop:\n.word 1092912139\nandi t0, s0, 7\nslli t0, t0, 2\nadd t0, t0, s2\nsw s0, 32(t0)\nlw t1, 32(t0)\nandi t2, t1, 1\nbeqz t2, even\naddi s0, s0, 1\neven:\nxor s0, s0, t1\naddi s3, s3, -1\nbnez s3, loop\nli a7, 93\nli a0, 0\necall\n.data\n.align 4\nvalues: .half -32768, 32767, -17, 29\n.space 128\n.rodata\n.align 3\nweights: .byte 7, -128, 127, -3\n",
+  "prefix_refinement": [
+    {
+      "consumed_inputs": 1,
+      "last_input": 230322,
+      "last_input_family": [
+        "GO",
+        0
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 2,
+      "last_input": 0,
+      "last_input_family": [
+        "V",
+        0
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 16,
+      "last_input": 66048,
+      "last_input_family": [
+        "F1",
+        512
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 24,
+      "last_input": 98313,
+      "last_input_family": [
+        "J",
+        5
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 20,
+      "last_input": 32768,
+      "last_input_family": [
+        "F0",
+        0
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 18,
+      "last_input": 30650,
+      "last_input_family": [
+        "V",
+        30650
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 17,
+      "last_input": 230317,
+      "last_input_family": [
+        "ST0",
+        0
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 19,
+      "last_input": 98168,
+      "last_input_family": [
+        "F1",
+        32632
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 21,
+      "last_input": 98322,
+      "last_input_family": [
+        "J",
+        14
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 22,
+      "last_input": 32768,
+      "last_input_family": [
+        "F0",
+        0
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 23,
+      "last_input": 32895,
+      "last_input_family": [
+        "F0",
+        127
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 25,
+      "last_input": 30650,
+      "last_input_family": [
+        "V",
+        30650
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 26,
+      "last_input": 98168,
+      "last_input_family": [
+        "F1",
+        32632
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 27,
+      "last_input": 32770,
+      "last_input_family": [
+        "F0",
+        2
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 28,
+      "last_input": 32776,
+      "last_input_family": [
+        "F0",
+        8
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 29,
+      "last_input": 264,
+      "last_input_family": [
+        "V",
+        264
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 30,
+      "last_input": 66048,
+      "last_input_family": [
+        "F1",
+        512
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 31,
+      "last_input": 230317,
+      "last_input_family": [
+        "ST0",
+        0
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    },
+    {
+      "consumed_inputs": 32,
+      "last_input": 30650,
+      "last_input_family": [
+        "V",
+        30650
+      ],
+      "layer": 0,
+      "coordinates": [],
+      "cached": [],
+      "chunked": [],
+      "cached_bits": [],
+      "chunked_bits": []
+    }
+  ],
+  "consumed_inputs": 64,
+  "checked_commits": 47,
+  "acceptance": "exact",
+  "generated_token_sha256": "475648b1c75b82d869b695dcef4cb7338f8b0247414cf566de6d89c74e38fc88",
+  "finished_utc": "2026-10-29T19:47:53.548483+00:00"
+}

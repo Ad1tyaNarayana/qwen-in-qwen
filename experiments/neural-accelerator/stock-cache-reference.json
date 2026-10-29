@@ -1,0 +1,8 @@
+{
+  "tokens": 1804,
+  "commits": 1415,
+  "instructions": 1416,
+  "dots": 128,
+  "token_sha256": "28fa89e2e75fb76e5e0f768db70c8f33d8da515e6d2206545c7d86bd9671198f",
+  "scope": "independent raw-byte oracle checks each dot; inherited scalar reference checks other operations"
+}

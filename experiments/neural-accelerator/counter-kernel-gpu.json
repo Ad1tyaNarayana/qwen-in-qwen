@@ -1,0 +1,636 @@
+{
+  "device": "cuda",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.21.0",
+  "scope": "stock kernel isolation; supplied synthetic counter channels, not autonomous guest evidence",
+  "source_sha256": {
+    "torch_chunk_gated_delta_rule": "e4116a769851c6a455d1a277f0b5ad777090d73c9da491a84e4e9773e17c45d6",
+    "torch_recurrent_gated_delta_rule": "60d1b140670aad5ef8a14d77ddc0461a6d252e139d18ddc8d2899fab7aae0728"
+  },
+  "runs": [
+    {
+      "length": 1,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 128.0,
+        "bits": "0x43000000"
+      },
+      "chunked": {
+        "value": 128.0,
+        "bits": "0x43000000"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        }
+      ],
+      "pairwise_exp": null,
+      "equal": true
+    },
+    {
+      "length": 2,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 64.0,
+        "bits": "0x42800000"
+      },
+      "chunked": {
+        "value": 64.00009155273438,
+        "bits": "0x4280000c"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -128.69314575195312,
+          "bits": "0xc300b172"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5000007152557373,
+        "bits": "0x3f00000c"
+      },
+      "equal": false
+    },
+    {
+      "length": 4,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 16.0,
+        "bits": "0x41800000"
+      },
+      "chunked": {
+        "value": 16.00006866455078,
+        "bits": "0x41800024"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -128.69314575195312,
+          "bits": "0xc300b172"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5000007152557373,
+        "bits": "0x3f00000c"
+      },
+      "equal": false
+    },
+    {
+      "length": 8,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "chunked": {
+        "value": 1.0000100135803223,
+        "bits": "0x3f800054"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -128.69314575195312,
+          "bits": "0xc300b172"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5000007152557373,
+        "bits": "0x3f00000c"
+      },
+      "equal": false
+    },
+    {
+      "length": 16,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 0.00390625,
+        "bits": "0x3b800000"
+      },
+      "chunked": {
+        "value": 0.003906333819031715,
+        "bits": "0x3b8000b4"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -128.69314575195312,
+          "bits": "0xc300b172"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5000007152557373,
+        "bits": "0x3f00000c"
+      },
+      "equal": false
+    },
+    {
+      "length": 32,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 5.960464477539063e-08,
+        "bits": "0x33800000"
+      },
+      "chunked": {
+        "value": 5.960546189953675e-08,
+        "bits": "0x33800073"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -128.69314575195312,
+          "bits": "0xc300b172"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5000007152557373,
+        "bits": "0x3f00000c"
+      },
+      "equal": false
+    },
+    {
+      "length": 64,
+      "beta_halving": false,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 1.3877787807814457e-17,
+        "bits": "0x23800000"
+      },
+      "chunked": {
+        "value": 1.3877978059355344e-17,
+        "bits": "0x23800073"
+      },
+      "g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -128.0,
+          "bits": "0xc3000000"
+        },
+        {
+          "value": -128.69314575195312,
+          "bits": "0xc300b172"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5000007152557373,
+        "bits": "0x3f00000c"
+      },
+      "equal": false
+    },
+    {
+      "length": 1,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 64.0,
+        "bits": "0x42800000"
+      },
+      "chunked": {
+        "value": 64.0,
+        "bits": "0x42800000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": null,
+      "equal": true
+    },
+    {
+      "length": 2,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 32.0,
+        "bits": "0x42000000"
+      },
+      "chunked": {
+        "value": 32.0,
+        "bits": "0x42000000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "equal": true
+    },
+    {
+      "length": 4,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 8.0,
+        "bits": "0x41000000"
+      },
+      "chunked": {
+        "value": 8.0,
+        "bits": "0x41000000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "equal": true
+    },
+    {
+      "length": 8,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 0.5,
+        "bits": "0x3f000000"
+      },
+      "chunked": {
+        "value": 0.5,
+        "bits": "0x3f000000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "equal": true
+    },
+    {
+      "length": 16,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 0.001953125,
+        "bits": "0x3b000000"
+      },
+      "chunked": {
+        "value": 0.001953125,
+        "bits": "0x3b000000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "equal": true
+    },
+    {
+      "length": 32,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 2.9802322387695312e-08,
+        "bits": "0x33000000"
+      },
+      "chunked": {
+        "value": 0.0,
+        "bits": "0x00000000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "equal": false
+    },
+    {
+      "length": 64,
+      "beta_halving": true,
+      "reset_clear": true,
+      "recurrent": {
+        "value": 6.938893903907228e-18,
+        "bits": "0x23000000"
+      },
+      "chunked": {
+        "value": 0.0,
+        "bits": "0x00000000"
+      },
+      "g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        },
+        {
+          "value": 0.0,
+          "bits": "0x00000000"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 1.0,
+        "bits": "0x3f800000"
+      },
+      "equal": false
+    },
+    {
+      "length": 16,
+      "beta_halving": false,
+      "reset_clear": false,
+      "recurrent": {
+        "value": 0.00390625,
+        "bits": "0x3b800000"
+      },
+      "chunked": {
+        "value": 0.0039062444120645523,
+        "bits": "0x3b7fffe8"
+      },
+      "g": [
+        {
+          "value": -0.0,
+          "bits": "0x80000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -0.0,
+          "bits": "0x80000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5,
+        "bits": "0x3f000000"
+      },
+      "equal": false
+    },
+    {
+      "length": 32,
+      "beta_halving": false,
+      "reset_clear": false,
+      "recurrent": {
+        "value": 5.960464477539063e-08,
+        "bits": "0x33800000"
+      },
+      "chunked": {
+        "value": 5.9604559510262334e-08,
+        "bits": "0x337fffe8"
+      },
+      "g": [
+        {
+          "value": -0.0,
+          "bits": "0x80000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -0.0,
+          "bits": "0x80000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5,
+        "bits": "0x3f000000"
+      },
+      "equal": false
+    },
+    {
+      "length": 64,
+      "beta_halving": false,
+      "reset_clear": false,
+      "recurrent": {
+        "value": 1.3877787807814457e-17,
+        "bits": "0x23800000"
+      },
+      "chunked": {
+        "value": 1.387776630111853e-17,
+        "bits": "0x237fffe6"
+      },
+      "g": [
+        {
+          "value": -0.0,
+          "bits": "0x80000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "cumulative_g": [
+        {
+          "value": -0.0,
+          "bits": "0x80000000"
+        },
+        {
+          "value": -0.6931471824645996,
+          "bits": "0xbf317218"
+        }
+      ],
+      "pairwise_exp": {
+        "value": 0.5,
+        "bits": "0x3f000000"
+      },
+      "equal": false
+    }
+  ]
+}

@@ -1,0 +1,3050 @@
+{
+  "status": "fixed",
+  "acceptance_case": "constructor fixed; exact state, no exception",
+  "baseline_exception_acceptance": {
+    "a": false,
+    "b": "not attempted because a fails",
+    "c": true
+  },
+  "accelerator": {
+    "source": "stock-cache-accelerator.json",
+    "kind": "accelerator",
+    "generated_tokens": 1804,
+    "checked_commits": 1415,
+    "token_sha256": "28fa89e2e75fb76e5e0f768db70c8f33d8da515e6d2206545c7d86bd9671198f",
+    "all_predictions_exact": true,
+    "chunk_sizes": {
+      "1": {
+        "comparisons": 1804,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 1,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "2": {
+        "comparisons": 902,
+        "boundaries_with_differences": 262,
+        "first_difference": {
+          "chunk_size": 2,
+          "consumed_inputs": 2,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 2
+        },
+        "final": {
+          "chunk_size": 2,
+          "consumed_inputs": 1804,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000005722045898,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080000c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 2,
+        "max_absolute_difference": 9.1552734375e-05
+      },
+      "4": {
+        "comparisons": 451,
+        "boundaries_with_differences": 387,
+        "first_difference": {
+          "chunk_size": 4,
+          "consumed_inputs": 4,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 2
+        },
+        "final": {
+          "chunk_size": 4,
+          "consumed_inputs": 1804,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000005722045898,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080000c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 9.1552734375e-05
+      },
+      "8": {
+        "comparisons": 226,
+        "boundaries_with_differences": 194,
+        "first_difference": {
+          "chunk_size": 8,
+          "consumed_inputs": 8,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 16.0,
+              "chunked": 15.999999046325684,
+              "cached_bits": "0x41800000",
+              "chunked_bits": "0x417fffff",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 3
+        },
+        "final": {
+          "chunk_size": 8,
+          "consumed_inputs": 1804,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000005722045898,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080000c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 0.002044677734375
+      },
+      "16": {
+        "comparisons": 113,
+        "boundaries_with_differences": 96,
+        "first_difference": {
+          "chunk_size": 16,
+          "consumed_inputs": 32,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000028610229492,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080003c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 63.994232177734375,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x427ffa18",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 63.994232177734375,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x427ffa18",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 3
+        },
+        "final": {
+          "chunk_size": 16,
+          "consumed_inputs": 1804,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000028610229492,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080003c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 0.005767822265625
+      },
+      "64": {
+        "comparisons": 29,
+        "boundaries_with_differences": 25,
+        "first_difference": {
+          "chunk_size": 64,
+          "consumed_inputs": 64,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "final": {
+          "chunk_size": 64,
+          "consumed_inputs": 1804,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000028610229492,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080003c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 0.013576507568359375
+      }
+    },
+    "prefix_refinement": [
+      {
+        "consumed_inputs": 1,
+        "last_input": 230322,
+        "last_input_family": [
+          "GO",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 2,
+        "last_input": 0,
+        "last_input_family": [
+          "V",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          64.00009155273438,
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280000c",
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 16,
+        "last_input": 66048,
+        "last_input_family": [
+          "F1",
+          512
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 24,
+        "last_input": 98313,
+        "last_input_family": [
+          "J",
+          5
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 20,
+        "last_input": 32768,
+        "last_input_family": [
+          "F0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          0.03125
+        ],
+        "chunked": [
+          0.03124999813735485
+        ],
+        "cached_bits": [
+          "0x3d000000"
+        ],
+        "chunked_bits": [
+          "0x3cffffff"
+        ]
+      },
+      {
+        "consumed_inputs": 18,
+        "last_input": 30650,
+        "last_input_family": [
+          "V",
+          30650
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          64.00009155273438,
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280000c",
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 17,
+        "last_input": 230317,
+        "last_input_family": [
+          "ST0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 19,
+        "last_input": 98168,
+        "last_input_family": [
+          "F1",
+          32632
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 21,
+        "last_input": 98322,
+        "last_input_family": [
+          "J",
+          14
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 22,
+        "last_input": 32768,
+        "last_input_family": [
+          "F0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0
+        ],
+        "chunked": [
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 23,
+        "last_input": 32895,
+        "last_input_family": [
+          "F0",
+          127
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          32.0
+        ],
+        "chunked": [
+          32.000091552734375
+        ],
+        "cached_bits": [
+          "0x42000000"
+        ],
+        "chunked_bits": [
+          "0x42000018"
+        ]
+      },
+      {
+        "consumed_inputs": 25,
+        "last_input": 30650,
+        "last_input_family": [
+          "V",
+          30650
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          63.99814224243164,
+          63.99814224243164
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x427ffe19",
+          "0x427ffe19"
+        ]
+      },
+      {
+        "consumed_inputs": 26,
+        "last_input": 98168,
+        "last_input_family": [
+          "F1",
+          32632
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0
+        ],
+        "chunked": [
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 27,
+        "last_input": 32770,
+        "last_input_family": [
+          "F0",
+          2
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          32.0
+        ],
+        "chunked": [
+          32.000091552734375
+        ],
+        "cached_bits": [
+          "0x42000000"
+        ],
+        "chunked_bits": [
+          "0x42000018"
+        ]
+      },
+      {
+        "consumed_inputs": 28,
+        "last_input": 32776,
+        "last_input_family": [
+          "F0",
+          8
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          16.0
+        ],
+        "chunked": [
+          16.00006866455078
+        ],
+        "cached_bits": [
+          "0x41800000"
+        ],
+        "chunked_bits": [
+          "0x41800024"
+        ]
+      },
+      {
+        "consumed_inputs": 29,
+        "last_input": 264,
+        "last_input_family": [
+          "V",
+          264
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          16.0,
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          16.00006866455078,
+          64.00204467773438,
+          64.00204467773438
+        ],
+        "cached_bits": [
+          "0x41800000",
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x41800024",
+          "0x4280010c",
+          "0x4280010c"
+        ]
+      },
+      {
+        "consumed_inputs": 30,
+        "last_input": 66048,
+        "last_input_family": [
+          "F1",
+          512
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          8.0
+        ],
+        "chunked": [
+          8.000045776367188
+        ],
+        "cached_bits": [
+          "0x41000000"
+        ],
+        "chunked_bits": [
+          "0x41000030"
+        ]
+      },
+      {
+        "consumed_inputs": 31,
+        "last_input": 230317,
+        "last_input_family": [
+          "ST0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          4.0
+        ],
+        "chunked": [
+          4.000028610229492
+        ],
+        "cached_bits": [
+          "0x40800000"
+        ],
+        "chunked_bits": [
+          "0x4080003c"
+        ]
+      },
+      {
+        "consumed_inputs": 32,
+        "last_input": 30650,
+        "last_input_family": [
+          "V",
+          30650
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          4.0,
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          4.000028610229492,
+          63.994232177734375,
+          63.994232177734375
+        ],
+        "cached_bits": [
+          "0x40800000",
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4080003c",
+          "0x427ffa18",
+          "0x427ffa18"
+        ]
+      }
+    ]
+  },
+  "original": {
+    "source": "stock-cache-original.json",
+    "kind": "original",
+    "generated_tokens": 4620,
+    "checked_commits": 3335,
+    "token_sha256": "34588c41f283d495505a4a82b040bd29967aef72e10dfde4dcec1375b6f1390c",
+    "all_predictions_exact": true,
+    "chunk_sizes": {
+      "1": {
+        "comparisons": 4620,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 1,
+          "consumed_inputs": 4620,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "2": {
+        "comparisons": 2310,
+        "boundaries_with_differences": 774,
+        "first_difference": {
+          "chunk_size": 2,
+          "consumed_inputs": 2,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 2
+        },
+        "final": {
+          "chunk_size": 2,
+          "consumed_inputs": 4620,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000005722045898,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080000c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 2,
+        "max_absolute_difference": 9.1552734375e-05
+      },
+      "4": {
+        "comparisons": 1155,
+        "boundaries_with_differences": 1155,
+        "first_difference": {
+          "chunk_size": 4,
+          "consumed_inputs": 4,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00009155273438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280000c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 2
+        },
+        "final": {
+          "chunk_size": 4,
+          "consumed_inputs": 4620,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000005722045898,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080000c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 9.1552734375e-05
+      },
+      "8": {
+        "comparisons": 578,
+        "boundaries_with_differences": 578,
+        "first_difference": {
+          "chunk_size": 8,
+          "consumed_inputs": 8,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 16.0,
+              "chunked": 15.999999046325684,
+              "cached_bits": "0x41800000",
+              "chunked_bits": "0x417fffff",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 3
+        },
+        "final": {
+          "chunk_size": 8,
+          "consumed_inputs": 4620,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000005722045898,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080000c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 0.002044677734375
+      },
+      "16": {
+        "comparisons": 289,
+        "boundaries_with_differences": 288,
+        "first_difference": {
+          "chunk_size": 16,
+          "consumed_inputs": 16,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 64.00204467773438,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x4280010c",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 2
+        },
+        "final": {
+          "chunk_size": 16,
+          "consumed_inputs": 4620,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000028610229492,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080003c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 0.005767822265625
+      },
+      "64": {
+        "comparisons": 73,
+        "boundaries_with_differences": 73,
+        "first_difference": {
+          "chunk_size": 64,
+          "consumed_inputs": 64,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 0.0625,
+              "chunked": 0.0625009834766388,
+              "cached_bits": "0x3d800000",
+              "chunked_bits": "0x3d800084",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                4,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 63.98642349243164,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x427ff219",
+              "signed_zero": false,
+              "value_head": 4,
+              "key_head": 2,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "j",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                6,
+                0,
+                2
+              ],
+              "cached": 64.0,
+              "chunked": 63.98642349243164,
+              "cached_bits": "0x42800000",
+              "chunked_bits": "0x427ff219",
+              "signed_zero": false,
+              "value_head": 6,
+              "key_head": 3,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "vcnt",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 3
+        },
+        "final": {
+          "chunk_size": 64,
+          "consumed_inputs": 4620,
+          "differences": [
+            {
+              "layer": 0,
+              "field": "recurrent_states",
+              "coordinate": [
+                0,
+                2,
+                0,
+                2
+              ],
+              "cached": 4.0,
+              "chunked": 4.000028610229492,
+              "cached_bits": "0x40800000",
+              "chunked_bits": "0x4080003c",
+              "signed_zero": false,
+              "value_head": 2,
+              "key_head": 1,
+              "key_row": 0,
+              "value_column": 2,
+              "node": "count",
+              "query_rows": [
+                0,
+                1
+              ],
+              "key_rows": [
+                0,
+                1
+              ],
+              "output_columns": [
+                2
+              ],
+              "value_columns": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "numerical_differences": 1
+        },
+        "max_numerical_differences": 3,
+        "max_absolute_difference": 0.01767730712890625
+      }
+    },
+    "prefix_refinement": [
+      {
+        "consumed_inputs": 1,
+        "last_input": 230322,
+        "last_input_family": [
+          "GO",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 2,
+        "last_input": 0,
+        "last_input_family": [
+          "V",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          64.00009155273438,
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280000c",
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 16,
+        "last_input": 0,
+        "last_input_family": [
+          "V",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          64.00204467773438,
+          64.00204467773438
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280010c",
+          "0x4280010c"
+        ]
+      },
+      {
+        "consumed_inputs": 24,
+        "last_input": 98169,
+        "last_input_family": [
+          "F1",
+          32633
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          0.015625
+        ],
+        "chunked": [
+          0.015624999068677425
+        ],
+        "cached_bits": [
+          "0x3c800000"
+        ],
+        "chunked_bits": [
+          "0x3c7fffff"
+        ]
+      },
+      {
+        "consumed_inputs": 20,
+        "last_input": 65536,
+        "last_input_family": [
+          "F1",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          0.0625
+        ],
+        "chunked": [
+          0.0624999962747097
+        ],
+        "cached_bits": [
+          "0x3d800000"
+        ],
+        "chunked_bits": [
+          "0x3d7fffff"
+        ]
+      },
+      {
+        "consumed_inputs": 18,
+        "last_input": 65408,
+        "last_input_family": [
+          "F0",
+          32640
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 17,
+        "last_input": 98297,
+        "last_input_family": [
+          "F1",
+          32761
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 19,
+        "last_input": 32767,
+        "last_input_family": [
+          "V",
+          32767
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          64.00009155273438,
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280000c",
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 21,
+        "last_input": 128,
+        "last_input_family": [
+          "V",
+          128
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          0.0625,
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          0.0624999962747097,
+          64.00009155273438,
+          64.00009155273438
+        ],
+        "cached_bits": [
+          "0x3d800000",
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x3d7fffff",
+          "0x4280000c",
+          "0x4280000c"
+        ]
+      },
+      {
+        "consumed_inputs": 22,
+        "last_input": 98176,
+        "last_input_family": [
+          "F1",
+          32640
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 23,
+        "last_input": 128,
+        "last_input_family": [
+          "V",
+          128
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          63.99814224243164,
+          63.99814224243164
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x427ffe19",
+          "0x427ffe19"
+        ]
+      },
+      {
+        "consumed_inputs": 25,
+        "last_input": 32895,
+        "last_input_family": [
+          "F0",
+          127
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 26,
+        "last_input": 65519,
+        "last_input_family": [
+          "F0",
+          32751
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 27,
+        "last_input": 63377,
+        "last_input_family": [
+          "F0",
+          30609
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 28,
+        "last_input": 30737,
+        "last_input_family": [
+          "V",
+          30737
+        ],
+        "layer": 0,
+        "coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            6,
+            0,
+            2
+          ]
+        ],
+        "cached": [
+          64.0,
+          64.0
+        ],
+        "chunked": [
+          64.00204467773438,
+          64.00204467773438
+        ],
+        "cached_bits": [
+          "0x42800000",
+          "0x42800000"
+        ],
+        "chunked_bits": [
+          "0x4280010c",
+          "0x4280010c"
+        ]
+      },
+      {
+        "consumed_inputs": 29,
+        "last_input": 98168,
+        "last_input_family": [
+          "F1",
+          32632
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 30,
+        "last_input": 65533,
+        "last_input_family": [
+          "F0",
+          32765
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 31,
+        "last_input": 32797,
+        "last_input_family": [
+          "F0",
+          29
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 32,
+        "last_input": 65449,
+        "last_input_family": [
+          "F0",
+          32681
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      }
+    ]
+  },
+  "differing_cells": [
+    [
+      0,
+      2,
+      0,
+      2,
+      "count"
+    ],
+    [
+      0,
+      4,
+      0,
+      2,
+      "j"
+    ],
+    [
+      0,
+      6,
+      0,
+      2,
+      "vcnt"
+    ]
+  ],
+  "readability_proof": "counter keys select row 0 on reset and row 1 otherwise; both rows are queried on every non-reset token; column 2 is the counter data output; reference ballast is in columns 0 and 1",
+  "mechanism": "fp32 cumulative log-decay subtraction changes exp of log-half; even without reset, cumulative log-half rounding differs; one-hot key normalization is exact and beta saturates to one",
+  "kernel_source_sha256": {
+    "torch_chunk_gated_delta_rule": "e4116a769851c6a455d1a277f0b5ad777090d73c9da491a84e4e9773e17c45d6",
+    "torch_recurrent_gated_delta_rule": "60d1b140670aad5ef8a14d77ddc0461a6d252e139d18ddc8d2899fab7aae0728"
+  },
+  "rejected_fixes": [
+    "beta=0.5 with no decay loses the live value by chunk-sum cancellation",
+    "removing reset decay still leaves cumulative log-half rounding"
+  ],
+  "script_sha256": {
+    "cache_diagnosis.py": "72ed8cbdb6c57a81783c11bc4901f3f851dcf017cf43c4aa3ddaf79deec0a882",
+    "counter_kernel_diagnosis.py": "e5d7674c6399eac99ca0a7cc0befccf113cd4a680f04b42013517a28399ea3d6",
+    "summarize_cache_diagnosis.py": "c5d65f3e7514e9552dbb75ba7e6e0e377d40c650a3e41bc21d63fc5dd83b7663",
+    "stock.py": "946a1482fe646e0ada2e42a8c7b36e8e46f76535777268bce5cac938c9902424",
+    "stock_m3.py": "cbca25758c2791cd6f81a345b0d513f6c66ffb21e8eb7f4b3f3ad7f0fa52a29d",
+    "constructor.py": "4e68ed13fc6f0970c20e609cb5c5ada077a113532a9f013abe9b91d3bc012166",
+    "reuse.py": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+    "oracle.py": "46b5b88a23b58dc4446353d0584c63d9825df934b1aa114b9286c9295fa29e1e",
+    "reference.py": "ddf5a7e0a5a93865ea906bc733dc207b7b5c07899953c6c6581018ef974e00a7"
+  },
+  "baseline_constructor_was_unchanged": true,
+  "M3": {
+    "status": "pass",
+    "runs": [
+      {
+        "program": 0,
+        "drom_first_byte": 7,
+        "instructions": 1416,
+        "dots": 128,
+        "target_tokens": 1804,
+        "generated_tokens": 1804,
+        "checked_commits": 1415,
+        "status": "pass",
+        "cached_chunked_differences": [],
+        "mismatches": 0,
+        "cached_chunked_tokens_exact": true,
+        "cached_chunked_state_exact": true,
+        "token_sha256": "28fa89e2e75fb76e5e0f768db70c8f33d8da515e6d2206545c7d86bd9671198f",
+        "program_source": "_start:\nla s1, weights\nla s2, values\nli s3, 128\nloop:\n.word 1092912139\nandi t0, s0, 7\nslli t0, t0, 2\nadd t0, t0, s2\nsw s0, 32(t0)\nlw t1, 32(t0)\nandi t2, t1, 1\nbeqz t2, even\naddi s0, s0, 1\neven:\nxor s0, s0, t1\naddi s3, s3, -1\nbnez s3, loop\nli a7, 93\nli a0, 0\necall\n.data\n.align 4\nvalues: .half -32768, 32767, -17, 29\n.space 128\n.rodata\n.align 3\nweights: .byte 7, -128, 127, -3\n"
+      },
+      {
+        "program": 0,
+        "drom_first_byte": -13,
+        "instructions": 1416,
+        "dots": 128,
+        "target_tokens": 1804,
+        "generated_tokens": 1804,
+        "checked_commits": 1415,
+        "status": "pass",
+        "cached_chunked_differences": [],
+        "mismatches": 0,
+        "cached_chunked_tokens_exact": true,
+        "cached_chunked_state_exact": true,
+        "token_sha256": "4ba406b9837457908ceff1cc8b07227a04cb99f552fd56dad8da088904dead5f",
+        "program_source": "_start:\nla s1, weights\nla s2, values\nli s3, 128\nloop:\n.word 1092912139\nandi t0, s0, 7\nslli t0, t0, 2\nadd t0, t0, s2\nsw s0, 32(t0)\nlw t1, 32(t0)\nandi t2, t1, 1\nbeqz t2, even\naddi s0, s0, 1\neven:\nxor s0, s0, t1\naddi s3, s3, -1\nbnez s3, loop\nli a7, 93\nli a0, 0\necall\n.data\n.align 4\nvalues: .half -32768, 32767, -17, 29\n.space 128\n.rodata\n.align 3\nweights: .byte -13, -128, 127, -3\n"
+      },
+      {
+        "program": 1,
+        "drom_first_byte": 7,
+        "instructions": 1416,
+        "dots": 128,
+        "target_tokens": 2332,
+        "generated_tokens": 2332,
+        "checked_commits": 1415,
+        "status": "pass",
+        "cached_chunked_differences": [],
+        "mismatches": 0,
+        "cached_chunked_tokens_exact": true,
+        "cached_chunked_state_exact": true,
+        "token_sha256": "3648a0a71855d98329dc4b3586721a63d8f2f0f60c7886661a608066172f4806",
+        "program_source": "_start:\nla s1, weights\nla s2, values\nli s3, 128\nloop:\n.word 1092912139\nandi t0, s0, 7\nslli t0, t0, 2\nadd t0, t0, s2\nsh s0, 32(t0)\nlh t1, 32(t0)\nandi t2, t1, 1\nbeqz t2, even\naddi s0, s0, 1\neven:\nxor s0, s0, t1\naddi s3, s3, -1\nbnez s3, loop\nli a7, 93\nli a0, 0\necall\n.data\n.align 4\nvalues: .half -32768, 32767, -17, 29\n.space 128\n.rodata\n.align 3\nweights: .byte 7, -128, 127, -3\n"
+      },
+      {
+        "program": 1,
+        "drom_first_byte": -13,
+        "instructions": 1416,
+        "dots": 128,
+        "target_tokens": 2316,
+        "generated_tokens": 2316,
+        "checked_commits": 1415,
+        "status": "pass",
+        "cached_chunked_differences": [],
+        "mismatches": 0,
+        "cached_chunked_tokens_exact": true,
+        "cached_chunked_state_exact": true,
+        "token_sha256": "29e78e60885c04d5b7666d97e9efd30cb9da40b7073a97c2d494e8dd4de8db24",
+        "program_source": "_start:\nla s1, weights\nla s2, values\nli s3, 128\nloop:\n.word 1092912139\nandi t0, s0, 7\nslli t0, t0, 2\nadd t0, t0, s2\nsh s0, 32(t0)\nlh t1, 32(t0)\nandi t2, t1, 1\nbeqz t2, even\naddi s0, s0, 1\neven:\nxor s0, s0, t1\naddi s3, s3, -1\nbnez s3, loop\nli a7, 93\nli a0, 0\necall\n.data\n.align 4\nvalues: .half -32768, 32767, -17, 29\n.space 128\n.rodata\n.align 3\nweights: .byte -13, -128, 127, -3\n"
+      }
+    ],
+    "controls": [
+      {
+        "control": "memory-bit",
+        "detected": true,
+        "mismatch": [
+          "token",
+          10,
+          98169,
+          98168
+        ],
+        "expected_boundary": 10,
+        "generated_tokens": 11
+      },
+      {
+        "control": "accumulator-bit",
+        "detected": true,
+        "mismatch": [
+          "token",
+          9,
+          30651,
+          30650
+        ],
+        "expected_boundary": 9,
+        "generated_tokens": 10
+      },
+      {
+        "control": "pc-bit",
+        "detected": true,
+        "mismatch": [
+          "token",
+          0,
+          32768,
+          0
+        ],
+        "expected_boundary": 0,
+        "generated_tokens": 1
+      },
+      {
+        "control": "write-gate-bit",
+        "detected": true,
+        "mismatch": [
+          "token",
+          16,
+          32768,
+          30650
+        ],
+        "expected_boundary": 16,
+        "generated_tokens": 17
+      },
+      {
+        "control": "token-family-bit",
+        "detected": true,
+        "mismatch": [
+          "token",
+          0,
+          32768,
+          0
+        ],
+        "expected_boundary": 0,
+        "generated_tokens": 1
+      }
+    ]
+  },
+  "M4": {
+    "status": "pass",
+    "runs": [
+      {
+        "guest": "ndot",
+        "status": "pass",
+        "generated_tokens": 8192,
+        "checked_commits": 6433,
+        "independent_dot_checks": 585,
+        "memory_before": {
+          "allocated_bytes": 14231158272,
+          "reserved_bytes": 14547943424,
+          "peak_allocated_bytes": 14231158272,
+          "peak_reserved_bytes": 14547943424,
+          "free_bytes": 1060372480,
+          "total_bytes": 17066033152
+        },
+        "memory": {
+          "allocated_bytes": 14422079488,
+          "reserved_bytes": 15036579840,
+          "peak_allocated_bytes": 14488735232,
+          "peak_reserved_bytes": 15061745664,
+          "free_bytes": 559153152,
+          "total_bytes": 17066033152
+        },
+        "token_sha256": "fee6f01606bb8eaa7d68e70583ecc6d939e11787ac80e824670b0608a1c77bdb",
+        "mismatches": 0,
+        "memory_after": {
+          "allocated_bytes": 14420494336,
+          "reserved_bytes": 15036579840,
+          "peak_allocated_bytes": 14488735232,
+          "peak_reserved_bytes": 15061745664,
+          "free_bytes": 559153152,
+          "total_bytes": 17066033152
+        }
+      },
+      {
+        "guest": "stories260K",
+        "status": "pass",
+        "generated_tokens": 8192,
+        "checked_commits": 5632,
+        "independent_dot_checks": 0,
+        "memory_before": {
+          "allocated_bytes": 14264712704,
+          "reserved_bytes": 15036579840,
+          "peak_allocated_bytes": 14488735232,
+          "peak_reserved_bytes": 15061745664,
+          "free_bytes": 559153152,
+          "total_bytes": 17066033152
+        },
+        "elf_sha256": "197388a66c479db1fdda53a21a69faae1a798e966341d17a2bffe033d8dd34d0",
+        "memory": {
+          "allocated_bytes": 14422079488,
+          "reserved_bytes": 15049162752,
+          "peak_allocated_bytes": 14488735232,
+          "peak_reserved_bytes": 15061745664,
+          "free_bytes": 546570240,
+          "total_bytes": 17066033152
+        },
+        "token_sha256": "cc73b4f82c12660cf964528dcfb251a5edc0af06101d597a129d542d9dbf2421",
+        "mismatches": 0,
+        "memory_after": {
+          "allocated_bytes": 14420494336,
+          "reserved_bytes": 15049162752,
+          "peak_allocated_bytes": 14488735232,
+          "peak_reserved_bytes": 15061745664,
+          "free_bytes": 546570240,
+          "total_bytes": 17066033152
+        }
+      }
+    ],
+    "memory": {
+      "allocated_bytes": 14264712704,
+      "reserved_bytes": 15049162752,
+      "peak_allocated_bytes": 14488735232,
+      "peak_reserved_bytes": 15061745664,
+      "free_bytes": 546570240,
+      "total_bytes": 17066033152
+    },
+    "error": null
+  },
+  "M5": "requires M3 and M4, aligned stories260K ndot guest, per-dot prefix and all 64 integer predictions/logit hashes/decoded bytes/KV clips/final architectural state",
+  "fixed": {
+    "source": "stock-cache-fixed.json",
+    "kind": "accelerator",
+    "generated_tokens": 1804,
+    "checked_commits": 1415,
+    "token_sha256": "28fa89e2e75fb76e5e0f768db70c8f33d8da515e6d2206545c7d86bd9671198f",
+    "all_predictions_exact": true,
+    "chunk_sizes": {
+      "1": {
+        "comparisons": 1804,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 1,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "2": {
+        "comparisons": 902,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 2,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "4": {
+        "comparisons": 451,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 4,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "8": {
+        "comparisons": 226,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 8,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "16": {
+        "comparisons": 113,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 16,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      },
+      "64": {
+        "comparisons": 29,
+        "boundaries_with_differences": 0,
+        "first_difference": null,
+        "final": {
+          "chunk_size": 64,
+          "consumed_inputs": 1804,
+          "differences": [],
+          "numerical_differences": 0
+        },
+        "max_numerical_differences": 0,
+        "max_absolute_difference": 0
+      }
+    },
+    "prefix_refinement": [
+      {
+        "consumed_inputs": 1,
+        "last_input": 230322,
+        "last_input_family": [
+          "GO",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 2,
+        "last_input": 0,
+        "last_input_family": [
+          "V",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 16,
+        "last_input": 66048,
+        "last_input_family": [
+          "F1",
+          512
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 24,
+        "last_input": 98313,
+        "last_input_family": [
+          "J",
+          5
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 20,
+        "last_input": 32768,
+        "last_input_family": [
+          "F0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 18,
+        "last_input": 30650,
+        "last_input_family": [
+          "V",
+          30650
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 17,
+        "last_input": 230317,
+        "last_input_family": [
+          "ST0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 19,
+        "last_input": 98168,
+        "last_input_family": [
+          "F1",
+          32632
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 21,
+        "last_input": 98322,
+        "last_input_family": [
+          "J",
+          14
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 22,
+        "last_input": 32768,
+        "last_input_family": [
+          "F0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 23,
+        "last_input": 32895,
+        "last_input_family": [
+          "F0",
+          127
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 25,
+        "last_input": 30650,
+        "last_input_family": [
+          "V",
+          30650
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 26,
+        "last_input": 98168,
+        "last_input_family": [
+          "F1",
+          32632
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 27,
+        "last_input": 32770,
+        "last_input_family": [
+          "F0",
+          2
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 28,
+        "last_input": 32776,
+        "last_input_family": [
+          "F0",
+          8
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 29,
+        "last_input": 264,
+        "last_input_family": [
+          "V",
+          264
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 30,
+        "last_input": 66048,
+        "last_input_family": [
+          "F1",
+          512
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 31,
+        "last_input": 230317,
+        "last_input_family": [
+          "ST0",
+          0
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      },
+      {
+        "consumed_inputs": 32,
+        "last_input": 30650,
+        "last_input_family": [
+          "V",
+          30650
+        ],
+        "layer": 0,
+        "coordinates": [],
+        "cached": [],
+        "chunked": [],
+        "cached_bits": [],
+        "chunked_bits": []
+      }
+    ]
+  },
+  "counter_encoding": "181*n; beta=2^-44; write=181*2^44; reference=181*2^17",
+  "deviation": "opt-in stock-only counter; legacy IR evaluator and compact backend do not support it"
+}

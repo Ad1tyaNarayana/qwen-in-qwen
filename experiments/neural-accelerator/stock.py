@@ -5,7 +5,7 @@ import inspect
 import torch
 
 
-def build_model(circuit, device):
+def build_model(circuit, device, memory_guard=None):
     from transformers import GenerationConfig, Qwen3_5ForCausalLM, Qwen3_5TextConfig
     from transformers.models.qwen3_5.modeling_qwen3_5 import Qwen3_5TextRotaryEmbedding
     from chipformer.q35 import emit
@@ -39,6 +39,8 @@ def build_model(circuit, device):
     loaded = set()
     for weights in namespace['iter_layers'](circuit, layout, config.to_dict(), 0,
                                            'model.', None, set(circuit.keep)):
+        if memory_guard:
+            memory_guard(sum(v.numel()*2 for v in weights.values()))
         weights = {k: v.to(dtype=torch.bfloat16, device=device) for k, v in weights.items()}
         _, unexpected = model.load_state_dict(weights, strict=False, assign=True)
         assert not unexpected
@@ -49,6 +51,8 @@ def build_model(circuit, device):
     for dim in circuit.keep:
         norm[layout.dim(dim)] = CODE_GAIN
     emit.check_bf16('final norm', norm)
+    if memory_guard:
+        memory_guard((vocabulary * layout.hidden + layout.hidden) * 2)
     weights = {'model.embed_tokens.weight': embedding_matrix(circuit, layout, vocabulary).to(dtype=torch.bfloat16, device=device),
                'model.norm.weight': norm.to(dtype=torch.bfloat16, device=device)}
     _, unexpected = model.load_state_dict(weights, strict=False, assign=True)
@@ -60,6 +64,8 @@ def build_model(circuit, device):
         assert name.startswith(f'model.layers.{count}.')
         parent, leaf = name.rsplit('.', 1)
         original = getattr(model.get_submodule(parent), leaf)
+        if memory_guard:
+            memory_guard(original.numel() * 2)
         setattr(model.get_submodule(parent), leaf, torch.nn.Parameter(
             torch.zeros(original.shape, dtype=torch.bfloat16, device=device), requires_grad=False))
     model.tie_weights()
