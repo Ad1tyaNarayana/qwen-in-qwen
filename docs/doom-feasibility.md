@@ -1,10 +1,12 @@
-# Doom does not fit the released Qwenputer memory map
+# Stock Doomgeneric exceeds the released Qwenputer memory map
 
 The goal is to run the original Doom engine on Qwenputer and leave an open source result. The released machine fails the writable memory requirement before a platform port can run. No Doom game ran during this audit. Game data was unnecessary for this source audit and is not included in the repository.
 
 Subsequent work verified a standalone [64 KiB RAM extension](../experiments/ram64/README.md) through stock-model generation. It does not resolve the engine's larger memory requirement. A Doom 1.9 shareware IWAD has since been obtained locally for the port; it remains excluded from the repository.
 
 [GZDoom](https://github.com/ZDoom/gzdoom) is another open-source engine port, with an OpenGL renderer and substantial scripting support. We chose Doomgeneric for this experiment because its small platform callback interface is a narrower porting target. That is an engineering choice, not a demonstrated GZDoom compatibility result. Both still need game data; the [original id Software source release](https://github.com/id-Software/DOOM) also identifies that requirement.
+
+The user subsequently identified [the native Aspire PIXO Doom port](https://github.com/atc1441/Vape_DOOM_ScreenShare/tree/main/PixoAspire_DOOM_Port). It builds on [DMC100-Doom](https://github.com/ArturBieniek4/DMC100-Doom), which reports a 32 KiB RAM target using a strip renderer and streamed map records. That architecture avoids the full-framebuffer and large-zone assumptions in this stock Doomgeneric audit. It is now a candidate for a smaller Qwenputer port. The board's flash and display drivers still need replacement, and the converted game data must fit an expanded compiled memory region; we have not yet executed that engine through the circuit.
 
 The audit pins [Qwenputer ca13310e2f9f788d1dd3feeea8213c1b0c23913c](https://github.com/divagr18/qwenputer/tree/ca13310e2f9f788d1dd3feeea8213c1b0c23913c) and [Doomgeneric e257a09527062bfb986b6e5e0780839b6cbd5b71](https://github.com/ozkl/doomgeneric/tree/e257a09527062bfb986b6e5e0780839b6cbd5b71). The local checkout contents and source hashes are recorded in [`artifacts/doom/audit.json`](../artifacts/doom/audit.json).
 
@@ -26,11 +28,11 @@ The optional crosscompile successfully compiled all 80 engine translation units 
 
 | Object sections | Bytes |
 | --- | ---: |
-| Executable allocated sections | 163,408 |
-| Read-only allocated sections | 136,137 |
+| Executable allocated sections | 215,444 |
+| Read-only allocated sections | 136,105 |
 | Writable allocated sections, including BSS | 297,309 |
 
-These sums include unused engine functions and data. A final link with garbage collection can remove some of them, while libc, startup code, and a platform backend can add others. The sums do not establish a live code or static data requirement. A relocatable combined-link attempt stopped because this Zig driver rejects linker `-r`. No runnable ELF or final linker map was produced. The independent source framebuffer calculation is sufficient for the no-go.
+The target explicitly uses `generic_rv32+m+zba`; all object ELF flags are checked to exclude compressed instructions and incompatible ABIs. An earlier audit used `baseline_rv32`, which enabled compressed instructions and understated code size. The corrected objects above supersede that measurement. These sums include unused engine functions and data. A final link with garbage collection can remove some of them, while libc, startup code, and a platform backend can add others. The sums do not establish a live code or static data requirement. A relocatable combined-link attempt stopped because this Zig driver rejects linker `-r`. No runnable ELF or final linker map was produced. The independent source framebuffer calculation is sufficient for the no-go.
 
 The runtime API is another port requirement. Qwenputer `env/rt.h` and `ref.py` implement byte output through ecall 1 and process exit through ecall 93. Doomgeneric needs `DG_Init`, `DG_DrawFrame`, `DG_SleepMs`, `DG_GetTicksMs`, `DG_GetKey`, and `DG_SetWindowTitle`. Its default WAD reader uses `fopen`, `fseek`, and `fread`. The successful object compilation does not supply those APIs or a heap allocator.
 

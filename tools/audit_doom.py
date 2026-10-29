@@ -84,7 +84,7 @@ if args.zig:
     object_names = re.search(r"^SRC_DOOM = (.+)$", makefile, re.M)[1].split()
     object_names.remove("doomgeneric_xlib.o")
     cc = [str(args.zig.resolve()), "cc", "-target", "riscv32-linux-musl",
-          "-mcpu=baseline_rv32+m+zba", "-mabi=ilp32", "-Os", "-fno-pic",
+          "-mcpu=generic_rv32+m+zba", "-mabi=ilp32", "-Os", "-fno-pic",
           "-ffunction-sections", "-fdata-sections", "-DNORMALUNIX", "-DLINUX",
           "-DSNDSERV", "-D_DEFAULT_SOURCE", "-Wno-implicit-function-declaration"]
     commands = []
@@ -95,6 +95,9 @@ if args.zig:
             command = cc + ["-c", str(source / name.replace(".o", ".c")), "-o", str(obj)]
             commands.append(command)
             subprocess.run(command, stdout=log, stderr=log, check=True)
+            flags = struct.unpack_from("<I", obj.read_bytes(), 36)[0]
+            if flags & 0xF:
+                raise ValueError(f"Unsupported RISC-V ISA/ABI flags in {obj.name}: {flags:#x}")
             objects.append(obj)
     (build / "commands.json").write_text(json.dumps(commands, indent=2) + "\n")
     sections = [dict(s, object=obj.name) for obj in objects for s in elf_sections(obj)]

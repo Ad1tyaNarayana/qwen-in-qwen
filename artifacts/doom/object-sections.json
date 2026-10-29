@@ -17,7 +17,7 @@
   },
   {
     "name": ".text.I_InitTimidityConfig",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -49,7 +49,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -129,7 +129,7 @@
   },
   {
     "name": ".text.AM_getIslope",
-    "bytes": 120,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -145,7 +145,7 @@
   },
   {
     "name": ".text.AM_activateNewScale",
-    "bytes": 146,
+    "bytes": 224,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -161,7 +161,7 @@
   },
   {
     "name": ".text.AM_saveScaleAndLoc",
-    "bytes": 26,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -177,7 +177,7 @@
   },
   {
     "name": ".text.AM_restoreScaleAndLoc",
-    "bytes": 136,
+    "bytes": 200,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -193,7 +193,7 @@
   },
   {
     "name": ".text.AM_addMark",
-    "bytes": 78,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -209,7 +209,7 @@
   },
   {
     "name": ".text.AM_findMinMaxBoundaries",
-    "bytes": 270,
+    "bytes": 352,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -225,7 +225,7 @@
   },
   {
     "name": ".text.AM_changeWindowLoc",
-    "bytes": 126,
+    "bytes": 176,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -241,7 +241,7 @@
   },
   {
     "name": ".text.AM_initVariables",
-    "bytes": 262,
+    "bytes": 368,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -257,7 +257,7 @@
   },
   {
     "name": ".text.AM_loadPics",
-    "bytes": 88,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -273,7 +273,7 @@
   },
   {
     "name": ".text.AM_unloadPics",
-    "bytes": 70,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -289,7 +289,7 @@
   },
   {
     "name": ".text.AM_clearMarks",
-    "bytes": 32,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -305,7 +305,7 @@
   },
   {
     "name": ".text.AM_LevelInit",
-    "bytes": 112,
+    "bytes": 148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -321,7 +321,7 @@
   },
   {
     "name": ".text.AM_Stop",
-    "bytes": 54,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -337,7 +337,7 @@
   },
   {
     "name": ".text.AM_Start",
-    "bytes": 140,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -353,7 +353,7 @@
   },
   {
     "name": ".text.AM_minOutWindowScale",
-    "bytes": 50,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -369,7 +369,7 @@
   },
   {
     "name": ".text.AM_maxOutWindowScale",
-    "bytes": 50,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -385,7 +385,7 @@
   },
   {
     "name": ".text.AM_Responder",
-    "bytes": 866,
+    "bytes": 1012,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -401,7 +401,7 @@
   },
   {
     "name": ".text.AM_changeWindowScale",
-    "bytes": 102,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -417,7 +417,7 @@
   },
   {
     "name": ".text.AM_doFollowPlayer",
-    "bytes": 162,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -433,7 +433,7 @@
   },
   {
     "name": ".text.AM_updateLightLev",
-    "bytes": 86,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -449,7 +449,7 @@
   },
   {
     "name": ".text.AM_Ticker",
-    "bytes": 88,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -465,7 +465,7 @@
   },
   {
     "name": ".text.AM_clearFB",
-    "bytes": 52,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -481,7 +481,7 @@
   },
   {
     "name": ".text.AM_clipMline",
-    "bytes": 672,
+    "bytes": 892,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -497,7 +497,7 @@
   },
   {
     "name": ".text.AM_drawFline",
-    "bytes": 304,
+    "bytes": 348,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -513,7 +513,7 @@
   },
   {
     "name": ".text.AM_drawMline",
-    "bytes": 58,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -529,7 +529,7 @@
   },
   {
     "name": ".text.AM_drawGrid",
-    "bytes": 234,
+    "bytes": 332,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -545,7 +545,7 @@
   },
   {
     "name": ".text.AM_drawWalls",
-    "bytes": 256,
+    "bytes": 360,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -561,7 +561,7 @@
   },
   {
     "name": ".text.AM_rotate",
-    "bytes": 156,
+    "bytes": 220,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -577,7 +577,7 @@
   },
   {
     "name": ".text.AM_drawLineCharacter",
-    "bytes": 272,
+    "bytes": 420,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -593,7 +593,7 @@
   },
   {
     "name": ".text.AM_drawPlayers",
-    "bytes": 266,
+    "bytes": 384,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -609,7 +609,7 @@
   },
   {
     "name": ".text.AM_drawThings",
-    "bytes": 134,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -625,7 +625,7 @@
   },
   {
     "name": ".text.AM_drawMarks",
-    "bytes": 214,
+    "bytes": 292,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -641,7 +641,7 @@
   },
   {
     "name": ".text.AM_drawCrosshair",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -657,7 +657,7 @@
   },
   {
     "name": ".text.AM_Drawer",
-    "bytes": 216,
+    "bytes": 264,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -753,7 +753,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -841,7 +841,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -953,7 +953,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1065,7 +1065,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1129,7 +1129,7 @@
   },
   {
     "name": ".text.D_PostEvent",
-    "bytes": 68,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1145,7 +1145,7 @@
   },
   {
     "name": ".text.D_PopEvent",
-    "bytes": 52,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1177,7 +1177,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1273,7 +1273,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1337,7 +1337,7 @@
   },
   {
     "name": ".text.D_FindWADByName",
-    "bytes": 220,
+    "bytes": 324,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1353,7 +1353,7 @@
   },
   {
     "name": ".text.DirIsFile",
-    "bytes": 90,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1369,7 +1369,7 @@
   },
   {
     "name": ".text.D_TryFindWADByName",
-    "bytes": 30,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1385,7 +1385,7 @@
   },
   {
     "name": ".text.D_FindIWAD",
-    "bytes": 494,
+    "bytes": 668,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1393,7 +1393,7 @@
   },
   {
     "name": ".rela.text.D_FindIWAD",
-    "bytes": 504,
+    "bytes": 456,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1401,7 +1401,7 @@
   },
   {
     "name": ".text.D_FindAllIWADs",
-    "bytes": 106,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1417,7 +1417,7 @@
   },
   {
     "name": ".text.D_SaveGameIWADName",
-    "bytes": 40,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1433,7 +1433,7 @@
   },
   {
     "name": ".text.D_SuggestIWADName",
-    "bytes": 48,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1449,7 +1449,7 @@
   },
   {
     "name": ".text.D_SuggestGameName",
-    "bytes": 54,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1505,7 +1505,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1585,7 +1585,7 @@
   },
   {
     "name": ".text.NetUpdate",
-    "bytes": 178,
+    "bytes": 232,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1601,7 +1601,7 @@
   },
   {
     "name": ".text.BuildNewTic",
-    "bytes": 220,
+    "bytes": 312,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1617,7 +1617,7 @@
   },
   {
     "name": ".text.D_ReceiveTic",
-    "bytes": 158,
+    "bytes": 220,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1633,7 +1633,7 @@
   },
   {
     "name": ".text.D_StartGameLoop",
-    "bytes": 86,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1649,7 +1649,7 @@
   },
   {
     "name": ".text.D_StartNetGame",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1665,7 +1665,7 @@
   },
   {
     "name": ".text.D_InitNetGame",
-    "bytes": 46,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1681,7 +1681,7 @@
   },
   {
     "name": ".text.D_QuitNetGame",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1689,7 +1689,7 @@
   },
   {
     "name": ".text.TryRunTics",
-    "bytes": 722,
+    "bytes": 940,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1705,7 +1705,7 @@
   },
   {
     "name": ".text.D_RegisterLoopCallbacks",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1753,7 +1753,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -1761,7 +1761,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 340,
+    "bytes": 344,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -1833,7 +1833,7 @@
   },
   {
     "name": ".text.D_ProcessEvents",
-    "bytes": 72,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1849,7 +1849,7 @@
   },
   {
     "name": ".text.D_Display",
-    "bytes": 924,
+    "bytes": 1136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1865,7 +1865,7 @@
   },
   {
     "name": ".text.D_PageDrawer",
-    "bytes": 40,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1881,7 +1881,7 @@
   },
   {
     "name": ".text.D_BindVariables",
-    "bytes": 428,
+    "bytes": 484,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1897,7 +1897,7 @@
   },
   {
     "name": ".text.D_GrabMouseCallback",
-    "bytes": 68,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1913,7 +1913,7 @@
   },
   {
     "name": ".text.doomgeneric_Tick",
-    "bytes": 82,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1929,7 +1929,7 @@
   },
   {
     "name": ".text.D_DoomLoop",
-    "bytes": 218,
+    "bytes": 240,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1945,7 +1945,7 @@
   },
   {
     "name": ".text.D_PageTicker",
-    "bytes": 28,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1961,7 +1961,7 @@
   },
   {
     "name": ".text.D_AdvanceDemo",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -1977,7 +1977,7 @@
   },
   {
     "name": ".text.D_DoAdvanceDemo",
-    "bytes": 452,
+    "bytes": 560,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2009,7 +2009,7 @@
   },
   {
     "name": ".text.D_StartTitle",
-    "bytes": 26,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2025,7 +2025,7 @@
   },
   {
     "name": ".text.D_IdentifyVersion",
-    "bytes": 408,
+    "bytes": 508,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2041,7 +2041,7 @@
   },
   {
     "name": ".text.D_SetGameDescription",
-    "bytes": 214,
+    "bytes": 264,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2057,7 +2057,7 @@
   },
   {
     "name": ".text.PrintDehackedBanners",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2065,7 +2065,7 @@
   },
   {
     "name": ".text.PrintGameVersion",
-    "bytes": 52,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2081,7 +2081,7 @@
   },
   {
     "name": ".text.D_DoomMain",
-    "bytes": 2690,
+    "bytes": 3020,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2097,7 +2097,7 @@
   },
   {
     "name": ".text.D_Endoom",
-    "bytes": 96,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2233,7 +2233,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -2313,7 +2313,7 @@
   },
   {
     "name": ".text.D_ValidGameMode",
-    "bytes": 38,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2329,7 +2329,7 @@
   },
   {
     "name": ".text.D_ValidEpisodeMap",
-    "bytes": 114,
+    "bytes": 148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2345,7 +2345,7 @@
   },
   {
     "name": ".text.D_GetNumEpisodes",
-    "bytes": 52,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2361,7 +2361,7 @@
   },
   {
     "name": ".text.D_ValidGameVersion",
-    "bytes": 74,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2377,7 +2377,7 @@
   },
   {
     "name": ".text.D_IsEpisodeMap",
-    "bytes": 26,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2393,7 +2393,7 @@
   },
   {
     "name": ".text.D_GameMissionString",
-    "bytes": 32,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2465,7 +2465,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -2545,7 +2545,7 @@
   },
   {
     "name": ".text.D_ConnectNetGame",
-    "bytes": 236,
+    "bytes": 284,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2561,7 +2561,7 @@
   },
   {
     "name": ".text.D_CheckNetGame",
-    "bytes": 566,
+    "bytes": 692,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2577,7 +2577,7 @@
   },
   {
     "name": ".text.RunTic",
-    "bytes": 236,
+    "bytes": 332,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2633,7 +2633,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -2713,7 +2713,7 @@
   },
   {
     "name": ".text.F_StartFinale",
-    "bytes": 212,
+    "bytes": 260,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2729,7 +2729,7 @@
   },
   {
     "name": ".text.F_Responder",
-    "bytes": 26,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2745,7 +2745,7 @@
   },
   {
     "name": ".text.F_CastResponder",
-    "bytes": 128,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2761,7 +2761,7 @@
   },
   {
     "name": ".text.F_Ticker",
-    "bytes": 252,
+    "bytes": 324,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2777,7 +2777,7 @@
   },
   {
     "name": ".text.F_StartCast",
-    "bytes": 110,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2793,7 +2793,7 @@
   },
   {
     "name": ".text.F_CastTicker",
-    "bytes": 866,
+    "bytes": 1036,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2809,7 +2809,7 @@
   },
   {
     "name": ".text.F_TextWrite",
-    "bytes": 290,
+    "bytes": 392,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2825,7 +2825,7 @@
   },
   {
     "name": ".text.F_CastPrint",
-    "bytes": 206,
+    "bytes": 284,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2841,7 +2841,7 @@
   },
   {
     "name": ".text.F_CastDrawer",
-    "bytes": 176,
+    "bytes": 224,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2857,7 +2857,7 @@
   },
   {
     "name": ".text.F_DrawPatchCol",
-    "bytes": 122,
+    "bytes": 156,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2873,7 +2873,7 @@
   },
   {
     "name": ".text.F_BunnyScroll",
-    "bytes": 366,
+    "bytes": 464,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2889,7 +2889,7 @@
   },
   {
     "name": ".text.F_Drawer",
-    "bytes": 170,
+    "bytes": 212,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -2961,7 +2961,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -3041,7 +3041,7 @@
   },
   {
     "name": ".text.wipe_shittyColMajorXform",
-    "bytes": 150,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3057,7 +3057,7 @@
   },
   {
     "name": ".text.wipe_initColorXForm",
-    "bytes": 40,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3073,7 +3073,7 @@
   },
   {
     "name": ".text.wipe_doColorXForm",
-    "bytes": 82,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3089,7 +3089,7 @@
   },
   {
     "name": ".text.wipe_exitColorXForm",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3097,7 +3097,7 @@
   },
   {
     "name": ".text.wipe_initMelt",
-    "bytes": 232,
+    "bytes": 332,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3113,7 +3113,7 @@
   },
   {
     "name": ".text.wipe_doMelt",
-    "bytes": 290,
+    "bytes": 392,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3129,7 +3129,7 @@
   },
   {
     "name": ".text.wipe_exitMelt",
-    "bytes": 54,
+    "bytes": 76,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3145,7 +3145,7 @@
   },
   {
     "name": ".text.wipe_StartScreen",
-    "bytes": 46,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3161,7 +3161,7 @@
   },
   {
     "name": ".text.wipe_EndScreen",
-    "bytes": 94,
+    "bytes": 152,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3177,7 +3177,7 @@
   },
   {
     "name": ".text.wipe_ScreenWipe",
-    "bytes": 172,
+    "bytes": 260,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3225,7 +3225,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -3233,7 +3233,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 388,
+    "bytes": 384,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -3305,7 +3305,7 @@
   },
   {
     "name": ".text.G_CmdChecksum",
-    "bytes": 12,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3313,7 +3313,7 @@
   },
   {
     "name": ".text.G_BuildTiccmd",
-    "bytes": 1684,
+    "bytes": 2056,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3329,7 +3329,7 @@
   },
   {
     "name": ".text.G_DoLoadLevel",
-    "bytes": 380,
+    "bytes": 456,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3345,7 +3345,7 @@
   },
   {
     "name": ".text.G_Responder",
-    "bytes": 682,
+    "bytes": 864,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3361,7 +3361,7 @@
   },
   {
     "name": ".text.G_Ticker",
-    "bytes": 1016,
+    "bytes": 1364,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3393,7 +3393,7 @@
   },
   {
     "name": ".text.G_DoReborn",
-    "bytes": 220,
+    "bytes": 328,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3409,7 +3409,7 @@
   },
   {
     "name": ".text.G_DoNewGame",
-    "bytes": 102,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3425,7 +3425,7 @@
   },
   {
     "name": ".text.G_DoLoadGame",
-    "bytes": 244,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3441,7 +3441,7 @@
   },
   {
     "name": ".text.G_DoSaveGame",
-    "bytes": 398,
+    "bytes": 468,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3457,7 +3457,7 @@
   },
   {
     "name": ".text.G_DoPlayDemo",
-    "bytes": 472,
+    "bytes": 556,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3473,7 +3473,7 @@
   },
   {
     "name": ".text.G_DoCompleted",
-    "bytes": 696,
+    "bytes": 876,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3489,7 +3489,7 @@
   },
   {
     "name": ".text.G_DoWorldDone",
-    "bytes": 52,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3505,7 +3505,7 @@
   },
   {
     "name": ".text.G_ReadDemoTiccmd",
-    "bytes": 132,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3521,7 +3521,7 @@
   },
   {
     "name": ".text.G_WriteDemoTiccmd",
-    "bytes": 310,
+    "bytes": 380,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3537,7 +3537,7 @@
   },
   {
     "name": ".text.G_InitPlayer",
-    "bytes": 182,
+    "bytes": 264,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3553,7 +3553,7 @@
   },
   {
     "name": ".text.G_PlayerReborn",
-    "bytes": 182,
+    "bytes": 264,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3569,7 +3569,7 @@
   },
   {
     "name": ".text.G_PlayerFinishLevel",
-    "bytes": 80,
+    "bytes": 108,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3585,7 +3585,7 @@
   },
   {
     "name": ".text.G_CheckSpot",
-    "bytes": 512,
+    "bytes": 680,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3617,7 +3617,7 @@
   },
   {
     "name": ".text.G_DeathMatchSpawnPlayer",
-    "bytes": 174,
+    "bytes": 224,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3633,7 +3633,7 @@
   },
   {
     "name": ".text.G_ScreenShot",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3649,7 +3649,7 @@
   },
   {
     "name": ".text.G_ExitLevel",
-    "bytes": 18,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3665,7 +3665,7 @@
   },
   {
     "name": ".text.G_SecretExitLevel",
-    "bytes": 66,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3681,7 +3681,7 @@
   },
   {
     "name": ".text.G_WorldDone",
-    "bytes": 104,
+    "bytes": 136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3697,7 +3697,7 @@
   },
   {
     "name": ".text.G_LoadGame",
-    "bytes": 44,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3713,7 +3713,7 @@
   },
   {
     "name": ".text.G_InitNew",
-    "bytes": 506,
+    "bytes": 644,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3729,7 +3729,7 @@
   },
   {
     "name": ".text.G_SaveGame",
-    "bytes": 44,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3745,7 +3745,7 @@
   },
   {
     "name": ".text.G_DeferedInitNew",
-    "bytes": 26,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3761,7 +3761,7 @@
   },
   {
     "name": ".text.G_CheckDemoStatus",
-    "bytes": 294,
+    "bytes": 400,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3769,7 +3769,7 @@
   },
   {
     "name": ".rela.text.G_CheckDemoStatus",
-    "bytes": 264,
+    "bytes": 324,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -3777,7 +3777,7 @@
   },
   {
     "name": ".text.G_RecordDemo",
-    "bytes": 172,
+    "bytes": 228,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3793,7 +3793,7 @@
   },
   {
     "name": ".text.G_VanillaVersionCode",
-    "bytes": 90,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3809,7 +3809,7 @@
   },
   {
     "name": ".text.G_BeginRecording",
-    "bytes": 294,
+    "bytes": 328,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3825,7 +3825,7 @@
   },
   {
     "name": ".text.G_DeferedPlayDemo",
-    "bytes": 18,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -3841,7 +3841,7 @@
   },
   {
     "name": ".text.G_TimeDemo",
-    "bytes": 66,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4001,7 +4001,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4041,7 +4041,7 @@
   },
   {
     "name": ".symtab",
-    "bytes": 7392,
+    "bytes": 7456,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4057,7 +4057,7 @@
   },
   {
     "name": ".strtab",
-    "bytes": 4156,
+    "bytes": 4200,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4081,7 +4081,7 @@
   },
   {
     "name": ".text.HUlib_init",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4089,7 +4089,7 @@
   },
   {
     "name": ".text.HUlib_clearTextLine",
-    "bytes": 14,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4097,7 +4097,7 @@
   },
   {
     "name": ".text.HUlib_initTextLine",
-    "bytes": 22,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4105,7 +4105,7 @@
   },
   {
     "name": ".text.HUlib_addCharToTextLine",
-    "bytes": 46,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4113,7 +4113,7 @@
   },
   {
     "name": ".text.HUlib_delCharFromTextLine",
-    "bytes": 26,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4121,7 +4121,7 @@
   },
   {
     "name": ".text.HUlib_drawTextLine",
-    "bytes": 288,
+    "bytes": 408,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4137,7 +4137,7 @@
   },
   {
     "name": ".text.HUlib_eraseTextLine",
-    "bytes": 210,
+    "bytes": 288,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4153,7 +4153,7 @@
   },
   {
     "name": ".text.HUlib_initSText",
-    "bytes": 86,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4161,7 +4161,7 @@
   },
   {
     "name": ".text.HUlib_addLineToSText",
-    "bytes": 84,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4169,7 +4169,7 @@
   },
   {
     "name": ".text.HUlib_addMessageToSText",
-    "bytes": 180,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4185,7 +4185,7 @@
   },
   {
     "name": ".text.HUlib_drawSText",
-    "bytes": 102,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4201,7 +4201,7 @@
   },
   {
     "name": ".text.HUlib_eraseSText",
-    "bytes": 94,
+    "bytes": 140,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4217,7 +4217,7 @@
   },
   {
     "name": ".text.HUlib_initIText",
-    "bytes": 34,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4225,7 +4225,7 @@
   },
   {
     "name": ".text.HUlib_delCharFromIText",
-    "bytes": 26,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4233,7 +4233,7 @@
   },
   {
     "name": ".text.HUlib_eraseLineFromIText",
-    "bytes": 38,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4241,7 +4241,7 @@
   },
   {
     "name": ".text.HUlib_resetIText",
-    "bytes": 18,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4249,7 +4249,7 @@
   },
   {
     "name": ".text.HUlib_addPrefixToIText",
-    "bytes": 62,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4257,7 +4257,7 @@
   },
   {
     "name": ".text.HUlib_keyInIText",
-    "bytes": 126,
+    "bytes": 180,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4273,7 +4273,7 @@
   },
   {
     "name": ".text.HUlib_drawIText",
-    "bytes": 18,
+    "bytes": 28,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4289,7 +4289,7 @@
   },
   {
     "name": ".text.HUlib_eraseIText",
-    "bytes": 46,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4313,7 +4313,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4393,7 +4393,7 @@
   },
   {
     "name": ".text.HU_Init",
-    "bytes": 96,
+    "bytes": 136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4409,7 +4409,7 @@
   },
   {
     "name": ".text.HU_Stop",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4425,7 +4425,7 @@
   },
   {
     "name": ".text.HU_Start",
-    "bytes": 512,
+    "bytes": 620,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4441,7 +4441,7 @@
   },
   {
     "name": ".text.HU_Drawer",
-    "bytes": 76,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4457,7 +4457,7 @@
   },
   {
     "name": ".text.HU_Erase",
-    "bytes": 56,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4473,7 +4473,7 @@
   },
   {
     "name": ".text.HU_Ticker",
-    "bytes": 426,
+    "bytes": 544,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4489,7 +4489,7 @@
   },
   {
     "name": ".text.HU_queueChatChar",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4505,7 +4505,7 @@
   },
   {
     "name": ".text.HU_dequeueChatChar",
-    "bytes": 38,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4521,7 +4521,7 @@
   },
   {
     "name": ".text.HU_Responder",
-    "bytes": 788,
+    "bytes": 976,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4617,7 +4617,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4753,7 +4753,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4817,7 +4817,7 @@
   },
   {
     "name": ".text.I_CDMusInit",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4825,7 +4825,7 @@
   },
   {
     "name": ".text.I_CDMusPrintStartup",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4833,7 +4833,7 @@
   },
   {
     "name": ".text.I_CDMusPlay",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4841,7 +4841,7 @@
   },
   {
     "name": ".text.I_CDMusStop",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4849,7 +4849,7 @@
   },
   {
     "name": ".text.I_CDMusResume",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4857,7 +4857,7 @@
   },
   {
     "name": ".text.I_CDMusSetVolume",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4873,7 +4873,7 @@
   },
   {
     "name": ".text.I_CDMusFirstTrack",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4881,7 +4881,7 @@
   },
   {
     "name": ".text.I_CDMusLastTrack",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4889,7 +4889,7 @@
   },
   {
     "name": ".text.I_CDMusTrackLength",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -4913,7 +4913,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -4993,7 +4993,7 @@
   },
   {
     "name": ".text.I_Endoom",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5009,7 +5009,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -5089,7 +5089,7 @@
   },
   {
     "name": ".text.I_ShutdownJoystick",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5097,7 +5097,7 @@
   },
   {
     "name": ".text.I_InitJoystick",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5105,7 +5105,7 @@
   },
   {
     "name": ".text.I_UpdateJoystick",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5113,7 +5113,7 @@
   },
   {
     "name": ".text.I_BindJoystickVariables",
-    "bytes": 250,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5161,7 +5161,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -5241,7 +5241,7 @@
   },
   {
     "name": ".text.I_InitScale",
-    "bytes": 16,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5257,7 +5257,7 @@
   },
   {
     "name": ".text.I_Scale1x",
-    "bytes": 104,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5273,7 +5273,7 @@
   },
   {
     "name": ".text.I_Scale2x",
-    "bytes": 144,
+    "bytes": 192,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5289,7 +5289,7 @@
   },
   {
     "name": ".text.I_Scale3x",
-    "bytes": 194,
+    "bytes": 244,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5305,7 +5305,7 @@
   },
   {
     "name": ".text.I_Scale4x",
-    "bytes": 222,
+    "bytes": 268,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5321,7 +5321,7 @@
   },
   {
     "name": ".text.I_Scale5x",
-    "bytes": 282,
+    "bytes": 332,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5337,7 +5337,7 @@
   },
   {
     "name": ".text.I_ResetScaleTables",
-    "bytes": 142,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5353,7 +5353,7 @@
   },
   {
     "name": ".text.GenerateStretchTable",
-    "bytes": 282,
+    "bytes": 384,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5369,7 +5369,7 @@
   },
   {
     "name": ".text.I_InitStretchTables",
-    "bytes": 154,
+    "bytes": 204,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5385,7 +5385,7 @@
   },
   {
     "name": ".text.I_Stretch1x",
-    "bytes": 352,
+    "bytes": 496,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5401,7 +5401,7 @@
   },
   {
     "name": ".text.I_Stretch2x",
-    "bytes": 628,
+    "bytes": 828,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5417,7 +5417,7 @@
   },
   {
     "name": ".text.I_Stretch3x",
-    "bytes": 948,
+    "bytes": 1216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5433,7 +5433,7 @@
   },
   {
     "name": ".text.I_Stretch4x",
-    "bytes": 1296,
+    "bytes": 1636,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5449,7 +5449,7 @@
   },
   {
     "name": ".text.I_Stretch5x",
-    "bytes": 532,
+    "bytes": 656,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5465,7 +5465,7 @@
   },
   {
     "name": ".text.I_Squash1x",
-    "bytes": 178,
+    "bytes": 232,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5481,7 +5481,7 @@
   },
   {
     "name": ".text.I_Squash2x",
-    "bytes": 254,
+    "bytes": 312,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5497,7 +5497,7 @@
   },
   {
     "name": ".text.I_InitSquashTable",
-    "bytes": 100,
+    "bytes": 136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5513,7 +5513,7 @@
   },
   {
     "name": ".text.I_Squash3x",
-    "bytes": 202,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5529,7 +5529,7 @@
   },
   {
     "name": ".text.I_Squash4x",
-    "bytes": 500,
+    "bytes": 576,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5545,7 +5545,7 @@
   },
   {
     "name": ".text.I_Squash5x",
-    "bytes": 236,
+    "bytes": 288,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5825,7 +5825,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -5833,7 +5833,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 820,
+    "bytes": 824,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -5905,7 +5905,7 @@
   },
   {
     "name": ".text.I_InitSound",
-    "bytes": 56,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5921,7 +5921,7 @@
   },
   {
     "name": ".text.I_ShutdownSound",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5929,7 +5929,7 @@
   },
   {
     "name": ".text.I_GetSfxLumpNum",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5937,7 +5937,7 @@
   },
   {
     "name": ".text.I_UpdateSound",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5945,7 +5945,7 @@
   },
   {
     "name": ".text.I_UpdateSoundParams",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5953,7 +5953,7 @@
   },
   {
     "name": ".text.I_StartSound",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5961,7 +5961,7 @@
   },
   {
     "name": ".text.I_StopSound",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5969,7 +5969,7 @@
   },
   {
     "name": ".text.I_SoundIsPlaying",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5977,7 +5977,7 @@
   },
   {
     "name": ".text.I_PrecacheSounds",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5985,7 +5985,7 @@
   },
   {
     "name": ".text.I_InitMusic",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -5993,7 +5993,7 @@
   },
   {
     "name": ".text.I_ShutdownMusic",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6001,7 +6001,7 @@
   },
   {
     "name": ".text.I_SetMusicVolume",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6009,7 +6009,7 @@
   },
   {
     "name": ".text.I_PauseSong",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6017,7 +6017,7 @@
   },
   {
     "name": ".text.I_ResumeSong",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6025,7 +6025,7 @@
   },
   {
     "name": ".text.I_RegisterSong",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6033,30 +6033,6 @@
   },
   {
     "name": ".text.I_UnRegisterSong",
-    "bytes": 2,
-    "write": false,
-    "alloc": true,
-    "exec": true,
-    "object": "i_sound.o"
-  },
-  {
-    "name": ".text.I_PlaySong",
-    "bytes": 2,
-    "write": false,
-    "alloc": true,
-    "exec": true,
-    "object": "i_sound.o"
-  },
-  {
-    "name": ".text.I_StopSong",
-    "bytes": 2,
-    "write": false,
-    "alloc": true,
-    "exec": true,
-    "object": "i_sound.o"
-  },
-  {
-    "name": ".text.I_MusicIsPlaying",
     "bytes": 4,
     "write": false,
     "alloc": true,
@@ -6064,8 +6040,32 @@
     "object": "i_sound.o"
   },
   {
+    "name": ".text.I_PlaySong",
+    "bytes": 4,
+    "write": false,
+    "alloc": true,
+    "exec": true,
+    "object": "i_sound.o"
+  },
+  {
+    "name": ".text.I_StopSong",
+    "bytes": 4,
+    "write": false,
+    "alloc": true,
+    "exec": true,
+    "object": "i_sound.o"
+  },
+  {
+    "name": ".text.I_MusicIsPlaying",
+    "bytes": 8,
+    "write": false,
+    "alloc": true,
+    "exec": true,
+    "object": "i_sound.o"
+  },
+  {
     "name": ".text.I_BindSoundVariables",
-    "bytes": 228,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6121,7 +6121,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -6201,7 +6201,7 @@
   },
   {
     "name": ".text.I_AtExit",
-    "bytes": 50,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6217,7 +6217,7 @@
   },
   {
     "name": ".text.I_Tactile",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6225,7 +6225,7 @@
   },
   {
     "name": ".text.I_ZoneBase",
-    "bytes": 146,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6241,7 +6241,7 @@
   },
   {
     "name": ".text.I_PrintBanner",
-    "bytes": 66,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6257,7 +6257,7 @@
   },
   {
     "name": ".text.I_PrintDivider",
-    "bytes": 42,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6273,7 +6273,7 @@
   },
   {
     "name": ".text.I_PrintStartupBanner",
-    "bytes": 64,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6289,7 +6289,7 @@
   },
   {
     "name": ".text.I_ConsoleStdout",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6297,7 +6297,7 @@
   },
   {
     "name": ".text.I_Quit",
-    "bytes": 32,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6313,7 +6313,7 @@
   },
   {
     "name": ".text.unlikely.I_Error",
-    "bytes": 484,
+    "bytes": 588,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6329,7 +6329,7 @@
   },
   {
     "name": ".text.I_GetMemoryValue",
-    "bytes": 432,
+    "bytes": 592,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6409,7 +6409,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -6505,7 +6505,7 @@
   },
   {
     "name": ".text.I_GetTime",
-    "bytes": 58,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6521,7 +6521,7 @@
   },
   {
     "name": ".text.I_GetTimeMS",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6553,7 +6553,7 @@
   },
   {
     "name": ".text.I_WaitVBL",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6561,7 +6561,7 @@
   },
   {
     "name": ".text.I_InitTimer",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6585,7 +6585,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -6593,7 +6593,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 156,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -6665,7 +6665,7 @@
   },
   {
     "name": ".text.mem_fopen_read",
-    "bytes": 48,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6681,7 +6681,7 @@
   },
   {
     "name": ".text.mem_fread",
-    "bytes": 94,
+    "bytes": 148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6697,7 +6697,7 @@
   },
   {
     "name": ".text.mem_fopen_write",
-    "bytes": 72,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6713,7 +6713,7 @@
   },
   {
     "name": ".text.mem_fwrite",
-    "bytes": 160,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6729,7 +6729,7 @@
   },
   {
     "name": ".text.mem_get_buf",
-    "bytes": 10,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6737,7 +6737,7 @@
   },
   {
     "name": ".text.mem_fclose",
-    "bytes": 42,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6753,7 +6753,7 @@
   },
   {
     "name": ".text.mem_ftell",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6761,7 +6761,7 @@
   },
   {
     "name": ".text.mem_fseek",
-    "bytes": 72,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6793,7 +6793,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -6873,7 +6873,7 @@
   },
   {
     "name": ".text.M_CheckParmWithArgs",
-    "bytes": 84,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6889,7 +6889,7 @@
   },
   {
     "name": ".text.M_ParmExists",
-    "bytes": 24,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6905,7 +6905,7 @@
   },
   {
     "name": ".text.M_CheckParm",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6921,7 +6921,7 @@
   },
   {
     "name": ".text.M_FindResponseFile",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6929,7 +6929,7 @@
   },
   {
     "name": ".text.M_GetExecutableName",
-    "bytes": 46,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -6961,7 +6961,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7041,7 +7041,7 @@
   },
   {
     "name": ".text.M_ClearBox",
-    "bytes": 18,
+    "bytes": 28,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7049,7 +7049,7 @@
   },
   {
     "name": ".text.M_AddToBox",
-    "bytes": 38,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7065,7 +7065,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7145,7 +7145,7 @@
   },
   {
     "name": ".text.cht_CheckCheat",
-    "bytes": 166,
+    "bytes": 236,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7161,7 +7161,7 @@
   },
   {
     "name": ".text.cht_GetParam",
-    "bytes": 18,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7185,7 +7185,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7265,7 +7265,7 @@
   },
   {
     "name": ".text.M_SetConfigFilenames",
-    "bytes": 14,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7281,7 +7281,7 @@
   },
   {
     "name": ".text.M_SaveDefaults",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7289,7 +7289,7 @@
   },
   {
     "name": ".text.M_SaveDefaultsAlternate",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7297,7 +7297,7 @@
   },
   {
     "name": ".text.M_LoadDefaults",
-    "bytes": 202,
+    "bytes": 260,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7313,7 +7313,7 @@
   },
   {
     "name": ".text.M_BindVariable",
-    "bytes": 30,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7329,7 +7329,7 @@
   },
   {
     "name": ".text.GetDefaultForName",
-    "bytes": 78,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7345,7 +7345,7 @@
   },
   {
     "name": ".text.M_SetVariable",
-    "bytes": 174,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7353,7 +7353,7 @@
   },
   {
     "name": ".rela.text.M_SetVariable",
-    "bytes": 84,
+    "bytes": 96,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7361,7 +7361,7 @@
   },
   {
     "name": ".text.M_GetIntVariable",
-    "bytes": 40,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7377,7 +7377,7 @@
   },
   {
     "name": ".text.M_GetStrVariable",
-    "bytes": 40,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7393,7 +7393,7 @@
   },
   {
     "name": ".text.M_GetFloatVariable",
-    "bytes": 44,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7409,7 +7409,7 @@
   },
   {
     "name": ".text.M_SetConfigDir",
-    "bytes": 84,
+    "bytes": 108,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7425,7 +7425,7 @@
   },
   {
     "name": ".text.M_GetSaveGameDir",
-    "bytes": 100,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7441,7 +7441,7 @@
   },
   {
     "name": ".text.SearchCollection",
-    "bytes": 56,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7457,7 +7457,7 @@
   },
   {
     "name": ".text.ParseIntParameter",
-    "bytes": 66,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7553,7 +7553,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7561,7 +7561,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 448,
+    "bytes": 456,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -7593,7 +7593,7 @@
   },
   {
     "name": ".symtab",
-    "bytes": 4896,
+    "bytes": 4912,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7609,7 +7609,7 @@
   },
   {
     "name": ".strtab",
-    "bytes": 2840,
+    "bytes": 2853,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7633,7 +7633,7 @@
   },
   {
     "name": ".text.M_BindBaseControls",
-    "bytes": 568,
+    "bytes": 588,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7649,7 +7649,7 @@
   },
   {
     "name": ".text.M_BindHereticControls",
-    "bytes": 200,
+    "bytes": 212,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7665,7 +7665,7 @@
   },
   {
     "name": ".text.M_BindHexenControls",
-    "bytes": 240,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7681,7 +7681,7 @@
   },
   {
     "name": ".text.M_BindStrifeControls",
-    "bytes": 402,
+    "bytes": 448,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7697,7 +7697,7 @@
   },
   {
     "name": ".text.M_BindWeaponControls",
-    "bytes": 312,
+    "bytes": 328,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7713,7 +7713,7 @@
   },
   {
     "name": ".text.M_BindMapControls",
-    "bytes": 260,
+    "bytes": 272,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7729,7 +7729,7 @@
   },
   {
     "name": ".text.M_BindMenuControls",
-    "bytes": 524,
+    "bytes": 536,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7745,7 +7745,7 @@
   },
   {
     "name": ".text.M_BindChatControls",
-    "bytes": 114,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7761,7 +7761,7 @@
   },
   {
     "name": ".text.M_ApplyPlatformDefaults",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7825,7 +7825,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -7905,7 +7905,7 @@
   },
   {
     "name": ".text.FixedMul",
-    "bytes": 16,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7913,7 +7913,7 @@
   },
   {
     "name": ".text.FixedDiv",
-    "bytes": 70,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -7937,7 +7937,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -8017,7 +8017,7 @@
   },
   {
     "name": ".text.M_NewGame",
-    "bytes": 144,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8033,7 +8033,7 @@
   },
   {
     "name": ".text.M_Options",
-    "bytes": 32,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8049,7 +8049,7 @@
   },
   {
     "name": ".text.M_LoadGame",
-    "bytes": 82,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8065,7 +8065,7 @@
   },
   {
     "name": ".text.M_SaveGame",
-    "bytes": 98,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8081,7 +8081,7 @@
   },
   {
     "name": ".text.M_ReadThis",
-    "bytes": 32,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8097,7 +8097,7 @@
   },
   {
     "name": ".text.M_QuitDOOM",
-    "bytes": 132,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8113,7 +8113,7 @@
   },
   {
     "name": ".text.M_DrawMainMenu",
-    "bytes": 42,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8129,7 +8129,7 @@
   },
   {
     "name": ".text.M_Episode",
-    "bytes": 154,
+    "bytes": 200,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8145,7 +8145,7 @@
   },
   {
     "name": ".text.M_DrawEpisode",
-    "bytes": 44,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8161,7 +8161,7 @@
   },
   {
     "name": ".text.M_ChooseSkill",
-    "bytes": 78,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8177,7 +8177,7 @@
   },
   {
     "name": ".text.M_DrawNewGame",
-    "bytes": 78,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8193,7 +8193,7 @@
   },
   {
     "name": ".text.M_EndGame",
-    "bytes": 96,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8209,7 +8209,7 @@
   },
   {
     "name": ".text.M_ChangeMessages",
-    "bytes": 78,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8225,7 +8225,7 @@
   },
   {
     "name": ".text.M_ChangeDetail",
-    "bytes": 100,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8241,7 +8241,7 @@
   },
   {
     "name": ".text.M_SizeDisplay",
-    "bytes": 82,
+    "bytes": 108,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8257,7 +8257,7 @@
   },
   {
     "name": ".text.M_ChangeSensitivity",
-    "bytes": 48,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8273,7 +8273,7 @@
   },
   {
     "name": ".text.M_Sound",
-    "bytes": 32,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8289,7 +8289,7 @@
   },
   {
     "name": ".text.M_DrawOptions",
-    "bytes": 236,
+    "bytes": 296,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8305,7 +8305,7 @@
   },
   {
     "name": ".text.M_ReadThis2",
-    "bytes": 80,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8321,7 +8321,7 @@
   },
   {
     "name": ".text.M_DrawReadThis1",
-    "bytes": 220,
+    "bytes": 272,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8337,7 +8337,7 @@
   },
   {
     "name": ".text.M_FinishReadThis",
-    "bytes": 30,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8353,7 +8353,7 @@
   },
   {
     "name": ".text.M_DrawReadThis2",
-    "bytes": 50,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8369,7 +8369,7 @@
   },
   {
     "name": ".text.M_SfxVol",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8385,7 +8385,7 @@
   },
   {
     "name": ".text.M_MusicVol",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8401,7 +8401,7 @@
   },
   {
     "name": ".text.M_DrawSound",
-    "bytes": 114,
+    "bytes": 136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8417,7 +8417,7 @@
   },
   {
     "name": ".text.M_LoadSelect",
-    "bytes": 56,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8433,7 +8433,7 @@
   },
   {
     "name": ".text.M_DrawLoad",
-    "bytes": 128,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8449,7 +8449,7 @@
   },
   {
     "name": ".text.M_SaveSelect",
-    "bytes": 96,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8465,7 +8465,7 @@
   },
   {
     "name": ".text.M_DrawSave",
-    "bytes": 212,
+    "bytes": 280,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8481,7 +8481,7 @@
   },
   {
     "name": ".text.M_ReadSaveStrings",
-    "bytes": 216,
+    "bytes": 268,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8497,7 +8497,7 @@
   },
   {
     "name": ".text.M_DrawSaveLoadBorder",
-    "bytes": 142,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8513,7 +8513,7 @@
   },
   {
     "name": ".text.M_WriteText",
-    "bytes": 156,
+    "bytes": 236,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8529,7 +8529,7 @@
   },
   {
     "name": ".text.M_ClearMenus",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8545,7 +8545,7 @@
   },
   {
     "name": ".text.M_StartMessage",
-    "bytes": 26,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8561,7 +8561,7 @@
   },
   {
     "name": ".text.M_SetupNextMenu",
-    "bytes": 20,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8577,7 +8577,7 @@
   },
   {
     "name": ".text.M_StringWidth",
-    "bytes": 114,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8593,7 +8593,7 @@
   },
   {
     "name": ".text.M_DoSave",
-    "bytes": 64,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8609,7 +8609,7 @@
   },
   {
     "name": ".text.M_QuickSaveResponse",
-    "bytes": 88,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8625,7 +8625,7 @@
   },
   {
     "name": ".text.M_QuickSave",
-    "bytes": 186,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8641,7 +8641,7 @@
   },
   {
     "name": ".text.M_StartControlPanel",
-    "bytes": 40,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8657,7 +8657,7 @@
   },
   {
     "name": ".text.M_QuickLoadResponse",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8673,7 +8673,7 @@
   },
   {
     "name": ".text.M_QuickLoad",
-    "bytes": 134,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8689,7 +8689,7 @@
   },
   {
     "name": ".text.M_DrawThermo",
-    "bytes": 202,
+    "bytes": 280,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8705,7 +8705,7 @@
   },
   {
     "name": ".text.M_VerifyNightmare",
-    "bytes": 54,
+    "bytes": 76,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8721,7 +8721,7 @@
   },
   {
     "name": ".text.M_EndGameResponse",
-    "bytes": 44,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8737,7 +8737,7 @@
   },
   {
     "name": ".text.M_QuitResponse",
-    "bytes": 118,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8753,7 +8753,7 @@
   },
   {
     "name": ".text.M_DrawEmptyCell",
-    "bytes": 66,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8769,7 +8769,7 @@
   },
   {
     "name": ".text.M_DrawSelCell",
-    "bytes": 66,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8785,7 +8785,7 @@
   },
   {
     "name": ".text.M_StopMessage",
-    "bytes": 18,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8801,7 +8801,7 @@
   },
   {
     "name": ".text.M_StringHeight",
-    "bytes": 86,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8817,7 +8817,7 @@
   },
   {
     "name": ".text.M_Responder",
-    "bytes": 2440,
+    "bytes": 2948,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8833,7 +8833,7 @@
   },
   {
     "name": ".text.M_Drawer",
-    "bytes": 532,
+    "bytes": 720,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8849,7 +8849,7 @@
   },
   {
     "name": ".text.M_Ticker",
-    "bytes": 54,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -8865,7 +8865,7 @@
   },
   {
     "name": ".text.M_Init",
-    "bytes": 170,
+    "bytes": 208,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9193,7 +9193,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -9201,7 +9201,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 1740,
+    "bytes": 1732,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -9289,7 +9289,7 @@
   },
   {
     "name": ".text.M_FileExists",
-    "bytes": 56,
+    "bytes": 76,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9305,7 +9305,7 @@
   },
   {
     "name": ".text.M_FileLength",
-    "bytes": 76,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9321,7 +9321,7 @@
   },
   {
     "name": ".text.M_WriteFile",
-    "bytes": 82,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9337,7 +9337,7 @@
   },
   {
     "name": ".text.M_ReadFile",
-    "bytes": 156,
+    "bytes": 224,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9353,7 +9353,7 @@
   },
   {
     "name": ".text.M_TempFile",
-    "bytes": 32,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9369,7 +9369,7 @@
   },
   {
     "name": ".text.M_StringJoin",
-    "bytes": 202,
+    "bytes": 296,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9385,7 +9385,7 @@
   },
   {
     "name": ".text.M_StrToInt",
-    "bytes": 126,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9401,7 +9401,7 @@
   },
   {
     "name": ".text.M_ExtractFileBase",
-    "bytes": 186,
+    "bytes": 272,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9417,7 +9417,7 @@
   },
   {
     "name": ".text.M_ForceUppercase",
-    "bytes": 46,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9433,7 +9433,7 @@
   },
   {
     "name": ".text.M_StrCaseStr",
-    "bytes": 100,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9449,7 +9449,7 @@
   },
   {
     "name": ".text.M_StringDuplicate",
-    "bytes": 62,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9465,7 +9465,7 @@
   },
   {
     "name": ".text.M_StringReplace",
-    "bytes": 236,
+    "bytes": 356,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9481,7 +9481,7 @@
   },
   {
     "name": ".text.M_StringCopy",
-    "bytes": 66,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9497,7 +9497,7 @@
   },
   {
     "name": ".text.M_StringConcat",
-    "bytes": 58,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9513,7 +9513,7 @@
   },
   {
     "name": ".text.M_StringStartsWith",
-    "bytes": 72,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9529,7 +9529,7 @@
   },
   {
     "name": ".text.M_StringEndsWith",
-    "bytes": 74,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9545,7 +9545,7 @@
   },
   {
     "name": ".text.M_vsnprintf",
-    "bytes": 54,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9561,7 +9561,7 @@
   },
   {
     "name": ".text.M_snprintf",
-    "bytes": 72,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9593,7 +9593,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -9673,7 +9673,7 @@
   },
   {
     "name": ".text.P_Random",
-    "bytes": 34,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9689,7 +9689,7 @@
   },
   {
     "name": ".text.M_Random",
-    "bytes": 34,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9705,7 +9705,7 @@
   },
   {
     "name": ".text.M_ClearRandom",
-    "bytes": 18,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9745,7 +9745,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -9825,7 +9825,7 @@
   },
   {
     "name": ".text.T_MoveCeiling",
-    "bytes": 310,
+    "bytes": 460,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9857,7 +9857,7 @@
   },
   {
     "name": ".text.P_RemoveActiveCeiling",
-    "bytes": 58,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9873,7 +9873,7 @@
   },
   {
     "name": ".text.EV_DoCeiling",
-    "bytes": 330,
+    "bytes": 476,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9905,7 +9905,7 @@
   },
   {
     "name": ".text.P_ActivateInStasisCeiling",
-    "bytes": 54,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9921,7 +9921,7 @@
   },
   {
     "name": ".text.P_AddActiveCeiling",
-    "bytes": 26,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9937,7 +9937,7 @@
   },
   {
     "name": ".text.EV_CeilingCrushStop",
-    "bytes": 56,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -9969,7 +9969,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -10049,7 +10049,7 @@
   },
   {
     "name": ".text.T_VerticalDoor",
-    "bytes": 362,
+    "bytes": 536,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10081,7 +10081,7 @@
   },
   {
     "name": ".text.EV_DoLockedDoor",
-    "bytes": 148,
+    "bytes": 200,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10097,7 +10097,7 @@
   },
   {
     "name": ".text.EV_DoDoor",
-    "bytes": 388,
+    "bytes": 528,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10129,7 +10129,7 @@
   },
   {
     "name": ".text.EV_VerticalDoor",
-    "bytes": 518,
+    "bytes": 696,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10145,7 +10145,7 @@
   },
   {
     "name": ".text.P_SpawnDoorCloseIn30",
-    "bytes": 84,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10161,7 +10161,7 @@
   },
   {
     "name": ".text.P_SpawnDoorRaiseIn5Mins",
-    "bytes": 110,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10193,7 +10193,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -10201,7 +10201,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 312,
+    "bytes": 316,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -10273,7 +10273,7 @@
   },
   {
     "name": ".text.P_RecursiveSound",
-    "bytes": 226,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10289,7 +10289,7 @@
   },
   {
     "name": ".text.P_NoiseAlert",
-    "bytes": 38,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10305,7 +10305,7 @@
   },
   {
     "name": ".text.P_CheckMeleeRange",
-    "bytes": 78,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10321,7 +10321,7 @@
   },
   {
     "name": ".text.P_CheckMissileRange",
-    "bytes": 202,
+    "bytes": 280,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10337,7 +10337,7 @@
   },
   {
     "name": ".text.P_Move",
-    "bytes": 264,
+    "bytes": 376,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10353,7 +10353,7 @@
   },
   {
     "name": ".text.P_TryWalk",
-    "bytes": 40,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10369,7 +10369,7 @@
   },
   {
     "name": ".text.P_NewChaseDir",
-    "bytes": 420,
+    "bytes": 576,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10385,7 +10385,7 @@
   },
   {
     "name": ".text.P_LookForPlayers",
-    "bytes": 242,
+    "bytes": 360,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10401,7 +10401,7 @@
   },
   {
     "name": ".text.A_KeenDie",
-    "bytes": 88,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10417,7 +10417,7 @@
   },
   {
     "name": ".text.A_Fall",
-    "bytes": 8,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10425,7 +10425,7 @@
   },
   {
     "name": ".text.A_Look",
-    "bytes": 208,
+    "bytes": 296,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10441,7 +10441,7 @@
   },
   {
     "name": ".text.A_Chase",
-    "bytes": 432,
+    "bytes": 632,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10457,7 +10457,7 @@
   },
   {
     "name": ".text.A_FaceTarget",
-    "bytes": 88,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10473,7 +10473,7 @@
   },
   {
     "name": ".text.A_PosAttack",
-    "bytes": 170,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10489,7 +10489,7 @@
   },
   {
     "name": ".text.A_SPosAttack",
-    "bytes": 172,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10505,7 +10505,7 @@
   },
   {
     "name": ".text.A_CPosAttack",
-    "bytes": 170,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10521,7 +10521,7 @@
   },
   {
     "name": ".text.A_CPosRefire",
-    "bytes": 82,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10537,7 +10537,7 @@
   },
   {
     "name": ".text.A_SpidRefire",
-    "bytes": 80,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10553,7 +10553,7 @@
   },
   {
     "name": ".text.A_BspiAttack",
-    "bytes": 52,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10569,7 +10569,7 @@
   },
   {
     "name": ".text.A_TroopAttack",
-    "bytes": 126,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10585,7 +10585,7 @@
   },
   {
     "name": ".text.A_SargAttack",
-    "bytes": 108,
+    "bytes": 156,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10601,7 +10601,7 @@
   },
   {
     "name": ".text.A_HeadAttack",
-    "bytes": 130,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10617,7 +10617,7 @@
   },
   {
     "name": ".text.A_CyberAttack",
-    "bytes": 52,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10633,7 +10633,7 @@
   },
   {
     "name": ".text.A_BruisAttack",
-    "bytes": 118,
+    "bytes": 176,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10649,7 +10649,7 @@
   },
   {
     "name": ".text.A_SkelMissile",
-    "bytes": 86,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10665,7 +10665,7 @@
   },
   {
     "name": ".text.A_Tracer",
-    "bytes": 342,
+    "bytes": 472,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10681,7 +10681,7 @@
   },
   {
     "name": ".text.A_SkelWhoosh",
-    "bytes": 50,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10697,7 +10697,7 @@
   },
   {
     "name": ".text.A_SkelFist",
-    "bytes": 130,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10713,7 +10713,7 @@
   },
   {
     "name": ".text.PIT_VileCheck",
-    "bytes": 152,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10729,7 +10729,7 @@
   },
   {
     "name": ".text.A_VileChase",
-    "bytes": 362,
+    "bytes": 500,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10761,7 +10761,7 @@
   },
   {
     "name": ".text.A_StartFire",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10777,7 +10777,7 @@
   },
   {
     "name": ".text.A_Fire",
-    "bytes": 168,
+    "bytes": 236,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10793,7 +10793,7 @@
   },
   {
     "name": ".text.A_FireCrackle",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10809,7 +10809,7 @@
   },
   {
     "name": ".text.A_VileTarget",
-    "bytes": 74,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10825,7 +10825,7 @@
   },
   {
     "name": ".text.A_VileAttack",
-    "bytes": 216,
+    "bytes": 304,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10841,7 +10841,7 @@
   },
   {
     "name": ".text.A_FatRaise",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10857,7 +10857,7 @@
   },
   {
     "name": ".text.A_FatAttack1",
-    "bytes": 152,
+    "bytes": 220,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10873,7 +10873,7 @@
   },
   {
     "name": ".text.A_FatAttack2",
-    "bytes": 150,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10889,7 +10889,7 @@
   },
   {
     "name": ".text.A_FatAttack3",
-    "bytes": 218,
+    "bytes": 316,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10905,7 +10905,7 @@
   },
   {
     "name": ".text.A_SkullAttack",
-    "bytes": 204,
+    "bytes": 272,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10921,7 +10921,7 @@
   },
   {
     "name": ".text.A_PainShootSkull",
-    "bytes": 278,
+    "bytes": 392,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10937,7 +10937,7 @@
   },
   {
     "name": ".text.A_PainAttack",
-    "bytes": 48,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10953,7 +10953,7 @@
   },
   {
     "name": ".text.A_PainDie",
-    "bytes": 74,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10969,7 +10969,7 @@
   },
   {
     "name": ".text.A_Scream",
-    "bytes": 136,
+    "bytes": 192,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -10985,7 +10985,7 @@
   },
   {
     "name": ".text.A_XScream",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11001,7 +11001,7 @@
   },
   {
     "name": ".text.A_Pain",
-    "bytes": 16,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11017,7 +11017,7 @@
   },
   {
     "name": ".text.A_Explode",
-    "bytes": 14,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11033,7 +11033,7 @@
   },
   {
     "name": ".text.A_BossDeath",
-    "bytes": 468,
+    "bytes": 628,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11049,7 +11049,7 @@
   },
   {
     "name": ".text.A_Hoof",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11065,7 +11065,7 @@
   },
   {
     "name": ".text.A_Metal",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11081,7 +11081,7 @@
   },
   {
     "name": ".text.A_BabyMetal",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11097,7 +11097,7 @@
   },
   {
     "name": ".text.A_OpenShotgun2",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11113,7 +11113,7 @@
   },
   {
     "name": ".text.A_LoadShotgun2",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11129,7 +11129,7 @@
   },
   {
     "name": ".text.A_CloseShotgun2",
-    "bytes": 44,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11145,7 +11145,7 @@
   },
   {
     "name": ".text.A_BrainAwake",
-    "bytes": 84,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11161,7 +11161,7 @@
   },
   {
     "name": ".text.A_BrainPain",
-    "bytes": 14,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11177,7 +11177,7 @@
   },
   {
     "name": ".text.A_BrainScream",
-    "bytes": 180,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11193,7 +11193,7 @@
   },
   {
     "name": ".text.A_BrainExplode",
-    "bytes": 136,
+    "bytes": 192,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11225,7 +11225,7 @@
   },
   {
     "name": ".text.A_BrainSpit",
-    "bytes": 134,
+    "bytes": 200,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11241,7 +11241,7 @@
   },
   {
     "name": ".text.A_SpawnSound",
-    "bytes": 36,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11257,7 +11257,7 @@
   },
   {
     "name": ".text.A_SpawnFly",
-    "bytes": 272,
+    "bytes": 388,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11273,7 +11273,7 @@
   },
   {
     "name": ".text.A_PlayerScream",
-    "bytes": 44,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11337,7 +11337,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -11417,7 +11417,7 @@
   },
   {
     "name": ".text.T_MovePlane",
-    "bytes": 294,
+    "bytes": 424,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11433,7 +11433,7 @@
   },
   {
     "name": ".text.T_MoveFloor",
-    "bytes": 162,
+    "bytes": 240,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11449,7 +11449,7 @@
   },
   {
     "name": ".text.EV_DoFloor",
-    "bytes": 840,
+    "bytes": 1124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11481,7 +11481,7 @@
   },
   {
     "name": ".text.EV_BuildStairs",
-    "bytes": 368,
+    "bytes": 516,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11505,7 +11505,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -11585,7 +11585,7 @@
   },
   {
     "name": ".text.P_GiveAmmo",
-    "bytes": 252,
+    "bytes": 352,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11601,7 +11601,7 @@
   },
   {
     "name": ".text.P_GiveWeapon",
-    "bytes": 228,
+    "bytes": 304,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11617,7 +11617,7 @@
   },
   {
     "name": ".text.P_GiveBody",
-    "bytes": 38,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11625,7 +11625,7 @@
   },
   {
     "name": ".text.P_GiveArmor",
-    "bytes": 28,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11633,7 +11633,7 @@
   },
   {
     "name": ".text.P_GiveCard",
-    "bytes": 22,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11641,7 +11641,7 @@
   },
   {
     "name": ".text.P_GivePower",
-    "bytes": 126,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11673,7 +11673,7 @@
   },
   {
     "name": ".text.P_TouchSpecialThing",
-    "bytes": 1500,
+    "bytes": 1868,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11705,7 +11705,7 @@
   },
   {
     "name": ".text.P_KillMobj",
-    "bytes": 408,
+    "bytes": 556,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11721,7 +11721,7 @@
   },
   {
     "name": ".text.P_DamageMobj",
-    "bytes": 720,
+    "bytes": 956,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11769,7 +11769,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -11777,7 +11777,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 352,
+    "bytes": 356,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -11849,7 +11849,7 @@
   },
   {
     "name": ".text.T_FireFlicker",
-    "bytes": 62,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11865,7 +11865,7 @@
   },
   {
     "name": ".text.P_SpawnFireFlicker",
-    "bytes": 84,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11881,7 +11881,7 @@
   },
   {
     "name": ".text.T_LightFlash",
-    "bytes": 72,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11897,7 +11897,7 @@
   },
   {
     "name": ".text.P_SpawnLightFlash",
-    "bytes": 106,
+    "bytes": 156,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11913,7 +11913,7 @@
   },
   {
     "name": ".text.T_StrobeFlash",
-    "bytes": 44,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11921,7 +11921,7 @@
   },
   {
     "name": ".text.P_SpawnStrobeFlash",
-    "bytes": 134,
+    "bytes": 204,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11937,7 +11937,7 @@
   },
   {
     "name": ".text.EV_StartLightStrobing",
-    "bytes": 96,
+    "bytes": 136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11953,7 +11953,7 @@
   },
   {
     "name": ".text.EV_TurnTagLightsOff",
-    "bytes": 158,
+    "bytes": 224,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11969,7 +11969,7 @@
   },
   {
     "name": ".text.EV_LightTurnOn",
-    "bytes": 158,
+    "bytes": 228,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11985,7 +11985,7 @@
   },
   {
     "name": ".text.T_Glow",
-    "bytes": 96,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -11993,7 +11993,7 @@
   },
   {
     "name": ".text.P_SpawnGlowingLight",
-    "bytes": 86,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12017,7 +12017,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -12097,7 +12097,7 @@
   },
   {
     "name": ".text.PIT_StompThing",
-    "bytes": 128,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12113,7 +12113,7 @@
   },
   {
     "name": ".text.P_TeleportMove",
-    "bytes": 352,
+    "bytes": 472,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12129,7 +12129,7 @@
   },
   {
     "name": ".text.PIT_CheckLine",
-    "bytes": 256,
+    "bytes": 324,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12145,7 +12145,7 @@
   },
   {
     "name": ".text.SpechitOverrun",
-    "bytes": 184,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12161,7 +12161,7 @@
   },
   {
     "name": ".text.PIT_CheckThing",
-    "bytes": 360,
+    "bytes": 504,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12177,7 +12177,7 @@
   },
   {
     "name": ".text.P_CheckPosition",
-    "bytes": 432,
+    "bytes": 564,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12193,7 +12193,7 @@
   },
   {
     "name": ".text.P_TryMove",
-    "bytes": 342,
+    "bytes": 440,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12209,7 +12209,7 @@
   },
   {
     "name": ".text.P_ThingHeightClip",
-    "bytes": 94,
+    "bytes": 148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12225,7 +12225,7 @@
   },
   {
     "name": ".text.P_HitSlideLine",
-    "bytes": 246,
+    "bytes": 324,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12241,7 +12241,7 @@
   },
   {
     "name": ".text.PTR_SlideTraverse",
-    "bytes": 188,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12257,7 +12257,7 @@
   },
   {
     "name": ".text.P_SlideMove",
-    "bytes": 490,
+    "bytes": 748,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12273,7 +12273,7 @@
   },
   {
     "name": ".text.PTR_AimTraverse",
-    "bytes": 388,
+    "bytes": 516,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12289,7 +12289,7 @@
   },
   {
     "name": ".text.PTR_ShootTraverse",
-    "bytes": 750,
+    "bytes": 940,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12305,7 +12305,7 @@
   },
   {
     "name": ".text.P_AimLineAttack",
-    "bytes": 174,
+    "bytes": 232,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12321,7 +12321,7 @@
   },
   {
     "name": ".text.P_LineAttack",
-    "bytes": 124,
+    "bytes": 148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12337,7 +12337,7 @@
   },
   {
     "name": ".text.PTR_UseTraverse",
-    "bytes": 120,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12353,7 +12353,7 @@
   },
   {
     "name": ".text.P_UseLines",
-    "bytes": 80,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12369,7 +12369,7 @@
   },
   {
     "name": ".text.PIT_RadiusAttack",
-    "bytes": 154,
+    "bytes": 228,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12385,7 +12385,7 @@
   },
   {
     "name": ".text.P_RadiusAttack",
-    "bytes": 172,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12401,7 +12401,7 @@
   },
   {
     "name": ".text.PIT_ChangeSector",
-    "bytes": 220,
+    "bytes": 320,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12417,7 +12417,7 @@
   },
   {
     "name": ".text.P_ChangeSector",
-    "bytes": 124,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12465,7 +12465,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -12473,7 +12473,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 992,
+    "bytes": 980,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -12545,7 +12545,7 @@
   },
   {
     "name": ".text.P_AproxDistance",
-    "bytes": 36,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12553,7 +12553,7 @@
   },
   {
     "name": ".text.P_PointOnLineSide",
-    "bytes": 120,
+    "bytes": 176,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12569,7 +12569,7 @@
   },
   {
     "name": ".text.P_BoxOnLineSide",
-    "bytes": 202,
+    "bytes": 280,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12585,7 +12585,7 @@
   },
   {
     "name": ".text.P_PointOnDivlineSide",
-    "bytes": 142,
+    "bytes": 208,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12601,7 +12601,7 @@
   },
   {
     "name": ".text.P_MakeDivline",
-    "bytes": 20,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12609,7 +12609,7 @@
   },
   {
     "name": ".text.P_InterceptVector",
-    "bytes": 134,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12625,7 +12625,7 @@
   },
   {
     "name": ".text.P_LineOpening",
-    "bytes": 82,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12641,7 +12641,7 @@
   },
   {
     "name": ".text.P_UnsetThingPosition",
-    "bytes": 130,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12657,7 +12657,7 @@
   },
   {
     "name": ".text.P_SetThingPosition",
-    "bytes": 162,
+    "bytes": 228,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12673,7 +12673,7 @@
   },
   {
     "name": ".text.P_BlockLinesIterator",
-    "bytes": 180,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12689,7 +12689,7 @@
   },
   {
     "name": ".text.P_BlockThingsIterator",
-    "bytes": 98,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12705,7 +12705,7 @@
   },
   {
     "name": ".text.PIT_AddLineIntercepts",
-    "bytes": 286,
+    "bytes": 400,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12721,7 +12721,7 @@
   },
   {
     "name": ".text.InterceptsOverrun",
-    "bytes": 86,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12737,7 +12737,7 @@
   },
   {
     "name": ".text.PIT_AddThingIntercepts",
-    "bytes": 242,
+    "bytes": 340,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12753,7 +12753,7 @@
   },
   {
     "name": ".text.P_TraverseIntercepts",
-    "bytes": 160,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12769,7 +12769,7 @@
   },
   {
     "name": ".text.P_PathTraverse",
-    "bytes": 546,
+    "bytes": 748,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12785,7 +12785,7 @@
   },
   {
     "name": ".text.InterceptsMemoryOverrun",
-    "bytes": 108,
+    "bytes": 156,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12849,7 +12849,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -12857,7 +12857,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 704,
+    "bytes": 708,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -12929,7 +12929,7 @@
   },
   {
     "name": ".text.P_SetMobjState",
-    "bytes": 94,
+    "bytes": 156,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12945,7 +12945,7 @@
   },
   {
     "name": ".text.P_RemoveMobj",
-    "bytes": 166,
+    "bytes": 212,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12961,7 +12961,7 @@
   },
   {
     "name": ".text.P_ExplodeMissile",
-    "bytes": 116,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12977,7 +12977,7 @@
   },
   {
     "name": ".text.P_XYMovement",
-    "bytes": 648,
+    "bytes": 876,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -12993,7 +12993,7 @@
   },
   {
     "name": ".text.P_ZMovement",
-    "bytes": 374,
+    "bytes": 556,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13009,7 +13009,7 @@
   },
   {
     "name": ".text.P_NightmareRespawn",
-    "bytes": 252,
+    "bytes": 356,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13025,7 +13025,7 @@
   },
   {
     "name": ".text.P_SpawnMobj",
-    "bytes": 272,
+    "bytes": 404,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13041,7 +13041,7 @@
   },
   {
     "name": ".text.P_MobjThinker",
-    "bytes": 192,
+    "bytes": 284,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13057,7 +13057,7 @@
   },
   {
     "name": ".text.P_RespawnSpecials",
-    "bytes": 328,
+    "bytes": 440,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13073,7 +13073,7 @@
   },
   {
     "name": ".text.P_SpawnPlayer",
-    "bytes": 362,
+    "bytes": 488,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13089,7 +13089,7 @@
   },
   {
     "name": ".text.P_SpawnMapThing",
-    "bytes": 592,
+    "bytes": 756,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13105,7 +13105,7 @@
   },
   {
     "name": ".text.P_SpawnPuff",
-    "bytes": 146,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13121,7 +13121,7 @@
   },
   {
     "name": ".text.P_SpawnBlood",
-    "bytes": 162,
+    "bytes": 244,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13137,7 +13137,7 @@
   },
   {
     "name": ".text.P_CheckMissileSpawn",
-    "bytes": 98,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13153,7 +13153,7 @@
   },
   {
     "name": ".text.P_SubstNullMobj",
-    "bytes": 30,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13169,7 +13169,7 @@
   },
   {
     "name": ".text.P_SpawnMissile",
-    "bytes": 276,
+    "bytes": 372,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13185,7 +13185,7 @@
   },
   {
     "name": ".text.P_SpawnPlayerMissile",
-    "bytes": 286,
+    "bytes": 392,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13241,7 +13241,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -13321,7 +13321,7 @@
   },
   {
     "name": ".text.T_PlatRaise",
-    "bytes": 284,
+    "bytes": 448,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13337,7 +13337,7 @@
   },
   {
     "name": ".text.P_RemoveActivePlat",
-    "bytes": 78,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13353,7 +13353,7 @@
   },
   {
     "name": ".text.EV_DoPlat",
-    "bytes": 556,
+    "bytes": 740,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13385,7 +13385,7 @@
   },
   {
     "name": ".text.P_ActivateInStasis",
-    "bytes": 54,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13401,7 +13401,7 @@
   },
   {
     "name": ".text.P_AddActivePlat",
-    "bytes": 40,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13417,7 +13417,7 @@
   },
   {
     "name": ".text.EV_StopPlat",
-    "bytes": 52,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13457,7 +13457,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -13465,7 +13465,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 248,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -13537,7 +13537,7 @@
   },
   {
     "name": ".text.P_SetPsprite",
-    "bytes": 100,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13553,7 +13553,7 @@
   },
   {
     "name": ".text.P_CalcSwing",
-    "bytes": 118,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13569,7 +13569,7 @@
   },
   {
     "name": ".text.P_BringUpWeapon",
-    "bytes": 88,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13585,7 +13585,7 @@
   },
   {
     "name": ".text.P_CheckAmmo",
-    "bytes": 232,
+    "bytes": 340,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13601,7 +13601,7 @@
   },
   {
     "name": ".text.P_FireWeapon",
-    "bytes": 90,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13617,7 +13617,7 @@
   },
   {
     "name": ".text.P_DropWeapon",
-    "bytes": 30,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13633,7 +13633,7 @@
   },
   {
     "name": ".text.A_WeaponReady",
-    "bytes": 308,
+    "bytes": 428,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13649,7 +13649,7 @@
   },
   {
     "name": ".text.A_ReFire",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13681,7 +13681,7 @@
   },
   {
     "name": ".text.A_Lower",
-    "bytes": 60,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13697,7 +13697,7 @@
   },
   {
     "name": ".text.A_Raise",
-    "bytes": 56,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13713,7 +13713,7 @@
   },
   {
     "name": ".text.A_GunFlash",
-    "bytes": 60,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13729,7 +13729,7 @@
   },
   {
     "name": ".text.A_Punch",
-    "bytes": 200,
+    "bytes": 288,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13745,7 +13745,7 @@
   },
   {
     "name": ".text.A_Saw",
-    "bytes": 304,
+    "bytes": 416,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13761,7 +13761,7 @@
   },
   {
     "name": ".text.A_FireMissile",
-    "bytes": 50,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13777,7 +13777,7 @@
   },
   {
     "name": ".text.A_FireBFG",
-    "bytes": 50,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13793,7 +13793,7 @@
   },
   {
     "name": ".text.A_FirePlasma",
-    "bytes": 104,
+    "bytes": 140,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13809,7 +13809,7 @@
   },
   {
     "name": ".text.P_BulletSlope",
-    "bytes": 126,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13825,7 +13825,7 @@
   },
   {
     "name": ".text.P_GunShot",
-    "bytes": 122,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13841,7 +13841,7 @@
   },
   {
     "name": ".text.A_FirePistol",
-    "bytes": 126,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13857,7 +13857,7 @@
   },
   {
     "name": ".text.A_FireShotgun",
-    "bytes": 132,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13873,7 +13873,7 @@
   },
   {
     "name": ".text.A_FireShotgun2",
-    "bytes": 282,
+    "bytes": 376,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13889,7 +13889,7 @@
   },
   {
     "name": ".text.A_FireCGun",
-    "bytes": 218,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13905,7 +13905,7 @@
   },
   {
     "name": ".text.A_Light0",
-    "bytes": 6,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13913,7 +13913,7 @@
   },
   {
     "name": ".text.A_Light1",
-    "bytes": 8,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13921,7 +13921,7 @@
   },
   {
     "name": ".text.A_Light2",
-    "bytes": 8,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13929,7 +13929,7 @@
   },
   {
     "name": ".text.A_BFGSpray",
-    "bytes": 174,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13945,7 +13945,7 @@
   },
   {
     "name": ".text.A_BFGsound",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13961,7 +13961,7 @@
   },
   {
     "name": ".text.P_SetupPsprites",
-    "bytes": 20,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -13977,7 +13977,7 @@
   },
   {
     "name": ".text.P_MovePsprites",
-    "bytes": 96,
+    "bytes": 152,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14017,7 +14017,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -14097,7 +14097,7 @@
   },
   {
     "name": ".text.P_TempSaveGameFile",
-    "bytes": 54,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14113,7 +14113,7 @@
   },
   {
     "name": ".text.P_SaveGameFile",
-    "bytes": 126,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14129,7 +14129,7 @@
   },
   {
     "name": ".text.P_WriteSaveGameHeader",
-    "bytes": 268,
+    "bytes": 328,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14145,7 +14145,7 @@
   },
   {
     "name": ".text.saveg_write8",
-    "bytes": 90,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14161,7 +14161,7 @@
   },
   {
     "name": ".text.P_ReadSaveGameHeader",
-    "bytes": 232,
+    "bytes": 304,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14177,7 +14177,7 @@
   },
   {
     "name": ".text.saveg_read8",
-    "bytes": 90,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14193,7 +14193,7 @@
   },
   {
     "name": ".text.P_ReadSaveGameEOF",
-    "bytes": 24,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14209,7 +14209,7 @@
   },
   {
     "name": ".text.P_WriteSaveGameEOF",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14225,7 +14225,7 @@
   },
   {
     "name": ".text.P_ArchivePlayers",
-    "bytes": 832,
+    "bytes": 984,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14241,7 +14241,7 @@
   },
   {
     "name": ".text.saveg_write_pad",
-    "bytes": 52,
+    "bytes": 76,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14257,7 +14257,7 @@
   },
   {
     "name": ".text.P_UnArchivePlayers",
-    "bytes": 844,
+    "bytes": 996,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14273,7 +14273,7 @@
   },
   {
     "name": ".text.saveg_read_pad",
-    "bytes": 50,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14289,7 +14289,7 @@
   },
   {
     "name": ".text.P_ArchiveWorld",
-    "bytes": 586,
+    "bytes": 668,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14305,7 +14305,7 @@
   },
   {
     "name": ".text.P_UnArchiveWorld",
-    "bytes": 564,
+    "bytes": 736,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14321,7 +14321,7 @@
   },
   {
     "name": ".text.P_ArchiveThinkers",
-    "bytes": 648,
+    "bytes": 764,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14337,7 +14337,7 @@
   },
   {
     "name": ".text.P_UnArchiveThinkers",
-    "bytes": 790,
+    "bytes": 984,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14353,7 +14353,7 @@
   },
   {
     "name": ".text.P_ArchiveSpecials",
-    "bytes": 802,
+    "bytes": 1008,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14369,7 +14369,7 @@
   },
   {
     "name": ".text.saveg_write_ceiling_t",
-    "bytes": 136,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14385,7 +14385,7 @@
   },
   {
     "name": ".text.P_UnArchiveSpecials",
-    "bytes": 1320,
+    "bytes": 1620,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14393,7 +14393,7 @@
   },
   {
     "name": ".rela.text.P_UnArchiveSpecials",
-    "bytes": 1452,
+    "bytes": 1440,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -14417,7 +14417,7 @@
   },
   {
     "name": ".text.saveg_write32",
-    "bytes": 66,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14433,7 +14433,7 @@
   },
   {
     "name": ".text.saveg_read32",
-    "bytes": 66,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14449,7 +14449,7 @@
   },
   {
     "name": ".text.saveg_write_thinker_t",
-    "bytes": 44,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14513,7 +14513,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -14593,7 +14593,7 @@
   },
   {
     "name": ".text.P_LoadVertexes",
-    "bytes": 134,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14609,7 +14609,7 @@
   },
   {
     "name": ".text.GetSectorAtNullAddress",
-    "bytes": 96,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14625,7 +14625,7 @@
   },
   {
     "name": ".text.P_LoadSegs",
-    "bytes": 392,
+    "bytes": 496,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14641,7 +14641,7 @@
   },
   {
     "name": ".text.P_LoadSubsectors",
-    "bytes": 152,
+    "bytes": 220,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14657,7 +14657,7 @@
   },
   {
     "name": ".text.P_LoadSectors",
-    "bytes": 284,
+    "bytes": 368,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14673,7 +14673,7 @@
   },
   {
     "name": ".text.P_LoadNodes",
-    "bytes": 332,
+    "bytes": 412,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14689,7 +14689,7 @@
   },
   {
     "name": ".text.P_LoadThings",
-    "bytes": 238,
+    "bytes": 324,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14705,7 +14705,7 @@
   },
   {
     "name": ".text.P_LoadLineDefs",
-    "bytes": 542,
+    "bytes": 692,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14721,7 +14721,7 @@
   },
   {
     "name": ".text.P_LoadSideDefs",
-    "bytes": 268,
+    "bytes": 348,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14737,7 +14737,7 @@
   },
   {
     "name": ".text.P_LoadBlockMap",
-    "bytes": 128,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14753,7 +14753,7 @@
   },
   {
     "name": ".text.P_GroupLines",
-    "bytes": 548,
+    "bytes": 768,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14769,7 +14769,7 @@
   },
   {
     "name": ".text.P_SetupLevel",
-    "bytes": 758,
+    "bytes": 904,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14785,7 +14785,7 @@
   },
   {
     "name": ".text.P_Init",
-    "bytes": 40,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14833,7 +14833,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -14841,7 +14841,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 612,
+    "bytes": 600,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -14913,7 +14913,7 @@
   },
   {
     "name": ".text.P_DivlineSide",
-    "bytes": 100,
+    "bytes": 152,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14921,7 +14921,7 @@
   },
   {
     "name": ".text.P_InterceptVector2",
-    "bytes": 134,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14937,7 +14937,7 @@
   },
   {
     "name": ".text.P_CrossSubsector",
-    "bytes": 478,
+    "bytes": 620,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14953,7 +14953,7 @@
   },
   {
     "name": ".text.P_CrossBSPNode",
-    "bytes": 208,
+    "bytes": 280,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -14969,7 +14969,7 @@
   },
   {
     "name": ".text.P_CheckSight",
-    "bytes": 200,
+    "bytes": 288,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15009,7 +15009,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -15089,7 +15089,7 @@
   },
   {
     "name": ".text.P_InitPicAnims",
-    "bytes": 236,
+    "bytes": 316,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15105,7 +15105,7 @@
   },
   {
     "name": ".text.getSide",
-    "bytes": 54,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15121,7 +15121,7 @@
   },
   {
     "name": ".text.getSector",
-    "bytes": 56,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15137,7 +15137,7 @@
   },
   {
     "name": ".text.twoSided",
-    "bytes": 36,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15153,7 +15153,7 @@
   },
   {
     "name": ".text.getNextSector",
-    "bytes": 20,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15161,7 +15161,7 @@
   },
   {
     "name": ".text.P_FindLowestFloorSurrounding",
-    "bytes": 58,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15169,7 +15169,7 @@
   },
   {
     "name": ".text.P_FindHighestFloorSurrounding",
-    "bytes": 66,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15177,7 +15177,7 @@
   },
   {
     "name": ".text.P_FindNextHighestFloor",
-    "bytes": 224,
+    "bytes": 340,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15193,7 +15193,7 @@
   },
   {
     "name": ".text.P_FindLowestCeilingSurrounding",
-    "bytes": 66,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15201,7 +15201,7 @@
   },
   {
     "name": ".text.P_FindHighestCeilingSurrounding",
-    "bytes": 62,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15209,7 +15209,7 @@
   },
   {
     "name": ".text.P_FindSectorFromLineTag",
-    "bytes": 62,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15225,7 +15225,7 @@
   },
   {
     "name": ".text.P_FindMinSurroundingLight",
-    "bytes": 58,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15233,7 +15233,7 @@
   },
   {
     "name": ".text.P_CrossSpecialLine",
-    "bytes": 700,
+    "bytes": 1100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15265,7 +15265,7 @@
   },
   {
     "name": ".text.P_ShootSpecialLine",
-    "bytes": 118,
+    "bytes": 168,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15281,7 +15281,7 @@
   },
   {
     "name": ".text.P_PlayerInSpecialSector",
-    "bytes": 250,
+    "bytes": 360,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15313,7 +15313,7 @@
   },
   {
     "name": ".text.P_UpdateSpecials",
-    "bytes": 414,
+    "bytes": 528,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15329,7 +15329,7 @@
   },
   {
     "name": ".text.EV_DoDonut",
-    "bytes": 598,
+    "bytes": 768,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15345,7 +15345,7 @@
   },
   {
     "name": ".text.P_SpawnSpecials",
-    "bytes": 486,
+    "bytes": 628,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15409,7 +15409,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -15417,7 +15417,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 736,
+    "bytes": 740,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -15489,7 +15489,7 @@
   },
   {
     "name": ".text.P_InitSwitchList",
-    "bytes": 168,
+    "bytes": 236,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15505,7 +15505,7 @@
   },
   {
     "name": ".text.P_StartButton",
-    "bytes": 94,
+    "bytes": 120,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15521,7 +15521,7 @@
   },
   {
     "name": ".text.P_ChangeSwitchTexture",
-    "bytes": 342,
+    "bytes": 428,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15537,7 +15537,7 @@
   },
   {
     "name": ".text.P_UseSpecialLine",
-    "bytes": 582,
+    "bytes": 920,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15601,7 +15601,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -15681,7 +15681,7 @@
   },
   {
     "name": ".text.EV_Teleport",
-    "bytes": 394,
+    "bytes": 500,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15705,7 +15705,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -15785,7 +15785,7 @@
   },
   {
     "name": ".text.P_InitThinkers",
-    "bytes": 14,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15801,7 +15801,7 @@
   },
   {
     "name": ".text.P_AddThinker",
-    "bytes": 20,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15817,7 +15817,7 @@
   },
   {
     "name": ".text.P_RemoveThinker",
-    "bytes": 6,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15825,7 +15825,7 @@
   },
   {
     "name": ".text.P_AllocateThinker",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15833,7 +15833,7 @@
   },
   {
     "name": ".text.P_RunThinkers",
-    "bytes": 76,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15849,7 +15849,7 @@
   },
   {
     "name": ".text.P_Ticker",
-    "bytes": 170,
+    "bytes": 220,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15889,7 +15889,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -15969,7 +15969,7 @@
   },
   {
     "name": ".text.P_Thrust",
-    "bytes": 94,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -15985,7 +15985,7 @@
   },
   {
     "name": ".text.P_CalcHeight",
-    "bytes": 274,
+    "bytes": 404,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16001,7 +16001,7 @@
   },
   {
     "name": ".text.P_MovePlayer",
-    "bytes": 160,
+    "bytes": 224,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16017,7 +16017,7 @@
   },
   {
     "name": ".text.P_DeathThink",
-    "bytes": 232,
+    "bytes": 320,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16033,7 +16033,7 @@
   },
   {
     "name": ".text.P_PlayerThink",
-    "bytes": 438,
+    "bytes": 660,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16065,7 +16065,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -16145,7 +16145,7 @@
   },
   {
     "name": ".text.R_ClearDrawSegs",
-    "bytes": 18,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16161,7 +16161,7 @@
   },
   {
     "name": ".text.R_ClipSolidWallSegment",
-    "bytes": 260,
+    "bytes": 344,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16177,7 +16177,7 @@
   },
   {
     "name": ".text.R_ClipPassWallSegment",
-    "bytes": 122,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16193,7 +16193,7 @@
   },
   {
     "name": ".text.R_ClearClipSegs",
-    "bytes": 44,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16209,7 +16209,7 @@
   },
   {
     "name": ".text.R_AddLine",
-    "bytes": 306,
+    "bytes": 404,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16225,7 +16225,7 @@
   },
   {
     "name": ".text.R_CheckBBox",
-    "bytes": 302,
+    "bytes": 412,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16241,7 +16241,7 @@
   },
   {
     "name": ".text.R_Subsector",
-    "bytes": 266,
+    "bytes": 332,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16257,7 +16257,7 @@
   },
   {
     "name": ".text.R_RenderBSPNode",
-    "bytes": 200,
+    "bytes": 272,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16337,7 +16337,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -16345,7 +16345,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 368,
+    "bytes": 376,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -16417,7 +16417,7 @@
   },
   {
     "name": ".text.R_DrawColumnInCache",
-    "bytes": 126,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16433,7 +16433,7 @@
   },
   {
     "name": ".text.R_GenerateComposite",
-    "bytes": 326,
+    "bytes": 444,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16449,7 +16449,7 @@
   },
   {
     "name": ".text.R_GenerateLookup",
-    "bytes": 460,
+    "bytes": 604,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16465,7 +16465,7 @@
   },
   {
     "name": ".text.R_GetColumn",
-    "bytes": 120,
+    "bytes": 176,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16481,7 +16481,7 @@
   },
   {
     "name": ".text.R_InitTextures",
-    "bytes": 1350,
+    "bytes": 1732,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16497,7 +16497,7 @@
   },
   {
     "name": ".text.R_InitFlats",
-    "bytes": 114,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16513,7 +16513,7 @@
   },
   {
     "name": ".text.R_InitSpriteLumps",
-    "bytes": 286,
+    "bytes": 368,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16529,7 +16529,7 @@
   },
   {
     "name": ".text.R_InitColormaps",
-    "bytes": 44,
+    "bytes": 56,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16545,7 +16545,7 @@
   },
   {
     "name": ".text.R_InitData",
-    "bytes": 104,
+    "bytes": 116,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16561,7 +16561,7 @@
   },
   {
     "name": ".text.R_FlatNumForName",
-    "bytes": 130,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16577,7 +16577,7 @@
   },
   {
     "name": ".text.R_CheckTextureNumForName",
-    "bytes": 104,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16593,7 +16593,7 @@
   },
   {
     "name": ".text.R_TextureNumForName",
-    "bytes": 56,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16609,7 +16609,7 @@
   },
   {
     "name": ".text.R_PrecacheLevel",
-    "bytes": 766,
+    "bytes": 968,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16625,7 +16625,7 @@
   },
   {
     "name": ".rodata.str1.1",
-    "bytes": 366,
+    "bytes": 358,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -16681,7 +16681,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -16761,7 +16761,7 @@
   },
   {
     "name": ".text.R_DrawColumn",
-    "bytes": 210,
+    "bytes": 276,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16777,7 +16777,7 @@
   },
   {
     "name": ".text.R_DrawColumnLow",
-    "bytes": 226,
+    "bytes": 292,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16793,7 +16793,7 @@
   },
   {
     "name": ".text.R_DrawFuzzColumn",
-    "bytes": 246,
+    "bytes": 320,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16809,7 +16809,7 @@
   },
   {
     "name": ".text.R_DrawFuzzColumnLow",
-    "bytes": 288,
+    "bytes": 372,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16825,7 +16825,7 @@
   },
   {
     "name": ".text.R_DrawTranslatedColumn",
-    "bytes": 216,
+    "bytes": 284,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16841,7 +16841,7 @@
   },
   {
     "name": ".text.R_DrawTranslatedColumnLow",
-    "bytes": 266,
+    "bytes": 344,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16857,7 +16857,7 @@
   },
   {
     "name": ".text.R_InitTranslationTables",
-    "bytes": 136,
+    "bytes": 168,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16873,7 +16873,7 @@
   },
   {
     "name": ".text.R_DrawSpan",
-    "bytes": 242,
+    "bytes": 276,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16889,7 +16889,7 @@
   },
   {
     "name": ".text.R_DrawSpanLow",
-    "bytes": 276,
+    "bytes": 316,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16905,7 +16905,7 @@
   },
   {
     "name": ".text.R_InitBuffer",
-    "bytes": 114,
+    "bytes": 144,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16921,7 +16921,7 @@
   },
   {
     "name": ".text.R_FillBackScreen",
-    "bytes": 692,
+    "bytes": 888,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16937,7 +16937,7 @@
   },
   {
     "name": ".text.R_VideoErase",
-    "bytes": 36,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -16953,7 +16953,7 @@
   },
   {
     "name": ".text.R_DrawViewBorder",
-    "bytes": 270,
+    "bytes": 360,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17065,7 +17065,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -17073,7 +17073,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 560,
+    "bytes": 552,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -17145,7 +17145,7 @@
   },
   {
     "name": ".text.R_AddPointToBox",
-    "bytes": 34,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17153,7 +17153,7 @@
   },
   {
     "name": ".text.R_PointOnSide",
-    "bytes": 134,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17169,7 +17169,7 @@
   },
   {
     "name": ".text.R_PointOnSegSide",
-    "bytes": 148,
+    "bytes": 204,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17185,7 +17185,7 @@
   },
   {
     "name": ".text.R_PointToAngle",
-    "bytes": 340,
+    "bytes": 424,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17201,7 +17201,7 @@
   },
   {
     "name": ".text.R_PointToAngle2",
-    "bytes": 24,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17217,7 +17217,7 @@
   },
   {
     "name": ".text.R_PointToDist",
-    "bytes": 128,
+    "bytes": 176,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17233,7 +17233,7 @@
   },
   {
     "name": ".text.R_InitPointToAngle",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17241,7 +17241,7 @@
   },
   {
     "name": ".text.R_ScaleFromGlobalAngle",
-    "bytes": 152,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17257,7 +17257,7 @@
   },
   {
     "name": ".text.R_InitTables",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17265,7 +17265,7 @@
   },
   {
     "name": ".text.R_InitTextureMapping",
-    "bytes": 318,
+    "bytes": 448,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17281,7 +17281,7 @@
   },
   {
     "name": ".text.R_InitLightTables",
-    "bytes": 170,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17297,7 +17297,7 @@
   },
   {
     "name": ".text.R_SetViewSize",
-    "bytes": 18,
+    "bytes": 28,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17313,7 +17313,7 @@
   },
   {
     "name": ".text.R_ExecuteSetViewSize",
-    "bytes": 666,
+    "bytes": 812,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17329,7 +17329,7 @@
   },
   {
     "name": ".text.R_Init",
-    "bytes": 162,
+    "bytes": 184,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17345,7 +17345,7 @@
   },
   {
     "name": ".text.R_PointInSubsector",
-    "bytes": 132,
+    "bytes": 176,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17361,7 +17361,7 @@
   },
   {
     "name": ".text.R_SetupFrame",
-    "bytes": 162,
+    "bytes": 208,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17377,7 +17377,7 @@
   },
   {
     "name": ".text.R_RenderPlayerView",
-    "bytes": 114,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17457,7 +17457,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -17537,7 +17537,7 @@
   },
   {
     "name": ".text.R_InitPlanes",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17545,7 +17545,7 @@
   },
   {
     "name": ".text.R_MapPlane",
-    "bytes": 496,
+    "bytes": 592,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17561,7 +17561,7 @@
   },
   {
     "name": ".text.R_ClearPlanes",
-    "bytes": 222,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17577,7 +17577,7 @@
   },
   {
     "name": ".text.R_FindPlane",
-    "bytes": 198,
+    "bytes": 252,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17593,7 +17593,7 @@
   },
   {
     "name": ".text.R_CheckPlane",
-    "bytes": 150,
+    "bytes": 212,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17609,7 +17609,7 @@
   },
   {
     "name": ".text.R_MakeSpans",
-    "bytes": 232,
+    "bytes": 320,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17625,7 +17625,7 @@
   },
   {
     "name": ".text.R_DrawPlanes",
-    "bytes": 702,
+    "bytes": 848,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17761,7 +17761,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -17841,7 +17841,7 @@
   },
   {
     "name": ".text.R_RenderMaskedSegRange",
-    "bytes": 596,
+    "bytes": 748,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17857,7 +17857,7 @@
   },
   {
     "name": ".text.R_RenderSegLoop",
-    "bytes": 840,
+    "bytes": 988,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17865,7 +17865,7 @@
   },
   {
     "name": ".rela.text.R_RenderSegLoop",
-    "bytes": 672,
+    "bytes": 624,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -17873,7 +17873,7 @@
   },
   {
     "name": ".text.R_StoreWallRange",
-    "bytes": 1990,
+    "bytes": 2392,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -17913,7 +17913,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -17921,7 +17921,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 216,
+    "bytes": 212,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -17993,7 +17993,7 @@
   },
   {
     "name": ".text.R_InitSkyMap",
-    "bytes": 14,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18041,7 +18041,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -18121,7 +18121,7 @@
   },
   {
     "name": ".text.R_InstallSpriteLump",
-    "bytes": 340,
+    "bytes": 424,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18137,7 +18137,7 @@
   },
   {
     "name": ".text.R_InitSpriteDefs",
-    "bytes": 596,
+    "bytes": 780,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18153,7 +18153,7 @@
   },
   {
     "name": ".text.R_InitSprites",
-    "bytes": 48,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18169,7 +18169,7 @@
   },
   {
     "name": ".text.R_ClearSprites",
-    "bytes": 18,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18185,7 +18185,7 @@
   },
   {
     "name": ".text.R_NewVisSprite",
-    "bytes": 36,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18201,7 +18201,7 @@
   },
   {
     "name": ".text.R_DrawMaskedColumn",
-    "bytes": 276,
+    "bytes": 344,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18217,7 +18217,7 @@
   },
   {
     "name": ".text.R_DrawVisSprite",
-    "bytes": 388,
+    "bytes": 476,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18233,7 +18233,7 @@
   },
   {
     "name": ".text.R_ProjectSprite",
-    "bytes": 734,
+    "bytes": 916,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18249,7 +18249,7 @@
   },
   {
     "name": ".text.R_AddSprites",
-    "bytes": 118,
+    "bytes": 160,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18265,7 +18265,7 @@
   },
   {
     "name": ".text.R_DrawPSprite",
-    "bytes": 480,
+    "bytes": 604,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18281,7 +18281,7 @@
   },
   {
     "name": ".text.R_DrawPlayerSprites",
-    "bytes": 146,
+    "bytes": 204,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18297,7 +18297,7 @@
   },
   {
     "name": ".text.R_SortVisSprites",
-    "bytes": 190,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18313,7 +18313,7 @@
   },
   {
     "name": ".text.R_DrawSprite",
-    "bytes": 570,
+    "bytes": 736,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18329,7 +18329,7 @@
   },
   {
     "name": ".text.R_DrawMasked",
-    "bytes": 150,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18401,7 +18401,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -18409,7 +18409,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 656,
+    "bytes": 648,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -18481,7 +18481,7 @@
   },
   {
     "name": ".text.SHA1_Init",
-    "bytes": 60,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18489,7 +18489,7 @@
   },
   {
     "name": ".text.SHA1_Update",
-    "bytes": 282,
+    "bytes": 364,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18505,7 +18505,7 @@
   },
   {
     "name": ".text.Transform",
-    "bytes": 4958,
+    "bytes": 6544,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18513,7 +18513,7 @@
   },
   {
     "name": ".text.SHA1_Final",
-    "bytes": 506,
+    "bytes": 652,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18529,7 +18529,7 @@
   },
   {
     "name": ".text.SHA1_UpdateInt32",
-    "bytes": 50,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18545,7 +18545,7 @@
   },
   {
     "name": ".text.SHA1_UpdateString",
-    "bytes": 46,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18569,7 +18569,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -18697,7 +18697,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -18761,7 +18761,7 @@
   },
   {
     "name": ".text.StatCopy",
-    "bytes": 52,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18777,7 +18777,7 @@
   },
   {
     "name": ".text.StatDump",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18809,7 +18809,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -18889,7 +18889,7 @@
   },
   {
     "name": ".text.STlib_init",
-    "bytes": 36,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18905,7 +18905,7 @@
   },
   {
     "name": ".text.STlib_initNum",
-    "bytes": 20,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18913,7 +18913,7 @@
   },
   {
     "name": ".text.STlib_drawNum",
-    "bytes": 402,
+    "bytes": 520,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18929,7 +18929,7 @@
   },
   {
     "name": ".text.STlib_updateNum",
-    "bytes": 16,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18945,7 +18945,7 @@
   },
   {
     "name": ".text.STlib_initPercent",
-    "bytes": 26,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18953,7 +18953,7 @@
   },
   {
     "name": ".text.STlib_updatePercent",
-    "bytes": 60,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18969,7 +18969,7 @@
   },
   {
     "name": ".text.STlib_initMultIcon",
-    "bytes": 18,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18977,7 +18977,7 @@
   },
   {
     "name": ".text.STlib_updateMultIcon",
-    "bytes": 234,
+    "bytes": 336,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -18993,7 +18993,7 @@
   },
   {
     "name": ".text.STlib_initBinIcon",
-    "bytes": 16,
+    "bytes": 28,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19001,7 +19001,7 @@
   },
   {
     "name": ".text.STlib_updateBinIcon",
-    "bytes": 212,
+    "bytes": 312,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19041,7 +19041,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -19049,7 +19049,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 372,
+    "bytes": 380,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -19121,7 +19121,7 @@
   },
   {
     "name": ".text.ST_refreshBackground",
-    "bytes": 118,
+    "bytes": 164,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19137,7 +19137,7 @@
   },
   {
     "name": ".text.ST_Responder",
-    "bytes": 1172,
+    "bytes": 1420,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19153,7 +19153,7 @@
   },
   {
     "name": ".text.ST_calcPainOffset",
-    "bytes": 80,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19169,7 +19169,7 @@
   },
   {
     "name": ".text.ST_updateFaceWidget",
-    "bytes": 1042,
+    "bytes": 1276,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19185,7 +19185,7 @@
   },
   {
     "name": ".text.ST_updateWidgets",
-    "bytes": 224,
+    "bytes": 304,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19201,7 +19201,7 @@
   },
   {
     "name": ".text.ST_Ticker",
-    "bytes": 58,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19217,7 +19217,7 @@
   },
   {
     "name": ".text.ST_doPaletteStuff",
-    "bytes": 188,
+    "bytes": 276,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19233,7 +19233,7 @@
   },
   {
     "name": ".text.ST_drawWidgets",
-    "bytes": 248,
+    "bytes": 308,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19249,7 +19249,7 @@
   },
   {
     "name": ".text.ST_doRefresh",
-    "bytes": 34,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19265,7 +19265,7 @@
   },
   {
     "name": ".text.ST_diffDraw",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19281,7 +19281,7 @@
   },
   {
     "name": ".text.ST_Drawer",
-    "bytes": 84,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19297,7 +19297,7 @@
   },
   {
     "name": ".text.ST_loadGraphics",
-    "bytes": 768,
+    "bytes": 996,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19313,7 +19313,7 @@
   },
   {
     "name": ".text.ST_loadData",
-    "bytes": 40,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19329,7 +19329,7 @@
   },
   {
     "name": ".text.ST_unloadGraphics",
-    "bytes": 764,
+    "bytes": 932,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19361,7 +19361,7 @@
   },
   {
     "name": ".text.ST_initData",
-    "bytes": 110,
+    "bytes": 148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19377,7 +19377,7 @@
   },
   {
     "name": ".text.ST_createWidgets",
-    "bytes": 744,
+    "bytes": 912,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19393,7 +19393,7 @@
   },
   {
     "name": ".text.ST_Start",
-    "bytes": 150,
+    "bytes": 192,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19409,7 +19409,7 @@
   },
   {
     "name": ".text.ST_Stop",
-    "bytes": 56,
+    "bytes": 76,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19425,7 +19425,7 @@
   },
   {
     "name": ".text.ST_Init",
-    "bytes": 66,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19481,7 +19481,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -19489,7 +19489,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 804,
+    "bytes": 800,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -19561,7 +19561,7 @@
   },
   {
     "name": ".text.S_Init",
-    "bytes": 208,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19577,7 +19577,7 @@
   },
   {
     "name": ".text.S_SetSfxVolume",
-    "bytes": 50,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19593,7 +19593,7 @@
   },
   {
     "name": ".text.S_SetMusicVolume",
-    "bytes": 50,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19609,7 +19609,7 @@
   },
   {
     "name": ".text.S_Shutdown",
-    "bytes": 24,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19625,7 +19625,7 @@
   },
   {
     "name": ".text.S_Start",
-    "bytes": 184,
+    "bytes": 236,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19641,7 +19641,7 @@
   },
   {
     "name": ".text.S_StopChannel",
-    "bytes": 68,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19657,7 +19657,7 @@
   },
   {
     "name": ".text.S_ChangeMusic",
-    "bytes": 224,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19673,7 +19673,7 @@
   },
   {
     "name": ".text.S_StopSound",
-    "bytes": 56,
+    "bytes": 72,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19689,7 +19689,7 @@
   },
   {
     "name": ".text.S_StartSound",
-    "bytes": 446,
+    "bytes": 576,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19705,7 +19705,7 @@
   },
   {
     "name": ".text.S_AdjustSoundParams",
-    "bytes": 306,
+    "bytes": 408,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19721,7 +19721,7 @@
   },
   {
     "name": ".text.S_PauseSound",
-    "bytes": 48,
+    "bytes": 68,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19737,7 +19737,7 @@
   },
   {
     "name": ".text.S_ResumeSound",
-    "bytes": 46,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19753,7 +19753,7 @@
   },
   {
     "name": ".text.S_UpdateSounds",
-    "bytes": 202,
+    "bytes": 292,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19769,7 +19769,7 @@
   },
   {
     "name": ".text.S_StartMusic",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19785,7 +19785,7 @@
   },
   {
     "name": ".text.S_StopMusic",
-    "bytes": 90,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -19873,7 +19873,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -19953,7 +19953,7 @@
   },
   {
     "name": ".text.SlopeDiv",
-    "bytes": 34,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20017,7 +20017,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -20097,7 +20097,7 @@
   },
   {
     "name": ".text.V_MarkRect",
-    "bytes": 114,
+    "bytes": 180,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20113,7 +20113,7 @@
   },
   {
     "name": ".text.V_CopyRect",
-    "bytes": 220,
+    "bytes": 296,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20129,7 +20129,7 @@
   },
   {
     "name": ".text.V_SetPatchClipCallback",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20145,7 +20145,7 @@
   },
   {
     "name": ".text.V_DrawPatch",
-    "bytes": 418,
+    "bytes": 532,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20161,7 +20161,7 @@
   },
   {
     "name": ".text.V_DrawPatchFlipped",
-    "bytes": 376,
+    "bytes": 476,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20193,7 +20193,7 @@
   },
   {
     "name": ".text.V_DrawTLPatch",
-    "bytes": 334,
+    "bytes": 424,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20209,7 +20209,7 @@
   },
   {
     "name": ".text.V_DrawXlaPatch",
-    "bytes": 266,
+    "bytes": 364,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20225,7 +20225,7 @@
   },
   {
     "name": ".text.V_DrawAltTLPatch",
-    "bytes": 334,
+    "bytes": 424,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20241,7 +20241,7 @@
   },
   {
     "name": ".text.V_DrawShadowedPatch",
-    "bytes": 334,
+    "bytes": 424,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20257,7 +20257,7 @@
   },
   {
     "name": ".text.V_LoadTintTable",
-    "bytes": 36,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20273,7 +20273,7 @@
   },
   {
     "name": ".text.V_LoadXlaTable",
-    "bytes": 36,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20289,7 +20289,7 @@
   },
   {
     "name": ".text.V_DrawBlock",
-    "bytes": 152,
+    "bytes": 216,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20305,7 +20305,7 @@
   },
   {
     "name": ".text.V_DrawFilledBox",
-    "bytes": 80,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20321,7 +20321,7 @@
   },
   {
     "name": ".text.V_DrawHorizLine",
-    "bytes": 34,
+    "bytes": 44,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20337,7 +20337,7 @@
   },
   {
     "name": ".text.V_DrawVertLine",
-    "bytes": 52,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20353,7 +20353,7 @@
   },
   {
     "name": ".text.V_DrawBox",
-    "bytes": 208,
+    "bytes": 292,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20369,7 +20369,7 @@
   },
   {
     "name": ".text.V_DrawRawScreen",
-    "bytes": 28,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20385,7 +20385,7 @@
   },
   {
     "name": ".text.V_Init",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20393,7 +20393,7 @@
   },
   {
     "name": ".text.V_UseBuffer",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20409,7 +20409,7 @@
   },
   {
     "name": ".text.V_RestoreBuffer",
-    "bytes": 18,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20425,7 +20425,7 @@
   },
   {
     "name": ".text.WritePCXfile",
-    "bytes": 356,
+    "bytes": 456,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20441,7 +20441,7 @@
   },
   {
     "name": ".text.V_ScreenShot",
-    "bytes": 142,
+    "bytes": 196,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20456,16 +20456,8 @@
     "object": "v_video.o"
   },
   {
-    "name": ".rodata.cst8",
-    "bytes": 8,
-    "write": false,
-    "alloc": true,
-    "exec": false,
-    "object": "v_video.o"
-  },
-  {
     "name": ".text.V_DrawMouseSpeedBox",
-    "bytes": 602,
+    "bytes": 768,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20473,7 +20465,7 @@
   },
   {
     "name": ".rela.text.V_DrawMouseSpeedBox",
-    "bytes": 444,
+    "bytes": 492,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -20505,7 +20497,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -20513,7 +20505,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 924,
+    "bytes": 904,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -20545,7 +20537,7 @@
   },
   {
     "name": ".symtab",
-    "bytes": 2320,
+    "bytes": 2368,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -20553,7 +20545,7 @@
   },
   {
     "name": ".shstrtab",
-    "bytes": 1269,
+    "bytes": 1256,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -20561,7 +20553,7 @@
   },
   {
     "name": ".strtab",
-    "bytes": 947,
+    "bytes": 996,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -20585,7 +20577,7 @@
   },
   {
     "name": ".text.WI_slamBackground",
-    "bytes": 20,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20601,7 +20593,7 @@
   },
   {
     "name": ".text.WI_Responder",
-    "bytes": 4,
+    "bytes": 8,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20609,7 +20601,7 @@
   },
   {
     "name": ".text.WI_drawLF",
-    "bytes": 246,
+    "bytes": 332,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20625,7 +20617,7 @@
   },
   {
     "name": ".text.WI_drawEL",
-    "bytes": 136,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20641,7 +20633,7 @@
   },
   {
     "name": ".text.WI_drawOnLnode",
-    "bytes": 204,
+    "bytes": 256,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20657,7 +20649,7 @@
   },
   {
     "name": ".text.WI_initAnimatedBack",
-    "bytes": 218,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20673,7 +20665,7 @@
   },
   {
     "name": ".text.WI_updateAnimatedBack",
-    "bytes": 284,
+    "bytes": 432,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20689,7 +20681,7 @@
   },
   {
     "name": ".text.WI_drawAnimatedBack",
-    "bytes": 132,
+    "bytes": 188,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20705,7 +20697,7 @@
   },
   {
     "name": ".text.WI_drawNum",
-    "bytes": 244,
+    "bytes": 344,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20721,7 +20713,7 @@
   },
   {
     "name": ".text.WI_drawPercent",
-    "bytes": 66,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20737,7 +20729,7 @@
   },
   {
     "name": ".text.WI_drawTime",
-    "bytes": 234,
+    "bytes": 336,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20769,7 +20761,7 @@
   },
   {
     "name": ".text.WI_unloadData",
-    "bytes": 1098,
+    "bytes": 1296,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20785,7 +20777,7 @@
   },
   {
     "name": ".text.WI_initNoState",
-    "bytes": 22,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20801,7 +20793,7 @@
   },
   {
     "name": ".text.WI_updateNoState",
-    "bytes": 46,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20817,7 +20809,7 @@
   },
   {
     "name": ".text.WI_initShowNextLoc",
-    "bytes": 30,
+    "bytes": 36,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20833,7 +20825,7 @@
   },
   {
     "name": ".text.WI_updateShowNextLoc",
-    "bytes": 64,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20849,7 +20841,7 @@
   },
   {
     "name": ".text.WI_drawShowNextLoc",
-    "bytes": 218,
+    "bytes": 300,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20865,7 +20857,7 @@
   },
   {
     "name": ".text.WI_drawNoState",
-    "bytes": 18,
+    "bytes": 20,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20881,7 +20873,7 @@
   },
   {
     "name": ".text.WI_fragSum",
-    "bytes": 68,
+    "bytes": 96,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20897,7 +20889,7 @@
   },
   {
     "name": ".text.WI_initDeathmatchStats",
-    "bytes": 102,
+    "bytes": 128,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20913,7 +20905,7 @@
   },
   {
     "name": ".text.WI_updateDeathmatchStats",
-    "bytes": 530,
+    "bytes": 724,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20929,7 +20921,7 @@
   },
   {
     "name": ".text.WI_drawDeathmatchStats",
-    "bytes": 536,
+    "bytes": 716,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20945,7 +20937,7 @@
   },
   {
     "name": ".text.WI_initNetgameStats",
-    "bytes": 140,
+    "bytes": 192,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20961,7 +20953,7 @@
   },
   {
     "name": ".text.WI_updateNetgameStats",
-    "bytes": 864,
+    "bytes": 1148,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -20993,7 +20985,7 @@
   },
   {
     "name": ".text.WI_drawNetgameStats",
-    "bytes": 636,
+    "bytes": 836,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21009,7 +21001,7 @@
   },
   {
     "name": ".text.WI_initStats",
-    "bytes": 54,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21025,7 +21017,7 @@
   },
   {
     "name": ".text.WI_updateStats",
-    "bytes": 688,
+    "bytes": 928,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21057,7 +21049,7 @@
   },
   {
     "name": ".text.WI_drawStats",
-    "bytes": 308,
+    "bytes": 372,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21073,7 +21065,7 @@
   },
   {
     "name": ".text.WI_checkForAccelerate",
-    "bytes": 90,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21089,7 +21081,7 @@
   },
   {
     "name": ".text.WI_Ticker",
-    "bytes": 168,
+    "bytes": 228,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21105,7 +21097,7 @@
   },
   {
     "name": ".text.WI_loadData",
-    "bytes": 1232,
+    "bytes": 1496,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21121,7 +21113,7 @@
   },
   {
     "name": ".text.WI_Drawer",
-    "bytes": 86,
+    "bytes": 100,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21137,7 +21129,7 @@
   },
   {
     "name": ".text.WI_initVariables",
-    "bytes": 82,
+    "bytes": 124,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21153,7 +21145,7 @@
   },
   {
     "name": ".text.WI_Start",
-    "bytes": 122,
+    "bytes": 152,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21249,7 +21241,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -21257,7 +21249,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 1488,
+    "bytes": 1496,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -21329,7 +21321,7 @@
   },
   {
     "name": ".text.W_Checksum",
-    "bytes": 264,
+    "bytes": 352,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21361,7 +21353,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -21441,7 +21433,7 @@
   },
   {
     "name": ".text.W_OpenFile",
-    "bytes": 42,
+    "bytes": 60,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21457,7 +21449,7 @@
   },
   {
     "name": ".text.W_CloseFile",
-    "bytes": 6,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21465,7 +21457,7 @@
   },
   {
     "name": ".text.W_Read",
-    "bytes": 6,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21489,7 +21481,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -21569,7 +21561,7 @@
   },
   {
     "name": ".text.W_ParseCommandLine",
-    "bytes": 168,
+    "bytes": 240,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21601,7 +21593,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -21681,7 +21673,7 @@
   },
   {
     "name": ".text.W_LumpNameHash",
-    "bytes": 70,
+    "bytes": 112,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21697,7 +21689,7 @@
   },
   {
     "name": ".text.W_AddFile",
-    "bytes": 776,
+    "bytes": 1028,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21713,7 +21705,7 @@
   },
   {
     "name": ".text.W_NumLumps",
-    "bytes": 10,
+    "bytes": 12,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21729,7 +21721,7 @@
   },
   {
     "name": ".text.W_CheckNumForName",
-    "bytes": 170,
+    "bytes": 248,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21745,7 +21737,7 @@
   },
   {
     "name": ".text.W_GetNumForName",
-    "bytes": 54,
+    "bytes": 80,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21761,7 +21753,7 @@
   },
   {
     "name": ".text.W_LumpLength",
-    "bytes": 68,
+    "bytes": 88,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21777,7 +21769,7 @@
   },
   {
     "name": ".text.W_ReadLump",
-    "bytes": 132,
+    "bytes": 172,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21793,7 +21785,7 @@
   },
   {
     "name": ".text.W_CacheLumpNum",
-    "bytes": 212,
+    "bytes": 276,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21809,7 +21801,7 @@
   },
   {
     "name": ".text.W_CacheLumpName",
-    "bytes": 32,
+    "bytes": 48,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21825,7 +21817,7 @@
   },
   {
     "name": ".text.W_ReleaseLumpNum",
-    "bytes": 102,
+    "bytes": 136,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21841,7 +21833,7 @@
   },
   {
     "name": ".text.W_ReleaseLumpName",
-    "bytes": 24,
+    "bytes": 32,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21857,7 +21849,7 @@
   },
   {
     "name": ".text.W_GenerateHashTable",
-    "bytes": 164,
+    "bytes": 232,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21873,7 +21865,7 @@
   },
   {
     "name": ".text.W_CheckCorrectIWAD",
-    "bytes": 160,
+    "bytes": 232,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -21889,7 +21881,7 @@
   },
   {
     "name": ".rodata.str1.1",
-    "bytes": 534,
+    "bytes": 526,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -21929,7 +21921,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -21937,7 +21929,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 552,
+    "bytes": 556,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -22009,7 +22001,7 @@
   },
   {
     "name": ".text.Z_ClearZone",
-    "bytes": 36,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22017,7 +22009,7 @@
   },
   {
     "name": ".text.Z_Init",
-    "bytes": 64,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22033,7 +22025,7 @@
   },
   {
     "name": ".text.Z_Free",
-    "bytes": 174,
+    "bytes": 236,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22049,7 +22041,7 @@
   },
   {
     "name": ".text.Z_Malloc",
-    "bytes": 284,
+    "bytes": 404,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22065,7 +22057,7 @@
   },
   {
     "name": ".text.Z_FreeTags",
-    "bytes": 94,
+    "bytes": 140,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22081,7 +22073,7 @@
   },
   {
     "name": ".text.Z_DumpHeap",
-    "bytes": 246,
+    "bytes": 348,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22097,7 +22089,7 @@
   },
   {
     "name": ".text.Z_FileDumpHeap",
-    "bytes": 306,
+    "bytes": 428,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22113,7 +22105,7 @@
   },
   {
     "name": ".text.Z_CheckHeap",
-    "bytes": 168,
+    "bytes": 244,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22129,7 +22121,7 @@
   },
   {
     "name": ".text.Z_ChangeTag2",
-    "bytes": 106,
+    "bytes": 152,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22145,7 +22137,7 @@
   },
   {
     "name": ".text.Z_ChangeUser",
-    "bytes": 60,
+    "bytes": 84,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22161,7 +22153,7 @@
   },
   {
     "name": ".text.Z_FreeMemory",
-    "bytes": 44,
+    "bytes": 64,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22177,7 +22169,7 @@
   },
   {
     "name": ".text.Z_ZoneSize",
-    "bytes": 12,
+    "bytes": 16,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22217,7 +22209,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -22225,7 +22217,7 @@
   },
   {
     "name": ".eh_frame",
-    "bytes": 500,
+    "bytes": 504,
     "write": false,
     "alloc": true,
     "exec": false,
@@ -22297,7 +22289,7 @@
   },
   {
     "name": ".text.W_StdC_Read",
-    "bytes": 54,
+    "bytes": 92,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22313,7 +22305,7 @@
   },
   {
     "name": ".text.W_StdC_OpenFile",
-    "bytes": 88,
+    "bytes": 132,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22329,7 +22321,7 @@
   },
   {
     "name": ".text.W_StdC_CloseFile",
-    "bytes": 34,
+    "bytes": 52,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22377,7 +22369,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -22457,7 +22449,7 @@
   },
   {
     "name": ".text.I_GetEvent",
-    "bytes": 204,
+    "bytes": 292,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22473,7 +22465,7 @@
   },
   {
     "name": ".text.I_InitInput",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22513,7 +22505,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -22593,7 +22585,7 @@
   },
   {
     "name": ".text.cmap_to_rgb565",
-    "bytes": 82,
+    "bytes": 104,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22609,7 +22601,7 @@
   },
   {
     "name": ".text.cmap_to_fb",
-    "bytes": 264,
+    "bytes": 364,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22625,7 +22617,7 @@
   },
   {
     "name": ".text.I_InitGraphics",
-    "bytes": 470,
+    "bytes": 616,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22657,7 +22649,7 @@
   },
   {
     "name": ".text.I_StartFrame",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22681,7 +22673,7 @@
   },
   {
     "name": ".text.I_UpdateNoBlit",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22689,7 +22681,7 @@
   },
   {
     "name": ".text.I_FinishUpdate",
-    "bytes": 182,
+    "bytes": 244,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22705,7 +22697,7 @@
   },
   {
     "name": ".text.I_ReadScreen",
-    "bytes": 22,
+    "bytes": 24,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22721,7 +22713,7 @@
   },
   {
     "name": ".text.I_SetPalette",
-    "bytes": 80,
+    "bytes": 108,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22737,7 +22729,7 @@
   },
   {
     "name": ".text.I_GetPaletteIndex",
-    "bytes": 28,
+    "bytes": 40,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22753,7 +22745,7 @@
   },
   {
     "name": ".text.I_BeginRead",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22761,7 +22753,7 @@
   },
   {
     "name": ".text.I_EndRead",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22785,7 +22777,7 @@
   },
   {
     "name": ".text.I_GraphicsCheckCommandLine",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22793,7 +22785,7 @@
   },
   {
     "name": ".text.I_SetGrabMouseCallback",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22801,7 +22793,7 @@
   },
   {
     "name": ".text.I_EnableLoadingDisk",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22809,7 +22801,7 @@
   },
   {
     "name": ".text.I_BindVideoVariables",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22817,7 +22809,7 @@
   },
   {
     "name": ".text.I_DisplayFPSDots",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22825,7 +22817,7 @@
   },
   {
     "name": ".text.I_CheckIsScreensaver",
-    "bytes": 2,
+    "bytes": 4,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -22897,7 +22889,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,
@@ -22977,7 +22969,7 @@
   },
   {
     "name": ".text.doomgeneric_Create",
-    "bytes": 68,
+    "bytes": 76,
     "write": false,
     "alloc": true,
     "exec": true,
@@ -23009,7 +23001,7 @@
   },
   {
     "name": ".riscv.attributes",
-    "bytes": 118,
+    "bytes": 49,
     "write": false,
     "alloc": false,
     "exec": false,

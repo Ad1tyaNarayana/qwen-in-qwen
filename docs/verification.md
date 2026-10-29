@@ -19,3 +19,7 @@ Review found and corrected two reproducibility issues. The runner now saves the 
 The preserved ELF includes compiler debug paths for this project's source files. It is retained byte for byte because the execution and stock-model prefix identify it by SHA-256. No model credentials or private SSH material are included.
 
 The Doom audit is a source and object-compilation experiment. Its memory calculation was rerun independently, and its object section totals were recomputed during review. No Doom executable was linked or run.
+
+The expanded memory runtime was independently rerun with its direct sparse constructor: 296 self-fed tokens across 12 cases, with all 65,536 recurrent RAM bytes matching after each case. The upstream-constructor comparison was inspected; an independent attempt exceeded a deliberately smaller 4 GiB guard before reaching the comparison. The existing successful comparison covers 188 tensors. The 8 MiB / 8 MiB run retains its narrower 121-token scope and does not claim full-state extraction.
+
+For compact GPU acceleration, independent review checked both traces against the stock-model trace and recomputed all five-run medians and ranges. The isolated token-table adaptation omits the merged-chat-only Q family, whose position at the end preserves standalone family IDs. The timing loop includes graph replay, next-token decoding and embedding, output copies, and CPU transfer; setup, reset, and warm-up are excluded.

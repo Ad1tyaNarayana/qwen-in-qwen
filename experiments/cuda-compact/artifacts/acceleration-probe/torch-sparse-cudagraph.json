@@ -1,0 +1,19 @@
+{
+  "mode": "torch-sparse-cudagraph",
+  "torch": "2.14.1+cu130",
+  "device": "NVIDIA GeForce RTX 5070 Ti",
+  "gpu": true,
+  "dtype": "float32",
+  "allow_tf32": false,
+  "reference_tokens_used_as_inputs": false,
+  "patch": "FreeRun embedding table omits merged-chat-only output family Q, preserving every standalone family id and row. Circuit arithmetic and kernels unchanged.",
+  "source_sha256": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd",
+  "patched_source_sha256": "390e3111cf79b7a776372308388dd1a920a3ceca10eb222837cbed83397c32a8",
+  "setup_seconds": 7.5250842000000375,
+  "generated_tokens": 5415,
+  "mismatches": 0,
+  "seconds_one_run": 3.644767299999785,
+  "timed_work": "FreeRun CUDA graph replay, next-token decoding/embedding, output copies and final CPU token transfer; excludes setup/capture warm-up/reference run",
+  "cuda_peak_allocated_bytes": 127068160,
+  "complete_first_frame": true
+}

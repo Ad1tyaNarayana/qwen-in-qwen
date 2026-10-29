@@ -1,0 +1,14 @@
+Collecting triton-windows==3.8.0.post29 (from -r artifacts\triton-requirement.txt (line 1))
+  Downloading triton_windows-3.8.0.post29-cp314-cp314-win_amd64.whl (54.1 MB)
+     ---------------------------------------- 54.1/54.1 MB 2.0 MB/s  0:00:26
+Installing collected packages: triton-windows
+Successfully installed triton-windows-3.8.0.post29
+python.exe : 
+At line:4 char:1
++ & .\.venv\Scripts\python.exe -m pip install --no-cache-dir --no-deps  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[notice] A new release of pip is available: 25.3 -> 26.2.2
+[notice] To update, run: <checkout>\.venv\Scripts\python.exe -m pip install --upgrade pip

@@ -33,7 +33,7 @@
     "libc_linked": false,
     "linked": false,
     "writable_allocated_bytes": 297309,
-    "readonly_allocated_bytes": 136137,
-    "code_bytes": 163408
+    "readonly_allocated_bytes": 136105,
+    "code_bytes": 215444
   }
 }

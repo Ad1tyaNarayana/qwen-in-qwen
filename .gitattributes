@@ -2,3 +2,7 @@
 artifacts/hf-cuda-*/report.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 experiments/cuda/gpu-environment.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 experiments/cuda/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/cuda-compact/artifacts/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Raw tool logs and patch context retain their original whitespace.
+experiments/cuda-compact/artifacts/*.log -whitespace
+experiments/cuda-compact/*.diff -whitespace

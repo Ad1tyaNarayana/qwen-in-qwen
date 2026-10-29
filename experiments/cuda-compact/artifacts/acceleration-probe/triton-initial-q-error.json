@@ -1,0 +1,19 @@
+{
+  "mode": "triton",
+  "torch": "2.14.1+cu130",
+  "device": "NVIDIA GeForce RTX 5070 Ti",
+  "gpu": true,
+  "dtype": "float32",
+  "allow_tf32": false,
+  "reference_tokens_used_as_inputs": false,
+  "triton": "3.8.0",
+  "arithmetic_probe": {
+    "generated_kernel_cuda_tensor": true,
+    "float32_elements_exact": 1024
+  },
+  "patch": "Only unused QS payloads9..15 map to QS0 during FreeRun embedding table construction; legal token rows unchanged.",
+  "source_sha256": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd",
+  "patched_source_sha256": "ff7b0546d28b1677b573664b61fdd18c8d79f775d2d25721598818063aa79bee",
+  "error": "KeyError('Q')",
+  "traceback": "Traceback (most recent call last):\n  File \"<checkout>\\tools\\acceleration_probe.py\", line 36, in main\n    fr=module.FreeRun(c,1,'cuda',compile_=False,sparse=True,v2=args.v2)\n  File \"<checkout>\\artifacts\\acceleration-probe\\fastexec-reserved-qs.py\", line 269, in __init__\n    t0 = S.tok(nm) if nm in S.CONTROLS else S.tok(nm, 0)\n                                            ~~~~~^^^^^^^\n  File \"<checkout>\\.upstream\\qwenputer\\experimental\\riscv\\chipformer\\rv\\spec.py\", line 111, in tok\n    base, size = FAMILIES[name]\n                 ~~~~~~~~^^^^^^\nKeyError: 'Q'\n"
+}

@@ -1,0 +1,16 @@
+{
+  "triton": {
+    "tokens": 5415,
+    "mismatches_against_stock_hf_trace": 0,
+    "sha256": "38a4a54bfb199040be4dc4a02f449673320733c313663be522ac2b8c5b541d9d"
+  },
+  "torch-sparse-cudagraph": {
+    "tokens": 5415,
+    "mismatches_against_stock_hf_trace": 0,
+    "sha256": "38a4a54bfb199040be4dc4a02f449673320733c313663be522ac2b8c5b541d9d"
+  },
+  "environment_added": [
+    "triton-windows==3.8.0.post29"
+  ],
+  "environment_removed": []
+}
