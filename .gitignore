@@ -1,0 +1,10 @@
+.upstream/
+.venv/
+.cache/
+build/
+__pycache__/
+.pytest_cache/
+.DS_Store
+.audit/
+artifacts/reference-*/
+artifacts/*/reference-frames.json

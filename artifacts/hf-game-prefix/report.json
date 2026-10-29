@@ -1,0 +1,32 @@
+{
+  "mode": "stock transformers Qwen3_5ForCausalLM, standalone compiled RISC-V CPU, bf16 CPU",
+  "parameters": 2113019200,
+  "generated_tokens": 16,
+  "tokens": [
+    0,
+    65544,
+    98313,
+    32688,
+    65536,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318,
+    230318
+  ],
+  "output": "",
+  "mismatches": 0,
+  "elapsed_seconds_one_run": 19.961391916964203,
+  "timed_work": "PAD prefill, state injection, and stock greedy generate; excludes model compilation",
+  "torch": "2.15.0",
+  "transformers": "5.21.0",
+  "firmware_sha256": "8969cdb7448eff1c03f44b0044f5b0f379da8c8390081f8e7a74355de5393cf0",
+  "bounded_prefix": true,
+  "upstream_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c"
+}

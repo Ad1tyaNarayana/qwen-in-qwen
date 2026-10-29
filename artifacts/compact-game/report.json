@@ -1,0 +1,46 @@
+{
+  "mode": "upstream compact RISC-V circuit tensor executor, CPU fp32; not full Qwen",
+  "upstream_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "firmware_sha256": "8969cdb7448eff1c03f44b0044f5b0f379da8c8390081f8e7a74355de5393cf0",
+  "generated_tokens": 54570,
+  "mismatches": 0,
+  "frames": 12,
+  "distinct_frames": 12,
+  "elapsed_seconds_one_run": 116.20373800001107,
+  "timed_work": "free-running circuit generation and token comparison; excludes build and reference run",
+  "seed": null,
+  "inputs": "deterministic game_keys in build/game.h",
+  "circuit": {
+    "layers": 11,
+    "dims": 2679,
+    "heads": 99,
+    "ffn_units": 42014,
+    "max_units": 8149,
+    "max_heads": 16
+  },
+  "python": "3.13.4",
+  "torch": "2.15.0",
+  "numpy": "2.5.4",
+  "input_schedule": {
+    "name": "Weight Paddle",
+    "frames": 12,
+    "controls": "hit",
+    "key_masks": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16,
+      16,
+      16,
+      0
+    ],
+    "rng": "none",
+    "loop_address": 534,
+    "rom_hex": "00e06002610c620a630964ff6501a26cd014a270d231a26cd014a270d2316701e7a171ff6704e7a1710182448354323f123464ff32041256883088153f01124e670488753f00124e6401790112567a01620a630964ff3300125c6501331f126265ffa26cd014a270d231121680808080c000"
+  }
+}
