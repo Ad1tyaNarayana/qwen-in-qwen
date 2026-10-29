@@ -104,7 +104,7 @@ DROM = '''    wide = c.zeros(NDOT_WIDTH, "ndot.dbytes")
 '''
 
 
-def build(width=4, target=None):
+def build(width=4, target=None, reduced=True):
     if width not in (4, 8):
         raise ValueError(width)
     from chipformer.rv import core
@@ -127,7 +127,7 @@ def build(width=4, target=None):
             raise ValueError(f'Constructor insertion site changed: {before}')
         source = source.replace(before, after)
     module = types.ModuleType('neural_accelerator_core')
-    module.__dict__.update(NDOT_WIDTH=width, neural_dot=dot)
+    module.__dict__.update(NDOT_WIDTH=width, neural_dot=lambda *args: dot(*args, compact=reduced))
     exec(compile(source, str(Path(__file__).resolve())+'::<frozen-core>', 'exec'), module.__dict__)
     # W=4 keeps the same uop names for a stable constructor, but never emits NDOT8 code.
     if width == 4:
@@ -138,11 +138,18 @@ def build(width=4, target=None):
         adapter.rom_word = lambda word, pc: reference.rom_word(word, pc, 4)
         module.RF = adapter
     circuit = module.build(target)
+    circuit.unreused_stats = circuit.stats()
+    if reduced:
+        from reuse import reuse
+        reuse(circuit)
     circuit.accelerator_module = module
     circuit.accelerator_width = width
     circuit.source_manifest = dict(base_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest(),
                                    constructor_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                                    generated_sha256=hashlib.sha256(source.encode()).hexdigest(),
+                                   arithmetic_sha256=hashlib.sha256(Path(__file__).with_name('arithmetic.py').read_bytes()).hexdigest(),
+                                   reuse_sha256=hashlib.sha256(Path(__file__).with_name('reuse.py').read_bytes()).hexdigest(),
+                                   reduced=reduced,
                                    replacement_sites=[before for before, _ in replacements])
     return circuit
 

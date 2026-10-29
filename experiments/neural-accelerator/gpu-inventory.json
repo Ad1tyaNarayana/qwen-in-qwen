@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-29T18:27:27.189580+00:00",
+  "source_command": "ssh gpu nvidia-smi --query-gpu=memory.total,memory.used,memory.free --format=csv,noheader,nounits",
+  "raw_output": "16303, 1170, 14826",
+  "total_mib": 16303,
+  "used_mib": 1170,
+  "free_mib": 14826,
+  "scope": "Read-only availability snapshot. No model allocation or GPU compute."
+}

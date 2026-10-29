@@ -1,5 +1,5 @@
 {
-  "status": "stopped_at_failed_M2_gate",
+  "status": "M2_pass_W4_and_W8_full_map_stock_memory_blocked",
   "created_utc": "2026-10-29T17:06:00.300660+00:00",
   "milestones": {
     "M0": {
@@ -22,75 +22,232 @@
       "legacy_regression_scope": "Doom first frame and original five-position stories260K Phase 1 fixture, each replayed through HALT in original and extended references."
     },
     "M2": {
-      "status": "fail",
-      "width_attempted": 4,
-      "width_8_status": "not_run_after_W4_failure",
-      "evidence": "ir-w4.json",
-      "positive_checks": [
-        {
-          "case": "last-drom-bank",
-          "tokens": 4,
-          "operands_exact": true,
-          "result_bits_exact": true,
-          "records_exact": true,
-          "kernel": true
+      "status": "pass",
+      "width_4_before": {
+        "status": "pass",
+        "evidence": "ir-w4-before-reduction.json",
+        "geometry": {
+          "layers": 65,
+          "dims": 4794,
+          "heads": 627,
+          "ffn_units": 66492,
+          "max_units": 7995,
+          "max_heads": 16,
+          "logical_value_heads": 1247,
+          "hidden": 5120
         },
-        {
-          "case": "first-span",
-          "tokens": 3,
-          "operands_exact": true,
-          "result_bits_exact": true,
-          "records_exact": true,
-          "kernel": true
-        },
-        {
+        "corruption_controls": [
+          {
+            "control": "memory-bit",
+            "expected_boundary": "DROM operand bit 0 before arithmetic",
+            "expected": 1,
+            "observed": 0,
+            "detected": true
+          },
+          {
+            "control": "accumulator-bit",
+            "expected_boundary": "old destination register bit 0",
+            "expected": 0,
+            "observed": 1,
+            "detected": true
+          },
+          {
+            "control": "pc-bit",
+            "expected_boundary": "PC word bit 0 before instruction decode",
+            "expected": 0,
+            "observed": 1,
+            "detected": true
+          },
+          {
+            "control": "write-gate-bit",
+            "expected_boundary": "RAM operand bit 0 immediately after SW",
+            "expected": 1,
+            "observed": 0,
+            "detected": true
+          },
+          {
+            "control": "token-family-bit",
+            "expected_boundary": "first generated result token",
+            "expected": 5558,
+            "observed": 38326,
+            "detected": true
+          }
+        ],
+        "fault_cases": 61,
+        "sequence": {
           "case": "dependent-dot-and-partial-store-sequence",
-          "instructions": 380,
-          "tokens": 940,
-          "dot_positions": 210,
+          "instructions": 34256,
+          "tokens": 80549,
+          "dot_positions": 34044,
           "records_exact": true,
           "operands_exact": true,
           "result_bits_exact": true,
           "kernel": true
-        }
-      ],
-      "geometry": {
-        "layers": 65,
-        "dims": 4794,
-        "heads": 627,
-        "ffn_units": 66492,
-        "max_units": 7995,
-        "max_heads": 16,
-        "logical_value_heads": 1247,
-        "hidden": 5120
+        },
+        "final_neural_ram": {
+          "case": "all-byte-final-neural-ram",
+          "bytes": 65536,
+          "sha256": "6f424c340eec2feca22ac1a7ea2ba1a622ea9f8770b0ddbf2ff0a7dd714c9516",
+          "exact": true
+        },
+        "test_source_sha256": "5832a090331fe4bbe82ad2c4f4dae0fbff2aced5f91b575fbe0cbfe69b792e18"
       },
-      "added_geometry": {
-        "layers": 21,
-        "dims": 2115,
-        "heads": 0,
-        "ffn_units": 24478,
-        "logical_value_heads": 0,
-        "hidden": 2304
+      "width_4_after": {
+        "status": "pass",
+        "evidence": "ir-w4.json",
+        "geometry": {
+          "layers": 64,
+          "dims": 2113,
+          "heads": 627,
+          "ffn_units": 68917,
+          "max_units": 8260,
+          "max_heads": 16,
+          "logical_value_heads": 1247,
+          "hidden": 2304
+        },
+        "corruption_controls": [
+          {
+            "control": "memory-bit",
+            "expected_boundary": "DROM operand bit 0 before arithmetic",
+            "expected": 1,
+            "observed": 0,
+            "detected": true
+          },
+          {
+            "control": "accumulator-bit",
+            "expected_boundary": "old destination register bit 0",
+            "expected": 0,
+            "observed": 1,
+            "detected": true
+          },
+          {
+            "control": "pc-bit",
+            "expected_boundary": "PC word bit 0 before instruction decode",
+            "expected": 0,
+            "observed": 1,
+            "detected": true
+          },
+          {
+            "control": "write-gate-bit",
+            "expected_boundary": "RAM operand bit 0 immediately after SW",
+            "expected": 1,
+            "observed": 0,
+            "detected": true
+          },
+          {
+            "control": "token-family-bit",
+            "expected_boundary": "first generated result token",
+            "expected": 5558,
+            "observed": 38326,
+            "detected": true
+          }
+        ],
+        "fault_cases": 61,
+        "sequence": {
+          "case": "dependent-dot-and-partial-store-sequence",
+          "instructions": 34256,
+          "tokens": 80549,
+          "dot_positions": 34044,
+          "records_exact": true,
+          "operands_exact": true,
+          "result_bits_exact": true,
+          "kernel": true
+        },
+        "final_neural_ram": {
+          "case": "all-byte-final-neural-ram",
+          "bytes": 65536,
+          "sha256": "6f424c340eec2feca22ac1a7ea2ba1a622ea9f8770b0ddbf2ff0a7dd714c9516",
+          "exact": true
+        },
+        "test_source_sha256": "9cbf2ea665aa14bb467854edb65f30926bc84a3094056a32a2e19644af031dff"
       },
-      "corruption_control": "token-family-bit",
-      "failure_kind": "Verification observer/control mismatch; not established as a circuit arithmetic failure.",
-      "diagnosis": "The test flips c.code[0]; standalone core.predictions reads c.out_fam/c.out_pay. The observed token therefore stays unchanged.",
-      "diagnosis_method": "Static source inspection after the failed gate. No neural retest or repair.",
-      "source_evidence": [
-        "test_ir.py:218",
-        "test_ir.py:221",
-        ".upstream/qwenputer/experimental/riscv/chipformer/rv/core.py:1293"
+      "width_8_after": {
+        "status": "pass",
+        "evidence": "ir-w8.json",
+        "geometry": {
+          "layers": 66,
+          "dims": 2237,
+          "heads": 627,
+          "ffn_units": 94073,
+          "max_units": 8260,
+          "max_heads": 16,
+          "logical_value_heads": 1247,
+          "hidden": 2304
+        },
+        "corruption_controls": [
+          {
+            "control": "memory-bit",
+            "expected_boundary": "DROM operand bit 0 before arithmetic",
+            "expected": 1,
+            "observed": 0,
+            "detected": true
+          },
+          {
+            "control": "accumulator-bit",
+            "expected_boundary": "old destination register bit 0",
+            "expected": 0,
+            "observed": 1,
+            "detected": true
+          },
+          {
+            "control": "pc-bit",
+            "expected_boundary": "PC word bit 0 before instruction decode",
+            "expected": 0,
+            "observed": 1,
+            "detected": true
+          },
+          {
+            "control": "write-gate-bit",
+            "expected_boundary": "RAM operand bit 0 immediately after SW",
+            "expected": 1,
+            "observed": 0,
+            "detected": true
+          },
+          {
+            "control": "token-family-bit",
+            "expected_boundary": "first generated result token",
+            "expected": 25780,
+            "observed": 58548,
+            "detected": true
+          }
+        ],
+        "fault_cases": 201,
+        "sequence": {
+          "case": "dependent-dot-and-partial-store-sequence",
+          "instructions": 53210,
+          "tokens": 125050,
+          "dot_positions": 52656,
+          "records_exact": true,
+          "operands_exact": true,
+          "result_bits_exact": true,
+          "kernel": true
+        },
+        "final_neural_ram": {
+          "case": "all-byte-final-neural-ram",
+          "bytes": 65536,
+          "sha256": "2db8f068dde50fde839f972dc1d0dfb361e30773636687a47ef1246cfbc8c93d",
+          "exact": true
+        },
+        "test_source_sha256": "0b47fcdbd06f3f0d55f484237b37481dda5b5536a7a9becec0f81c169af020ff"
+      },
+      "liveness": [
+        "liveness-w4.json",
+        "liveness-w8.json"
       ],
-      "controls_preceding_failure": "Four prior assertions completed by control-flow inference; individual values were not retained, so no separate control results are claimed.",
-      "raw_traceback_note": "The source-line display came from an in-flight edited file. Unexecuted additions were removed; restored test_ir.py line 221 is the failed token-family assertion. Raw ir-w4.json is preserved."
+      "depth": "depth-schedule.json",
+      "seed": 314159,
+      "scope": "Full-map supplied-token IR with check=True and kernel=True. No stock generation.",
+      "post_acceptance_harness_changes": "W4: W8-only test coverage and persistence. W8: persistence only. Constructor, arithmetic and allocator source hashes match accepted runs."
     },
     "M3": {
       "status": "not_attempted",
-      "reason": "M2 gate failed. No autonomous stock generate implementation or test."
+      "reason": "Explicitly excluded from this continuation task."
     },
     "M4": {
-      "status": "out_of_scope",
-      "needs": "Actual full-map stock parameter/memory accounting, bounded full-map stock run and compact/stock equivalence."
+      "status": "resources_only",
+      "evidence": "resources.json",
+      "memory_status": "Blocked under the approved 14 GiB cap and sampled free-memory budget with 1 GiB headroom.",
+      "remaining": "No ndot stock execution or compact/stock equivalence."
     },
     "M5": {
       "status": "out_of_scope",
@@ -104,46 +261,66 @@
     "transformers": "5.21.0",
     "numpy": "2.5.4",
     "zig": "0.17.0",
-    "compute": "Mac CPU only",
-    "gpu_accessed": false,
+    "compute": "Mac CPU only; GPU host queried for tasklist and nvidia-smi inventory, no GPU compute or model allocation.",
+    "gpu_accessed": true,
     "packages_installed": false,
     "commits_made": false,
-    "independent_agent_review": false
+    "independent_agent_review": false,
+    "gpu_host_inventory_checked": true,
+    "gpu_compute_used": false
   },
   "repository": {
     "branch": "tiny-llm",
-    "head": "6321bdeafecb715b77f311d41e6fc038e925f4b2",
+    "head": "86cb1f1b7c394bc3e55b6354e221a7eb4b42e7e1",
     "upstream_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
     "upstream_status": ""
   },
   "source_sha256": {
-    "experiments/neural-accelerator/README.md": "09da64f3bb51516a7e571046c273f0cdb97c6b4141c9529196cb34fad734f33f",
+    "experiments/neural-accelerator/README.md": "4ce24d1a34e8e22cfa6444c32787eccef225ccc169a81718042af1ea41a0d989",
+    "experiments/neural-accelerator/REDUCTION.md": "10acbb4f769284b2a88ba4754f8e27d10009ae2ef07efd7b82e8c9006a147845",
     "experiments/neural-accelerator/SPEC.md": "6874150d5ab7b2df2fda8589e62b5cabdf84385518b2fead657cd8a71ce4f13b",
-    "experiments/neural-accelerator/arithmetic.py": "99ec850d9f61e473c9cd4b77d7e86a1ebda9a9d51af31456bfa3115453bdba87",
-    "experiments/neural-accelerator/constructor.py": "fb2c2c3e27f99a2bd9f8c18d23b5122160c0141f7927fcd349cb97c1bab4d57f",
+    "experiments/neural-accelerator/arithmetic.py": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+    "experiments/neural-accelerator/constructor.py": "9481c08b1a0456ef1f780a22eeaa64a93162e8acd467b44836eeefbd1813bfa3",
+    "experiments/neural-accelerator/decisions.tsv": "5d94d6c4cd66d406c8b36f2002a02f589ababba5910328606d47484d0c66fc5a",
     "experiments/neural-accelerator/m0.py": "66044c55ecf0a8eb0ade243f1e2dcb0409d7655f8d494a2d714324af2d7197ea",
     "experiments/neural-accelerator/ndot.h": "8a0ae31d1993a2c5dae6366f67687f3a2be6d6b5b8aa62974e32b6177efd785e",
     "experiments/neural-accelerator/oracle.py": "46b5b88a23b58dc4446353d0584c63d9825df934b1aa114b9286c9295fa29e1e",
     "experiments/neural-accelerator/prepare.py": "1af73a5d165699e2353359bff466b3744da0bc10f78277aebd94b22e47d4ff26",
     "experiments/neural-accelerator/reference.py": "ddf5a7e0a5a93865ea906bc733dc207b7b5c07899953c6c6581018ef974e00a7",
+    "experiments/neural-accelerator/resources.py": "453b9c9da50f41a283b63b275149028424701ee81133b8a3767bece34812bfb7",
+    "experiments/neural-accelerator/reuse.py": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
     "experiments/neural-accelerator/test_intrinsic.py": "7bc110da990d516f8dada0622efedf4c75b27226ed8b154a63ae91f316d92eef",
-    "experiments/neural-accelerator/test_ir.py": "4e081db9333a532aabd7a3706b5575c9e2e5383f8407930b331d9c0bf329fbe1",
+    "experiments/neural-accelerator/test_ir.py": "d3990c0def432382d0222525b52b6afd30fe64cd59efc7f4744cf1320a003e49",
     "experiments/neural-accelerator/test_isa.py": "a12553802b05c2f56bcee4ecc714158e8e425fdc5cbef7ceb84878012a5ad8db",
     "experiments/neural-accelerator/test_legacy.py": "2b3d3be4c5f50cc7cd65222e91ddea149e424e1000fb0d1eb2cf155d937509c4"
   },
   "result_sha256": {
     "arithmetic-result.json": "deb2b3b71ba2f0350162439459a9a36425b7196d2782892aa05e7c6f5dcbf036",
+    "depth-schedule.json": "bf5036f2eba917bc6ce635300b5f6ad4c53b6f3e6da90d6a08082918a7473e41",
+    "gpu-inventory.json": "a928f442b563ce03c1fe9dcfbb9612ccc8982b414eaae4bfdf2f941687b5a082",
     "intrinsic-result.json": "5b32df3fb6378102aa362977f4ab685cc9de3fc15e7a34d8932daf0a462f276a",
-    "ir-w4.json": "99ee1c6991743ed9ec65d81a0aa8363ce50b4277683cc6a8ca57e7f08f5bf904",
+    "ir-w4-before-reduction.json": "36009937409f135dfd29b415d4f3c9689466eb160fe1cd30b8654731272a10f0",
+    "ir-w4-controls-and-faults.json": "ea4d7a4d7b11f1d098dda6feb19a9a1c1d6f4aba782b453689ed4ab0231af36e",
+    "ir-w4-initial-failure.json": "99ee1c6991743ed9ec65d81a0aa8363ce50b4277683cc6a8ca57e7f08f5bf904",
+    "ir-w4-reduction-strict-partial.json": "07745a043c902ec91dc25f02440c3599436cee8073b07e14f98ccc786f469e82",
+    "ir-w4.json": "a56524c887df496ad6068506dbee6521cc7c4af2657a549d9657368248ecf69a",
+    "ir-w8-controls-and-faults.json": "762565c21a2e1b8c225654a3031142830fe57f871c522f6df1b9599611419f1e",
+    "ir-w8.json": "39fd060bb383d44a364b869c73677be44b7e1a4a40a7fa2be361eddc715eb47e",
     "isa-result.json": "e06b3d70c1c4b87ea777da35b1b7ab5347c74f03df1eb161a2a68a90899bfbb4",
     "legacy-doom.json": "8166855b106ab07b0ec1720ea5d3a4821f8461fbb7164ca05f5c652fb60f5b9b",
-    "legacy-stories.json": "25c6fae7158b73300859099de667cf723b93f6dc55b3d9ae476d413b1b09c4c7"
+    "legacy-stories.json": "25c6fae7158b73300859099de667cf723b93f6dc55b3d9ae476d413b1b09c4c7",
+    "liveness-w4.json": "7cdda475d46153af58eb18d89a4b4db92c26868cda9155a2d8870c2b3106734b",
+    "liveness-w8.json": "34cd50a39f800218d9e36fed6a65a28a9b784cd8663268909afe5f362ceb6ae9",
+    "resources.html": "92d4ee7715eb577c172571d4806ff504dfa77fb28eb45ab75d479a854310249e",
+    "resources.json": "ada31296b882293642a3d33465e9cc2b23f87539c91249c3b125124acd8f554c"
   },
   "limits": [
-    "No completed W=4 corruption suite.",
-    "W=8 constructor path is untested.",
-    "No complete neural memory enumeration, all-byte final neural RAM comparison, reset/resume proof, or autonomous stock generation.",
-    "No dense parameter, peak stock memory, latency, or speed measurement.",
-    "W=4 adds 21 layers, above both the W=4 8\u201314 and W=8 10\u201316 design envelopes."
-  ]
+    "No ndot stock-HF execution or generation, compact-executor equivalence or timing, cache reset/resume proof, aligned guest rebuild, or new whole-LLM prediction.",
+    "All ndot stock peaks and compact latency values are conditional estimates; only parameter counts are exact meta measurements.",
+    "Both reduced widths exceed the estimated 14 GiB reserved-memory cap and the sampled free-memory budget with 1 GiB headroom.",
+    "The 64 and 66 chip layers remain above the original provisional depth envelopes.",
+    "M3 was explicitly excluded and was not started. All work is inline; no independent agent review."
+  ],
+  "updated_utc": "2026-10-29T18:55:30.675977+00:00",
+  "historical_evidence": "evidence-initial.json"
 }

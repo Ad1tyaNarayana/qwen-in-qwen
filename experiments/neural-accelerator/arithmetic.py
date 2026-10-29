@@ -38,13 +38,17 @@ def lane_product(c, weights, activations, name):
     return negate_if(c, magnitude, sign, name+'.signed')
 
 
-def dot(c, weights, activations, accumulator, dot4, dot8, width):
+def dot(c, weights, activations, accumulator, dot4, dot8, width, compact=False):
     lanes = []
     for i in range(width):
         product = lane_product(c, weights[8*i:8*i+8], activations[16*i:16*i+16], f'ndot.lane{i}')
-        enabled = dot4+dot8 if i < 4 else dot8
-        lanes.append([c.node(c.t_and([bit, enabled]), f'ndot.active{i}.{k}')
-                      for k, bit in enumerate(product)])
+        if compact:
+            # Constructor routing sets both operands to zero on every disabled lane.
+            lanes.append(product)
+        else:
+            enabled = dot4+dot8 if i < 4 else dot8
+            lanes.append([c.node(c.t_and([bit, enabled]), f'ndot.active{i}.{k}')
+                          for k, bit in enumerate(product)])
     level = 0
     while len(lanes) > 1:
         lanes = [add_nibbles(c, lanes[i], lanes[i+1], 8, [], f'ndot.tree{level}.{i//2}')

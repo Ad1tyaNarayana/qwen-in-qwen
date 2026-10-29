@@ -1,0 +1,251 @@
+{
+  "4": {
+    "ndot.rbit": {
+      "first_sublayer": 24,
+      "last_sublayer": 24,
+      "levels": [
+        24
+      ]
+    },
+    "ndot.wbit": {
+      "first_sublayer": 90,
+      "last_sublayer": 90,
+      "levels": [
+        90
+      ]
+    },
+    "absw": {
+      "first_sublayer": 2,
+      "last_sublayer": 96,
+      "levels": [
+        2,
+        92,
+        94,
+        96
+      ]
+    },
+    "absa": {
+      "first_sublayer": 2,
+      "last_sublayer": 30,
+      "levels": [
+        2,
+        26,
+        28,
+        30
+      ]
+    },
+    "sign": {
+      "first_sublayer": 92,
+      "last_sublayer": 92,
+      "levels": [
+        92
+      ]
+    },
+    "nibble products": {
+      "first_sublayer": 98,
+      "last_sublayer": 98,
+      "levels": [
+        98
+      ]
+    },
+    "hi": {
+      "first_sublayer": 100,
+      "last_sublayer": 100,
+      "levels": [
+        100
+      ]
+    },
+    "col": {
+      "first_sublayer": 102,
+      "last_sublayer": 102,
+      "levels": [
+        102
+      ]
+    },
+    "normalize": {
+      "first_sublayer": 2,
+      "last_sublayer": 106,
+      "levels": [
+        2,
+        102,
+        104,
+        106
+      ]
+    },
+    "signed": {
+      "first_sublayer": 106,
+      "last_sublayer": 112,
+      "levels": [
+        106,
+        108,
+        110,
+        112
+      ]
+    },
+    "ndot.tree0": {
+      "first_sublayer": 112,
+      "last_sublayer": 116,
+      "levels": [
+        112,
+        114,
+        116
+      ]
+    },
+    "ndot.tree1": {
+      "first_sublayer": 116,
+      "last_sublayer": 120,
+      "levels": [
+        116,
+        118,
+        120
+      ]
+    },
+    "ndot.accumulate": {
+      "first_sublayer": 120,
+      "last_sublayer": 124,
+      "levels": [
+        120,
+        122,
+        124
+      ]
+    },
+    "exit.": {
+      "first_sublayer": 20,
+      "last_sublayer": 128,
+      "levels": [
+        20,
+        28,
+        128
+      ]
+    }
+  },
+  "8": {
+    "ndot.rbit": {
+      "first_sublayer": 24,
+      "last_sublayer": 24,
+      "levels": [
+        24
+      ]
+    },
+    "ndot.wbit": {
+      "first_sublayer": 90,
+      "last_sublayer": 90,
+      "levels": [
+        90
+      ]
+    },
+    "absw": {
+      "first_sublayer": 2,
+      "last_sublayer": 96,
+      "levels": [
+        2,
+        92,
+        94,
+        96
+      ]
+    },
+    "absa": {
+      "first_sublayer": 2,
+      "last_sublayer": 30,
+      "levels": [
+        2,
+        26,
+        28,
+        30
+      ]
+    },
+    "sign": {
+      "first_sublayer": 92,
+      "last_sublayer": 92,
+      "levels": [
+        92
+      ]
+    },
+    "nibble products": {
+      "first_sublayer": 98,
+      "last_sublayer": 98,
+      "levels": [
+        98
+      ]
+    },
+    "hi": {
+      "first_sublayer": 100,
+      "last_sublayer": 100,
+      "levels": [
+        100
+      ]
+    },
+    "col": {
+      "first_sublayer": 102,
+      "last_sublayer": 102,
+      "levels": [
+        102
+      ]
+    },
+    "normalize": {
+      "first_sublayer": 2,
+      "last_sublayer": 106,
+      "levels": [
+        2,
+        102,
+        104,
+        106
+      ]
+    },
+    "signed": {
+      "first_sublayer": 106,
+      "last_sublayer": 112,
+      "levels": [
+        106,
+        108,
+        110,
+        112
+      ]
+    },
+    "ndot.tree0": {
+      "first_sublayer": 112,
+      "last_sublayer": 116,
+      "levels": [
+        112,
+        114,
+        116
+      ]
+    },
+    "ndot.tree1": {
+      "first_sublayer": 116,
+      "last_sublayer": 120,
+      "levels": [
+        116,
+        118,
+        120
+      ]
+    },
+    "ndot.tree2": {
+      "first_sublayer": 120,
+      "last_sublayer": 124,
+      "levels": [
+        120,
+        122,
+        124
+      ]
+    },
+    "ndot.accumulate": {
+      "first_sublayer": 124,
+      "last_sublayer": 128,
+      "levels": [
+        124,
+        126,
+        128
+      ]
+    },
+    "exit.": {
+      "first_sublayer": 20,
+      "last_sublayer": 132,
+      "levels": [
+        20,
+        28,
+        132
+      ]
+    }
+  }
+}

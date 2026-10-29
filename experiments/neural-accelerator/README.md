@@ -154,3 +154,198 @@ Model the Domain shaped the immutable oracle outcome and separate instruction,
 reference, and circuit modules. Prove It Works required actual legacy replays
 and retained the negative gate. Architecture alternatives were considered
 inline under AGENTS.md. No independent agent review was performed.
+
+## 2026-10-29 continuation: W=4 M2 passes before and after reduction
+
+This section supersedes the initial M2 failure and remaining-work statements
+above. Earlier findings remain historical. The raw initial failure is retained
+in [ir-w4-initial-failure.json](ir-w4-initial-failure.json).
+
+The repaired token-family control flips `out_fam[0]`, which standalone
+`core.predictions` actually reads. Every control now records its expected and
+observed values, flushes and fsyncs the result, then asserts detection. Memory,
+old-accumulator, PC, write-gate and token-family controls all pass, both before
+and after reduction. Their boundaries are respectively the first DROM operand
+bit, old-rd bit, predecode PC bit, first RAM operand after SW, and first predicted
+result token. A NumPy-scalar JSON serialization defect in the new persistence
+code was corrected before publishing these results.
+
+The full-map W=4 suite passes `evaluate(check=True, kernel=True)` on all 80,549
+sequence tokens and 34,256 instructions, with 34,044 per-token dot comparisons.
+It covers all aligned spans within one 8 KiB DROM bank, first and last spans
+of all 512 DROM banks, and every 8-byte-aligned span in the 64 KiB RAM. This
+enumerates the DROM column, row and value-slot selectors and RAM row, slot and
+bank selectors. Prior SB, SH and SW cases exercise all eight byte lanes, four
+halfword lanes and two word lanes. The earlier dependent partial-store and
+scalar-load sequence remains included.
+
+All 31 invalid alignment-residue pairs, 14 region and wrapped-address cases,
+seven disabled/reserved widths, and nine read-only store cases pass. Each of
+these 61 faults checks the exact serialized fault and nonzero PC, every register
+in all three recurrent register copies, and all 65,536 unchanged RAM bytes.
+First and last legal spans pass separately. Final neural RAM is decoded from
+the evaluator's recurrent state, without consulting the reference during
+extraction. Every byte matches. Both variants have SHA-256
+`6f424c340eec2feca22ac1a7ea2ba1a622ea9f8770b0ddbf2ff0a7dd714c9516`.
+
+| Geometry | Original | W=4 before reduction | W=4 after reduction |
+| --- | ---: | ---: | ---: |
+| Chip layers | 44 | 65 | 64 |
+| Residual dimensions | 2,679 | 4,794 | 2,113 |
+| Selected hidden size | 2,816 | 5,120 | 2,304 |
+| Graph FFN units | 42,014 | 66,492 | 68,917 |
+| Key heads | 627 | 627 | 627 |
+| Logical value heads | 1,247 | 1,247 | 1,247 |
+
+[REDUCTION.md](REDUCTION.md) explains the clear and history proof and the two
+allocation schedules considered inline. The selected allocator reuses 2,553
+dimensions, pins all 264 convolution-lag sources and three tiny counter outputs,
+and retains every probe. Its exact separate clear adds FFN units but no layers.
+Removing redundant enables on already-zero inactive lane products saves one
+layer. [liveness-w4.json](liveness-w4.json) records every lifetime and handover.
+The largest graph MLP has 8,260 units against 9,216 available. Output cleanup
+also fits. No head shape, recurrent table, memory map or feedback rule changed.
+
+The unreduced result is [ir-w4-before-reduction.json](ir-w4-before-reduction.json).
+It incorporates the hash-bound [control and fault run](ir-w4-controls-and-faults.json)
+after an intentional interruption to increase memory-test chunk size from 64
+to 2,048. The reduced [ir-w4.json](ir-w4.json) reruns everything without that
+resume option. An earlier stricter reuse candidate was intentionally interrupted
+before completion, so it is not an accepted M2 result.
+
+## 2026-10-29 stock resources and conditional compact cost
+
+[resources.py](resources.py) instantiates complete stock HF configs on the meta
+device. It counts the complete chip vocabulary, tied embeddings, 16 key and
+32 value heads per linear layer, intermediate size 9,216, and the required zero
+full-attention layer. It allocates no dense model storage on the Mac or GPU.
+
+| Variant | Exact parameters | BF16 parameter bytes | Peak allocated GiB | Peak reserved GiB | Fits 16 GiB with 1 GiB free |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Original | 6,212,045,824 | 12,424,091,648 | 12.072 | 12.484 | Yes, prior bounded stock evidence |
+| W=4 before | 16,035,550,912 | 32,071,101,824 | 30.750 | 31.163 | No |
+| W=4 after | 7,115,541,760 | 14,231,083,520 | 13.794 | 14.206 | Estimated yes |
+
+Only the original peak is measured. New peaks are estimates calibrated to the
+original 12,962,223,104 allocated bytes and 13,404,995,584 reserved bytes in
+`../tiny-llm-neural/evidence/hf.json`. The model adds exact fp32 recurrent-state
+bytes per layer, retains the calibrated remaining runtime overhead, scales that
+remaining overhead upward for wider hidden sizes, and retains the measured
+reserved-minus-allocated gap. It assumes the same bounded-prefix runtime scope.
+Reduced W=4's reserved estimate exceeds the approved 14 GiB allocator cap.
+No new full-map stock allocation was attempted. Fit on 16 GiB remains an
+estimate until a bounded stock run satisfies the cap and free-memory guard.
+
+The compact cost model uses the measured Phase 1 stories rate of
+3,844.248005854528 trace tokens/s, or 260.1289 microseconds per transition.
+It normalizes the feedback-fusion category costs by their 239.208-microsecond
+profiler span. FFN work scales with graph units, residual/history apply with
+layers times physical dimensions, feedback with dimensions, and unmodeled
+overhead with layers. Head and DROM-apply work stay fixed by assumption because
+head shapes, counts and projection nonzero counts are unchanged. This assumes
+the same GPU scheduling cost despite additional nonzero striped RAM queries.
+The changed geometry and fusion kernels have not been timed or validated
+together. These are conditional estimates, not measured accelerator latency.
+
+| Variant | Projected microseconds per transition | Position 4 minutes/token | Position 63 minutes/token |
+| --- | ---: | ---: | ---: |
+| W=4 before | 349.989 | 5.74 to 6.12 | 11.94 to 12.32 |
+| W=4 after | 308.214 | 5.06 to 5.39 | 10.52 to 10.85 |
+
+These projections replace only measured matrix-dot loop work with 7 to 8
+tokens per aligned group and retain measured nondot work. Packing, register
+allocation, refresh recount and the actual aligned guest require M5 evidence.
+Attention remains scalar. [resources.json](resources.json) retains configs,
+exact counts, calibration and all assumptions. No new speed measurement is
+claimed, and M3 has not started.
+
+```sh
+.venv/bin/python experiments/neural-accelerator/test_ir.py --width 4
+.venv/bin/python experiments/neural-accelerator/test_ir.py --width 4 --unreduced
+.venv/bin/python experiments/neural-accelerator/resources.py
+```
+
+The old reproduction command's expected-failure statement is superseded.
+The final W=4 acceptance precedes changes confined to the W=8 test branch.
+No constructor or W=4 execution-path change followed that acceptance.
+
+The later read-only GPU inventory reports 16,303 MiB total and 14,826 MiB free.
+[gpu-inventory.json](gpu-inventory.json) retains the raw sample. This free-memory
+budget is smaller than reduced W=4's estimated peak plus the required 1 GiB
+headroom. Therefore the nominal 16 GiB fit estimate above does not establish a
+safe fit on the sampled desktop configuration. Both that availability check
+and the 14 GiB allocator cap currently block a full-map stock allocation.
+No GPU allocation was attempted.
+
+## 2026-10-30 W=8 M2 passes
+
+[ir-w8.json](ir-w8.json) passes the complete M2 gate on the reduced wider
+circuit. Five corruption controls and 201 faults pass. These include 127
+NDOT8 alignment cases, 31 retained NDOT4 alignment cases, 28 region cases,
+six disabled or reserved widths and nine read-only stores. Each fault checks
+the nonzero fault PC, every register copy, and every unchanged RAM byte.
+
+The legal sequence checks 53,210 instructions and 125,050 supplied-input tokens,
+with 52,656 per-token dot comparisons. Both NDOT4 and NDOT8 enumerate every
+aligned span of one DROM bank, both edges of all 512 DROM banks, and every
+aligned RAM span. Both widths also test prior SB, SH and SW at every lane.
+The narrower upper-stripe case passes. All arithmetic, operand and output bits
+pass `evaluate(check=True, kernel=True)`. All final RAM bytes match, with SHA-256
+`2db8f068dde50fde839f972dc1d0dfb361e30773636687a47ef1246cfbc8c93d`.
+
+The control and fault results were retained in
+[ir-w8-controls-and-faults.json](ir-w8-controls-and-faults.json) before an
+intentional interruption to expand the legal NDOT4 sweep. The completed run
+hash-binds that unchanged circuit's retained results. The original unrun W=8
+test sequence also needed an alignment correction before its first execution.
+Neither interruption followed a failed numerical acceptance check.
+
+| W=8 reduced geometry | Value |
+| --- | ---: |
+| Chip layers | 66 |
+| Residual dimensions | 2,237 |
+| Selected hidden size | 2,304 |
+| Graph FFN units | 94,073 |
+| Key / logical value heads | 627 / 1,247 |
+| Reused dimensions / clear units | 4,153 |
+| Largest graph MLP units | 8,260 |
+
+[liveness-w8.json](liveness-w8.json) retains every lifetime and clear.
+The same 264 lag sources and three tiny outputs remain pinned. Including
+output and ballast cleanup, the final MLP uses 3,024 of 9,216 units.
+
+The W=8 stock config has exactly **7,318,811,264 parameters** and
+**14,637,622,528 BF16 parameter bytes**. Its estimated allocated peak is
+**14.176 GiB** and reserved peak **14.589 GiB**. It fits a nominal empty
+16 GiB device with 1 GiB headroom by this model, but exceeds both the approved
+14 GiB allocator cap and the sampled free-memory budget with headroom.
+This is not a stock allocation or execution result.
+
+The conditional compact estimate is **348.220 microseconds per transition**,
+1.3386 times the measured Phase 1 baseline. Matrix-only projected minutes per
+stories260K token are **4.40 to 4.59** at position 4 and **10.57 to 10.76** at
+position 63. The W=4 estimate is lower per transition and similar at the late
+position, where nondot work matters more. No timing was measured for either
+new geometry. [resources.json](resources.json) and
+[resources.html](resources.html) contain the final four-variant accounting.
+
+```sh
+.venv/bin/python experiments/neural-accelerator/test_ir.py --width 8
+.venv/bin/python experiments/neural-accelerator/resources.py --include-w8
+```
+
+Unreduced reproductions now write `ir-w4-before-reduction.json` or
+`ir-w8-before-reduction.json`, preserving accepted reduced output files.
+After acceptance, only output-file isolation and serialization-before-open
+were changed in the test harness. Numerical construction and test paths are
+unchanged. JSON reports retain the exact test-source hash used for their runs.
+
+M2 is complete for both widths. M3 was not started. The next recommendation is
+bounded generic-map W=4 stock greedy generation on two programs with changed
+data and identical weights, at least 1,024 dependent instructions per run,
+and exact commit-state and cache comparisons. Full-map M4 remains blocked by
+the current memory limits and unproven stock and compact-executor equivalence.
+Additional width or depth reduction is needed before a safe full-map stock
+allocation on the sampled GPU configuration. Attention remains deferred.
+No upstream edits, commits, installations, or changes to the other thread's
+directories were made.
