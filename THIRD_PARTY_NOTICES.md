@@ -28,4 +28,3 @@ SOFTWARE.
 `experiments/dmc-rv32/platform.c` derives from DMC100-Doom's platform stub and retains its GPL-2.0-or-later notice. DMC100-Doom is by Artur Bieniek, derived from id Software's Doom and Doomgeneric. The source used here is the Aspire PIXO port in atc1441/Vape_DOOM_ScreenShare, pinned in that experiment's README. Its COPYING and NOTICE accompany the adaptation. The other new glue files carry their licenses individually. A combined Doom executable remains subject to the engine's GPL terms.
 
 `experiments/doom-baremetal` includes Doom's GPL text and Zig compiler_rt's MIT notice for reproducing the linked runtime. No upstream engine binary, WAD, converted game-data pack, or WAD-bearing ELF is included. See the experiments' NOTICE files for corresponding-source and attribution requirements.
-
