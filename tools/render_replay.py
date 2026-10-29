@@ -27,7 +27,7 @@ def main():
 <p>An original CHIP-8 paddle game interpreted by C firmware on the compiled RISC-V circuit. Every displayed frame comes from the verified tensor execution.</p>
 <canvas width="64" height="32"></canvas><section><button id="play">Pause</button><input id="scrub" type="range" min="0"><span id="status"></span></section>
 <p id="evidence"></p><small>This is a prerecorded replay of upstream's compact circuit tensor executor on an Apple M4 Pro CPU. Playback runs at four frames per second. Actual execution time appears above. The game frames have not been generated through the full Qwen language model. A separate stock Qwen3_5ForCausalLM run generated the first complete frame on an RTX 5070 Ti. This replay uses the compact CPU run.</small>
-<p><a href="report.json">Execution report</a> · <a href="frames.json">Verified frames</a> · <a href="game.json">Original ROM and key schedule</a></p>
+<p><a href="report.json">Execution report</a> · <a href="frames.json">Verified frames</a> · <a href="game.json">Original ROM and key schedule</a> · <a href="../hf-cuda-first-frame/report.annotated.json">Stock CUDA frame report</a> · <a href="https://github.com/Ad1tyaNarayana/qwenputer-games">Source and reproduction</a></p>
 <script>
 const frames=FRAMES, report=REPORT, canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),scrub=document.querySelector('#scrub'),play=document.querySelector('#play');
 let index=0,playing=true;scrub.max=frames.length-1;
