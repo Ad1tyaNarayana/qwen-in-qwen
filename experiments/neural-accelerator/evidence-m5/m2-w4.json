@@ -1,0 +1,743 @@
+{
+  "status": "pass",
+  "width": 4,
+  "stats": {
+    "layers": 64,
+    "dims": 2113,
+    "heads": 627,
+    "ffn_units": 68923,
+    "max_units": 8260,
+    "max_heads": 16,
+    "logical_value_heads": 1247,
+    "hidden": 2304
+  },
+  "additions": {
+    "layers": 20,
+    "dims": -566,
+    "heads": 0,
+    "ffn_units": 26909,
+    "logical_value_heads": 0,
+    "hidden": -512
+  },
+  "source_manifest": {
+    "base_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+    "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+    "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+    "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+    "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+    "reduced": true,
+    "stock_integer_counters": true,
+    "integer_counters_sha256": "e02a9a4acc469512f4b7f723f22190fbc8c9808e3c2b37c01514d448427d60ec",
+    "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+    "replacement_sites": [
+      "from chipformer.rv import ref as RF",
+      "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+      "    n_plain = len(srcs)",
+      "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+      "\"imm\": imm, \"r\": r, \"val\": val,"
+    ]
+  },
+  "prepare_manifest": {
+    "rv/spec.py": {
+      "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+      "scratch_sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016",
+      "replacements": [
+        [
+          "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+          "DROM_BASE, DROM_WORDS = 0x02000000, 1048576"
+        ],
+        [
+          "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+          "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+        ],
+        [
+          "DATA_BASE = 0x100",
+          "DATA_BASE = RAM_BASE + 0x100"
+        ]
+      ]
+    },
+    "rv/core.py": {
+      "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+      "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+      "replacements": [
+        [
+          "def build(target:",
+          "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+        ],
+        [
+          "    c = RvCore(target, text)",
+          "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+        ],
+        [
+          "hl = lits_of(EA[13:17], h)",
+          "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+        ],
+        [
+          "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+          "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+        ],
+        [
+          "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+          "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+        ],
+        [
+          "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+          "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+        ]
+      ]
+    },
+    "rv/ref.py": {
+      "original_sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638",
+      "scratch_sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638",
+      "replacements": []
+    },
+    "q35/ir.py": {
+      "original_sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b",
+      "scratch_sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b",
+      "replacements": []
+    },
+    "q35/prims.py": {
+      "original_sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01",
+      "scratch_sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01",
+      "replacements": []
+    }
+  },
+  "checks": [
+    {
+      "case": "alignment-0-1",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-0-2",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-0-3",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-0-4",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-0-5",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-0-6",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-0-7",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-0",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-1",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-2",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-3",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-4",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-5",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-6",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-1-7",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-0",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-1",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-2",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-3",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-4",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-5",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-6",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-2-7",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-0",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-1",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-2",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-3",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-4",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-5",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-6",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "alignment-3-7",
+      "fault": 2,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-0",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-40000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-1000000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-1fffffc",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-2400000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-20000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "weight-region-fffffff8",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-0",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-40000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-2000000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-fffff8",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-1010000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-10000",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "activation-region-fffffff0",
+      "fault": 4,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-1",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-2",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-3",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-4",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-5",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-6",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "illegal-width-7",
+      "fault": 0,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-0-40000",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-0-2000000",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-0-23ffffc",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-1-40000",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-1-2000000",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-1-23ffffc",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-2-40000",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-2-2000000",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "readonly-2-23ffffc",
+      "fault": 5,
+      "fault_pc": 262164,
+      "records_exact": true,
+      "no_partial_register_write": true,
+      "all_ram_bytes_unchanged": true,
+      "kernel": true
+    },
+    {
+      "case": "last-drom-bank",
+      "tokens": 4,
+      "operands_exact": true,
+      "result_bits_exact": true,
+      "records_exact": true,
+      "kernel": true
+    },
+    {
+      "case": "first-span",
+      "tokens": 3,
+      "operands_exact": true,
+      "result_bits_exact": true,
+      "records_exact": true,
+      "kernel": true
+    },
+    {
+      "case": "dependent-dot-and-partial-store-sequence",
+      "instructions": 34256,
+      "tokens": 80549,
+      "dot_positions": 34044,
+      "records_exact": true,
+      "operands_exact": true,
+      "result_bits_exact": true,
+      "kernel": true
+    },
+    {
+      "case": "all-byte-final-neural-ram",
+      "bytes": 65536,
+      "sha256": "6f424c340eec2feca22ac1a7ea2ba1a622ea9f8770b0ddbf2ff0a7dd714c9516",
+      "exact": true
+    }
+  ],
+  "torch": "2.15.0",
+  "numpy": "2.5.4",
+  "transformers": "5.21.0",
+  "full_map": true,
+  "stock_generate": false,
+  "test_source_sha256": "d840d73e1e7400fac07f40931e5c09dfb394ab77c6cdf21508668660f71b126a",
+  "chunk_size": 2048,
+  "reuse": {
+    "logical_dims": 4672,
+    "physical_dims": 2113,
+    "clears": 2559,
+    "pinned": 1277,
+    "pinned_lag_sources": 264,
+    "pinned_tiny_outputs": 3,
+    "evidence": "liveness-w4.json"
+  },
+  "corruption_controls": [
+    {
+      "control": "memory-bit",
+      "expected_boundary": "DROM operand bit 0 before arithmetic",
+      "expected": 1,
+      "observed": 0,
+      "detected": true
+    },
+    {
+      "control": "accumulator-bit",
+      "expected_boundary": "old destination register bit 0",
+      "expected": 0,
+      "observed": 1,
+      "detected": true
+    },
+    {
+      "control": "pc-bit",
+      "expected_boundary": "PC word bit 0 before instruction decode",
+      "expected": 0,
+      "observed": 1,
+      "detected": true
+    },
+    {
+      "control": "write-gate-bit",
+      "expected_boundary": "RAM operand bit 0 immediately after SW",
+      "expected": 1,
+      "observed": 0,
+      "detected": true
+    },
+    {
+      "control": "token-family-bit",
+      "expected_boundary": "first generated result token",
+      "expected": 5558,
+      "observed": 38326,
+      "detected": true
+    }
+  ],
+  "active_case": "dependent-dot-and-partial-store-sequence",
+  "remaining": "Stock execution is M3 and has not been attempted."
+}

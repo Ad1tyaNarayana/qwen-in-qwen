@@ -74,7 +74,7 @@ def run(a):
     import torch
     report = dict(status='running', fixture=a.fixture, width=a.width,
                   requested_tokens=a.tokens, generated_tokens=0, checked_tokens=0,
-                  mismatches=0, stock_hf=False, backend='unfused Executor2 / FreeRun',
+                  mismatches=0, stock_hf=False, backend='unfused adapted Executor2 / FreeRun',
                   boot_state_only=True, reference_tokens_used_as_inputs=False,
                   started_utc=datetime.now(timezone.utc).isoformat())
     write_json(a.out / 'report.json', report)
@@ -100,15 +100,9 @@ def run(a):
         assert len(expected) == meta['tokens'] and len(expected) >= a.tokens
         circuit = build(a.width)
         snapshot(circuit, ref.Machine.from_program(elf.program(inputs / 'engine.elf')))
-        source = Path(fastexec.__file__).read_text()
-        old = 'nf, nb = len(C.OUT_NAMES), C.NPAY'
-        assert source.count(old) == 1 and source.count('enumerate(C.OUT_NAMES)') == 1
-        source = source.replace(old, 'output_names = list(S.FAMILIES) + S.CONTROL_NAMES\n        nf, nb = len(output_names), C.NPAY')
-        source = source.replace('enumerate(C.OUT_NAMES)', 'enumerate(output_names)')
-        module = types.ModuleType('ndot_standalone_freerun')
-        exec(compile(source, str(a.out / 'standalone-freerun.py'), 'exec'), module.__dict__)
-        (a.out / 'standalone-freerun.py').write_text(source)
-        fr = module.FreeRun(circuit, 1, 'cuda', compile_=False, v2=True)
+        from compact import freerun_class
+        FreeRun = freerun_class(a.out)
+        fr = FreeRun(circuit, 1, 'cuda', compile_=False, v2=True)
         fr.load(0, spec.tok('GO'))
         fr.ex.reset()
         fr.ex.y.zero_()

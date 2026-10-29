@@ -1,0 +1,94 @@
+{
+  "original-unfused": {
+    "runs": [
+      {
+        "tokens_per_second": 2086.71543132914,
+        "compute_seconds": 31.406294799984607
+      },
+      {
+        "tokens_per_second": 2086.639204534475,
+        "compute_seconds": 31.407442099996842
+      },
+      {
+        "tokens_per_second": 2086.0735343396777,
+        "compute_seconds": 31.41595870001038
+      },
+      {
+        "tokens_per_second": 2087.053539334226,
+        "compute_seconds": 31.401206899994577
+      },
+      {
+        "tokens_per_second": 2086.3940980317075,
+        "compute_seconds": 31.41113179999229
+      }
+    ],
+    "median_tokens_per_second": 2086.639204534475,
+    "range_tokens_per_second": [
+      2086.0735343396777,
+      2087.053539334226
+    ],
+    "median_microseconds_per_transition": 479.2395339965339
+  },
+  "unified-original": {
+    "runs": [
+      {
+        "tokens_per_second": 2392.2969731231747,
+        "compute_seconds": 27.394592199998442
+      },
+      {
+        "tokens_per_second": 2392.3069022827412,
+        "compute_seconds": 27.39447850000579
+      },
+      {
+        "tokens_per_second": 2392.3188575559066,
+        "compute_seconds": 27.39434159999655
+      },
+      {
+        "tokens_per_second": 2392.283315204139,
+        "compute_seconds": 27.394748600003368
+      },
+      {
+        "tokens_per_second": 2392.278817905802,
+        "compute_seconds": 27.394800100002612
+      }
+    ],
+    "median_tokens_per_second": 2392.2969731231747,
+    "range_tokens_per_second": [
+      2392.278817905802,
+      2392.3188575559066
+    ],
+    "median_microseconds_per_transition": 418.00830383298404
+  },
+  "unified-ndot": {
+    "runs": [
+      {
+        "tokens_per_second": 2392.3655357855414,
+        "compute_seconds": 27.39380710000114
+      },
+      {
+        "tokens_per_second": 2392.3499470628567,
+        "compute_seconds": 27.393985599999723
+      },
+      {
+        "tokens_per_second": 2392.234771473193,
+        "compute_seconds": 27.395304500001657
+      },
+      {
+        "tokens_per_second": 2392.335476367765,
+        "compute_seconds": 27.39415130000998
+      },
+      {
+        "tokens_per_second": 2392.316508410224,
+        "compute_seconds": 27.394368499990378
+      }
+    ],
+    "median_tokens_per_second": 2392.335476367765,
+    "range_tokens_per_second": [
+      2392.234771473193,
+      2392.3655357855414
+    ],
+    "median_microseconds_per_transition": 418.00157623306245
+  },
+  "original_unfused_projected_minutes_per_position": 25.900938320283725,
+  "unified_original_projected_minutes_per_position": 22.591640561571122
+}

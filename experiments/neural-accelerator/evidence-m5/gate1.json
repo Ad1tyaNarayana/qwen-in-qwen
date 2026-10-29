@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "gate": 1,
+  "runs": [
+    {
+      "guest": "ndot",
+      "tokens": 8192,
+      "mismatches": 0,
+      "sha256": "fee6f01606bb8eaa7d68e70583ecc6d939e11787ac80e824670b0608a1c77bdb"
+    },
+    {
+      "guest": "stories-stock",
+      "tokens": 8192,
+      "mismatches": 0,
+      "sha256": "cc73b4f82c12660cf964528dcfb251a5edc0af06101d597a129d542d9dbf2421"
+    },
+    {
+      "guest": "doom",
+      "tokens": 262144,
+      "mismatches": 0,
+      "sha256": "b18355d382d138762967505df52db4cff2a4ea75743c735576dab0280b685f13"
+    },
+    {
+      "guest": "stories",
+      "tokens": 262144,
+      "mismatches": 0,
+      "sha256": "8ae2be703b962ed74670a5b9007e0e40960bf0e39cc2bfe69e808d8d0a05a1f2"
+    }
+  ],
+  "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+  "bf16_tensors": 897,
+  "weight_report_sha256": "362fbfdda6b03346d475354ded75e858493382220cef3aad50bb2f7239931d4d",
+  "m2_report_sha256": "de49d5b89858551e627f2e03799fdb4305ee845b3bbe79d35b2b6e3ca272d1da",
+  "gpu_report_sha256": "49e030643d51bf90692b57bbce1abae8905bc0a6b3488b48f63527e5b608aba5",
+  "verification": "Mac comparison of actual GPU bytes against stock exports and independent legacy traces"
+}

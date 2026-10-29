@@ -1,8 +1,7 @@
-"""Stock-only integer counter construction with exact tiny-beta accumulation.
+"""Shared counter graph with exact tiny-beta fp32 accumulation and BF16 reads.
 
-The legacy IR evaluator assumes saturated beta gates and cannot evaluate this
-variant. Its stock numerical gate is counter_kernel_diagnosis.py plus the full
-stock M3 gate. The arithmetic and memory graph is unchanged.
+counter_ir and compact interpret this graph's counter level explicitly.
+The ordinary stock emitter consumes its projections without a special case.
 """
 
 COUNTER = '''    def counter(self, name, reset, step):

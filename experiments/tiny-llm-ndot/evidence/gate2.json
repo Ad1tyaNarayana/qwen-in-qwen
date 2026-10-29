@@ -1,0 +1,49 @@
+{
+  "status": "fail",
+  "gate": 2,
+  "register_differences": [
+    {
+      "register": 28,
+      "original": 4294912529,
+      "ndot": 4294967286
+    },
+    {
+      "register": 29,
+      "original": 16820820,
+      "ndot": 33587232
+    },
+    {
+      "register": 30,
+      "original": 4294912000,
+      "ndot": 4294912529
+    },
+    {
+      "register": 31,
+      "original": 105648,
+      "ndot": 16820820
+    }
+  ],
+  "pc": 262168,
+  "ram_differences": [
+    {
+      "address": 16842520,
+      "original": 4294967295,
+      "ndot": 63
+    },
+    {
+      "address": 16842524,
+      "original": 267148,
+      "ndot": 16821084
+    },
+    {
+      "address": 16842540,
+      "original": 266160,
+      "ndot": 266256
+    }
+  ],
+  "retired_instruction_savings": 90145792,
+  "trace_token_savings": 137987870,
+  "no_masks_or_tolerances": true,
+  "neural_run_started": false,
+  "stock_ndot_stories_prefix_started": false
+}

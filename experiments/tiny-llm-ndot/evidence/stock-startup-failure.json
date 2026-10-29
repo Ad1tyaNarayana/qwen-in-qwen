@@ -1,0 +1,9 @@
+{
+  "status": "startup-failure",
+  "exit_code": 2,
+  "generated_tokens": 0,
+  "stderr": "usage: stock_prefix.py [-h] --repo REPO --upstream UPSTREAM --inputs INPUTS\n                       --out OUT\nstock_prefix.py: error: the following arguments are required: --repo\n",
+  "cause": "Experiment profile.py shadowed Python stdlib profile during stock library imports",
+  "correction": "Rename helper profile_gpu.py and remove only the stale experiment module and its own bytecode; fresh stock artifact directory",
+  "numerical_failure": false
+}

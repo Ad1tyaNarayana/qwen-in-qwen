@@ -164,7 +164,7 @@ def main():
         exact_matmuls()
         if a.device == 'cuda':
             torch.cuda.set_per_process_memory_fraction(12 * 2**30 / torch.cuda.get_device_properties(0).total_memory)
-        circuit = build(4, stock_integer_counters=True)
+        circuit = build(4)
         model, metadata = build_model(circuit, a.device)
         report.update(model=metadata, geometry=circuit.stats(), constructor=circuit.source_manifest,
                       torch=torch.__version__, transformers=__import__('transformers').__version__,

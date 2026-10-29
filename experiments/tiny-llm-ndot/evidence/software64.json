@@ -1,0 +1,1235 @@
+{
+  "status": "fail",
+  "runs": [
+    {
+      "guest": "original",
+      "status": "pass",
+      "positions": [
+        {
+          "position": 0,
+          "instructions": 2122366,
+          "trace_tokens": 3193567
+        },
+        {
+          "position": 1,
+          "instructions": 2136726,
+          "trace_tokens": 3218248
+        },
+        {
+          "position": 2,
+          "instructions": 2150990,
+          "trace_tokens": 3249380
+        },
+        {
+          "position": 3,
+          "instructions": 2164866,
+          "trace_tokens": 3262735
+        },
+        {
+          "position": 4,
+          "instructions": 2179478,
+          "trace_tokens": 3286637
+        },
+        {
+          "position": 5,
+          "instructions": 2193510,
+          "trace_tokens": 3304793
+        },
+        {
+          "position": 6,
+          "instructions": 2207374,
+          "trace_tokens": 3336318
+        },
+        {
+          "position": 7,
+          "instructions": 2221186,
+          "trace_tokens": 3348227
+        },
+        {
+          "position": 8,
+          "instructions": 2234946,
+          "trace_tokens": 3363177
+        },
+        {
+          "position": 9,
+          "instructions": 2249142,
+          "trace_tokens": 3387697
+        },
+        {
+          "position": 10,
+          "instructions": 2262816,
+          "trace_tokens": 3410090
+        },
+        {
+          "position": 11,
+          "instructions": 2272060,
+          "trace_tokens": 3431434
+        },
+        {
+          "position": 12,
+          "instructions": 2284308,
+          "trace_tokens": 3445959
+        },
+        {
+          "position": 13,
+          "instructions": 2302618,
+          "trace_tokens": 3465762
+        },
+        {
+          "position": 14,
+          "instructions": 2317460,
+          "trace_tokens": 3491689
+        },
+        {
+          "position": 15,
+          "instructions": 2332048,
+          "trace_tokens": 3497310
+        },
+        {
+          "position": 16,
+          "instructions": 2344580,
+          "trace_tokens": 3528901
+        },
+        {
+          "position": 17,
+          "instructions": 2356196,
+          "trace_tokens": 3540471
+        },
+        {
+          "position": 18,
+          "instructions": 2365848,
+          "trace_tokens": 3545935
+        },
+        {
+          "position": 19,
+          "instructions": 2378922,
+          "trace_tokens": 3573299
+        },
+        {
+          "position": 20,
+          "instructions": 2393368,
+          "trace_tokens": 3588049
+        },
+        {
+          "position": 21,
+          "instructions": 2406266,
+          "trace_tokens": 3607785
+        },
+        {
+          "position": 22,
+          "instructions": 2415556,
+          "trace_tokens": 3633987
+        },
+        {
+          "position": 23,
+          "instructions": 2423144,
+          "trace_tokens": 3637199
+        },
+        {
+          "position": 24,
+          "instructions": 2437972,
+          "trace_tokens": 3662198
+        },
+        {
+          "position": 25,
+          "instructions": 2447748,
+          "trace_tokens": 3668678
+        },
+        {
+          "position": 26,
+          "instructions": 2472222,
+          "trace_tokens": 3711619
+        },
+        {
+          "position": 27,
+          "instructions": 2482090,
+          "trace_tokens": 3722772
+        },
+        {
+          "position": 28,
+          "instructions": 2496142,
+          "trace_tokens": 3733457
+        },
+        {
+          "position": 29,
+          "instructions": 2490484,
+          "trace_tokens": 3723568
+        },
+        {
+          "position": 30,
+          "instructions": 2505168,
+          "trace_tokens": 3745505
+        },
+        {
+          "position": 31,
+          "instructions": 2548934,
+          "trace_tokens": 3807803
+        },
+        {
+          "position": 32,
+          "instructions": 2555224,
+          "trace_tokens": 3829821
+        },
+        {
+          "position": 33,
+          "instructions": 2556472,
+          "trace_tokens": 3826257
+        },
+        {
+          "position": 34,
+          "instructions": 2572350,
+          "trace_tokens": 3836709
+        },
+        {
+          "position": 35,
+          "instructions": 2587106,
+          "trace_tokens": 3865307
+        },
+        {
+          "position": 36,
+          "instructions": 2599130,
+          "trace_tokens": 3888548
+        },
+        {
+          "position": 37,
+          "instructions": 2602834,
+          "trace_tokens": 3885775
+        },
+        {
+          "position": 38,
+          "instructions": 2617148,
+          "trace_tokens": 3910681
+        },
+        {
+          "position": 39,
+          "instructions": 2629812,
+          "trace_tokens": 3929439
+        },
+        {
+          "position": 40,
+          "instructions": 2654008,
+          "trace_tokens": 3965304
+        },
+        {
+          "position": 41,
+          "instructions": 2634576,
+          "trace_tokens": 3929569
+        },
+        {
+          "position": 42,
+          "instructions": 2674118,
+          "trace_tokens": 3989318
+        },
+        {
+          "position": 43,
+          "instructions": 2667312,
+          "trace_tokens": 3972759
+        },
+        {
+          "position": 44,
+          "instructions": 2718062,
+          "trace_tokens": 4052279
+        },
+        {
+          "position": 45,
+          "instructions": 2720650,
+          "trace_tokens": 4055327
+        },
+        {
+          "position": 46,
+          "instructions": 2721582,
+          "trace_tokens": 4054761
+        },
+        {
+          "position": 47,
+          "instructions": 2715754,
+          "trace_tokens": 4040637
+        },
+        {
+          "position": 48,
+          "instructions": 2734008,
+          "trace_tokens": 4070424
+        },
+        {
+          "position": 49,
+          "instructions": 2754574,
+          "trace_tokens": 4097201
+        },
+        {
+          "position": 50,
+          "instructions": 2768524,
+          "trace_tokens": 4124358
+        },
+        {
+          "position": 51,
+          "instructions": 2770030,
+          "trace_tokens": 4123557
+        },
+        {
+          "position": 52,
+          "instructions": 2798184,
+          "trace_tokens": 4168309
+        },
+        {
+          "position": 53,
+          "instructions": 2821034,
+          "trace_tokens": 4200953
+        },
+        {
+          "position": 54,
+          "instructions": 2818742,
+          "trace_tokens": 4186093
+        },
+        {
+          "position": 55,
+          "instructions": 2825710,
+          "trace_tokens": 4192962
+        },
+        {
+          "position": 56,
+          "instructions": 2827386,
+          "trace_tokens": 4193461
+        },
+        {
+          "position": 57,
+          "instructions": 2822434,
+          "trace_tokens": 4182663
+        },
+        {
+          "position": 58,
+          "instructions": 2877822,
+          "trace_tokens": 4279169
+        },
+        {
+          "position": 59,
+          "instructions": 2859646,
+          "trace_tokens": 4249755
+        },
+        {
+          "position": 60,
+          "instructions": 2857858,
+          "trace_tokens": 4235926
+        },
+        {
+          "position": 61,
+          "instructions": 2948546,
+          "trace_tokens": 4386091
+        },
+        {
+          "position": 62,
+          "instructions": 2944002,
+          "trace_tokens": 4377575
+        },
+        {
+          "position": 63,
+          "instructions": 2926052,
+          "trace_tokens": 4341698
+        }
+      ],
+      "instructions": 162208013,
+      "tokens": 242609345,
+      "elapsed_seconds": 560.4798985419911,
+      "native_output_exact": true,
+      "output_sha256": "3e5d30301e9671ac5ecaf35fc751d9f533aa313211a9debacacefc35afa8021f",
+      "ram_sha256": "028f078679ed6777fa4c2bf3740b167aa67385c3eeeacb324e05b57c36d94688",
+      "registers": [
+        0,
+        262160,
+        16842752,
+        0,
+        0,
+        16822272,
+        9,
+        261,
+        0,
+        0,
+        0,
+        64,
+        33854183,
+        33854183,
+        16842691,
+        0,
+        3435973837,
+        93,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4294912529,
+        16820820,
+        4294912000,
+        105648
+      ],
+      "pc": 262168,
+      "anchor": 4,
+      "count": 2,
+      "fault": null,
+      "exit_code": 0
+    },
+    {
+      "guest": "ndot",
+      "status": "pass",
+      "positions": [
+        {
+          "position": 0,
+          "instructions": 713838,
+          "trace_tokens": 1041133
+        },
+        {
+          "position": 1,
+          "instructions": 728198,
+          "trace_tokens": 1062942
+        },
+        {
+          "position": 2,
+          "instructions": 742462,
+          "trace_tokens": 1084080
+        },
+        {
+          "position": 3,
+          "instructions": 756338,
+          "trace_tokens": 1105280
+        },
+        {
+          "position": 4,
+          "instructions": 770950,
+          "trace_tokens": 1126656
+        },
+        {
+          "position": 5,
+          "instructions": 784982,
+          "trace_tokens": 1147512
+        },
+        {
+          "position": 6,
+          "instructions": 798846,
+          "trace_tokens": 1167499
+        },
+        {
+          "position": 7,
+          "instructions": 812658,
+          "trace_tokens": 1188395
+        },
+        {
+          "position": 8,
+          "instructions": 826418,
+          "trace_tokens": 1209241
+        },
+        {
+          "position": 9,
+          "instructions": 840614,
+          "trace_tokens": 1230087
+        },
+        {
+          "position": 10,
+          "instructions": 854288,
+          "trace_tokens": 1248589
+        },
+        {
+          "position": 11,
+          "instructions": 863532,
+          "trace_tokens": 1259957
+        },
+        {
+          "position": 12,
+          "instructions": 875780,
+          "trace_tokens": 1278444
+        },
+        {
+          "position": 13,
+          "instructions": 894090,
+          "trace_tokens": 1307822
+        },
+        {
+          "position": 14,
+          "instructions": 908932,
+          "trace_tokens": 1328565
+        },
+        {
+          "position": 15,
+          "instructions": 923520,
+          "trace_tokens": 1350404
+        },
+        {
+          "position": 16,
+          "instructions": 936052,
+          "trace_tokens": 1369142
+        },
+        {
+          "position": 17,
+          "instructions": 947668,
+          "trace_tokens": 1383132
+        },
+        {
+          "position": 18,
+          "instructions": 957320,
+          "trace_tokens": 1396834
+        },
+        {
+          "position": 19,
+          "instructions": 970394,
+          "trace_tokens": 1415688
+        },
+        {
+          "position": 20,
+          "instructions": 984840,
+          "trace_tokens": 1436726
+        },
+        {
+          "position": 21,
+          "instructions": 997738,
+          "trace_tokens": 1456118
+        },
+        {
+          "position": 22,
+          "instructions": 1007028,
+          "trace_tokens": 1467252
+        },
+        {
+          "position": 23,
+          "instructions": 1014616,
+          "trace_tokens": 1475273
+        },
+        {
+          "position": 24,
+          "instructions": 1029444,
+          "trace_tokens": 1498104
+        },
+        {
+          "position": 25,
+          "instructions": 1039220,
+          "trace_tokens": 1508383
+        },
+        {
+          "position": 26,
+          "instructions": 1063694,
+          "trace_tokens": 1551189
+        },
+        {
+          "position": 27,
+          "instructions": 1073562,
+          "trace_tokens": 1562911
+        },
+        {
+          "position": 28,
+          "instructions": 1087614,
+          "trace_tokens": 1584159
+        },
+        {
+          "position": 29,
+          "instructions": 1081956,
+          "trace_tokens": 1565009
+        },
+        {
+          "position": 30,
+          "instructions": 1096640,
+          "trace_tokens": 1586363
+        },
+        {
+          "position": 31,
+          "instructions": 1140406,
+          "trace_tokens": 1667945
+        },
+        {
+          "position": 32,
+          "instructions": 1146696,
+          "trace_tokens": 1673126
+        },
+        {
+          "position": 33,
+          "instructions": 1147944,
+          "trace_tokens": 1667464
+        },
+        {
+          "position": 34,
+          "instructions": 1163822,
+          "trace_tokens": 1693117
+        },
+        {
+          "position": 35,
+          "instructions": 1178578,
+          "trace_tokens": 1715204
+        },
+        {
+          "position": 36,
+          "instructions": 1190602,
+          "trace_tokens": 1729785
+        },
+        {
+          "position": 37,
+          "instructions": 1194306,
+          "trace_tokens": 1731951
+        },
+        {
+          "position": 38,
+          "instructions": 1208620,
+          "trace_tokens": 1752235
+        },
+        {
+          "position": 39,
+          "instructions": 1221284,
+          "trace_tokens": 1770993
+        },
+        {
+          "position": 40,
+          "instructions": 1245480,
+          "trace_tokens": 1811708
+        },
+        {
+          "position": 41,
+          "instructions": 1226048,
+          "trace_tokens": 1765511
+        },
+        {
+          "position": 42,
+          "instructions": 1265590,
+          "trace_tokens": 1837396
+        },
+        {
+          "position": 43,
+          "instructions": 1258784,
+          "trace_tokens": 1814792
+        },
+        {
+          "position": 44,
+          "instructions": 1309534,
+          "trace_tokens": 1908849
+        },
+        {
+          "position": 45,
+          "instructions": 1312122,
+          "trace_tokens": 1908586
+        },
+        {
+          "position": 46,
+          "instructions": 1313054,
+          "trace_tokens": 1901913
+        },
+        {
+          "position": 47,
+          "instructions": 1307226,
+          "trace_tokens": 1883523
+        },
+        {
+          "position": 48,
+          "instructions": 1325480,
+          "trace_tokens": 1912384
+        },
+        {
+          "position": 49,
+          "instructions": 1346046,
+          "trace_tokens": 1946012
+        },
+        {
+          "position": 50,
+          "instructions": 1359996,
+          "trace_tokens": 1965604
+        },
+        {
+          "position": 51,
+          "instructions": 1361502,
+          "trace_tokens": 1963538
+        },
+        {
+          "position": 52,
+          "instructions": 1389656,
+          "trace_tokens": 2011867
+        },
+        {
+          "position": 53,
+          "instructions": 1412506,
+          "trace_tokens": 2051790
+        },
+        {
+          "position": 54,
+          "instructions": 1410214,
+          "trace_tokens": 2039879
+        },
+        {
+          "position": 55,
+          "instructions": 1417182,
+          "trace_tokens": 2044657
+        },
+        {
+          "position": 56,
+          "instructions": 1418858,
+          "trace_tokens": 2038518
+        },
+        {
+          "position": 57,
+          "instructions": 1413906,
+          "trace_tokens": 2025383
+        },
+        {
+          "position": 58,
+          "instructions": 1469294,
+          "trace_tokens": 2128927
+        },
+        {
+          "position": 59,
+          "instructions": 1451118,
+          "trace_tokens": 2084326
+        },
+        {
+          "position": 60,
+          "instructions": 1449330,
+          "trace_tokens": 2072325
+        },
+        {
+          "position": 61,
+          "instructions": 1540018,
+          "trace_tokens": 2246057
+        },
+        {
+          "position": 62,
+          "instructions": 1535474,
+          "trace_tokens": 2231235
+        },
+        {
+          "position": 63,
+          "instructions": 1517524,
+          "trace_tokens": 2189576
+        }
+      ],
+      "instructions": 72062221,
+      "tokens": 104621475,
+      "elapsed_seconds": 134.95398241700605,
+      "native_output_exact": true,
+      "output_sha256": "3e5d30301e9671ac5ecaf35fc751d9f533aa313211a9debacacefc35afa8021f",
+      "ram_sha256": "6912e73c2d616a64b7ab7d01af777fc96c95022274839f92a55421b70bb14649",
+      "registers": [
+        0,
+        262160,
+        16842752,
+        0,
+        0,
+        16822272,
+        9,
+        261,
+        0,
+        0,
+        0,
+        64,
+        33854183,
+        33854183,
+        16842691,
+        0,
+        3435973837,
+        93,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4294967286,
+        33587232,
+        4294912529,
+        16820820
+      ],
+      "pc": 262168,
+      "anchor": 4,
+      "count": 2,
+      "fault": null,
+      "exit_code": 0
+    }
+  ],
+  "independent_dot_checks": 1024,
+  "native_exact": true,
+  "native_records": [
+    [
+      0,
+      1,
+      403,
+      2531150448,
+      0
+    ],
+    [
+      1,
+      403,
+      407,
+      110482425,
+      0
+    ],
+    [
+      2,
+      407,
+      261,
+      1076894511,
+      0
+    ],
+    [
+      3,
+      261,
+      378,
+      2928627636,
+      0
+    ],
+    [
+      4,
+      378,
+      432,
+      3057963026,
+      0
+    ],
+    [
+      5,
+      432,
+      383,
+      3089159036,
+      0
+    ],
+    [
+      6,
+      383,
+      286,
+      2091383824,
+      0
+    ],
+    [
+      7,
+      286,
+      261,
+      327146313,
+      0
+    ],
+    [
+      8,
+      261,
+      376,
+      2828308774,
+      0
+    ],
+    [
+      9,
+      376,
+      298,
+      110864872,
+      0
+    ],
+    [
+      10,
+      298,
+      315,
+      3682699441,
+      0
+    ],
+    [
+      11,
+      315,
+      421,
+      4157098110,
+      0
+    ],
+    [
+      12,
+      421,
+      395,
+      428755283,
+      0
+    ],
+    [
+      13,
+      395,
+      317,
+      1892722496,
+      0
+    ],
+    [
+      14,
+      317,
+      426,
+      1547811374,
+      0
+    ],
+    [
+      15,
+      426,
+      338,
+      39418039,
+      0
+    ],
+    [
+      16,
+      338,
+      401,
+      1775350224,
+      0
+    ],
+    [
+      17,
+      401,
+      396,
+      3640490346,
+      0
+    ],
+    [
+      18,
+      396,
+      267,
+      3777948182,
+      0
+    ],
+    [
+      19,
+      267,
+      337,
+      3125523876,
+      0
+    ],
+    [
+      20,
+      337,
+      410,
+      229027954,
+      0
+    ],
+    [
+      21,
+      410,
+      408,
+      25067009,
+      0
+    ],
+    [
+      22,
+      408,
+      419,
+      3292774616,
+      0
+    ],
+    [
+      23,
+      419,
+      292,
+      472473147,
+      0
+    ],
+    [
+      24,
+      292,
+      411,
+      1052256491,
+      0
+    ],
+    [
+      25,
+      411,
+      322,
+      2547434987,
+      0
+    ],
+    [
+      26,
+      322,
+      265,
+      1482242965,
+      0
+    ],
+    [
+      27,
+      265,
+      282,
+      991188752,
+      0
+    ],
+    [
+      28,
+      282,
+      295,
+      3665346423,
+      0
+    ],
+    [
+      29,
+      295,
+      433,
+      2529312123,
+      0
+    ],
+    [
+      30,
+      433,
+      426,
+      1507878244,
+      0
+    ],
+    [
+      31,
+      426,
+      385,
+      4124215676,
+      0
+    ],
+    [
+      32,
+      385,
+      328,
+      532352879,
+      0
+    ],
+    [
+      33,
+      328,
+      432,
+      3884292440,
+      0
+    ],
+    [
+      34,
+      432,
+      358,
+      3785824766,
+      0
+    ],
+    [
+      35,
+      358,
+      394,
+      3379373385,
+      0
+    ],
+    [
+      36,
+      394,
+      261,
+      1143779750,
+      0
+    ],
+    [
+      37,
+      261,
+      370,
+      540780512,
+      0
+    ],
+    [
+      38,
+      370,
+      432,
+      2609752291,
+      0
+    ],
+    [
+      39,
+      432,
+      352,
+      1826441830,
+      0
+    ],
+    [
+      40,
+      352,
+      266,
+      2980206557,
+      0
+    ],
+    [
+      41,
+      266,
+      268,
+      3564739421,
+      0
+    ],
+    [
+      42,
+      268,
+      388,
+      2847631180,
+      0
+    ],
+    [
+      43,
+      388,
+      426,
+      437338329,
+      0
+    ],
+    [
+      44,
+      426,
+      338,
+      2895927538,
+      0
+    ],
+    [
+      45,
+      338,
+      391,
+      3289562893,
+      0
+    ],
+    [
+      46,
+      391,
+      266,
+      1440161164,
+      0
+    ],
+    [
+      47,
+      266,
+      267,
+      2268127281,
+      0
+    ],
+    [
+      48,
+      267,
+      337,
+      3823723774,
+      0
+    ],
+    [
+      49,
+      337,
+      335,
+      192577377,
+      0
+    ],
+    [
+      50,
+      335,
+      312,
+      3265986872,
+      0
+    ],
+    [
+      51,
+      312,
+      432,
+      4083109642,
+      0
+    ],
+    [
+      52,
+      432,
+      398,
+      731046992,
+      0
+    ],
+    [
+      53,
+      398,
+      312,
+      1409991896,
+      0
+    ],
+    [
+      54,
+      312,
+      286,
+      812735057,
+      0
+    ],
+    [
+      55,
+      286,
+      267,
+      2035975750,
+      0
+    ],
+    [
+      56,
+      267,
+      414,
+      988273555,
+      0
+    ],
+    [
+      57,
+      414,
+      270,
+      3279973171,
+      0
+    ],
+    [
+      58,
+      270,
+      333,
+      3830997749,
+      0
+    ],
+    [
+      59,
+      333,
+      415,
+      755970897,
+      0
+    ],
+    [
+      60,
+      415,
+      426,
+      1945672705,
+      0
+    ],
+    [
+      61,
+      426,
+      338,
+      630164128,
+      0
+    ],
+    [
+      62,
+      338,
+      261,
+      671915624,
+      0
+    ],
+    [
+      63,
+      261,
+      419,
+      2648720768,
+      0
+    ]
+  ],
+  "decoded_text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big, red ball. She wanted to play with it, but it was too high. She as",
+  "model_sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+  "instruction_savings": 90145792,
+  "trace_token_savings": 137987870,
+  "final_architecture": {
+    "register_differences": [
+      {
+        "register": 28,
+        "original": 4294912529,
+        "ndot": 4294967286
+      },
+      {
+        "register": 29,
+        "original": 16820820,
+        "ndot": 33587232
+      },
+      {
+        "register": 30,
+        "original": 4294912000,
+        "ndot": 4294912529
+      },
+      {
+        "register": 31,
+        "original": 105648,
+        "ndot": 16820820
+      }
+    ],
+    "pc_equal": true,
+    "original_pc": 262168,
+    "ndot_pc": 262168,
+    "ram_words_different": 3,
+    "exit_equal": true,
+    "fault_equal": true
+  },
+  "error": "AssertionError(('final architectural state differs', {'register_differences': [{'register': 28, 'original': 4294912529, 'ndot': 4294967286}, {'register': 29, 'original': 16820820, 'ndot': 33587232}, {'register': 30, 'original': 4294912000, 'ndot': 4294912529}, {'register': 31, 'original': 105648, 'ndot': 16820820}], 'pc_equal': True, 'original_pc': 262168, 'ndot_pc': 262168, 'ram_words_different': 3, 'exit_equal': True, 'fault_equal': True}))",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/aditya/Me/qwenputer/qwenputer-games/experiments/tiny-llm-ndot/verify.py\", line 105, in main\n    assert not state['register_differences'] and state['pc_equal'] and state['ram_words_different'] == 0, ('final architectural state differs', state)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('final architectural state differs', {'register_differences': [{'register': 28, 'original': 4294912529, 'ndot': 4294967286}, {'register': 29, 'original': 16820820, 'ndot': 33587232}, {'register': 30, 'original': 4294912000, 'ndot': 4294912529}, {'register': 31, 'original': 105648, 'ndot': 16820820}], 'pc_equal': True, 'original_pc': 262168, 'ndot_pc': 262168, 'ram_words_different': 3, 'exit_equal': True, 'fault_equal': True})\n"
+}

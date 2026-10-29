@@ -1,0 +1,8 @@
+{
+  "scope": "Independent reference coverage of the 32768-token boot prefix; actual stock token comparison remains separate",
+  "tokens": 32768,
+  "complete_records_end_token": 32768,
+  "ndot_instructions": 1136,
+  "first_ndot_token": 18616,
+  "last_pc": "0x40168"
+}

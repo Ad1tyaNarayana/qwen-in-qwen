@@ -721,3 +721,91 @@ Prove It Works required actual GPU generation, raw-bit cache comparisons and
 independent token-file checks. Explain the Number kept memory claims tied to
 measured allocator peaks in one completed run. The append-only trail is
 [decisions.tsv](decisions.tsv).
+
+## 2026-10-30 unified counter graph passes Gate 1
+
+The constructor now always builds the integer counter. The `stock_integer_counters`
+construction argument is removed. Stock emission, IR evaluation, and compact execution
+consume the same graph. Earlier stock-only and legacy-counter scope statements above
+remain historical. This section supersedes their open counter-unification follow-up.
+
+[counter_ir.py](counter_ir.py) checks the counter's actual fp32 delta update and
+BF16 normalized read. It checks integer state bounds, the tiny-beta selector,
+reference columns, exact increments, and exact output values. Other heads retain
+the original strict IR checks. [compact.py](compact.py) generates an isolated
+Executor2 adapter from the frozen source. Its counter heads use the same projected
+values and beta selector, fp32 updates, and BF16 reads. The ordinary stock forward
+and emitter are unchanged. [legacy_neural.py](legacy_neural.py) also selects this
+adapter, so its default no longer combines the unified graph with the old backend.
+
+[weights.json](evidence-m5/weights.json) compares every BF16 word in all 897 emitted
+tensors, including the embedding, with the saved constructor from the passing M4
+build. All words agree. The final norm uses identical kept dimensions, and the
+appended stock full-attention layer has the same zero weights and shape. The
+normalized generated constructor source has SHA-256
+`5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da`,
+identical to the passing M3/M4 graph. The arithmetic and reuse source hashes also
+match. Mac LF and Windows CRLF base-file hashes differ. Converting the Mac base
+file to CRLF exactly reproduces the accepted Windows base hash. The generated
+source agrees without any numerical normalization or tolerance.
+
+[m2-w4.json](evidence-m5/m2-w4.json) passes the complete unified W=4 M2 suite.
+All five corruption controls and 61 faults pass. The positive sweep checks
+80,549 tokens, 34,256 retired instructions, and 34,044 per-token dot comparisons.
+Every final RAM byte matches, with the same historical SHA-256
+`6f424c340eec2feca22ac1a7ea2ba1a622ea9f8770b0ddbf2ff0a7dd714c9516`.
+The graph has 64 chip layers, 2,113 physical dimensions, 627 key heads,
+1,247 logical value heads, and 68,923 FFN units. Hidden size remains 2,304.
+
+[gate1.json](evidence-m5/gate1.json) independently checks exported actual GPU
+files on the Mac. All runs start from ELF boot state and GO, then use generated
+tokens for feedback. Comparison files never supply intermediate guest state.
+
+| Unified W=4 check | Actual tokens checked | Mismatches |
+| --- | ---: | ---: |
+| ndot loop against actual stock M4 output | 8,192 | 0 |
+| legacy stories against actual stock M4 output | 8,192 | 0 |
+| unchanged Doom against independent legacy trace | 262,144 | 0 |
+| unchanged stories against independent legacy trace | 262,144 | 0 |
+
+The backend is the adapted unfused Executor2 and FreeRun. Neither ROM fusion nor
+feedback fusion was used. These token checks do not claim every latent cache word
+is identical across backends. The separate passing M3 stock cache proof still
+applies to the identical emitted weights.
+
+The detached worker exited zero. The final tasklist had no Python jobs. Outputs
+are retained privately under
+`C:/Users/Admin/qwenputer-games-work/artifacts/neural-accelerator-m5-unified-gate1-v3-20261030`.
+The earlier fresh directories retain a workspace-path error and a Triton local
+variable type error. Both stopped before token generation. Their reports are
+[workspace-error.json](evidence-m5/workspace-error.json) and
+[compile-error.json](evidence-m5/compile-error.json). No failed numerical comparison
+was retried or waived. No upstream files, excluded directories, packages, or
+system installations changed. No commit was made.
+
+The new integer guest and its next gate are documented in
+[tiny-llm-ndot](../tiny-llm-ndot/README.md). Model the Domain kept the counter's
+update and read contract attached to the shared graph. Prove It Works required
+actual BF16 word comparisons and exported GPU byte comparisons. Sequence Work
+into Verifiable Units kept the later software gate paused until M2 completed.
+The append-only trail is [decisions.tsv](decisions.tsv). Work ran inline without
+an independent agent review.
+
+## 2026-10-30 M5 guest output passes, final architectural state fails
+
+Work stops at Gate 2. The NDOT4 stories engine and original integer engine have
+identical model blobs and match all 64 native and software-reference outputs,
+including IDs, logit hashes, decoded bytes, and KV clipping. All 1,024 bounded
+independent per-dot oracle checks pass. Their final PC, exit code, and fault
+status agree. However, x28 through x31 and three stack RAM words differ.
+No coordinate was ignored, no state was rewritten, and no tolerance was used.
+This fails the requested final architectural-state equality.
+
+[tiny-llm-ndot](../tiny-llm-ndot/README.md) retains the exact register and RAM
+values, full software reports, native evidence, guest build, and reproduction
+commands. Whole-program retired instructions fall from 162,208,013 to
+72,062,221; trace tokens fall from 242,609,345 to 104,621,475. These are software
+counts, not measured GPU speed. The five-position M5 neural run and the
+16,384-token stock prefix for that ndot stories ELF were not started. No
+minutes-per-prediction comparison with Phase 1 is available. Gate 1 remains
+passed; M5 remains failed at the literal final-state check.

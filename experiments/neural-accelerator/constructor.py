@@ -104,7 +104,7 @@ DROM = '''    wide = c.zeros(NDOT_WIDTH, "ndot.dbytes")
 '''
 
 
-def build(width=4, target=None, reduced=True, stock_integer_counters=False):
+def build(width=4, target=None, reduced=True):
     if width not in (4, 8):
         raise ValueError(width)
     from chipformer.rv import core
@@ -112,9 +112,10 @@ def build(width=4, target=None, reduced=True, stock_integer_counters=False):
     import reference
     source_path = Path(core.__file__)
     source = source_path.read_text()
-    if stock_integer_counters:
-        from integer_counters import rewrite
-        source = rewrite(source, core)
+    from integer_counters import rewrite
+    from counter_ir import install
+    install()
+    source = rewrite(source, core)
     start = source.index('    mem = c.zeros(32, "mem")')
     end = source.index('    # ---------------------------------------------------------------- P3: the text buffer', start)
     source = source[:start] + RAM + DROM + '\n' + source[end:]
@@ -147,14 +148,15 @@ def build(width=4, target=None, reduced=True, stock_integer_counters=False):
         reuse(circuit)
     circuit.accelerator_module = module
     circuit.accelerator_width = width
-    circuit.stock_integer_counters = stock_integer_counters
+    circuit.stock_integer_counters = True
     circuit.source_manifest = dict(base_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest(),
                                    constructor_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                                    generated_sha256=hashlib.sha256(source.encode()).hexdigest(),
                                    arithmetic_sha256=hashlib.sha256(Path(__file__).with_name('arithmetic.py').read_bytes()).hexdigest(),
                                    reuse_sha256=hashlib.sha256(Path(__file__).with_name('reuse.py').read_bytes()).hexdigest(),
-                                   reduced=reduced, stock_integer_counters=stock_integer_counters,
-                                   integer_counters_sha256=hashlib.sha256(Path(__file__).with_name('integer_counters.py').read_bytes()).hexdigest() if stock_integer_counters else None,
+                                   reduced=reduced, stock_integer_counters=True,
+                                   integer_counters_sha256=hashlib.sha256(Path(__file__).with_name('integer_counters.py').read_bytes()).hexdigest(),
+                                   counter_ir_sha256=hashlib.sha256(Path(__file__).with_name('counter_ir.py').read_bytes()).hexdigest(),
                                    replacement_sites=[before for before, _ in replacements])
     return circuit
 

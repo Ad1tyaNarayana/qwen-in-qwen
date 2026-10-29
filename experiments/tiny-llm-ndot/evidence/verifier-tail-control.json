@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "positive_tokens": 32768,
+  "negative_copy_last_token": 32767,
+  "negative_mismatches": 1,
+  "source": "Actual file unchanged; one-bit corruption applied only to a temporary comparison control"
+}

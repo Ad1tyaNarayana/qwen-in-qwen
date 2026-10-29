@@ -68,7 +68,7 @@ def main():
     delta, = differences(circuit, cache, mirror)
     assert delta['signed_zero'] and delta['chunked_bits'] == '0x80000000'
     print('cache diagnosis retains readable coordinates, exact bits, and signed zero')
-    integer = build(4, stock_integer_counters=True)
+    integer = build(4)
     machine.n = 17
     snapshot(integer, machine)
     integer_cache = SimpleNamespace(layers=[SimpleNamespace(recurrent_states={0: torch.zeros(1, 32, 128, 128)})

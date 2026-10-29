@@ -1,0 +1,6 @@
+{
+  "tokens_checked": 2343168,
+  "mismatches": 0,
+  "output": "@0 1 403 2531150448 0\n>Once\n@1 403 407 110482425 0\n> upon\n",
+  "source": "Snapshot copied from actual self-fed GPU token file during execution"
+}

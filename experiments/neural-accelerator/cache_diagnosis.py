@@ -86,7 +86,7 @@ def main():
         if a.device == 'cuda':
             torch.cuda.set_per_process_memory_fraction(12 * 2**30 / torch.cuda.get_device_properties(0).total_memory)
         if a.kind == 'accelerator':
-            circuit = build(4, stock_integer_counters=a.integer_counters)
+            circuit = build(4)
         else:
             circuit = core.build()
             circuit.accelerator_module = core

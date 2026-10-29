@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "gate": 2,
+  "rule": "Exact defined observations, non-stack RAM, and final-use liveness with covered data/address/control stores",
+  "final_sp": "0x01010000",
+  "stack_differences": [
+    "0x100ff18",
+    "0x100ff1c",
+    "0x100ff2c"
+  ],
+  "differing_temporaries": [
+    28,
+    29,
+    30,
+    31
+  ],
+  "exit_abi_registers": [
+    10,
+    17
+  ],
+  "direct_store_sites": [
+    "0x40110",
+    "0x40120"
+  ],
+  "direct_store_address": "0x0100aa54",
+  "control_branch": "0x401ac",
+  "control_stores": 512,
+  "control_address_range": [
+    "0x0100a258",
+    "0x0100aa54"
+  ],
+  "observations_64_exact": true,
+  "non_stack_ram_exact": true,
+  "proof_sha256": {
+    "gate2-liveness.json": "bb05b668f41da4ffcb7d1cbf5cb9257d033fd9b5d7447000e2d8124d9924968a",
+    "gate2-control.json": "cc39c25236fccf8fe95de318c615e90a6cc637b294c42e29cdcc942ba797dddf",
+    "gate2-native-recheck.json": "b81b1a365a78c181bcc2202bc0051ba709f9d46e242cb37a900dcb4a14175e9e"
+  },
+  "neural_rule": "Own-binary trace, final RAM and registers must match exactly without a dead-state exception"
+}

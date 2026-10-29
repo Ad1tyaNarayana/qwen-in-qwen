@@ -77,7 +77,7 @@ def main():
         from oracle import execute, serialize
         from transformers import StoppingCriteria, StoppingCriteriaList
         from transformers.generation.streamers import BaseStreamer
-        circuit = build(4, stock_integer_counters=True)
+        circuit = build(4)
         report.update(geometry=circuit.stats(), constructor=circuit.source_manifest)
         from chipformer.q35.tiny import BASE, pick_layout
         from transformers import Qwen3_5ForCausalLM, Qwen3_5TextConfig

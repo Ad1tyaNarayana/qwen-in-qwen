@@ -1,0 +1,11 @@
+{
+  "status": "fail",
+  "gate": 1,
+  "runs": [],
+  "backend": "unfused adapted Executor2 / FreeRun",
+  "initial_snapshot_only": true,
+  "reference_inputs": false,
+  "error": "CalledProcessError(128, ['git', '-C', 'C:\\\\Users\\\\Admin\\\\qwenputer-games-work\\\\repo\\\\.upstream\\\\qwenputer', 'rev-parse', 'HEAD'])",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\neural-accelerator\\unified_gpu.py\", line 31, in main\n    prepare(a.out / 'scratch')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\neural-accelerator\\prepare.py\", line 15, in prepare\n    manifest = module.prepare(ROOT / '.upstream/qwenputer', scratch, 64, 4096)\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\memory-map\\prepare.py\", line 48, in prepare\n    revision = subprocess.check_output(['git', '-C', str(upstream), 'rev-parse', 'HEAD'], text=True).strip()\n               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\subprocess.py\", line 472, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n               **kwargs).stdout\n               ^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\subprocess.py\", line 577, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['git', '-C', 'C:\\\\Users\\\\Admin\\\\qwenputer-games-work\\\\repo\\\\.upstream\\\\qwenputer', 'rev-parse', 'HEAD']' returned non-zero exit status 128.\n",
+  "finished_utc": "2026-10-29T20:51:21.881317+00:00"
+}

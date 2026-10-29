@@ -17,7 +17,9 @@ def main():
     p.add_argument('--resume-controls', type=Path)
     p.add_argument('--chunk-size', type=int, default=2048)
     p.add_argument('--unreduced', action='store_true')
+    p.add_argument('--out', type=Path, default=Path(__file__).parent)
     args = p.parse_args()
+    args.out.mkdir(parents=True, exist_ok=True)
     scratch = Path(tempfile.mkdtemp(prefix='ir-', dir=ROOT / '.cache/neural-accelerator'))
     manifest = prepare(scratch)
     import numpy as np
@@ -47,7 +49,7 @@ def main():
                   transformers=__import__('transformers').__version__,
                   full_map=True, stock_generate=False)
     output_name = f'ir-w{args.width}-before-reduction.json' if args.unreduced else f'ir-w{args.width}.json'
-    output = Path(__file__).parent / output_name
+    output = args.out / output_name
     completed_faults = set()
     if args.resume_controls:
         prior = json.loads(args.resume_controls.read_text())
@@ -61,7 +63,7 @@ def main():
     report['test_source_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     report['chunk_size'] = args.chunk_size
     if hasattr(c, 'reuse_report'):
-        liveness = Path(__file__).parent / f'liveness-w{args.width}.json'
+        liveness = args.out / f'liveness-w{args.width}.json'
         liveness.write_text(json.dumps(c.reuse_report, indent=2)+'\n')
         report['reuse'] = {key: value for key, value in c.reuse_report.items()
                            if key not in ('lifetimes', 'handovers')}
