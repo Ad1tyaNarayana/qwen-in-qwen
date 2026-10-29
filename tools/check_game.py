@@ -54,6 +54,14 @@ def main():
     assert frames(cuda_bytes) == json.loads((cuda_dir / "frames.json").read_text()) == images[:1]
     assert cuda['mismatches'] == 0 and cuda['frame_sha256'] == images[0]['sha256']
     print(f"stock HF CUDA: {len(cuda_tokens)} exact tokens and one complete matching frame")
+    gpu_dir = ROOT / "artifacts/compact-game-cuda"
+    gpu = json.loads((gpu_dir / "report.json").read_text())
+    assert np.fromfile(gpu_dir / "trace.u32", dtype="<u4").tolist() == generated
+    assert hashlib.sha256((gpu_dir / "weight-paddle.elf").read_bytes()).hexdigest() == digest == gpu['firmware_sha256']
+    assert (gpu_dir / "actual-output.bin").read_bytes() == output
+    assert json.loads((gpu_dir / "frames.json").read_text()) == images
+    assert gpu['generated_tokens'] == len(generated) and gpu['mismatches'] == 0
+    print(f"compact Triton CUDA: {len(generated)} exact tokens and {len(images)} matching frames")
 
 
 if __name__ == "__main__":

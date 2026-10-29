@@ -18,8 +18,12 @@ Review found and corrected two reproducibility issues. The runner now saves the 
 
 The preserved ELF includes compiler debug paths for this project's source files. It is retained byte for byte because the execution and stock-model prefix identify it by SHA-256. No model credentials or private SSH material are included.
 
-The Doom audit is a source and object-compilation experiment. Its memory calculation was rerun independently, and its object section totals were recomputed during review. No Doom executable was linked or run.
+The original Doom audit is a source and object-compilation experiment. Its memory calculation was rerun independently, and its corrected object section totals were recomputed during review. That audit itself does not link or run Doom. Subsequent experiments now contain reproducible Doomgeneric and DMC ports with separate software-reference first-frame evidence; neither claims a circuit-generated Doom frame.
 
 The expanded memory runtime was independently rerun with its direct sparse constructor: 296 self-fed tokens across 12 cases, with all 65,536 recurrent RAM bytes matching after each case. The upstream-constructor comparison was inspected; an independent attempt exceeded a deliberately smaller 4 GiB guard before reaching the comparison. The existing successful comparison covers 188 tensors. The 8 MiB / 8 MiB run retains its narrower 121-token scope and does not claim full-state extraction.
 
 For compact GPU acceleration, independent review checked both traces against the stock-model trace and recomputed all five-run medians and ranges. The isolated token-table adaptation omits the merged-chat-only Q family, whose position at the end preserves standalone family IDs. The timing loop includes graph replay, next-token decoding and embedding, output copies, and CPU transfer; setup, reset, and warm-up are excluded.
+
+The complete GPU run subsequently generated all 54,570 tokens and twelve frames. Independent review compared the full trace, every GIF frame, PNG and embedded HTML frame data with the Mac evidence. The expanded-memory GPU probe separately generated 142 tokens and matched all 65,536 extracted RAM bytes. Its preparation and state helpers match the CPU experiment.
+
+Review also tightened the Doomgeneric reproduction gates. Modified upstream source is rejected before compilation, and a run that exhausts its instruction budget without producing the expected frame exits unsuccessfully. Both failures were exercised. Game assets and the executable that embeds them remain local; source exports preserve licensing notices and first-frame scope.

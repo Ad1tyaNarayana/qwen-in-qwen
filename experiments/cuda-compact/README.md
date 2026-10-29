@@ -22,3 +22,11 @@ The Windows fork under the Triton organization documents Windows support, sm120,
 Start with the native Windows environment in [the stock CUDA instructions](../cuda/README.md), then run the commands in `run-commands.ps1` from the repository root. They copy the archived harnesses and committed firmware into the locations used by the original run. The exact executed probe scripts are under `source/`. They loaded a copied adapted module from the artifact directory rather than changing upstream files. `acceleration_probe.py` has a 240-second process watchdog and `acceleration_compare.py` a 60-second watchdog. No experiment processes remain running.
 
 These rates are for the original 32 KB circuit. The proposed 8 MiB RAM plus 8 MiB DROM circuit grows to hundreds of sequential layers and many more state heads. Its compilation time, memory use, and token rate remain unmeasured here. The base-map rates must not be extrapolated to Doom. Batch throughput also does not accelerate a single dependent game trace. The next useful test is a short exact free-running probe on that actual enlarged graph. The stock-HF run remains separate evidence; these compact measurements do not establish stock-HF Doom execution.
+
+## Complete game follow-up
+
+The same Triton executor subsequently generated all 54,570 game tokens and twelve distinct frames in one 8.478-second run. Every token and frame matches the Mac execution. This excludes setup, capture/warm-up, reference generation, comparison, and rendering. Setup took 1.182 seconds and capture 0.341 seconds; total time including rendering was 10.113 seconds. The result remains a prerecorded replay.
+
+The [full trace and replay artifacts](../../artifacts/compact-game-cuda) preserve the firmware, ROM, input schedule, output bytes, report and pixels. After the setup above, copy `source/full_game_probe.py` and `source/render_gpu_replay.py` into `tools/`, then run them using the Windows venv. The probe expects the firmware copy at `artifacts/weight-paddle.elf` prepared by `run-commands.ps1`; it has a 55-second watchdog. The saved replay was rendered from the generated frame bytes.
+
+The later [expanded-memory CUDA proof](../memory-map-cuda/README.md) uses a different, larger circuit and separately verifies extraction of recurrent RAM.

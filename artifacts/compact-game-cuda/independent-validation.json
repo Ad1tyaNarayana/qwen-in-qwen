@@ -1,0 +1,7 @@
+{
+  "tokens_compared_against_mac_compact_trace": 54570,
+  "token_mismatches": 0,
+  "all_twelve_frames_equal_mac_frames": true,
+  "trace_sha256": "10a46cf6a1fb2bdee6495e360c4a076bab7ba8a34ee3ce1fba31aa630f3a75cf",
+  "firmware_sha256_matches_report": true
+}

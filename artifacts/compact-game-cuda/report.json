@@ -1,0 +1,30 @@
+{
+  "mode": "upstream compact circuit Triton Executor2, fp32 CUDA graph; not stock HF",
+  "is_doom": false,
+  "wall_limit_seconds": 55,
+  "setup_seconds": 1.1820642000002408,
+  "capture_warmup_seconds": 0.34082939999962036,
+  "upstream_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "firmware_sha256": "8969cdb7448eff1c03f44b0044f5b0f379da8c8390081f8e7a74355de5393cf0",
+  "generated_tokens": 54570,
+  "mismatches": 0,
+  "frames": 12,
+  "distinct_frames": 12,
+  "elapsed_seconds_one_run": 8.478331900000285,
+  "timed_work": "FreeRun CUDA graph replay, self-fed token embeddings, trace copies and final CPU transfer; excludes setup, graph capture, reference execution, token comparison and rendering",
+  "reference_tokens_used_as_inputs": false,
+  "trace_sha256": "10a46cf6a1fb2bdee6495e360c4a076bab7ba8a34ee3ce1fba31aa630f3a75cf",
+  "torch": "2.14.1+cu130",
+  "triton": "3.8.0",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "cuda_peak_allocated_bytes": 116212736,
+  "graph": {
+    "chip_layers": 11,
+    "dims": 2679
+  },
+  "inputs": "same deterministic game_keys compiled into the saved ELF; prerecorded replay",
+  "source_adaptation": "Only merged-chat Q family omitted from standalone FreeRun embedding table; circuit kernels unchanged",
+  "replay_display_fps": 4,
+  "replay_is_live_execution": false,
+  "total_seconds": 10.113412100000005
+}

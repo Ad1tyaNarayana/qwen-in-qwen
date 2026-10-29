@@ -2,9 +2,9 @@
 
 An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](https://github.com/divagr18/qwenputer)'s compiled CPU circuit. This repository contains the source, execution trace, inputs, and frames from an Apple M4 Pro with 24 GB unified memory and an RTX 5070 Ti with 16 GB VRAM.
 
-![Verified CHIP-8 output, replayed at four frames per second](artifacts/compact-game/replay.gif)
+![Verified CHIP-8 output, replayed at four frames per second](artifacts/compact-game-cuda/replay.gif)
 
-**This GIF is accelerated, prerecorded output.** The saved run produced 12 frames in 116.20 seconds, including token comparison. Playback is four frames per second. It is not live gameplay.
+**This GIF is accelerated, prerecorded output.** The GPU circuit generated the 12 frames in 8.48 seconds after setup, excluding reference generation, comparison, and rendering. Playback is four frames per second. It is not live gameplay. The earlier Mac compact run produced identical frames in 116.20 seconds, including token comparison.
 
 [Open the shareable replay](https://ad1tyanarayana.github.io/qwenputer-games/). Pause or scrub through the verified frames, then inspect the linked execution evidence.
 
@@ -13,6 +13,7 @@ An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](ht
 | Experiment | Execution path | Verified result |
 | --- | --- | --- |
 | Weight Paddle | CHIP-8 ROM → C interpreter compiled to RV32IM → upstream compact tensor circuit executor | 54,570 self-generated tokens, zero reference mismatches, 12 distinct frames |
+| Complete Weight Paddle on RTX 5070 Ti | Same firmware → compact Triton circuit and CUDA graphs | All 54,570 tokens and 12 frames match the Mac run; one 8.48-second generation run |
 | RISC-V hello | Stock Hugging Face `Qwen3_5ForCausalLM` with locally compiled CPU weights | Five generated tokens, output `H`, successful halt |
 | Game boot prefix | Stock Hugging Face model, same game firmware | First 16 generated tokens match exactly; this prefix does not contain a frame |
 | First neural game frame on RTX 5070 Ti | Stock Hugging Face model with bf16 compiled CPU weights on CUDA | 5,415 generated tokens, zero mismatches, one complete frame matching the Mac run |
@@ -21,7 +22,7 @@ An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](ht
 
 The complete game run uses upstream's optimized circuit executor. It uses compiled tensor operations and specialized Gated DeltaNet memory operations. It is distinct from executing stock Hugging Face layers. The separate stock-model checks establish only the bounded results shown above.
 
-The pretrained Qwen3.5-4B language model was not loaded. The stock Hugging Face model generated one complete frame on the RTX 5070 Ti in a single 76.37-second correctness run, with 4.36 GB of peak PyTorch CUDA allocation. The complete 12-frame replay still uses the compact CPU executor. The Python reference emulator checks generated tokens and does not supply the executor's next token or game frames. Python renders only bytes emitted by the RISC-V firmware.
+The pretrained Qwen3.5-4B language model was not loaded. The stock Hugging Face model generated one complete frame on the RTX 5070 Ti in a single 76.37-second correctness run, with 4.36 GB of peak PyTorch CUDA allocation. The complete 12-frame replays use compact circuit executors on CPU or GPU. The Python reference emulator checks generated tokens and does not supply the executor's next token or game frames. Python renders only bytes emitted by the RISC-V firmware.
 
 ## Run the experiment
 
@@ -57,13 +58,14 @@ For the tested native Windows CUDA path, use [the GPU reproduction instructions]
 ## Inspect the evidence
 
 - [Complete compact execution report](artifacts/compact-game/report.json), [frames](artifacts/compact-game/frames.json), and [input schedule with ROM bytes](artifacts/compact-game/game.json).
+- [Complete GPU circuit report](artifacts/compact-game-cuda/report.json), [replay](artifacts/compact-game-cuda/index.html), and [exact full trace](artifacts/compact-game-cuda/trace.u32).
 - [Stock-model hello result](artifacts/hf-smoke/report.json) and [game-prefix result](artifacts/hf-game-prefix/report.json).
 - [Stock-model CUDA first frame](artifacts/hf-cuda-first-frame/frame.png), [annotated execution report](artifacts/hf-cuda-first-frame/report.annotated.json), and [trace](artifacts/hf-cuda-first-frame/trace.u32).
 - [Saved RISC-V firmware](artifacts/compact-game/weight-paddle.elf) and [generated token trace](artifacts/compact-game/trace.u32).
 - [Firmware source](firmware/chip8.c), [original ROM generator](tools/build_game.py), and [independent artifact checks](tools/check_game.py).
 - [Verification scope and review](docs/verification.md).
 
-Timings are individual correctness runs, not a controlled hardware comparison. They exclude compilation and reference generation. The CUDA first-frame timing also includes online checking and checkpoint writes. Its dense execution path is different from the Mac compact executor, so these runs do not establish a hardware speed ratio.
+The complete-game and stock-model timings are individual correctness runs, not a controlled hardware comparison. They exclude compilation and reference generation. The stock CUDA first-frame timing also includes online checking and checkpoint writes. Its dense execution path is different from the compact executors, so these runs do not establish a hardware speed ratio.
 
 The subsequent [compact GPU comparison](experiments/cuda-compact/README.md) alternated five runs of each executor on the same GPU. Triton took a median 0.841 seconds and sparse PyTorch CUDA graphs 3.660 seconds for the identical first-frame trace, excluding setup and warm-up. Those are compact circuit measurements, separate from the stock-model evidence.
 
@@ -79,8 +81,12 @@ The subsequent [compact GPU comparison](experiments/cuda-compact/README.md) alte
 
 [The expanded compact memory runtime](experiments/memory-map/README.md) has passed 12 cases at 64 KiB RAM / 4 MiB DROM, including full recurrent-RAM extraction, and a shorter test at 8 MiB / 8 MiB. Its direct sparse constructor removes large temporary matrices. The smaller map is the current target for the strip-rendering Doom port. Neither memory proof is a Doom run.
 
+[The same smaller map passed on CUDA](experiments/memory-map-cuda/README.md): 142 generated tokens and all 65,536 extracted RAM bytes matched the CPU proof. This verifies GPU state extraction for future strip-frame capture.
+
+Two real Doom ports now render E1M1 in the software reference machine: [stock Doomgeneric](experiments/doom-baremetal/README.md) needs 51,386,454 trace tokens; [the DMC strip-rendering port](experiments/dmc-rv32/README.md) needs 6,342,933 tokens and only 64 KiB RAM. The latter uses the user-supplied Aspire PIXO source and captures actual rendered strips from guest memory. These are reference results; they do not yet establish a circuit-rendered Doom frame. The public exports contain source, build instructions, licenses and textual evidence, with game data kept local.
+
 For the full pretrained model, the author reports an approximately 18.8 GB checkpoint and recommends a 24 GB GPU. The Mac's 24 GB is shared with the OS. A desktop RTX 5070 Ti has 16 GB VRAM and benefits from upstream CUDA support, but cannot hold that unchanged checkpoint entirely in VRAM. We have not validated quantization, offloading, or a Mac GPU port. See [the author's write-up](https://divagr.com/blog/qwenputer) and [NVIDIA's specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/).
 
 ## License and credit
 
-New code and the original Weight Paddle ROM are MIT licensed. Qwenputer is by Divyansh Agrawal. Its notices are preserved in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Doom source and game assets have separate licenses; the audit does not redistribute either. GPT-6.1 Sol agents assisted implementation and investigation, with orchestration and independent verification recorded in this project's working trail.
+The original Weight Paddle ROM and new code are MIT licensed except where a file carries another license. The DMC platform adaptation retains GPL-2.0-or-later. Qwenputer is by Divyansh Agrawal; DMC100-Doom is by Artur Bieniek, and the Aspire PIXO port is from atc1441's project. Notices are preserved in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and each experiment's NOTICE. Doom game assets remain separate local inputs. GPT-6.1 Sol agents assisted implementation and investigation, with orchestration and independent verification recorded in this project's working trail.

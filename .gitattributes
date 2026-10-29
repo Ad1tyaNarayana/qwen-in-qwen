@@ -6,3 +6,5 @@ experiments/cuda-compact/artifacts/** -text whitespace=blank-at-eol,blank-at-eof
 # Raw tool logs and patch context retain their original whitespace.
 experiments/cuda-compact/artifacts/*.log -whitespace
 experiments/cuda-compact/*.diff -whitespace
+artifacts/compact-game-cuda/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/memory-map-cuda/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

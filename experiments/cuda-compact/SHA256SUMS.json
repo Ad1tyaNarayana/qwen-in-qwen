@@ -1,5 +1,5 @@
 {
-  "README.md": "5818e5180e6be81828eaa5baad71e3da1b1db52c017dce1fb7bbe1856b38d514",
+  "README.md": "35c90ed9b64e3481ba19765d369160fda1667f69c2f0eef4787ac9d8ec6e56b9",
   "artifacts/acceleration-after.txt": "610bcdb8a8e6a129a03853f69b3cc1cb66947ffb5142209fca8c91c2de6ce0ab",
   "artifacts/acceleration-before.txt": "2e72bf9b252d4ba06d2412adc6f9d66441501f31048ec9b5bf7e5ed367ace792",
   "artifacts/acceleration-probe/comparison.json": "b9edb910dd1682a59edfcd220961ecdc28e85afb42046c4d55e58a1fb73ac6cc",
@@ -19,6 +19,8 @@
   "run-commands.ps1": "61e6f96d8fa91ac4dfffe4c7a45b62b0bade10fb57a147d6ce6b00fab3b89009",
   "source/acceleration_compare.py": "d8b3d2ec1b7432942618af8fe7e95a9155da040651db981df52a327ff4ff5f19",
   "source/acceleration_probe.py": "2c8e4ed6296d3d66a615b008e7516910cd40dda5711d2ab1a5831d163595d640",
+  "source/full_game_probe.py": "c6a4da4e731d0e6a579ae859bfb262c860a37debfa2b24b25234b0752f77b64b",
+  "source/render_gpu_replay.py": "dec6571fa91e96f72379ffc77bdc733509ff81eaae44c25cb6468efee1e228fd",
   "source/triton_probe_kernel.py": "88ac73a32cc6ef7c1965aa1578d8bee0b51b344cb79e990dfcc903af00abbad4",
   "standalone-freerun.diff": "36d1880578491177e5a29e60b737f2bdde431d64879ab5847ee56af47d9a26fe",
   "validation.json": "58c9ed48fe2010333282d8201bbe691f389c244704d3e1525e092f5c30d7dcb5"

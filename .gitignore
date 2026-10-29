@@ -6,5 +6,6 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .audit/
+experiments/memory-map-cuda/scratch/
 artifacts/reference-*/
 artifacts/*/reference-frames.json
