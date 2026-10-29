@@ -1,6 +1,10 @@
-# Doom does not fit the current Qwenputer machine
+# Doom does not fit the released Qwenputer memory map
 
-The goal is to run the original Doom engine on Qwenputer and leave an open source result. The current machine fails the writable memory requirement before a platform port can run. No Doom game ran during this audit. No WAD was downloaded or included.
+The goal is to run the original Doom engine on Qwenputer and leave an open source result. The released machine fails the writable memory requirement before a platform port can run. No Doom game ran during this audit. Game data was unnecessary for this source audit and is not included in the repository.
+
+Subsequent work verified a standalone [64 KiB RAM extension](../experiments/ram64/README.md) through stock-model generation. It does not resolve the engine's larger memory requirement. A Doom 1.9 shareware IWAD has since been obtained locally for the port; it remains excluded from the repository.
+
+[GZDoom](https://github.com/ZDoom/gzdoom) is another open-source engine port, with an OpenGL renderer and substantial scripting support. We chose Doomgeneric for this experiment because its small platform callback interface is a narrower porting target. That is an engineering choice, not a demonstrated GZDoom compatibility result. Both still need game data; the [original id Software source release](https://github.com/id-Software/DOOM) also identifies that requirement.
 
 The audit pins [Qwenputer ca13310e2f9f788d1dd3feeea8213c1b0c23913c](https://github.com/divagr18/qwenputer/tree/ca13310e2f9f788d1dd3feeea8213c1b0c23913c) and [Doomgeneric e257a09527062bfb986b6e5e0780839b6cbd5b71](https://github.com/ozkl/doomgeneric/tree/e257a09527062bfb986b6e5e0780839b6cbd5b71). The local checkout contents and source hashes are recorded in [`artifacts/doom/audit.json`](../artifacts/doom/audit.json).
 

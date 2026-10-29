@@ -6,6 +6,8 @@ An original CHIP-8 paddle game running as RISC-V firmware through [Qwenputer](ht
 
 **This GIF is accelerated, prerecorded output.** The saved run produced 12 frames in 116.20 seconds, including token comparison. Playback is four frames per second. It is not live gameplay.
 
+[Open the shareable replay](https://ad1tyanarayana.github.io/qwenputer-games/). Pause or scrub through the verified frames, then inspect the linked execution evidence.
+
 ## What ran
 
 | Experiment | Execution path | Verified result |
