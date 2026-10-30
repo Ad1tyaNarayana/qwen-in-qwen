@@ -88,7 +88,7 @@ The graph, traces and neural samples use deterministic gzip compression. Raw
 GPU checkpoints remain private under `.cache/explorer/showcase-checkpoints/`.
 Exact byte sizes for all published files are in `data-sizes.json`. The five new
 showcase recording directories total 1,576,326 bytes. Screenshots
-09 through 16 total 1,574,525 bytes. These additions are below 20 MB.
+09 through 16 total 1,598,506 bytes. These additions are below 20 MB.
 
 ## Provenance rules
 
@@ -159,15 +159,23 @@ reference machine.
 
 ## New periodic fused GPU capture
 
-Four atomic acquisition attempts during this extension failed safely. The
-owner was `tiny-qwen35-covariance-20261030-full`, started at
-`2026-10-30T05:04:51.7118252Z`, with an expected duration of up to 235 minutes.
-No GPU process was started, and no other task was stopped. New periodic
-MNIST, Life and stories260K captures remain blocked. The generalized capture
-path is syntax checked and its observers/oracle are exercised by the actual
-final checkpoint imports, but the periodic GPU loop is not yet exercised.
+The pending captures were completed on 2026-10-30 using isolated
+`artifacts/explorer-*-periodic-20261030*` directories and the fused executor.
+MNIST has 24 verified snapshots across 189,092 tokens. Life has 13 across
+403,149 tokens. The stories260K capture starts at ELF boot and covers a whole
+inner position. `gpu-capture-status.json` records its final counts.
+Every capture checks every generated token and every snapshot against the
+independent reference at the consumed-feedback index. `import_periodic.py`
+repeats all snapshot and token comparisons on the Mac before publishing.
+Comparison state never enters executor feedback or the displayed neural arrays.
 
-When the lock becomes available, run this command from the Mac with a fresh
+The launcher now tar-syncs its supervisor script before detaching a short
+encoded PowerShell command through WMI. This avoids Windows cmd's command-line
+length limit. The first setup attempt failed before starting a worker and
+released its lock. Successful short captures retain the 15-minute watchdog
+and release the lock in `finally`.
+
+To make another capture, run this command from the Mac with a fresh
 label:
 
 ```sh
@@ -346,10 +354,11 @@ shows the generated story.
 
 ## Remaining gaps
 
-* New periodic fused capture awaits the GPU lock for MNIST, Life and one
-  stories260K position. Five showcase final checkpoints and the existing story
-  final checkpoint are real. Intermediate application events have trace
-  provenance. No per-layer neural activation history is claimed.
+* Neural observations exist only at listed exact prefixes. Periodic MNIST,
+  Life and one stories260K position are now captured and independently checked.
+  Tiny Qwen has its retained final neural snapshot only. Intermediate
+  application events retain trace provenance. No per-layer neural activation
+  history is claimed.
 * Exact dynamic call stacks, instruction-retirement profiling, and an automatic
   link from arbitrary guest addresses to an inner-model token are not implemented.
 * Unclassified compiler prefixes retain exact symbols rather than guessed roles.
@@ -368,3 +377,53 @@ The interaction takes inspiration from the MIT-licensed
 [neuron-explorer](https://github.com/lyramakesmusic/neuron-explorer).
 No upstream explorer code or assets were copied. This implementation uses the
 repository's MIT license.
+
+
+## Tiny Qwen3.5 inside the compiled Qwen3.5 network
+
+The tiny-Qwen3.5 gallery card opens a 4,096-token final window from the accepted
+35,836,005-token autonomous GPU run. Its one final neural sample is imported
+from the actual retained GPU checkpoint, never regenerated from reference.
+The independent Mac replay checks all 65,536 RAM bytes, 96 register values,
+PC, anchor and count at consumed-feedback prefix 35,836,004. The full actual
+trace hash also equals the independent reference hash. Bindings and verification
+are in `data/tiny-qwen35-validation.json`.
+
+L4 shows six inner DeltaNet layers and two full-attention layers, actual
+emitted token IDs and `Once upon a time, there`. Its decoder uses the guest
+ELF's `arena` symbol plus the DROM pack's exact RAM offsets. DeltaNet state is
+Q20 with four 16-by-16 value-head matrices per layer. Full-attention KV is Q10,
+64 positions by 32 dimensions per layer. Convolution history is Q12. These
+arrays come only from the exact final neural RAM sample. Shared scratch is not
+presented as historical per-layer activation data. Missing prefixes show no
+neural arrays. The outer network's weights are compiled, not pretrained.
+
+The manifest binds the shared `0e515bbb…` BF16 network hash to constructor
+`generated_sha256` `5e156bdb…`. The trained inner model's quality remains limited
+to 291/327 float agreement on six inspected prompts used during quantization
+investigation. They are not an unseen benchmark. The 16,384-token stock prefix
+checks low-level CPU execution and completes no inner prediction.
+
+Rebuild the retained final import and new periodic bundles with the existing
+venv, after collecting their actual GPU artifacts into `.cache/explorer/`.
+
+```sh
+.venv/bin/python experiments/explorer/import_tiny_qwen.py
+.venv/bin/python experiments/explorer/import_periodic.py --demo mnist --bundle .cache/explorer/periodic/mnist/bundle
+.venv/bin/python experiments/explorer/import_periodic.py --demo life --bundle .cache/explorer/periodic/life/bundle
+.venv/bin/python experiments/explorer/import_periodic.py --demo stories260k --bundle .cache/explorer/periodic/stories260k/bundle
+```
+
+Screenshots 17 and 18 show the tiny-Qwen DeltaNet and full-attention KV views.
+Screenshots 19 and 20 show exact intermediate MNIST and Life neural samples.
+Screenshot 21 shows the complete final Qwen state matrix, 22 shows an exact
+stories260K intermediate neural sample, and 23 shows the tiny-Qwen gallery card.
+The canonical extension decision trail is `.cache/explorer/extension-decisions.tsv`.
+Execution and review are inline under the supplied AGENTS.md. No independent
+agent review, new pretrained outer weights, or unseen language-quality result
+is claimed.
+
+The extension adds 2,178,941 bytes of published recording bundles and
+1,426,987 bytes of new screenshots 17 through 23. Exact current file sizes
+are in `data-sizes.json`. The 79 MiB raw Qwen checkpoint and uncompressed GPU
+traces remain private under `.cache/explorer/`.

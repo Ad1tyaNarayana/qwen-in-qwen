@@ -1,15 +1,43 @@
 {
-  "status": "blocked",
-  "atomic_acquisition_attempts": 4,
-  "lock_owner": "tiny-qwen35-covariance-20261030-full; start=2026-10-30T05:04:51.7118252Z; expected <= 235 minutes",
-  "new_gpu_jobs": 0,
-  "new_periodic_snapshots": 0,
-  "retained_final_snapshots_imported": 5,
-  "last_launcher_exit_code": 2,
-  "expected_capture_every": {
-    "mnist": 8192,
-    "life": 16384,
-    "stories260k": 32768
-  },
-  "protected_directories_untouched": true
+  "status": "complete",
+  "historical_atomic_acquisition_attempts": 4,
+  "extension_atomic_acquisition_attempts": 5,
+  "new_gpu_jobs": 3,
+  "setup_failures": 1,
+  "setup_failure": "Windows cmd command-line limit before worker launch; fixed supervisor transport; lock released in cleanup",
+  "new_periodic_snapshots": 53,
+  "new_retained_final_snapshots_imported": 1,
+  "retained_final_snapshots_imported": 6,
+  "gpu_lock_released": true,
+  "runs": [
+    {
+      "demo": "mnist",
+      "tokens": 189092,
+      "snapshots": 24,
+      "every": 8192,
+      "mac_verified": true,
+      "remote_artifact": "explorer-mnist-periodic-20261030c",
+      "verification": "experiments/explorer/data/recordings/periodic-mnist/mac-validation.json"
+    },
+    {
+      "demo": "life",
+      "tokens": 403149,
+      "snapshots": 13,
+      "every": 32768,
+      "mac_verified": true,
+      "remote_artifact": "explorer-life-periodic-20261030b",
+      "verification": "experiments/explorer/data/recordings/periodic-life/mac-validation.json"
+    },
+    {
+      "demo": "stories260k",
+      "tokens": 1041913,
+      "snapshots": 16,
+      "every": 65536,
+      "mac_verified": true,
+      "remote_artifact": "explorer-stories-periodic-20261030b",
+      "verification": "experiments/explorer/data/recordings/periodic-stories260k/mac-validation.json"
+    }
+  ],
+  "protected_directories_untouched": true,
+  "reference_used": "comparison only; every snapshot independently replayed on Mac at its consumed-feedback index"
 }

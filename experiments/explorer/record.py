@@ -106,6 +106,9 @@ def decode_app(snapshot,inputs,program):
         config=layout(inputs,program)
         return snapshot_app(snapshot,config) if config else None
     pack=json.loads((inputs/'pack.json').read_text())
+    if pack.get('kind')=='Qwen3_5ForCausalLM':
+        from tiny_qwen import decode
+        return decode(snapshot,pack,program)
     symbols={s['name']:s for s in program['symbols']}
     ram=bytes.fromhex(snapshot['ram_hex'])
     arrays={}

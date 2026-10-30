@@ -25,5 +25,6 @@
     "experiments/showcase/mnist/evidence/training.json"
   ],
   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
-  "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+  "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark",
+  "explorer_recording": "periodic-mnist/fused-capture.json"
 }

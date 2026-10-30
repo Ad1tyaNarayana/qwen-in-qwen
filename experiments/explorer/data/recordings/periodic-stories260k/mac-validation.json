@@ -1,0 +1,1 @@
+{"passed":true,"tokens":1041913,"mismatches":0,"snapshots":16,"offsets":[65536,131072,196608,262144,327680,393216,458752,524288,589824,655360,720896,786432,851968,917504,983040,1041913],"reference_used":"comparison only","scope":"Every actual token and every neural snapshot rechecked independently on Mac; all RAM, registers, PC, anchor and count.","compressed_bytes":1344799}

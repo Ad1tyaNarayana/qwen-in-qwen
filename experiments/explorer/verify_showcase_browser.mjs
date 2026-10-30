@@ -52,6 +52,34 @@ try{
  await evaluate(`await explorer.seek(explorer.state.record.application.events[0].offset);`);
  await assert(`explorer.state.snapshot===null && document.getElementById('detail').textContent.includes('decoded from generated trace')`,'MNIST frame history retains trace provenance');
  await shot('14-mnist-trace');
+ await open('tiny-qwen35');
+ await assert(`explorer.state.record.id==='tiny-qwen35-final' && explorer.state.snapshot.verification.passed && explorer.state.snapshot.offset===35836005`,'Tiny Qwen opens final verified actual GPU state');
+ await assert(`document.getElementById('detail').textContent.includes('Qwen3.5 architecture running inside a Qwen3.5-architecture network.') && document.getElementById('detail').textContent.includes('compiled, not pretrained')`,'Qwen headline and outer compiled weight provenance are explicit');
+ await assert(`document.querySelectorAll('[data-qwen-layer]').length===8 && [...document.querySelectorAll('[data-qwen-layer]')].filter(b=>b.textContent.includes('DeltaNet')).length===6`,'Hybrid view has six DeltaNet layers and two full-attention layers');
+ await assert(`document.querySelector('.story').textContent==='Once upon a time, there' && document.querySelectorAll('.tokenChip').length===6 && document.getElementById('detail').textContent.includes('291/327') && document.getElementById('detail').textContent.includes('not an unseen')`,'Actual BYTE text and token IDs render with inspected-prompt quality limitation');
+ await assert(`explorer.state.snapshot.app.arrays['layer-0-state'].values.length===1024 && document.getElementById('qwenValues').textContent.includes('Q20') && document.getElementById('qwenHeat').width===16 && document.getElementById('qwenHeat').height===16`,'DeltaNet recurrent state decoded from actual neural RAM');
+ await assert(`document.getElementById('recording').value===explorer.state.record.id`,'Recording selector follows manifest URL loading');
+ await shot('17-qwen35-deltanet');
+ await evaluate(`document.getElementById('detail').scrollTop=440`);await shot('21-qwen35-final-state');
+ await evaluate(`document.getElementById('detail').scrollTop=0`);
+ await evaluate(`document.querySelector('[data-qwen-layer="3"]').click();document.getElementById('qwenPosition').value='5';document.getElementById('qwenPosition').dispatchEvent(new Event('change'));`);
+ await assert(`document.getElementById('qwenValues').textContent.includes('position 5, 32 KV dimensions') && document.getElementById('qwenValues').textContent.includes('Q10')`,'Full-attention KV position control uses actual Q10 RAM');
+ await assert(`document.getElementById('breadcrumb').textContent.includes('0x'+(explorer.state.snapshot.app.arrays['layer-3-keys'].address+5*64).toString(16).padStart(8,'0'))`,'KV breadcrumb points to the selected guest RAM position');
+ await shot('18-qwen35-kv');
+ await evaluate(`await explorer.seek(explorer.state.record.end-1);`);
+ await assert(`explorer.state.snapshot===null && document.getElementById('detail').textContent.includes('State is unavailable') && !document.getElementById('qwenHeat')`,'Qwen missing-frame view never substitutes final neural RAM');
+ for(const name of ['mnist','life']){
+  await open(name);
+  await assert(`explorer.state.record.snapshots.length>1`,name+' loads periodic neural samples');
+  await evaluate(`await explorer.seek(explorer.state.record.snapshots[0].offset);`);
+  await assert(`explorer.state.snapshot.verification.passed && explorer.state.snapshot.verification.reference_consumed_tokens===explorer.state.offset-1`,name+' periodic snapshot has exact independent verification boundary');
+  await shot(name==='mnist'?'19-mnist-periodic':'20-life-periodic');
+ }
+ await open('stories260K ndot 38-position story');
+ await assert(`explorer.state.record.id==='periodic-stories260k' && explorer.state.record.snapshots.length===16 && explorer.state.record.end===1041913`,'Stories opens 16 verified samples covering one complete inner position from boot');
+ await evaluate(`await explorer.seek(explorer.state.record.snapshots[3].offset);`);
+ await assert(`explorer.state.snapshot.verification.passed && explorer.state.snapshot.offset===262144`,'Stories intermediate snapshot is available at its exact GPU prefix');
+ await shot('22-stories-periodic');
  await open('Doom first frame');
  await evaluate(`explorer.setLevel(2)`);
  await assert(`explorer.state.record===null && document.getElementById('detail').textContent.includes('No compatible recording')`,'Original-network manifest never displays another guest CPU recording');
@@ -59,11 +87,14 @@ try{
  await evaluate(`const s=explorer;const L=s.details.findIndex(d=>d?.heads.some(h=>h.name==='ram3'));s.state.layer=L;s.state.pick={kind:'head',index:s.details[L].heads.findIndex(h=>h.name==='ram3'),value:0};s.setLevel(1);`);
  await assert(`document.getElementById('headHeat').width===128 && document.getElementById('detail').textContent.includes('read from neural state')`,'Demo checkpoint S slice renders in L1');
  await shot('16-mnist-neural-S');
+ await evaluate(`explorer.showGallery();document.getElementById('detail').scrollTop=document.getElementById('detail').scrollHeight`);
+ await assert(`[...document.querySelectorAll('.demoCard')].find(c=>c.textContent.includes('tiny-qwen35')).textContent.includes('35,836,005')`,'Tiny Qwen gallery card shows completed neural trace count');
+ await shot('23-qwen35-gallery');
  await send('Emulation.setDeviceMetricsOverride',{width:820,height:1100,deviceScaleFactor:1,mobile:false});
  await evaluate(`explorer.showGallery()`);await shot('15-gallery-compact');
  await assert(`document.getElementById('detail').scrollWidth<=document.getElementById('detail').clientWidth+1`,'Gallery fits compact viewport');
  check(errors.length===0,'No browser exceptions: '+errors.join('\n'));
  check(requests.every(u=>u.startsWith('http://127.0.0.1:8792/')||u==='about:blank'),'All requests are local');
- await writeFile(here+'showcase-browser-validation.json',JSON.stringify({passed:true,checks,screenshots:8,errors},null,2)+'\n');
- console.log('Showcase browser checks passed. Eight new screenshots saved.');
+ await writeFile(here+'showcase-browser-validation.json',JSON.stringify({passed:true,checks,screenshots:15,errors},null,2)+'\n');
+ console.log('Showcase browser checks passed. Fifteen screenshots saved.');
 }finally{ws.close();}

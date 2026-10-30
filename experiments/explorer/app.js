@@ -1,7 +1,7 @@
 import {$,esc,hex,number,json,bytes,badge,tokenFamily,outputAt,instructionText,heatmap} from './data.js';
 import {NetworkMap} from './network.js';
 import {drawGuest} from './decoders.js';
-import {gallery,demoView,stopDemoAnimation} from './demo_views.js';
+import {gallery,demoView,tinyQwenView,stopDemoAnimation} from './demo_views.js';
 const LEVELS=['Network','Layer / unit','CPU','Program','Application'];
 const state={level:0,layer:4,pick:null,offset:0,record:null,trace:null,program:null,snapshot:null,base:'recordings/',innerLayer:0,innerPos:0,array:'x',manifestIndex:null,memory:0x1000100,list:false,page:0,manifests:[]};
 let graph,details,map,catalog,playing=false,loadVersion=0;
@@ -15,7 +15,9 @@ function header(kicker,title,description,source='compiled IR',type='compiled'){
 function statsHTML(s){if(!s)return '<p>Weight statistics unavailable for this unit.</p>';return `<div class="metrics"><div><b>${number(s[1])}</b><small>NONZERO COEFFICIENTS</small></div><div><b>${s[4].toExponential(2)}</b><small>WEIGHT L2</small></div></div><p>Min ${s[2].toExponential(3)} · max ${s[3].toExponential(3)}<br>Exact stock emitter projection rows, including constant ballast splitting. Zeros excluded from head coordinate counts.</p>`;}
 function crumbs(){
  const app=state.manifestIndex===null?state.snapshot?.app:null,a=app?.arrays[state.array];
- const arrayAddress=a?a.address+(a.shape?.length===3?(state.innerLayer*a.shape[1]+state.innerPos)*a.shape[2]*(a.format==='b'?1:2):0):null;
+ const qwen=app?.kind==='tiny-qwen35';
+ const qwenOffset=state.array.endsWith('-state')?Math.min(3,state.innerPos)*1024:state.array.endsWith('-keys')||state.array.endsWith('-values')?Math.min(63,state.innerPos)*64:0;
+ const arrayAddress=a?a.address+(qwen?qwenOffset:a.shape?.length===3?(state.innerLayer*a.shape[1]+state.innerPos)*a.shape[2]*(a.format==='b'?1:2):0):null;
  const address=state.level===4?arrayAddress:state.level===2?state.memory:null;
  let linked=null;
  if(address>=0x1000000&&address<0x1010000){const word=(address-0x1000000)>>>2,bank=(word&15)|((word>>>12)<<4);for(const [L,d] of details.entries()){const j=d?.heads.findIndex(h=>h.name===`ram${bank}`);if(j>=0){linked={layer:L,index:j,kind:'head',value:(word>>>4)&1};break;}}}
@@ -25,8 +27,9 @@ function crumbs(){
  if(address!==null&&linked)entries.push([hex(address),2]);
  if(state.level>=2)entries.push(['CPU',2]);if(state.level>=3)entries.push([currentFunction()?.name??'Program',3]);
  if(state.level>=4){
-  entries.push([state.manifestIndex===null?(state.record?.application?.kind??state.record?.decoder?.title??state.record?.decoder?.kind??'tiny LLM'):state.manifests[state.manifestIndex]?.manifest.demo??'Demo',4]);
-  if(a?.shape?.length===3){
+  entries.push([state.manifestIndex===null?(state.record?.application?.kind??state.record?.decoder?.title??state.record?.decoder?.kind??state.record?.app_kind??'tiny LLM'):state.manifests[state.manifestIndex]?.manifest.demo??'Demo',4]);
+  if(qwen&&a)entries.push([state.array,4]);
+  if(!qwen&&a?.shape?.length===3){
    entries.push([`${state.array}[layer ${state.innerLayer}][pos ${state.innerPos}]`,4]);
    const rows=[...outputAt(state.record,state.offset).matchAll(/@(\d+) (\d+) (\d+) (\d+) (\d+)\n>([\s\S]*?)\n(?=@|$)/g)];
    const row=rows.find(m=>+m[1]===state.innerPos),previous=rows.find(m=>+m[1]===state.innerPos-1);
@@ -137,6 +140,7 @@ function programView(){
  bindSeek();$('openApplication').onclick=()=>setLevel(4);$('detail').querySelectorAll('[data-memory]').forEach(b=>b.onclick=()=>{state.memory=+b.dataset.memory;setLevel(2);});
 }
 function applicationView(){
+ if(state.record?.app_kind==='tiny-qwen35'){tinyQwenView(state,{seek,setLevel,header,availability:neuralAvailability,bindSamples,updateCrumbs:crumbs});return;}
  if(state.record?.application){demoView(state,{seek,setLevel,header,availability:neuralAvailability,bindSamples});return;}
  if(state.manifestIndex!==null){manifestView();return;}
  const output=state.record?outputAt(state.record,state.offset):'',pieces=[...output.matchAll(/@(\d+) (\d+) (\d+) (\d+) (\d+)\n>([\s\S]*?)\n(?=@|$)/g)],story=pieces.map(m=>m[6]).join('');
@@ -195,6 +199,7 @@ async function loadRecordingURL(url){
  if(raw.length%8)throw Error('Trace must contain [token, PC] uint32 pairs');const trace=new Uint32Array(raw.buffer,raw.byteOffset,raw.byteLength/4);
  if(trace.length/2!==record.end-record.start)throw Error('Trace length does not match recording offsets');
  if(version!==loadVersion)return;
+ $('recording').value=record.id;
  Object.assign(state,{record,trace,program,recordBase:base,snapshot:null,manifestIndex:null,offset:record.start+1});$('scrubber').min=record.start+1;$('scrubber').max=record.end;
  await seek(record.snapshots.some(s=>s.offset===record.end)?record.end:record.start+1);drawTimeline();
 }
@@ -243,6 +248,7 @@ function showGallery(){
 async function openDemo(index){
  try{
   stopDemoAnimation();const {manifest:m}=state.manifests[index];
+  if(m.demo==='tiny-qwen35')Object.assign(state,{innerLayer:0,innerPos:0,array:''});
   const entry=catalog.recordings.find(r=>r.id==='showcase-'+m.demo)??catalog.recordings.find(r=>r.elf_sha256===m.elf_sha256)??(m.demo.includes('38-position')?catalog.recordings.find(r=>r.id==='stories260k-final'):null);
   if(m.explorer_recording)await loadRecordingURL(new URL(m.explorer_recording,location.origin+'/recordings/').href);
   else if(entry)await loadRecording(entry.id);

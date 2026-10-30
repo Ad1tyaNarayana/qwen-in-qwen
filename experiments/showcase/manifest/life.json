@@ -22,5 +22,6 @@
     "experiments/showcase/life/evidence/stock-report.json"
   ],
   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
-  "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+  "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark",
+  "explorer_recording": "periodic-life/fused-capture.json"
 }

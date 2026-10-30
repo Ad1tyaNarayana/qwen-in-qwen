@@ -19,5 +19,6 @@
     "experiments/tiny-llm-ndot-fused/evidence/story-validation.json",
     "experiments/tiny-llm-ndot-fused/evidence/story-fixture.json",
     "experiments/showcase/evidence/weights.json"
-  ]
+  ],
+  "explorer_recording": "periodic-stories260k/fused-capture.json"
 }

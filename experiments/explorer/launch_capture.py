@@ -5,6 +5,8 @@ from datetime import datetime,timezone
 from pathlib import Path
 import re
 import subprocess
+import io
+import tarfile
 from common import HERE, ROOT
 
 REMOTE='C:/Users/Admin/qwenputer-games-work'
@@ -59,8 +61,12 @@ try {{
  @{{exit_code=$p.ExitCode}} | ConvertTo-Json | Set-Content '{base}/exit.json'
 }} catch {{ @{{error=$_.ToString();exit_code=1}} | ConvertTo-Json | Set-Content '{base}/exit.json' }} finally {{ cmd /c 'rmdir /s /q C:\\Users\\Admin\\gpu-lock' }}
 '''
-        encoded=base64.b64encode(script.encode('utf-16-le')).decode()
-        command=f"powershell -ExecutionPolicy Bypass -NoProfile -EncodedCommand {encoded}"
+        payload=io.BytesIO()
+        with tarfile.open(fileobj=payload,mode='w') as archive:
+            raw=script.encode('utf-8'); member=tarfile.TarInfo('supervisor.ps1'); member.size=len(raw)
+            archive.addfile(member,io.BytesIO(raw))
+        subprocess.run(['ssh','gpu',f'tar -xf - -C {base}'],input=payload.getvalue(),check=True)
+        command=f"powershell -ExecutionPolicy Bypass -NoProfile -EncodedCommand "+base64.b64encode(f"& '{base}/supervisor.ps1'".encode('utf-16-le')).decode()
         result=ps("Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='"+command+"'} | ConvertTo-Json")
         import json
         status=json.loads(result)

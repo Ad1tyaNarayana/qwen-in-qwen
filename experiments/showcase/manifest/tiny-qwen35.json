@@ -1,0 +1,44 @@
+{
+  "demo": "tiny-qwen35",
+  "status": "neural-verified",
+  "network": "unified W=4 full-map; compiled outer network weights, not pretrained",
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+  "constructor_binding": {
+    "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+    "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+    "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+    "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+    "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+    "reduced": true,
+    "stock_integer_counters": true,
+    "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+    "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+    "replacement_sites": [
+      "from chipformer.rv import ref as RF",
+      "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+      "    n_plain = len(srcs)",
+      "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+      "\"imm\": imm, \"r\": r, \"val\": val,"
+    ]
+  },
+  "elf_sha256": "c2d16c876271ce64ae3a5faee45654ac676b462e79751b0c60f71aa7aa9202f1",
+  "drom_image_sha256": "21ea4e55dbb76d4507480a70f6c78b53f8d20ce0b5d4ed7971144dc8c628556f",
+  "instruction_count": 25121038,
+  "trace_tokens": 35836005,
+  "mismatches": 0,
+  "outputs": "Once upon a time, there",
+  "output_source": "BYTE records from actual self-fed GPU trace",
+  "stock_hf_prefix_tokens_checked": 16384,
+  "generation_seconds": 10014.168106500378,
+  "timing_scope": "Retained generation calls; excludes setup, IO, comparisons, waits, power outage and discarded replayed work",
+  "quality_limitation": "291/327 float agreement on six inspected prompts. These prompts were used during quantization investigation and are not an unseen benchmark.",
+  "explorer_recording": "tiny-qwen35/tiny-qwen35-final.json",
+  "evidence_paths": [
+    "experiments/tiny-qwen35/evidence/neural-validation.json",
+    "experiments/tiny-qwen35/evidence/covariance-quality.json",
+    "experiments/explorer/data/tiny-qwen35-validation.json",
+    "experiments/showcase/evidence/weights.json"
+  ],
+  "weight_hash_scope": "Shared stock BF16 tensor hash bound to constructor generated_sha256; the outer CPU weights are compiled, not pretrained."
+}
