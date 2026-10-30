@@ -1,6 +1,7 @@
 import {$,esc,hex,number,json,bytes,badge,tokenFamily,outputAt,instructionText,heatmap} from './data.js';
 import {NetworkMap} from './network.js';
 import {drawGuest} from './decoders.js';
+import {gallery,demoView,stopDemoAnimation} from './demo_views.js';
 const LEVELS=['Network','Layer / unit','CPU','Program','Application'];
 const state={level:0,layer:4,pick:null,offset:0,record:null,trace:null,program:null,snapshot:null,base:'recordings/',innerLayer:0,innerPos:0,array:'x',manifestIndex:null,memory:0x1000100,list:false,page:0,manifests:[]};
 let graph,details,map,catalog,playing=false,loadVersion=0;
@@ -14,7 +15,7 @@ function header(kicker,title,description,source='compiled IR',type='compiled'){
 function statsHTML(s){if(!s)return '<p>Weight statistics unavailable for this unit.</p>';return `<div class="metrics"><div><b>${number(s[1])}</b><small>NONZERO COEFFICIENTS</small></div><div><b>${s[4].toExponential(2)}</b><small>WEIGHT L2</small></div></div><p>Min ${s[2].toExponential(3)} · max ${s[3].toExponential(3)}<br>Exact stock emitter projection rows, including constant ballast splitting. Zeros excluded from head coordinate counts.</p>`;}
 function crumbs(){
  const app=state.manifestIndex===null?state.snapshot?.app:null,a=app?.arrays[state.array];
- const arrayAddress=a?a.address+(a.shape.length===3?(state.innerLayer*a.shape[1]+state.innerPos)*a.shape[2]*(a.format==='b'?1:2):0):null;
+ const arrayAddress=a?a.address+(a.shape?.length===3?(state.innerLayer*a.shape[1]+state.innerPos)*a.shape[2]*(a.format==='b'?1:2):0):null;
  const address=state.level===4?arrayAddress:state.level===2?state.memory:null;
  let linked=null;
  if(address>=0x1000000&&address<0x1010000){const word=(address-0x1000000)>>>2,bank=(word&15)|((word>>>12)<<4);for(const [L,d] of details.entries()){const j=d?.heads.findIndex(h=>h.name===`ram${bank}`);if(j>=0){linked={layer:L,index:j,kind:'head',value:(word>>>4)&1};break;}}}
@@ -24,8 +25,8 @@ function crumbs(){
  if(address!==null&&linked)entries.push([hex(address),2]);
  if(state.level>=2)entries.push(['CPU',2]);if(state.level>=3)entries.push([currentFunction()?.name??'Program',3]);
  if(state.level>=4){
-  entries.push([state.manifestIndex===null?(state.record?.decoder?.title??state.record?.decoder?.kind??'tiny LLM'):state.manifests[state.manifestIndex]?.manifest.demo??'Demo',4]);
-  if(a?.shape.length===3){
+  entries.push([state.manifestIndex===null?(state.record?.application?.kind??state.record?.decoder?.title??state.record?.decoder?.kind??'tiny LLM'):state.manifests[state.manifestIndex]?.manifest.demo??'Demo',4]);
+  if(a?.shape?.length===3){
    entries.push([`${state.array}[layer ${state.innerLayer}][pos ${state.innerPos}]`,4]);
    const rows=[...outputAt(state.record,state.offset).matchAll(/@(\d+) (\d+) (\d+) (\d+) (\d+)\n>([\s\S]*?)\n(?=@|$)/g)];
    const row=rows.find(m=>+m[1]===state.innerPos),previous=rows.find(m=>+m[1]===state.innerPos-1);
@@ -36,6 +37,7 @@ function crumbs(){
  $('breadcrumb').querySelectorAll('button').forEach(b=>b.onclick=()=>{if(+b.dataset.level===1&&linked){state.layer=linked.layer;state.pick=linked;}if(+b.dataset.level===2&&address!==null)state.memory=address;setLevel(+b.dataset.level);});
 }
 function setLevel(level){
+ state.gallery=false;stopDemoAnimation();
  state.level=Math.max(0,Math.min(4,level));$('zoom').value=state.level;
  $('levels').querySelectorAll('button').forEach((b,i)=>b.classList.toggle('active',i===state.level));
  const show=state.level===0;
@@ -63,7 +65,7 @@ function search(){
 }
 function expression(terms){return terms.map(([d,w])=>`${w} × ${d===0?'ONE':`slot${d}`}`).join(' + ')||'0';}
 function neuralAvailability(){
- if(state.snapshot)return `<div class="notice neuralNotice">${badge('read from neural state','neural')} Exact sample at generated prefix ${number(state.snapshot.offset)}. ${esc(state.snapshot.state_boundary??'Last generated token awaits feedback; S reflects processed feedback tokens.')}</div>`;
+ if(state.snapshot)return `<div class="notice neuralNotice">${badge('read from neural state','neural')} Exact sample at generated prefix ${number(state.snapshot.offset)}. ${esc(state.snapshot.state_boundary??'Last generated token awaits feedback; S reflects processed feedback tokens.')} ${state.snapshot.verification?.passed?'Independent reference check passed for PC, anchor/count, 65,536 RAM bytes and 96 register values.':''}</div>`;
  const samples=state.record?.snapshots??[];
  return `<div class="notice">No neural-state snapshot at this token offset. Trace-derived PC and output remain available. Registers, RAM and activations are not interpolated.<br>${samples.map(s=>`<button data-offset="${s.offset}">Jump to neural sample ${number(s.offset)}</button>`).join('')}${!samples.length?'<button data-final>Open validated final neural snapshot</button>':''}</div>`;
 }
@@ -135,6 +137,7 @@ function programView(){
  bindSeek();$('openApplication').onclick=()=>setLevel(4);$('detail').querySelectorAll('[data-memory]').forEach(b=>b.onclick=()=>{state.memory=+b.dataset.memory;setLevel(2);});
 }
 function applicationView(){
+ if(state.record?.application){demoView(state,{seek,setLevel,header,availability:neuralAvailability,bindSamples});return;}
  if(state.manifestIndex!==null){manifestView();return;}
  const output=state.record?outputAt(state.record,state.offset):'',pieces=[...output.matchAll(/@(\d+) (\d+) (\d+) (\d+) (\d+)\n>([\s\S]*?)\n(?=@|$)/g)],story=pieces.map(m=>m[6]).join('');
  const app=state.snapshot?.app,pack=app?.pack??state.record?.pack;
@@ -154,13 +157,13 @@ function renderArray(){
 function renderManifests(){
  const list=$('manifestList');if(!list)return;
  list.innerHTML=state.manifests.length?state.manifests.map(({file,manifest},i)=>`<button class="unitRow" data-demo="${i}"><code>${esc(manifest.demo??manifest.title??file)}</code><small>${esc(manifest.status??'manifest')}</small></button>`).join(''):'<p>No showcase manifests have appeared yet. See README for the recording/decoder adapter contract.</p>';
- list.querySelectorAll('[data-demo]').forEach(b=>b.onclick=()=>{state.manifestIndex=+b.dataset.demo;renderDetail();});
+ list.querySelectorAll('[data-demo]').forEach(b=>b.onclick=()=>openDemo(+b.dataset.demo));
 }
 function manifestView(){
  const {file,manifest:m}=state.manifests[state.manifestIndex];
  const reference=m.output_source?.includes('reference'),source=reference?'reference':'manifest report';
- $('detail').innerHTML=header('L4 / SHOWCASE MANIFEST',m.demo??file,m.network??'External demo manifest',source,reference?'reference':'trace')+`<div class="arraySelect"><button id="backLLM">← Recorded tiny LLM</button><select id="chooseDemo" aria-label="Showcase demo">${state.manifests.map((x,i)=>`<option value="${i}" ${i===state.manifestIndex?'selected':''}>${esc(x.manifest.demo??x.file)}</option>`).join('')}</select></div><div class="notice">${esc(m.status)}. Source: ${esc(m.output_source)}. ${reference?'These outputs are reference evidence. No neural run is claimed.':'This is a published evidence manifest, not a loaded neural RAM sample.'}</div><div class="grid2"><div class="panel"><h3>Application output</h3><canvas id="manifestCanvas" class="heatmap" style="display:none"></canvas><div id="manifestFrames" class="arraySelect"></div><pre id="manifestText"></pre></div><div class="panel"><h3>Evidence and input bindings</h3><p>ELF ${esc(m.elf_sha256)}<br>Network weight hash ${esc(m.network_weight_sha256)}<br>${esc(m.weight_hash_scope??'')}</p><pre>${esc((m.evidence_paths??[]).join('\n'))}</pre><p>${esc(m.stock_note??'')}<br>${esc(m.timing_scope??'')}</p>${m.explorer_recording?'<button id="loadDemoRecording">Load local neural recording</button>':'<p>This manifest has no explorer_recording path. Waiting for a compatible local recording. No guest RAM address or framebuffer pixels are guessed.</p>'}</div></div>`;
- $('backLLM').onclick=()=>{state.manifestIndex=null;renderDetail();};$('chooseDemo').onchange=()=>{state.manifestIndex=+$('chooseDemo').value;renderDetail();};$('manifestText').textContent=m.outputs??'No output in manifest.';
+ $('detail').innerHTML=header('L4 / SHOWCASE MANIFEST',m.demo??file,m.network??'External demo manifest',source,reference?'reference':'trace')+`<div class="arraySelect"><button id="backLLM">← Program gallery</button><select id="chooseDemo" aria-label="Showcase demo">${state.manifests.map((x,i)=>`<option value="${i}" ${i===state.manifestIndex?'selected':''}>${esc(x.manifest.demo??x.file)}</option>`).join('')}</select></div><div class="notice">${esc(m.status)}. Source: ${esc(m.output_source)}. ${reference?'These outputs are reference evidence. No neural run is claimed.':'This is a published evidence manifest, not a loaded neural RAM sample.'}</div><div class="grid2"><div class="panel"><h3>Application output</h3><canvas id="manifestCanvas" class="heatmap" style="display:none"></canvas><div id="manifestFrames" class="arraySelect"></div><pre id="manifestText"></pre></div><div class="panel"><h3>Evidence and input bindings</h3><p>ELF ${esc(m.elf_sha256)}<br>Network weight hash ${esc(m.network_weight_sha256)}<br>${esc(m.weight_hash_scope??'')}</p><pre>${esc((m.evidence_paths??[]).join('\n'))}</pre><p>${esc(m.stock_note??'')}<br>${esc(m.timing_scope??'')}</p>${m.explorer_recording?'<button id="loadDemoRecording">Load local neural recording</button>':'<p>This manifest has no explorer_recording path. Waiting for a compatible local recording. No guest RAM address or framebuffer pixels are guessed.</p>'}</div></div>`;
+ $('backLLM').onclick=showGallery;$('chooseDemo').onchange=()=>openDemo(+$('chooseDemo').value);$('manifestText').textContent=m.outputs??'No output in manifest.';
  const frames=[];
  if(m.demo==='life')for(const match of (m.outputs??'').matchAll(/Generation (\d+)\n((?:[.#]+\n)+)/g)){const lines=match[2].trim().split('\n');frames.push({label:'Generation '+match[1],rows:lines.length,cols:lines[0].length,values:[...lines.join('')].map(c=>c==='#'?1:0)});}
  if(m.demo==='tictactoe')for(const match of (m.outputs??'').matchAll(/(?:^|\n)([XO.]{3})\n([XO.]{3})\n([XO.]{3})/g))frames.push({label:'Board '+frames.length,rows:3,cols:3,values:[...(match[1]+match[2]+match[3])].map(c=>c==='X'?1:c==='O'?-1:0)});
@@ -181,6 +184,8 @@ function renderGuestDecoder(){
  return true;
 }
 function renderDetail(){
+ if(state.gallery){gallery(state.manifests,openDemo);return;}
+ if(!state.record&&[2,3].includes(state.level)){$('detail').innerHTML=header('HISTORICAL EVIDENCE','No compatible recording loaded.','This manifest uses a different ELF or network. Its L2 and L3 data are unavailable locally.','manifest report','reference');crumbs();return;}
  if(state.level===1)layerView();if(state.level===2)cpuView();if(state.level===3)programView();if(state.level===4&&!renderGuestDecoder())applicationView();crumbs();
 }
 async function loadRecording(id){const e=catalog.recordings.find(r=>r.id===id);if(!e)throw Error('Recording not present in this catalog');$('recording').value=id;return loadRecordingURL(new URL(e.url,new URL(state.base,location.href)).href);}
@@ -219,15 +224,33 @@ async function init(){
  $('legend').querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{$('roleFilter').value=$('roleFilter').value===b.dataset.role?'':b.dataset.role;search();});
  ['search','roleFilter','layerFilter'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{state.page=0;search();}));$('pointMode').onchange=()=>{map.mode=$('pointMode').value;map.makePoints();};$('resetCamera').onclick=()=>map.reset();
  $('listTab').onclick=()=>{state.list=true;$('listTab').classList.add('active');$('mapTab').classList.remove('active');search();};$('mapTab').onclick=()=>{state.list=false;$('mapTab').classList.add('active');$('listTab').classList.remove('active');search();setLevel(0);};
- $('brand').onclick=e=>{e.preventDefault();setLevel(0);};$('zoom').oninput=()=>{const z=+$('zoom').value,next=Math.round(z);if(next!==state.level)setLevel(next);$('zoom').value=z;if(next===0)map.animateZoom(1+z*1.3);else $('detail').style.transform=`scale(${1+(z-next)*.08})`;};$('zoom').onchange=()=>{$('detail').style.transform='';$('zoom').value=state.level;};
+ $('brand').onclick=e=>{e.preventDefault();showGallery();};$('galleryNav').onclick=showGallery;$('zoom').oninput=()=>{const z=+$('zoom').value,next=Math.round(z);if(next!==state.level)setLevel(next);$('zoom').value=z;if(next===0)map.animateZoom(1+z*1.3);else $('detail').style.transform=`scale(${1+(z-next)*.08})`;};$('zoom').onchange=()=>{$('detail').style.transform='';$('zoom').value=state.level;};
  $('scrubber').oninput=()=>seek(+$('scrubber').value).catch(fail);$('recording').onchange=()=>loadRecording($('recording').value).catch(fail);
- $('timelineCanvas').onclick=e=>{const b=e.target.getBoundingClientRect();seek(Math.round(state.record.start+(e.clientX-b.left)/b.width*(state.record.end-state.record.start))).catch(fail);};
+ $('timelineCanvas').onclick=e=>{if(!state.record)return;const b=e.target.getBoundingClientRect();seek(Math.round(state.record.start+(e.clientX-b.left)/b.width*(state.record.end-state.record.start))).catch(fail);};
  $('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Ⅱ':'▶';};
  setInterval(()=>{if(playing&&state.record){const next=Math.min(state.record.end,state.offset+Math.max(1,Math.floor((state.record.end-state.record.start)/600)));seek(next).catch(fail);if(next===state.record.end){playing=false;$('play').textContent='▶';}}},100);
  $('localCatalog').onchange=async e=>{try{const value=JSON.parse(await e.target.files[0].text());if(value.schema!=='qwenputer.catalog.v1')throw Error('Expected recording catalog v1');catalog=value;state.base='recordings/';populateCatalog();await loadRecording(catalog.recordings[0].id);}catch(e){fail(e);}};
  catalog=await json('recordings/index.json');populateCatalog();await loadRecording(catalog.recordings.find(r=>r.id==='stories260k-position-0')?.id??catalog.recordings[0].id);
  try{state.manifests=await json('/api/manifests');}catch{state.manifests=[];}
- setLevel(Math.max(0,Math.min(4,Number(location.hash.slice(1))||0)));window.explorer={state,graph,details,map,seek,setLevel,loadRecording};document.documentElement.dataset.ready='true';
+ if(!location.hash||location.hash==='#gallery')showGallery();else setLevel(Math.max(0,Math.min(4,Number(location.hash.slice(1))||0)));window.explorer={state,graph,details,map,seek,setLevel,loadRecording,showGallery,openDemo};document.documentElement.dataset.ready='true';
+}
+function showGallery(){
+ setLevel(0);state.gallery=true;
+ for(const id of ['network','mapInfo','mapTools','mapCaption'])$(id).style.display='none';
+ $('detail').style.display='block';$('detail').scrollTop=0;
+ gallery(state.manifests,openDemo);$('breadcrumb').innerHTML='<span>Program gallery</span>';history.replaceState(null,'','#gallery');
+}
+async function openDemo(index){
+ try{
+  stopDemoAnimation();const {manifest:m}=state.manifests[index];
+  const entry=catalog.recordings.find(r=>r.id==='showcase-'+m.demo)??catalog.recordings.find(r=>r.elf_sha256===m.elf_sha256)??(m.demo.includes('38-position')?catalog.recordings.find(r=>r.id==='stories260k-final'):null);
+  if(m.explorer_recording)await loadRecordingURL(new URL(m.explorer_recording,location.origin+'/recordings/').href);
+  else if(entry)await loadRecording(entry.id);
+  else{++loadVersion;Object.assign(state,{record:null,trace:null,program:null,snapshot:null,manifestIndex:index});$('recording').value='';$('timeLabel').textContent='Manifest evidence only';$('timelineNote').textContent='No compatible local recording. No data from another ELF is shown.';$('timelineCanvas').getContext('2d').clearRect(0,0,$('timelineCanvas').width,$('timelineCanvas').height);}
+  if(state.program&&state.program.elf_sha256!==m.elf_sha256)throw Error('Manifest and recording ELF mismatch');
+  if(state.record)state.manifestIndex=null;
+  setLevel(4);$('detail').scrollTop=0;
+ }catch(e){fail(e);}
 }
 function populateCatalog(){ $('recording').innerHTML=catalog.recordings.map(r=>`<option value="${esc(r.id)}">${esc(r.title)} · ${number(r.tokens)} tokens</option>`).join('');}
 init().catch(e=>{fail(e);$('detail').style.display='block';$('detail').innerHTML=header('LOAD ERROR','Recording or graph could not load.',e.message)+`<p>Run the exporter and recorder commands in README, then reload.</p>`;});

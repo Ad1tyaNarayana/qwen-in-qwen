@@ -11,3 +11,8 @@ Full position PC check	Ground program view in generated tokens	1041913 tokens ac
 Shared GPU unavailable	Do not interfere with another task	Lock acquisition refused; final owner showcase-20261030a	Periodic capture remains unexecuted
 Hidden residual layout	Include all stock coordinates	Emitter Layout maps ballast, tau, IR slots and padding	2304 coordinates per layer
 Browser verification	Check actual offline UI and missing sample behavior	14 checks and 8 PNG screenshots	Pass
+Manifest gallery	One card per published result, with explicit network identity	experiments/showcase/manifest/*.json	8 cards; original Doom and Phase 1 marked different network
+Trace application events	Do not substitute host simulation for neural history	Generated result and store commits; final replay equals neural exports	SHA rounds, Life RAM, minimax token positions and MNIST logits retain trace provenance
+Final showcase S import	Show real state while another task holds GPU	5 retained actual GPU checkpoints with ELF and trace bindings	5 exact PC/anchor/count, 327680 RAM bytes, 480 register values verified
+Periodic capture blocked	Never interfere with another GPU task	Atomic mkdir refused; owner tiny-qwen35-covariance-20261030-full	No new GPU generation; generic periodic capture supports showcase ELFs and per-snapshot checks
+Real browser extension checks	Verify navigation and provenance on the rendered application	showcase-browser-validation.json and screenshots 09 through 16	Pass

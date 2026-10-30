@@ -11,7 +11,7 @@ async function evaluate(expression){if(expression.includes('await '))expression=
 const check=(ok,message)=>{if(!ok)throw Error(message);};
 async function shot(name){await evaluate('Promise.all(document.getAnimations().map(a=>a.finished))');await evaluate('new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))');const {data}=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await writeFile(here+'screenshots/'+name+'.png',Buffer.from(data,'base64'));}
 try{
- await send('Runtime.enable');await send('Page.enable');await send('Network.enable');await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1040,deviceScaleFactor:1,mobile:false});await send('Page.navigate',{url:'http://127.0.0.1:8792/'});
+ await send('Runtime.enable');await send('Page.enable');await send('Network.enable');await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1040,deviceScaleFactor:1,mobile:false});await send('Page.navigate',{url:'http://127.0.0.1:8792/#0'});
  for(let i=0;i<100;i++){if(await evaluate('document.documentElement.dataset.ready === "true"'))break;await new Promise(r=>setTimeout(r,100));}
  check(await evaluate('!!window.explorer'),'Explorer initialized');
  check(await evaluate('explorer.graph.layers.length===65 && explorer.graph.geometry.ffn_units===68923'),'Graph geometry');
@@ -47,10 +47,10 @@ try{
  check(await evaluate(`explorer.state.snapshot===null && document.getElementById('detail').textContent.includes('No neural-state snapshot')`),'Scrubbing does not substitute nearby neural sample');
  await send('Emulation.setDeviceMetricsOverride',{width:820,height:1100,deviceScaleFactor:1,mobile:false});await evaluate(`explorer.setLevel(0)`);await shot('06-compact-network');
  await evaluate(`explorer.setLevel(4);explorer.state.manifestIndex=explorer.state.manifests.findIndex(x=>x.manifest.demo==='life');document.getElementById('levels').querySelector('[data-level="4"]').click();`);
- check(await evaluate(`document.getElementById('detail').textContent.includes('reference-verified-neural-pending') && document.getElementById('manifestCanvas').width===24`),'Reference Life manifest rendered with provenance');
- await shot('08-life-reference');
+ check(await evaluate(`document.getElementById('detail').textContent.includes('actual self-fed GPU BYTE records') && document.getElementById('manifestCanvas').width===24`),'Accepted Life manifest rendered with provenance');
+ await shot('08-life-manifest');
  check(requests.every(u=>u.startsWith('http://127.0.0.1:8792/')||u==='about:blank'),'All app requests are local');
  check(errors.length===0,'No uncaught browser errors: '+errors.join('\n'));
- await writeFile(here+'browser-validation.json',JSON.stringify({passed:true,checks:['initialization','graph geometry','head search','semantic RAM axes','ELF function timeline','neural register and RAM sample','inner KV decoder','no sample interpolation','compact viewport','no uncaught exceptions','reference Life provenance','all asset requests stay on localhost','every hidden coordinate represented','complete zero-padded stock capacity'],screenshots:8,errors},null,2)+'\n');
+ await writeFile(here+'browser-validation.json',JSON.stringify({passed:true,checks:['initialization','graph geometry','head search','semantic RAM axes','ELF function timeline','neural register and RAM sample','inner KV decoder','no sample interpolation','compact viewport','no uncaught exceptions','accepted Life manifest provenance','all asset requests stay on localhost','every hidden coordinate represented','complete zero-padded stock capacity'],screenshots:8,errors},null,2)+'\n');
  console.log('Browser checks passed. Eight screenshots saved.');
 }finally{ws.close();}

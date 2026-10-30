@@ -35,9 +35,11 @@ def main():
     try:
         owner=f'Qwenputer Explorer {a.label}; start={datetime.now(timezone.utc).isoformat()}; expected <=15 minutes'
         print(ps(f"Set-Content 'C:/Users/Admin/gpu-lock/owner.txt' '{owner}'; if(Test-Path '{base}') {{throw 'Fresh artifact path required'}}; New-Item -ItemType Directory '{repo}' -Force | Out-Null"))
+        fixtures=[inputs+'/'+name for name in ('engine.elf','reference.json','pack.json') if (ROOT/inputs/name).exists()]
         paths=['experiments/explorer','experiments/tiny-llm-ndot','experiments/tiny-llm-ndot-fused',
             'experiments/neural-accelerator','experiments/memory-map/prepare.py','experiments/dmc-feedback-fusion',
-            'experiments/dmc-rom-fusion','experiments/dmc-cuda/source/helpers/state.py',inputs]
+            'experiments/dmc-rom-fusion','experiments/dmc-cuda/source/helpers/state.py',
+            'experiments/showcase/manifest',*fixtures]
         send=subprocess.Popen(['tar','-cf','-','--exclude=__pycache__','--exclude=data','--exclude=screenshots','--exclude=*.u32','--exclude=reference-package','-C',str(ROOT),*paths],stdout=subprocess.PIPE)
         receive=subprocess.run(['ssh','gpu',f'tar -xf - -C {repo}'],stdin=send.stdout)
         send.stdout.close()

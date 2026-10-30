@@ -101,7 +101,10 @@ def neural_snapshot(fr,c,offset,selected=('pc','count','regs.rs1','ram3','drom0'
 
 
 def decode_app(snapshot,inputs,program):
-    if not (inputs/'pack.json').exists(): return None
+    if not (inputs/'pack.json').exists():
+        from showcase_data import layout, snapshot_app
+        config=layout(inputs,program)
+        return snapshot_app(snapshot,config) if config else None
     pack=json.loads((inputs/'pack.json').read_text())
     symbols={s['name']:s for s in program['symbols']}
     ram=bytes.fromhex(snapshot['ram_hex'])
@@ -150,15 +153,16 @@ def bundle(out,name,pairs,start,program,snapshots,inputs,binding):
         path=f'{name}.snapshot-{snapshot["offset"]}.json.gz'
         write_json(out/path,snapshot)
         snapshot_refs.append(dict(offset=snapshot['offset'],path=path,provenance=NEURAL))
+    app_kind=snapshots[0]['app']['kind'] if snapshots and snapshots[0].get('app') else 'tiny-llm'
     record=dict(schema='qwenputer.recording.v1',id=name,title=name.replace('-',' '),start=start,end=start+len(pairs),
         trace=f'{name}.trace.u32.gz',trace_format='Interleaved little-endian uint32 [generated token, decoded instruction PC]',
         program='program.json.gz',snapshots=snapshot_refs,bins=bins,byte_events=byte_events,
         provenance=TRACE,binding=binding,token_families=list(spec.FAMILY_SIZES),controls=spec.CONTROL_NAMES,
-        final_families=sorted(spec.FINAL),app_kind='tiny-llm',
+        final_families=sorted(spec.FINAL),app_kind=app_kind,
         coverage='Full generated token window. Neural snapshots exist only at listed exact offsets. No state interpolation.',
         pack=json.loads((inputs/'pack.json').read_text()) if (inputs/'pack.json').exists() else None)
     write_json(out/f'{name}.json',record)
-    return dict(id=name,title=record['title'],url=f'{name}.json',tokens=len(pairs),snapshots=len(snapshots))
+    return dict(id=name,title=record['title'],url=f'{name}.json',tokens=len(pairs),snapshots=len(snapshots),elf_sha256=program['elf_sha256'])
 
 
 def import_run(a):
@@ -170,6 +174,8 @@ def import_run(a):
     assert len(actual)==len(expected)
     for lo in range(0,len(actual),1<<20): assert np.array_equal(actual[lo:lo+(1<<20)],expected[lo:lo+(1<<20)])
     ref=json.loads((a.inputs/'reference.json').read_text())
+    assert sha(a.inputs/'engine.elf')==ref['elf_sha256']
+    assert sha(a.inputs/'reference.tokens.u32')==ref['sha256']
     assert sha(a.actual/'actual.tokens.u32')==ref['sha256']
     program=program_info(a.inputs)
     checkpoint=torch.load(a.checkpoint,map_location='cpu',weights_only=True)
@@ -250,21 +256,24 @@ def capture(a):
     sys.path.insert(0,str(ROOT/'experiments/tiny-llm-ndot-fused'))
     import story
     ref=json.loads((a.inputs/'reference.json').read_text())
+    assert sha(a.inputs/'engine.elf')==ref['elf_sha256']
+    assert sha(a.inputs/'reference.tokens.u32')==ref['sha256']
     args=SimpleNamespace(repo=ROOT,upstream=a.upstream,out=a.out,inputs=a.inputs,original_circuit=False)
     if a.stop is not None and not 0<a.stop<=ref['tokens']: raise ValueError('--stop outside retained reference comparison bounds')
     fr,info,spec,meta=story.build(args,ref)
     expected=np.memmap(a.inputs/'reference.tokens.u32',dtype='<u4',mode='r')
-    target=a.stop or (ref['positions'][1]['end_token']-ref['positions'][1]['trace_tokens'])
+    target=a.stop or (ref['positions'][1]['end_token']-ref['positions'][1]['trace_tokens'] if 'positions' in ref else ref['tokens'])
     offset=0; generated=[]; snapshots=[]
     check=reference_checker(a.inputs)
     with torch.no_grad():
         while offset<target:
-            amount=min(min(8192,a.every) if offset==0 else a.every,target-offset)
+            amount=min(a.every-offset%a.every,target-offset)
             part=fr.run(amount)[0].astype('<u4')
             assert np.array_equal(part,expected[offset:offset+amount]),f'Generated mismatch at {offset}'
             generated.append(part); offset+=amount
             s=neural_snapshot(fr,info['circuit'],offset)
             check(s,offset-1)
+            s['verification']=dict(passed=True,reference_consumed_tokens=offset-1,ram_bytes=65536,register_values=96,pc=True,anchor=True,count=True)
             s['pending_token']=int(part[-1]); s['state_boundary']='Last generated token awaits feedback. Exact S state after the previous generated token.'
             snapshots.append(s)
             print(json.dumps(dict(offset=offset,target=target)),flush=True)
@@ -274,9 +283,23 @@ def capture(a):
     program=program_info(a.inputs)
     pairs=decode_trace(actual,spec,program['entry'])
     entry=bundle(a.out,'fused-capture',pairs,0,program,snapshots,a.inputs,
-        dict(source=meta,validation='Every generated token equals independent comparison trace. Snapshots decoded directly from actual executor S.',reference_used='comparison only'))
-    boot=bundle(a.out,'boot-neural',pairs[:min(8192,len(pairs))],0,program,[s for s in snapshots if s['offset']<=8192],a.inputs,entry and dict(validation='Generated tokens and neural snapshots checked against independent reference; reference never supplies feedback.',reference_used='comparison only'))
-    write_json(a.out/'index.json',dict(schema='qwenputer.catalog.v1',recordings=[boot,entry]))
+        dict(source=meta,elf_sha256=program['elf_sha256'],actual_trace_sha256=sha(a.out/'actual.tokens.u32'),
+             reference_trace_sha256=ref['sha256'],validation='Every generated token equals independent comparison trace. Snapshots decoded directly from actual executor S.',reference_used='comparison only'))
+    from showcase_data import layout, trace_application
+    config=layout(a.inputs,program) if not (a.inputs/'pack.json').exists() else None
+    if config:
+        application=trace_application(pairs,program,a.inputs,config)
+        replay_ram=application.pop('final_ram');replay_registers=application.pop('final_registers')
+        if offset==ref['tokens']:
+            assert replay_ram==bytes.fromhex(snapshots[-1]['ram_hex'])
+            assert all(replay_registers==r for r in snapshots[-1]['registers'].values())
+        record=json.loads((a.out/'fused-capture.json').read_text())
+        record['application']=application;record['app_kind']=config['kind']
+        write_json(a.out/'fused-capture.json',record)
+    write_json(a.out/'capture-validation.json',dict(passed=True,tokens=offset,mismatches=0,
+        every=a.every,snapshots=[dict(offset=s['offset'],**s['verification']) for s in snapshots],
+        reference_used='comparison only',boot_state_only=True))
+    write_json(a.out/'index.json',dict(schema='qwenputer.catalog.v1',recordings=[entry]))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)

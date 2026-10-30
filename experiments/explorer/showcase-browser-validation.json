@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    "Landing has one card per manifest",
+    "All unified cards show identical full network weight hash",
+    "Doom and Phase 1 visibly use another network",
+    "SHA card loads correct recording, hashlib comparison and exact verified neural sample",
+    "SHA round control selects an actual generated event without substituting a neural sample",
+    "Life renders real captured guest RAM",
+    "Life animation advances recorded RAM frames with trace provenance",
+    "Tic-tac-toe renders board and decoded minimax progress",
+    "sha256 L2 uses its own ELF and neural register file",
+    "sha256 L3 shows its ELF program",
+    "life L2 uses its own ELF and neural register file",
+    "life L3 shows its ELF program",
+    "tictactoe L2 uses its own ELF and neural register file",
+    "tictactoe L3 shows its ELF program",
+    "mnist L2 uses its own ELF and neural register file",
+    "mnist L3 shows its ELF program",
+    "mnist-scalar L2 uses its own ELF and neural register file",
+    "mnist-scalar L3 shows its ELF program",
+    "MNIST renders exact input, hidden activations and ten generated logits",
+    "MNIST side-by-side comparison uses both full trace lengths",
+    "MNIST frame history retains trace provenance",
+    "Original-network manifest never displays another guest CPU recording",
+    "Demo checkpoint S slice renders in L1",
+    "Gallery fits compact viewport"
+  ],
+  "screenshots": 8,
+  "errors": []
+}

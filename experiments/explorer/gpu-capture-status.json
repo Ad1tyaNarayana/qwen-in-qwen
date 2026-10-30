@@ -1,0 +1,15 @@
+{
+  "status": "blocked",
+  "atomic_acquisition_attempts": 4,
+  "lock_owner": "tiny-qwen35-covariance-20261030-full; start=2026-10-30T05:04:51.7118252Z; expected <= 235 minutes",
+  "new_gpu_jobs": 0,
+  "new_periodic_snapshots": 0,
+  "retained_final_snapshots_imported": 5,
+  "last_launcher_exit_code": 2,
+  "expected_capture_every": {
+    "mnist": 8192,
+    "life": 16384,
+    "stories260k": 32768
+  },
+  "protected_directories_untouched": true
+}
