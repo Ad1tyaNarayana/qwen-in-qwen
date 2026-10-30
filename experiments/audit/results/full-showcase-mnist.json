@@ -1,0 +1,20 @@
+{
+ "name": "showcase-mnist",
+ "elf_sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75",
+ "seconds": 0.224531888961792,
+ "instructions": 121329,
+ "ndots": 19056,
+ "rvi_tokens": 189092,
+ "gpu_tokens": 189092,
+ "gpu_qs_qd_tokens": 0,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "c8a88ac035be07bfb2ed3f7f7c7609069fab4e74ecc5639eabb586ee6fc9343b",
+ "output_tail": "           \n           ##.              \n                            \n                            \nLabel 1 prediction 1\n",
+ "output_sha256": "0642b473ae774399d31363ca5dc07831081601dba71c02639e9d01a4c15cf85e",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}

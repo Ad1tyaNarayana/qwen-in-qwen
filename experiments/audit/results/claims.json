@@ -1,0 +1,442 @@
+[
+ {
+  "claim": "Doom tokens",
+  "published": 6342933,
+  "recomputed": 6342933,
+  "ok": true,
+  "source": "raw trace file",
+  "kind": "measured"
+ },
+ {
+  "claim": "hist generation s",
+  "published": 3044.57,
+  "recomputed": 3044.574422900019,
+  "ok": true,
+  "source": "full-report",
+  "kind": "measured"
+ },
+ {
+  "claim": "run1 generation s",
+  "published": 1446.28,
+  "recomputed": 1446.2763813000174,
+  "ok": true,
+  "source": "ff chunks sum",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 generation s",
+  "published": 1693.11,
+  "recomputed": 1693.106171399988,
+  "ok": true,
+  "source": "unified chunks sum",
+  "kind": "measured"
+ },
+ {
+  "claim": "2.105x",
+  "published": 2.105,
+  "recomputed": 2.105112454483517,
+  "ok": true,
+  "source": "ratio",
+  "kind": "derived"
+ },
+ {
+  "claim": "1.798 cross-network",
+  "published": 1.798,
+  "recomputed": 1.7982182537215223,
+  "ok": true,
+  "source": "ratio",
+  "kind": "derived, unlike networks"
+ },
+ {
+  "claim": "run1 tok/s",
+  "published": 4385.7,
+  "recomputed": 4385.699083530988,
+  "ok": true,
+  "source": "",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 tok/s",
+  "published": 3746.33,
+  "recomputed": 3746.3291476607073,
+  "ok": true,
+  "source": "",
+  "kind": "measured"
+ },
+ {
+  "claim": "hist tok/s",
+  "published": 2083.36,
+  "recomputed": 2083.3561998981218,
+  "ok": true,
+  "source": "",
+  "kind": "measured"
+ },
+ {
+  "claim": "run1 wall",
+  "published": 1469.41,
+  "recomputed": 1469.4132961000005,
+  "ok": true,
+  "source": "report",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 wall",
+  "published": 1715.49,
+  "recomputed": 1715.4851406999987,
+  "ok": true,
+  "source": "report",
+  "kind": "measured"
+ },
+ {
+  "claim": "unified/original",
+  "published": 1.17067,
+  "recomputed": 1.1706657132007523,
+  "ok": true,
+  "source": "",
+  "kind": "measured"
+ },
+ {
+  "claim": "run1 full chunks",
+  "published": 762,
+  "recomputed": 762,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run1 min",
+  "published": 227.809,
+  "recomputed": 227.80885009754394,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run1 median",
+  "published": 227.915,
+  "recomputed": 227.91465454113924,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run1 max",
+  "published": 229.334,
+  "recomputed": 229.3341552734862,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 full chunks",
+  "published": 762,
+  "recomputed": 762,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 min",
+  "published": 266.717,
+  "recomputed": 266.7166503906859,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 median",
+  "published": 266.834,
+  "recomputed": 266.8337341308336,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "run2 max",
+  "published": 268.298,
+  "recomputed": 268.2981201171941,
+  "ok": true,
+  "source": "chunks",
+  "kind": "measured"
+ },
+ {
+  "claim": "RV instructions",
+  "published": 3885544,
+  "recomputed": 3885544,
+  "ok": true,
+  "source": "rvi.py",
+  "kind": "measured"
+ },
+ {
+  "claim": "render base us",
+  "published": 479.705,
+  "recomputed": 479.7054473876793,
+  "ok": true,
+  "source": "timing-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "render rom us",
+  "published": 251.663,
+  "recomputed": 251.66263732911975,
+  "ok": true,
+  "source": "timing-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "render fused us",
+  "published": 228.155,
+  "recomputed": 228.15541839599217,
+  "ok": true,
+  "source": "timing-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "render fused tok/s",
+  "published": 4382.98,
+  "recomputed": 4382.977213648178,
+  "ok": true,
+  "source": "timing-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "boot fused tok/s",
+  "published": 4380.38,
+  "recomputed": 4380.377941408822,
+  "ok": true,
+  "source": "timing-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "~2.10x window",
+  "published": 2.1,
+  "recomputed": 2.1025380451631035,
+  "ok": true,
+  "source": "timing-summary",
+  "kind": "derived"
+ },
+ {
+  "claim": "ROM heads us",
+  "published": 260.136,
+  "recomputed": 260.13626953125004,
+  "ok": true,
+  "source": "profile-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "ROM %",
+  "published": 51.34,
+  "recomputed": 51.33996785758113,
+  "ok": true,
+  "source": "profile-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "RAM heads us",
+  "published": 41.289,
+  "recomputed": 41.28933984375,
+  "ok": true,
+  "source": "profile-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "stream span us",
+  "published": 506.7,
+  "recomputed": 506.69347953796387,
+  "ok": true,
+  "source": "profile-summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "later-frame tokens",
+  "published": 4501708.33,
+  "recomputed": 4501708.333333333,
+  "ok": true,
+  "source": "cost-model",
+  "kind": "measured"
+ },
+ {
+  "claim": "orig s/frame",
+  "published": 2159,
+  "recomputed": 2159.4919960416664,
+  "ok": true,
+  "source": "",
+  "kind": "projection"
+ },
+ {
+  "claim": "fused s/frame",
+  "published": 1027,
+  "recomputed": 1027.0872647916665,
+  "ok": true,
+  "source": "",
+  "kind": "projection"
+ },
+ {
+  "claim": "~52,000x",
+  "published": 52000,
+  "recomputed": 51827.807904999994,
+  "ok": true,
+  "source": "",
+  "kind": "projection"
+ },
+ {
+  "claim": "phases sum",
+  "published": 46858641,
+  "recomputed": 46858641,
+  "ok": true,
+  "source": "CONTINUING.md",
+  "kind": "measured"
+ },
+ {
+  "claim": "walk tokens",
+  "published": 46858641,
+  "recomputed": 46858641,
+  "ok": true,
+  "source": "counts-walk",
+  "kind": "measured"
+ },
+ {
+  "claim": "1.624x",
+  "published": 1.624,
+  "recomputed": 1.6236982080533082,
+  "ok": true,
+  "source": "cost-model",
+  "kind": "estimate"
+ },
+ {
+  "claim": "story tokens",
+  "published": 53296563,
+  "recomputed": 53296563,
+  "ok": true,
+  "source": "raw trace",
+  "kind": "measured"
+ },
+ {
+  "claim": "story min/pos",
+  "published": 6.2394,
+  "recomputed": 6.239430494517307,
+  "ok": true,
+  "source": "validation",
+  "kind": "measured"
+ },
+ {
+  "claim": "story tok/s",
+  "published": 3746.445,
+  "recomputed": 3746.445376201626,
+  "ok": true,
+  "source": "",
+  "kind": "measured"
+ },
+ {
+  "claim": "qwen tokens",
+  "published": 35836005,
+  "recomputed": 35836005,
+  "ok": true,
+  "source": "raw trace",
+  "kind": "measured"
+ },
+ {
+  "claim": "qwen instr",
+  "published": 25121038,
+  "recomputed": 25121038,
+  "ok": true,
+  "source": "rvi.py",
+  "kind": "measured"
+ },
+ {
+  "claim": "qwen ndots",
+  "published": 2257920,
+  "recomputed": 2257920,
+  "ok": true,
+  "source": "rvi.py",
+  "kind": "measured"
+ },
+ {
+  "claim": "qwen min/pos",
+  "published": 27.82,
+  "recomputed": 27.817133629167714,
+  "ok": true,
+  "source": "validation",
+  "kind": "measured"
+ },
+ {
+  "claim": "qwen min/new",
+  "published": 33.38,
+  "recomputed": 33.38056035500126,
+  "ok": true,
+  "source": "validation",
+  "kind": "measured"
+ },
+ {
+  "claim": "MNIST time ratio",
+  "published": 4.152,
+  "recomputed": 4.151994671476664,
+  "ok": true,
+  "source": "summary",
+  "kind": "measured"
+ },
+ {
+  "claim": "MNIST token ratio",
+  "published": 4.1521,
+  "recomputed": 4.152095276373405,
+  "ok": true,
+  "source": "rvi.py",
+  "kind": "measured"
+ },
+ {
+  "claim": "MNIST instr ratio",
+  "published": 4.6202,
+  "recomputed": 4.620239184366475,
+  "ok": true,
+  "source": "rvi.py",
+  "kind": "measured"
+ },
+ {
+  "claim": "MNIST int acc %",
+  "published": 96.05,
+  "recomputed": 96.05,
+  "ok": true,
+  "source": "raw predictions",
+  "kind": "measured"
+ },
+ {
+  "claim": "orig unfused proj min/pos",
+  "published": 25.9,
+  "recomputed": 25.900938320283725,
+  "ok": true,
+  "source": "baseline",
+  "kind": "projection"
+ },
+ {
+  "claim": "fused/unfused boot",
+  "published": 1.561,
+  "recomputed": 1.5609933251884742,
+  "ok": true,
+  "source": "README table",
+  "kind": "derived"
+ },
+ {
+  "claim": "1.86x (unlike backends)",
+  "published": 1.86,
+  "recomputed": 1.8587802911119633,
+  "ok": true,
+  "source": "README numbers",
+  "kind": "derived: fused original vs unfused unified"
+ },
+ {
+  "claim": "3.4x (projected vs measured)",
+  "published": 3.4,
+  "recomputed": 3.4241930064758166,
+  "ok": true,
+  "source": "",
+  "kind": "derived: projection/measurement"
+ },
+ {
+  "claim": "~5.3x (projection/projection)",
+  "published": 5.3,
+  "recomputed": 5.337098355714759,
+  "ok": true,
+  "source": "",
+  "kind": "derived: both projections; 38-pos measured ratio would be 4.15"
+ }
+]

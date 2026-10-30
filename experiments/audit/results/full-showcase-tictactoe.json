@@ -1,0 +1,20 @@
+{
+ "name": "showcase-tictactoe",
+ "elf_sha256": "5c6afb49f2f42e5013bcdfe127b09838fd70db08214ecf1656e3ff7b0652040e",
+ "seconds": 1.1452631950378418,
+ "instructions": 705245,
+ "ndots": 0,
+ "rvi_tokens": 895755,
+ "gpu_tokens": 895755,
+ "gpu_qs_qd_tokens": 0,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "98eb24538031b664ff8aff496a8be8a89298544410c2d3b17b5b970c1f243176",
+ "output_tail": "X.\n.O.\n...\n\nCPU 2\nXXO\n.O.\n...\n\nHuman 6\nXXO\n.O.\nX..\n\nCPU 3\nXXO\nOO.\nX..\n\nHuman 8\nXXO\nOO.\nX.X\n\nCPU 5\nXXO\nOOO\nX.X\n\nCPU wins\n",
+ "output_sha256": "425cd97804a0714a010d3b733840f561e9e2376f8455827f501c63fab47188b4",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}

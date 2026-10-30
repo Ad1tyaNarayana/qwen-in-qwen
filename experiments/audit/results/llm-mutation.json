@@ -1,0 +1,62 @@
+{
+ "qwen35": {
+  "segments": [
+   [
+    "0x40000",
+    11732,
+    11732,
+    5
+   ],
+   [
+    "0x2000000",
+    1674224,
+    1674224,
+    4
+   ],
+   [
+    "0x1000100",
+    0,
+    63136,
+    6
+   ]
+  ],
+  "contains_once_upon": false,
+  "contains_there_was": false,
+  "contains_lily": true,
+  "mutation": "top bit of one byte, plus bit 4 of every 37th DROM byte from 30% to 95%",
+  "mutated_halted": true,
+  "mutated_fault": null,
+  "mutated_instructions": 25060512,
+  "mutated_text": "Once sc seeanble\n!9602"
+ },
+ "stories": {
+  "segments": [
+   [
+    "0x40000",
+    6012,
+    6012,
+    5
+   ],
+   [
+    "0x2000000",
+    299851,
+    299851,
+    4
+   ],
+   [
+    "0x1000100",
+    0,
+    46272,
+    6
+   ]
+  ],
+  "contains_once_upon": false,
+  "contains_there_was": false,
+  "contains_lily": true,
+  "mutation": "top bit of one byte, plus bit 4 of every 37th DROM byte from 30% to 95%",
+  "mutated_halted": true,
+  "mutated_fault": null,
+  "mutated_instructions": 35620991,
+  "mutated_text": "OnceotototlmayototkeotlkelkellQotkeQkekeototmQ9otayQlayayendayayot"
+ }
+}

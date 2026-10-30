@@ -1,0 +1,20 @@
+{
+  "mode": "unified W=4 full-map unfused Executor2 / FreeRun",
+  "tokens": 6342933,
+  "seconds": 2679.202218300001,
+  "trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "final_token": 230321,
+  "checkpoint_offset": 6342933,
+  "words_compared": {
+    "S": 20430848,
+    "hist": 259899
+  },
+  "differing_words": {
+    "S": 0,
+    "hist": 0
+  },
+  "first_differences": [],
+  "x_equal": true,
+  "tok_equal": true,
+  "scratch_y_zero": true
+}

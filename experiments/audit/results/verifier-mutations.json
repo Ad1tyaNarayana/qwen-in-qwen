@@ -1,0 +1,17 @@
+{
+ "none": "ACCEPTED",
+ "token_mid": "rejected at verify_gpu.py:26",
+ "token_first": "rejected at verify_gpu.py:26",
+ "stock_token_mid": "rejected at verify_gpu.py:58",
+ "ram_mid": "rejected at verify_gpu.py:27",
+ "output": "rejected at verify_gpu.py:32",
+ "reg": "rejected at verify_gpu.py:30",
+ "mismatches": "rejected at verify_gpu.py:33",
+ "weight_label": "rejected at verify_gpu.py:36",
+ "stock_weight": "rejected at verify_gpu.py:65",
+ "used_ref": "rejected at verify_gpu.py:64",
+ "chunk": "rejected at verify_gpu.py:47",
+ "exit": "rejected at verify_gpu.py:72",
+ "time_scale": "rejected at verify_gpu.py:35",
+ "reference_copied_over_actual": "ACCEPTED"
+}

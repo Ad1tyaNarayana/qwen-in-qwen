@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-10-30 14:49:51",
+  "ssh_master": "missing control socket",
+  "connection": "No route to host",
+  "last_collected_stage": "stock-fuzz: 8192 tokens accepted; job3 lock released",
+  "uncollected": [
+    "safe-fused",
+    "safe-stock"
+  ],
+  "scope": "No failure inferred for uncollected GPU jobs; connection loss is separate from numerical results.",
+  "reconnected": true,
+  "remote_last_boot_local": "2026-10-30 20:23:01",
+  "surviving_audit_workers": 0,
+  "stale_lock_owner_checked": true,
+  "incomplete_output_preserved": "artifacts/audit-1/safe-fused-interrupted-20261030-1455",
+  "restart": "retry4.cmd; corrected guest only, fresh neural boot, same ELF and fixed network",
+  "restarted_stages_passed": [
+    "safe-fused",
+    "safe-stock"
+  ],
+  "cleanup": {
+    "time_utc": "2026-10-30T15:03:31.329239+00:00",
+    "lock_absent": true,
+    "python_workers": 0,
+    "remote_status": "safe-fused exit 0; safe-stock exit 0; job4 lock released"
+  }
+}

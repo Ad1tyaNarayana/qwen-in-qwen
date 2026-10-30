@@ -1,0 +1,18 @@
+{
+ "elf": ".cache/audit/fresh-safe/engine.elf",
+ "rvi_tokens": 310237,
+ "project_tokens": 310968,
+ "project_tokens_no_qs_qd": 310237,
+ "first_diff": null,
+ "tokens_equal": true,
+ "regs_equal": true,
+ "ram_equal": true,
+ "output_equal": true,
+ "instructions": 195341,
+ "proj_instructions": 195341,
+ "ndots": 170,
+ "output": "80576be9\n7e110754\n7d95edb5\n7e281e48\n7e42e8a5\n7e45b6a5\n00000000\nb3a11ae4\n622701ef\n8c2e3d15\ne5c2e7c0\n80000000\n00000000\nffffffff\n00000007\nffffffff\nfffffffd\nfffffffc\n7fffffff\nfffffffc\n5406ce78\n00000000\n",
+ "fault": null,
+ "proj_fault": "None",
+ "project_sha256": "05e38150edf01d86cd0e1b3f5ea92567f470bd9b36c4dc0cb4adcfd59f8ac926"
+}

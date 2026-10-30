@@ -1,0 +1,107 @@
+{
+  "status": "pass within tested scope",
+  "time_utc": "2026-10-30T15:03:31.329239+00:00",
+  "gpu_stages": {
+    "unfused": {
+      "passed": true,
+      "guests": 5,
+      "full_state_digest_equal_to_fused": true
+    },
+    "fuzz": {
+      "passed": true,
+      "guests": 3
+    },
+    "safe-fused": {
+      "passed": true,
+      "guests": 1
+    },
+    "stock": {
+      "passed": true,
+      "tokens": 32768,
+      "offset": 0
+    },
+    "stock-deflt": {
+      "passed": true,
+      "tokens": 2048,
+      "offset": 0
+    },
+    "stock-fuzz": {
+      "passed": true,
+      "tokens": 8192,
+      "offset": 0
+    },
+    "safe-stock": {
+      "passed": true,
+      "tokens": 4096,
+      "offset": 0
+    },
+    "stock-qwen-deep": {
+      "passed": true,
+      "tokens": 4096,
+      "offset": 20000000
+    },
+    "stock-doom-deep": {
+      "passed": true,
+      "tokens": 4096,
+      "offset": 5000000
+    },
+    "ckpt": {
+      "results": {
+        "none": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        },
+        "binding": "rejected at restore (binding/shape)",
+        "live_register_S": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        },
+        "next_embedding_x": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        },
+        "token_word": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        },
+        "lag_history": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        },
+        "unused_drom_row": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        },
+        "unused_ram_row": {
+          "token_mismatches": 0,
+          "first": null,
+          "final_ram_equal": true
+        }
+      }
+    },
+    "deep-doom": {
+      "passed": true,
+      "words": {
+        "S": 20430848,
+        "hist": 259899
+      }
+    }
+  },
+  "cleanup": {
+    "time_utc": "2026-10-30T15:03:31.329239+00:00",
+    "lock_absent": true,
+    "python_workers": 0,
+    "remote_status": "safe-fused exit 0; safe-stock exit 0; job4 lock released"
+  },
+  "limits": [
+    "Checkpoint contents are not checksummed by restore",
+    "Stock coverage remains bounded",
+    "Universal equivalence and 24 fps are unproven"
+  ]
+}

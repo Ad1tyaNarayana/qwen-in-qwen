@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "manifest_count": 10,
+  "unified_doom": {
+    "file": "doom-first-frame-unified.json",
+    "manifest": {
+      "demo": "Doom first frame (unified network)",
+      "status": "verified",
+      "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+      "drom_image_sha256": "c1f2818d8890bf41a2c3343b5046cfade0dad7d557f2fb548d7488168bbd0003",
+      "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+      "network": "unified W=4 full-map",
+      "weight_hash_scope": "stock BF16 emission from the hash-bound constructor (generated_sha256 5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da), as for the other unified guests; the 4,096-token stock prefix hashed its actual loaded weights",
+      "instruction_count": 3885544,
+      "trace_tokens": 6342933,
+      "mismatches": 0,
+      "generation_seconds": 1693.106171399988,
+      "tokens_per_second": 3746.3291476607073,
+      "uninterrupted_wall_seconds": 1715.4851406999987,
+      "outputs": "320x240 E1M1 first frame, 25 strips, RGB565 SHA-256 6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+      "output_source": "actual GPU recurrent RAM strips and palette",
+      "stock_hf_prefix_tokens_checked": 4096,
+      "stock_note": "Prefix of the same ELF in stock Qwen3_5ForCausalLM.generate; the full frame ran in the compact fused executor, not stock generate",
+      "evidence_paths": [
+        "experiments/doom-showcase/evidence/unified-full-report.json",
+        "experiments/doom-showcase/evidence/unified-full-validation.json",
+        "experiments/doom-showcase/evidence/unified-full-chunks.jsonl",
+        "experiments/doom-showcase/evidence/stock-prefix-report.json",
+        "experiments/doom-showcase/evidence/stock-prefix-validation.json"
+      ],
+      "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+      "timing_scope": "one complete autonomous uninterrupted execution; generation only; not repeated benchmark"
+    }
+  },
+  "scope": "real manifest endpoint and gallery source inspection; no new browser screenshot"
+}

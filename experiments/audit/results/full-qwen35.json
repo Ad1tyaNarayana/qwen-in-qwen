@@ -1,0 +1,20 @@
+{
+ "name": "qwen35",
+ "elf_sha256": "c2d16c876271ce64ae3a5faee45654ac676b462e79751b0c60f71aa7aa9202f1",
+ "seconds": 42.98168587684631,
+ "instructions": 25121038,
+ "ndots": 2257920,
+ "rvi_tokens": 35707697,
+ "gpu_tokens": 35836005,
+ "gpu_qs_qd_tokens": 128308,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "8e9b0dc050ff31e11899fd6a3dff17e70e8a46442d4db5edd0b1e8dd963e0e40",
+ "output_tail": "n\n@2 407 261 1834393023 0\n> a\n@3 261 378 4150177918 0\n> time\n@4 378 941 2897540521 0\n>,\n@5 941 383 3917258910 0\n> there\n",
+ "output_sha256": "2f7a8ceed5bc71b7322e54ec539d8badf68d214c34d3f0c9178d715697d69ff0",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}

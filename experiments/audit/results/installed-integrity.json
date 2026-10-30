@@ -1,0 +1,28 @@
+{
+  "version": "5.21.0",
+  "optimize": 0,
+  "scope": "installed wheel RECORD integrity; not publisher attestation",
+  "files": {
+    "transformers/cache_utils.py": {
+      "sha256": "36c4cd52d66f39fdb51fa2fc92cfc43e2e8b152e07f7c2a17186eac1e81237e7",
+      "record_sha256": "NsTNUtZvOf21H6L8ks_EPi6LFS4H98KhcYbqwegSN-c",
+      "record_matches": true
+    },
+    "transformers/generation/utils.py": {
+      "sha256": "966f70ba83d94c9ce07b21150be49ff84b24eadbf9c47de052a1fb0f8ba38679",
+      "record_sha256": "lm9wuoPZTJzgeyEVC-Sf-Esk6tv5xH3gUqH7D4ujhnk",
+      "record_matches": true
+    },
+    "transformers/models/qwen3_5/modeling_qwen3_5.py": {
+      "sha256": "af05d0acfe79fff8aea1c75f93516a6a72bc80f6f901329a73e66a3866fe1e7c",
+      "record_sha256": "rwXQrP55__iuocdfk1FqanK8gPb5ATKac-ZqOGb-Hnw",
+      "record_matches": true
+    },
+    "transformers/utils/generic.py": {
+      "sha256": "a97067244e842edc1fcaa77f0b57ea8e81d821105f6fe65311b77ccebf86f897",
+      "record_sha256": "qXBnJE6ELtwfyqd_C1fqjoHYIRBfb-ZTEbd8zr-G-Jc",
+      "record_matches": true
+    }
+  },
+  "passed": true
+}

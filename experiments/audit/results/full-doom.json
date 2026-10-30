@@ -1,0 +1,20 @@
+{
+ "name": "doom",
+ "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+ "seconds": 6.057275295257568,
+ "instructions": 3885544,
+ "ndots": 0,
+ "rvi_tokens": 6337409,
+ "gpu_tokens": 6342933,
+ "gpu_qs_qd_tokens": 5524,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "b9ea6e4ad1a05162f571970604e1a085078d8cf6ae21da48749b47f4dd80b3ef",
+ "output_tail": "QWENPUTER_DMC_START\nQWENPUTER_DMC_FRAME_READY\n",
+ "output_sha256": "1d19ce4bf4fd4170a0788dcc21bc4b210c4afc25e4cbaae621928d7c020dd67e",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}

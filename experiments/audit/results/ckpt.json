@@ -1,0 +1,38 @@
+{
+  "none": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  },
+  "binding": "rejected at restore (binding/shape)",
+  "live_register_S": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  },
+  "next_embedding_x": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  },
+  "token_word": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  },
+  "lag_history": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  },
+  "unused_drom_row": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  },
+  "unused_ram_row": {
+    "token_mismatches": 0,
+    "first": null,
+    "final_ram_equal": true
+  }
+}

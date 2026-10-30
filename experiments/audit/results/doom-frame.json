@@ -1,0 +1,56 @@
+{
+ "base": {
+  "strips": 25,
+  "covered": 76800,
+  "frame_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "halted": true,
+  "fault": null,
+  "steps": 3885544,
+  "unique": 147
+ },
+ "mutated_game_data": {
+  "strips": 0,
+  "covered": 0,
+  "frame_sha256": "0c5cc90b079d0d9c1ded1376357d23a9782a704a83e01731f50ccd162e246492",
+  "halted": true,
+  "fault": null,
+  "steps": 337145,
+  "unique": 1
+ },
+ "mutated_from_0.97_step_4099": {
+  "strips": 0,
+  "covered": 0,
+  "frame_sha256": "0c5cc90b079d0d9c1ded1376357d23a9782a704a83e01731f50ccd162e246492",
+  "halted": true,
+  "fault": null,
+  "steps": 280915,
+  "unique": 1
+ },
+ "mutated_from_0.9_step_8191": {
+  "strips": 25,
+  "covered": 76800,
+  "frame_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "halted": true,
+  "fault": null,
+  "steps": 3885546,
+  "unique": 147
+ },
+ "mutated_from_0.8_step_16381": {
+  "strips": 25,
+  "covered": 76800,
+  "frame_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "halted": true,
+  "fault": null,
+  "steps": 3885540,
+  "unique": 147
+ },
+ "mutated_from_0.6_step_16381": {
+  "strips": 25,
+  "covered": 76800,
+  "frame_sha256": "9caee5528ee9d26386b812f80b6536d81bb48f3ed00feb784975b1fcfda25b61",
+  "halted": true,
+  "fault": null,
+  "steps": 3885544,
+  "unique": 147
+ }
+}

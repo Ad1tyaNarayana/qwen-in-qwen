@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "mode": "unified W=4 full-map unfused Executor2 / FreeRun",
+  "torch": "2.14.1+cu130",
+  "triton": "3.8.0",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "constructor": {
+   "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+   "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+   "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+   "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+   "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+   "reduced": true,
+   "stock_integer_counters": true,
+   "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+   "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+   "replacement_sites": [
+    "from chipformer.rv import ref as RF",
+    "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+    "    n_plain = len(srcs)",
+    "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+    "\"imm\": imm, \"r\": r, \"val\": val,"
+   ]
+  }
+ },
+ "start": "ad7e7717a8c7b5cdff2b052932443da90e71f869559846982e2b6e0b9e297ecc",
+ "end": "ad7e7717a8c7b5cdff2b052932443da90e71f869559846982e2b6e0b9e297ecc",
+ "guests": {
+  "sha256": {
+   "gpu_tokens": 25186,
+   "rvi_tokens": 25186,
+   "equal": true,
+   "ram_equal": true,
+   "regs": [],
+   "fault": null,
+   "exit": 0,
+   "out": "6177a9cb410ff61f20015ad\n",
+   "state": "07a760a61d3d",
+   "elf": "c7b0dbe9da21",
+   "trace": "240ab36e288e"
+  },
+  "fresh": {
+   "gpu_tokens": 310936,
+   "rvi_tokens": 310205,
+   "equal": true,
+   "ram_equal": true,
+   "regs": [],
+   "fault": [
+    6,
+    264504
+   ],
+   "exit": null,
+   "out": "ffffc\n5406ce78\n00000000\n",
+   "state": "f0a202f1b10d",
+   "elf": "51d00616636f",
+   "trace": "04eee693e0dc"
+  },
+  "sha256-mut": {
+   "gpu_tokens": 25332,
+   "rvi_tokens": 25332,
+   "equal": true,
+   "ram_equal": true,
+   "regs": [],
+   "fault": null,
+   "exit": 0,
+   "out": "b96405de127b7fd8da2dd21\n",
+   "state": "3aba4d6a37dd",
+   "elf": "9d480996628e",
+   "trace": "b756b4b18e4b"
+  },
+  "fault4": {
+   "gpu_tokens": 72,
+   "rvi_tokens": 72,
+   "equal": true,
+   "ram_equal": true,
+   "regs": [],
+   "fault": [
+    4,
+    262256
+   ],
+   "exit": null,
+   "out": "",
+   "state": "1f3c92247baf",
+   "elf": "610593df2186",
+   "trace": "9169feacd4c5"
+  },
+  "fault7": {
+   "gpu_tokens": 45,
+   "rvi_tokens": 45,
+   "equal": true,
+   "ram_equal": true,
+   "regs": [],
+   "fault": null,
+   "exit": 0,
+   "out": "\u0004\u0000\u0000\u0002",
+   "state": "4689add2d665",
+   "elf": "f17a7e536f60",
+   "trace": "e90bf1718831"
+  }
+ }
+}

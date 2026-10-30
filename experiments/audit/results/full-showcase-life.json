@@ -1,0 +1,20 @@
+{
+ "name": "showcase-life",
+ "elf_sha256": "8b7fbc0697ccb6d67e7a2b4ccee63c19ac1ac9028829e7939ba7d47ad3d237d1",
+ "seconds": 0.5449631214141846,
+ "instructions": 346545,
+ "ndots": 0,
+ "rvi_tokens": 403149,
+ "gpu_tokens": 403149,
+ "gpu_qs_qd_tokens": 0,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "e3aad589c733305f8bd1ab0bc2f179ed8a1b48353d8ed1c1324bddfeee4610e5",
+ "output_tail": "...................\n........................\n........................\n........................\n........................\n",
+ "output_sha256": "c9098d77e890827ca919d3999ba5108983d5b0eec5bf247d5b6a67b64614d590",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}

@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "guest": "fresh",
+  "offset": 0,
+  "tokens": 2048,
+  "loaded_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "report": {
+    "weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+    "weight_bytes": 15292471808,
+    "constructor": {
+      "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+      "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+      "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+      "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+      "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+      "reduced": true,
+      "stock_integer_counters": true,
+      "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+      "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+      "replacement_sites": [
+        "from chipformer.rv import ref as RF",
+        "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+        "    n_plain = len(srcs)",
+        "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+        "\"imm\": imm, \"r\": r, \"val\": val,"
+      ]
+    },
+    "transformers": "5.21.0",
+    "modeling_file": "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Lib\\site-packages\\transformers\\models\\qwen3_5\\modeling_qwen3_5.py",
+    "modeling_sha256": "af05d0acfe79fff8aea1c75f93516a6a72bc80f6f901329a73e66a3866fe1e7c",
+    "type_exact": true,
+    "forward_qualname": "Qwen3_5ForCausalLM.forward",
+    "forward_file": "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Lib\\site-packages\\transformers\\utils\\generic.py",
+    "instance_overrides": [],
+    "layer_types": [
+      "Qwen3_5DecoderLayer"
+    ],
+    "attn_types": [
+      "Conv1d",
+      "Embedding",
+      "Linear",
+      "ModuleList",
+      "Qwen3_5Attention",
+      "Qwen3_5DecoderLayer",
+      "Qwen3_5ForCausalLM",
+      "Qwen3_5GatedDeltaNet",
+      "Qwen3_5MLP",
+      "Qwen3_5RMSNorm",
+      "Qwen3_5RMSNormGated",
+      "Qwen3_5TextModel",
+      "Qwen3_5TextRotaryEmbedding",
+      "SiLUActivation"
+    ],
+    "hooks": 0,
+    "seed_token_offset": 0,
+    "cache_type": "DynamicCache",
+    "cache_module": "transformers.cache_utils",
+    "generated": 2048,
+    "seconds": 119.79030299999795,
+    "tps": 17.096542447179843,
+    "trace_sha256": "fbdab2694ed665afaa83e68c99986cdccf2ae7cb692657760181de0e6c3d0e06",
+    "min_free_bytes": 1056964608,
+    "peak_allocated": 14425126912,
+    "peak_reserved": 14451474432,
+    "done": true
+  },
+  "comparison": "raw generated tokens vs reference; boot windows also checked against independent interpreter without division digits",
+  "boot_only": true,
+  "reference_seeded": false
+}

@@ -1,0 +1,66 @@
+{
+ "sha256": {
+  "elf_bytes": 15784,
+  "output_bytes": 154,
+  "full_output_in_elf": false,
+  "hits12": [
+   2,
+   [
+    "b'SHA256 empty'",
+    "b'HA256 empty\\n'"
+   ]
+  ],
+  "digest_binary_in_elf": [
+   false,
+   false
+  ]
+ },
+ "life": {
+  "elf_bytes": 12908,
+  "output_bytes": 2065,
+  "full_output_in_elf": false,
+  "hits12": [
+   0,
+   []
+  ]
+ },
+ "tictactoe": {
+  "elf_bytes": 16276,
+  "output_bytes": 211,
+  "full_output_in_elf": false,
+  "hits12": [
+   18,
+   [
+    "b'Human X, CPU'",
+    "b'uman X, CPU '",
+    "b'man X, CPU O'"
+   ]
+  ]
+ },
+ "mnist": {
+  "elf_bytes": 44368,
+  "output_bytes": 1320,
+  "full_output_in_elf": false,
+  "hits12": [
+   3,
+   [
+    "b' prediction '",
+    "b' prediction '",
+    "b' prediction '"
+   ]
+  ]
+ },
+ "mnist-scalar": {
+  "elf_bytes": 44056,
+  "output_bytes": 1320,
+  "full_output_in_elf": false,
+  "hits12": [
+   3,
+   [
+    "b' prediction '",
+    "b' prediction '",
+    "b' prediction '"
+   ]
+  ]
+ }
+}

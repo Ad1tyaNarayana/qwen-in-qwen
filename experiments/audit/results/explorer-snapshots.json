@@ -1,0 +1,12 @@
+{
+ "periodic-life": {
+  "snapshots": 13,
+  "ram_equal": 13,
+  "ram_diff": 0
+ },
+ "periodic-mnist": {
+  "snapshots": 24,
+  "ram_equal": 24,
+  "ram_diff": 0
+ }
+}

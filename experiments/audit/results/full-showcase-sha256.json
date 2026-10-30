@@ -1,0 +1,20 @@
+{
+ "name": "showcase-sha256",
+ "elf_sha256": "c7b0dbe9da21ada944059ad7a69e6f99f71847306427cff1a7d43906f71c2869",
+ "seconds": 0.01906895637512207,
+ "instructions": 11191,
+ "ndots": 0,
+ "rvi_tokens": 25186,
+ "gpu_tokens": 25186,
+ "gpu_qs_qd_tokens": 0,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "9b5f46f4091557c9748867e09d9311ed5c41ad5d4b07a41af41e37bf7c5836a9",
+ "output_tail": "4c8996fb92427ae41e4649b934ca495991b7852b855\nSHA256 abc\nba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\n",
+ "output_sha256": "893ee990705eda45fd62c25ce81b514ef354e85f9243f1d9046bb942b068d12e",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}

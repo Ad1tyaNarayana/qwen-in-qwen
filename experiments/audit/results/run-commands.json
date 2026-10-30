@@ -1,0 +1,230 @@
+{
+  "scope": "Successful or pending commands; initial import failure is recorded separately. Run sequentially with the shared GPU lock. Use fresh output labels for reproduction.",
+  "runs": [
+    {
+      "name": "fused",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_audit.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\fused",
+        "--mode",
+        "fused",
+        "--guests",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\sha256",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh-mut",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\sha256-mut",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault1",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault2",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault3",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault4",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault5",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault6",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault7"
+      ]
+    },
+    {
+      "name": "stock",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_stock.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\stock",
+        "--guest",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh",
+        "--tokens",
+        "32768"
+      ]
+    },
+    {
+      "name": "unfused",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_audit.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\unfused",
+        "--mode",
+        "unfused",
+        "--guests",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\sha256",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\sha256-mut",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault4",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fault7"
+      ]
+    },
+    {
+      "name": "ckpt",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_ckpt.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\ckpt",
+        "--inputs",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\fixture-sha256"
+      ]
+    },
+    {
+      "name": "stock-deflt",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_stock.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\stock-deflt",
+        "--guest",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh",
+        "--tokens",
+        "2048",
+        "--default-flags"
+      ]
+    },
+    {
+      "name": "stock-qwen-deep",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_stock.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\stock-qwen-deep",
+        "--guest",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests-deep\\qwen",
+        "--tokens",
+        "4096",
+        "--seed-records",
+        "20000000"
+      ]
+    },
+    {
+      "name": "stock-doom-deep",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_stock.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\stock-doom-deep",
+        "--guest",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests-deep\\doom",
+        "--tokens",
+        "4096",
+        "--seed-records",
+        "5000000"
+      ]
+    },
+    {
+      "name": "deep-doom",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_deep.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\deep-doom",
+        "--inputs",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests-deep\\doom",
+        "--tokens",
+        "6342933",
+        "--checkpoint",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\doom-showcase-verified-01\\unified-full\\checkpoint.pt"
+      ]
+    },
+    {
+      "name": "fuzz",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_audit.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\fuzz",
+        "--mode",
+        "fused",
+        "--guests",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fuzz1101",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fuzz2202",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fuzz3303"
+      ]
+    },
+    {
+      "name": "stock-fuzz",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_stock.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\stock-fuzz",
+        "--guest",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fuzz1101",
+        "--tokens",
+        "8192"
+      ]
+    },
+    {
+      "name": "safe-fused",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_audit.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\safe-fused",
+        "--mode",
+        "fused",
+        "--guests",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh-safe"
+      ]
+    },
+    {
+      "name": "safe-stock",
+      "argv": [
+        "C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\scripts\\gpu_stock.py",
+        "--repo",
+        "C:\\Users\\Admin\\qwenputer-games-work\\repo",
+        "--upstream",
+        "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer",
+        "--out",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\safe-stock",
+        "--guest",
+        "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\audit-1\\guests\\fresh-safe",
+        "--tokens",
+        "4096"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "mode": "unified W=4 unchanged circuit with data-ROM batching and single-kernel feedback",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "constructor": {
+      "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+      "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+      "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+      "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+      "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+      "reduced": true,
+      "stock_integer_counters": true,
+      "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+      "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+      "replacement_sites": [
+        "from chipformer.rv import ref as RF",
+        "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+        "    n_plain = len(srcs)",
+        "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+        "\"imm\": imm, \"r\": r, \"val\": val,"
+      ]
+    },
+    "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d"
+  },
+  "start": "683e80a93093fb518449a284666ff53b011d154fc80f918e82c4a24a96ba27ff",
+  "end": "683e80a93093fb518449a284666ff53b011d154fc80f918e82c4a24a96ba27ff",
+  "guests": {
+    "fuzz1101": {
+      "gpu_tokens": 81548,
+      "rvi_tokens": 70321,
+      "equal": true,
+      "ram_equal": true,
+      "regs": [],
+      "fault": null,
+      "exit": 0,
+      "out": "\u00c1\u0000\u00e9\u0000\u00ed\u00c3|\u00f5\u00b4",
+      "state": "5add8e9ee165",
+      "elf": "257b58475c12",
+      "trace": "dae3ce236723"
+    },
+    "fuzz2202": {
+      "gpu_tokens": 80916,
+      "rvi_tokens": 70224,
+      "equal": true,
+      "ram_equal": true,
+      "regs": [],
+      "fault": null,
+      "exit": 0,
+      "out": "\b\u0001\u0000\r-\u0004\u00b3\u0006\u0000\u0000",
+      "state": "22abc4945f74",
+      "elf": "fd0557afe5de",
+      "trace": "a35588f251bf"
+    },
+    "fuzz3303": {
+      "gpu_tokens": 81624,
+      "rvi_tokens": 70512,
+      "equal": true,
+      "ram_equal": true,
+      "regs": [],
+      "fault": null,
+      "exit": 0,
+      "out": "\u00df\u0000\u0000\u00eb\u0000\u0000\u0002\u0005\u0000\u0000",
+      "state": "344403418433",
+      "elf": "2b8c4c2afa06",
+      "trace": "599625c5bce9"
+    }
+  },
+  "complete_project_trace_equal": true
+}

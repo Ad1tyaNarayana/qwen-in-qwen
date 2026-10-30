@@ -1,0 +1,20 @@
+{
+ "name": "stories",
+ "elf_sha256": "d3a50d37b122fc6c5f1858872347656483553596609d9601f6faf5373809e212",
+ "seconds": 63.15697002410889,
+ "instructions": 36563797,
+ "ndots": 2463616,
+ "rvi_tokens": 52994839,
+ "gpu_tokens": 53296563,
+ "gpu_qs_qd_tokens": 301724,
+ "equal_after_strip": true,
+ "first_diff": null,
+ "exit": 0,
+ "fault": null,
+ "halted": true,
+ "rvi_ram_sha256": "bab62801e1d0362944b61c368229d8ca6e300c0fb952f116e5f2662336be68ce",
+ "output_tail": "34 432 358 3785824766 0\n> she\n@35 358 394 3379373385 0\n> saw\n@36 394 261 1143779750 0\n> a\n@37 261 370 540780512 0\n> big\n",
+ "output_sha256": "21b06dd95998fe9e2b9a91f187675ba7ceb2e05f6698d0339617416ea56de8f6",
+ "ram_equal_gpu": true,
+ "regs_equal_gpu": true
+}
