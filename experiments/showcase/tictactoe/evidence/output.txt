@@ -1,0 +1,46 @@
+Human X, CPU O; squares 0..8
+...
+...
+...
+
+Human 0
+X..
+...
+...
+
+CPU 4
+X..
+.O.
+...
+
+Human 1
+XX.
+.O.
+...
+
+CPU 2
+XXO
+.O.
+...
+
+Human 6
+XXO
+.O.
+X..
+
+CPU 3
+XXO
+OO.
+X..
+
+Human 8
+XXO
+OO.
+X.X
+
+CPU 5
+XXO
+OOO
+X.X
+
+CPU wins

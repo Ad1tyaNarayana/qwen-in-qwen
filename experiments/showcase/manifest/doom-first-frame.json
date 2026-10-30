@@ -1,0 +1,23 @@
+{
+  "demo": "Doom first frame",
+  "status": "historical-verified",
+  "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+  "drom_image_sha256": "c1f2818d8890bf41a2c3343b5046cfade0dad7d557f2fb548d7488168bbd0003",
+  "network_weight_sha256": "3aaf0b6eed10fe0581a5f4f440fc014bcf57d375cf1d1913f891c9fb5f33dab4",
+  "network": "original full-map circuit; different weights from unified W=4",
+  "weight_hash_scope": "retrospective original stock emission; historical GPU tensor dump not hashed",
+  "instruction_count": 3885544,
+  "trace_tokens": 6342933,
+  "mismatches": 0,
+  "generation_seconds": 3044.574422900019,
+  "tokens_per_second": 2083.3561998981218,
+  "outputs": "320x240 E1M1 first frame, 25 strips, RGB565 SHA-256 6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "output_source": "actual GPU recurrent RAM strips and palette",
+  "stock_hf_prefix_tokens_checked": 0,
+  "stock_note": "No matching-ELF historical stock prefix imported",
+  "evidence_paths": [
+    "experiments/dmc-cuda/evidence/full-report.json",
+    "experiments/dmc-cuda/evidence/independent-validation.json",
+    "experiments/showcase/evidence/weights-original.json"
+  ]
+}

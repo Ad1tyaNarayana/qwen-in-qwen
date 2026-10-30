@@ -1,0 +1,7 @@
+{
+  "native_terminal_games": 681,
+  "human_wins": 0,
+  "all_human_continuations_explored": true,
+  "source": "experiments/showcase/tictactoe/check_perfect.c",
+  "source_sha256": "e1c994e9348e471c0919dbbdb6ea5aaa5db2cdbb2150a9b4cfe6505e88c50ec7"
+}

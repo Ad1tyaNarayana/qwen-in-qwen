@@ -1,0 +1,12 @@
+utc	decision	reason	evidence	result
+2026-10-30	Inline execution; existing workers reused	User prohibits further delegation and upstream edits	experiments/tiny-llm-ndot/worker.py	No executor changes planned
+2026-10-30	Guest fixtures contain source, ELF, DROM and independent trace bindings	Model the Domain keeps program state distinct from network weights	experiments/showcase/build.py	Separate measured gates
+2026-10-30	Use common shared harness rather than four copied runners	Existing checkpoint worker accepts generic ELF/reference fixtures	experiments/tiny-llm-ndot-fused/story.py	One integration seam
+2026-10-30	GPU work deferred while lock held	Mandatory shared GPU coordination	gpu-lock/owner.txt	Training task owns lock
+2026-10-30	Throughput checkpoint: five guests total 2,298,310 trace tokens and 32,768 stock-prefix tokens	All per-guest traces remain below 2M; batch budget includes stock allocation and checks	experiments/showcase/evidence/local-validation.json	Ready for GPU lock
+2026-10-30T04:15:02Z	Acquired shared GPU lock and detached sequential batch a	Training released lock; owner is showcase-20261030a	C:/Users/Admin/qwenputer-games-work/artifacts/showcase-20261030a	GPU acceptance running
+2026-10-30	Preserved native live-input whitespace support and regenerated its reference	ELF metadata changed while executable behavior stayed identical	.cache/showcase/tictactoe/reference.before-live-fix.json	Trace, output, all RAM and registers reproduced exactly
+2026-10-30	Require actual loaded stock tensor hash for every program	Constructor identity alone would not bind loaded dense weights	experiments/showcase/*/evidence/stock-report.json	All five equal canonical unified BF16 hash
+2026-10-30	Accept all five full fused runs and bounded stock prefixes	Every exported token and literal final RAM/register state passed on Mac	experiments/showcase/evidence/summary.json	2,298,310 full tokens and 32,768 stock tokens; zero mismatches
+2026-10-30	Keep one-run GPU timing scope explicit	Scalar and NDOT use identical DROM, output and network weights	experiments/showcase/evidence/summary.json	210.051 s scalar versus 50.590 s NDOT; observed 4.1520x
+2026-10-30	Preserve externally advanced shared HEAD	Another task committed Explorer-only files as 2f53b04	git diff --name-only 9365186..2f53b04	No showcase commit or dependency changes

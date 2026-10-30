@@ -1,0 +1,6 @@
+{
+  "source": "ssh gpu tar read-only export of C:/Users/Admin/qwenputer-games-work/probes/dmc-frame-20261029/inputs/doom.elf",
+  "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+  "drom_image_sha256": "c1f2818d8890bf41a2c3343b5046cfade0dad7d557f2fb548d7488168bbd0003",
+  "private_elf_path": ".cache/showcase/historical-doom/doom.elf"
+}

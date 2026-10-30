@@ -1,0 +1,18 @@
+{
+  "layer1": {
+    "maximum_activation": 255,
+    "maximum_absolute_dot_plus_bias_bound": 9902909,
+    "maximum_absolute_rescale_product_plus_rounding_bound": 33248605856,
+    "int32_dot_safe": true,
+    "int64_rescale_safe": true,
+    "int32_rescaled_value_safe": true
+  },
+  "layer2": {
+    "maximum_activation": 32767,
+    "maximum_absolute_dot_plus_bias_bound": 64159235,
+    "maximum_absolute_rescale_product_plus_rounding_bound": 5150731051328,
+    "int32_dot_safe": true,
+    "int64_rescale_safe": true,
+    "int32_rescaled_value_safe": true
+  }
+}

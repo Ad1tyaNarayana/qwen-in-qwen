@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "instructions": 705245,
+  "trace_tokens": 895755,
+  "mismatches": 0,
+  "final_ram_bytes_checked": 65536,
+  "all_three_register_copies_equal": true,
+  "output": "Human X, CPU O; squares 0..8\n...\n...\n...\n\nHuman 0\nX..\n...\n...\n\nCPU 4\nX..\n.O.\n...\n\nHuman 1\nXX.\n.O.\n...\n\nCPU 2\nXXO\n.O.\n...\n\nHuman 6\nXXO\n.O.\nX..\n\nCPU 3\nXXO\nOO.\nX..\n\nHuman 8\nXXO\nOO.\nX.X\n\nCPU 5\nXXO\nOOO\nX.X\n\nCPU wins\n",
+  "output_source": "BYTE records independently decoded from actual self-fed GPU trace",
+  "generation_seconds": 239.97101900000416,
+  "tokens_per_second": 3732.763246715156,
+  "stock_hf_prefix_tokens_checked": 4096,
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "actual_trace_sha256": "0b5319070d9d52c63d081a5dc72ad87bc12537d3be377b792c56d40f14106a71",
+  "final_ram_sha256": "98eb24538031b664ff8aff496a8be8a89298544410c2d3b17b5b970c1f243176",
+  "elf_sha256": "5c6afb49f2f42e5013bcdfe127b09838fd70db08214ecf1656e3ff7b0652040e",
+  "drom_sha256": "72e5b0c2afad05035f4d607c814dfb48774103c81e2d2924f707af887f404612",
+  "checkpoint_restore_offsets": [
+    65536,
+    65792
+  ],
+  "actual_evidence_path": ".cache/showcase/actual-20261030a/tictactoe/fused",
+  "stock_minimum_free_bytes": 911212544
+}

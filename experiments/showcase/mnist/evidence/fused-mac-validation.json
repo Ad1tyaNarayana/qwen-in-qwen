@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "trace_tokens": 189092,
+  "mismatches": 0,
+  "all_ram_bytes_equal": true,
+  "all_register_copies_equal": true,
+  "output": "MNIST test 0\n                            \n                            \n                            \n                            \n      ##############+       \n            . ...  ##.      \n                  ##.       \n                 ##         \n                ##          \n              .##           \n             ###            \n            ##.             \n           ###              \n          .##               \nLabel 7 prediction 7\nMNIST test 1\n                            \n                            \n         +#######           \n        ###    ##+          \n              ###.          \n            .###            \n           +##+             \n          ###+              \n         ###+               \n        ###                 \n        ########+++#######. \n         ....+###+..        \n                            \n                            \nLabel 2 prediction 2\nMNIST test 2\n                            \n                            \n                 #.         \n                +#          \n               .#           \n               ##           \n              +#.           \n             .#+            \n             ##             \n            +#+             \n            ##.             \n           ##.              \n                            \n                            \nLabel 1 prediction 1\n",
+  "generation_seconds": 50.590385999996215,
+  "tokens_per_second": 3737.7062116113157,
+  "actual_trace_sha256": "c92bf5750e1126ad8b99c3738f1c4854f6741cb23b1f46ef734ae8af8bf04ba5",
+  "scope": "fused autonomous full run only; combined stock acceptance is in neural-validation.json"
+}

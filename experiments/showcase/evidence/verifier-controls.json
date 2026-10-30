@@ -1,0 +1,18 @@
+{
+  "fused_tail": {
+    "one_bit_change": true,
+    "rejected": true
+  },
+  "stock_tail": {
+    "one_bit_change": true,
+    "rejected": true
+  },
+  "ram": {
+    "one_bit_change": true,
+    "rejected": true
+  },
+  "register_copy": {
+    "one_bit_change": true,
+    "rejected": true
+  }
+}

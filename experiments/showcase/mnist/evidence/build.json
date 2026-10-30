@@ -1,0 +1,115 @@
+{
+  "demo": "mnist",
+  "elf": {
+    "sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75",
+    "entry": 262144,
+    "elf_flags": 0,
+    "sections": [
+      {
+        "name": ".text",
+        "address": 262144,
+        "bytes": 1092,
+        "write": false,
+        "execute": true
+      },
+      {
+        "name": ".rodata",
+        "address": 33554432,
+        "bytes": 28144,
+        "write": false,
+        "execute": false
+      },
+      {
+        "name": ".bss",
+        "address": 16777472,
+        "bytes": 1632,
+        "write": true,
+        "execute": false
+      }
+    ],
+    "symbols": {
+      "main.c": 0,
+      ".L0 ": 262172,
+      "$x": 262144,
+      "images": 33554480,
+      ".L_MergedGlobals": 16777472,
+      "m2": 33582536,
+      "number": 263116,
+      "labels": 33554472,
+      "b1": 33581920,
+      "w1": 33556832,
+      "m1": 33582048,
+      "w2": 33582176,
+      "b2": 33582496,
+      "$d": 734,
+      "hidden": 16777472,
+      "input": 16777536,
+      ".Lline_table_start0": 734,
+      ".Lpcrel_hi0": 262144,
+      "engine_main": 262172,
+      "_start": 262144,
+      "__stack_top": 16842752,
+      "STACK_BYTES": 8192,
+      "RAM_MARGIN": 1024,
+      "__scratch_end": 16779104
+    }
+  },
+  "elf_sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75",
+  "drom_sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3",
+  "source_sha256": "dbe3479858dd421f8986bbf9775e7174e715340a3f591918d693a53e2fe21e48",
+  "commands": [
+    [
+      "clang",
+      "-O2",
+      "-fno-unroll-loops",
+      "-fno-vectorize",
+      "-fno-slp-vectorize",
+      "-fwrapv",
+      "-std=c11",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/neural-accelerator",
+      "-DNATIVE",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/mnist/main.c",
+      "-o",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist/native"
+    ],
+    [
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.venv/lib/python3.13/site-packages/ziglang/zig",
+      "cc",
+      "-target",
+      "riscv32-freestanding",
+      "-mcpu=generic_rv32+m",
+      "-mabi=ilp32",
+      "-O2",
+      "-fno-unroll-loops",
+      "-fno-vectorize",
+      "-fno-slp-vectorize",
+      "-fwrapv",
+      "-std=c11",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/neural-accelerator",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-nostdlib",
+      "-static",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wl,--gc-sections",
+      "-Wl,-T,/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist/link.ld",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/mnist/main.c",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/tiny-llm-rv32/start.S",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist/compiler_rt.a",
+      "-o",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist/engine.elf"
+    ]
+  ],
+  "memory_map": {
+    "ram": 65536,
+    "drom": 4194304,
+    "code": 262144
+  },
+  "prompt_tokens": [],
+  "steps": 1
+}

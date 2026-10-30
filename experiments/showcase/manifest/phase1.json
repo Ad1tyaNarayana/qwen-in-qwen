@@ -1,0 +1,24 @@
+{
+  "demo": "Phase 1 stories260K five positions",
+  "status": "historical-verified",
+  "elf_sha256": "197388a66c479db1fdda53a21a69faae1a798e966341d17a2bffe033d8dd34d0",
+  "drom_image_sha256": "1886e6b6683a5668661145d91aebc0af51189c3b928ed1835c70c56d388100b9",
+  "network_weight_sha256": "3aaf0b6eed10fe0581a5f4f440fc014bcf57d375cf1d1913f891c9fb5f33dab4",
+  "network": "original full-map circuit; different weights from unified W=4",
+  "weight_hash_scope": "retrospective original stock emission; historical GPU tensor dump not hashed",
+  "instruction_count": 10756734,
+  "trace_tokens": 16213774,
+  "mismatches": 0,
+  "generation_seconds": 4217.671174000097,
+  "tokens_per_second": 3844.248005854528,
+  "outputs": "Once upon a time,",
+  "output_source": "Actual GPU trace BYTE records. Reference used only for comparison.",
+  "stock_hf_prefix_tokens_checked": 32675,
+  "stock_note": "Historical deadline-bounded exact prefix; original requested 100,000-token target was not completed",
+  "evidence_paths": [
+    "experiments/tiny-llm-neural/evidence/validation.json",
+    "experiments/tiny-llm-neural/evidence/reference.json",
+    "experiments/tiny-llm-neural/evidence/hf.json",
+    "experiments/showcase/evidence/weights-original.json"
+  ]
+}

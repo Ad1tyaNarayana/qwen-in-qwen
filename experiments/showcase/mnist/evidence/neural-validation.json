@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "instructions": 121329,
+  "trace_tokens": 189092,
+  "mismatches": 0,
+  "final_ram_bytes_checked": 65536,
+  "all_three_register_copies_equal": true,
+  "output": "MNIST test 0\n                            \n                            \n                            \n                            \n      ##############+       \n            . ...  ##.      \n                  ##.       \n                 ##         \n                ##          \n              .##           \n             ###            \n            ##.             \n           ###              \n          .##               \nLabel 7 prediction 7\nMNIST test 1\n                            \n                            \n         +#######           \n        ###    ##+          \n              ###.          \n            .###            \n           +##+             \n          ###+              \n         ###+               \n        ###                 \n        ########+++#######. \n         ....+###+..        \n                            \n                            \nLabel 2 prediction 2\nMNIST test 2\n                            \n                            \n                 #.         \n                +#          \n               .#           \n               ##           \n              +#.           \n             .#+            \n             ##             \n            +#+             \n            ##.             \n           ##.              \n                            \n                            \nLabel 1 prediction 1\n",
+  "output_source": "BYTE records independently decoded from actual self-fed GPU trace",
+  "generation_seconds": 50.590385999996215,
+  "tokens_per_second": 3737.7062116113157,
+  "stock_hf_prefix_tokens_checked": 16384,
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "actual_trace_sha256": "c92bf5750e1126ad8b99c3738f1c4854f6741cb23b1f46ef734ae8af8bf04ba5",
+  "final_ram_sha256": "c8a88ac035be07bfb2ed3f7f7c7609069fab4e74ecc5639eabb586ee6fc9343b",
+  "elf_sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75",
+  "drom_sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3",
+  "checkpoint_restore_offsets": [
+    65536,
+    65792
+  ],
+  "actual_evidence_path": ".cache/showcase/actual-20261030a/mnist/fused",
+  "stock_minimum_free_bytes": 764411904
+}

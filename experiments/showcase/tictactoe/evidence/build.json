@@ -1,0 +1,107 @@
+{
+  "demo": "tictactoe",
+  "elf": {
+    "sha256": "5c6afb49f2f42e5013bcdfe127b09838fd70db08214ecf1656e3ff7b0652040e",
+    "entry": 262144,
+    "elf_flags": 0,
+    "sections": [
+      {
+        "name": ".text",
+        "address": 262144,
+        "bytes": 1532,
+        "write": false,
+        "execute": true
+      },
+      {
+        "name": ".rodata",
+        "address": 33554432,
+        "bytes": 124,
+        "write": false,
+        "execute": false
+      },
+      {
+        "name": ".bss",
+        "address": 16777472,
+        "bytes": 16,
+        "write": true,
+        "execute": false
+      }
+    ],
+    "symbols": {
+      "main.c": 0,
+      ".L0 ": 262172,
+      "$x": 262144,
+      "board": 16777472,
+      "lines": 33554532,
+      "moves": 33554523,
+      "score": 263172,
+      "number": 263556,
+      "$d": 821,
+      ".Lline_table_start0": 821,
+      ".Lpcrel_hi0": 262144,
+      "engine_main": 262172,
+      "_start": 262144,
+      "__stack_top": 16842752,
+      "STACK_BYTES": 8192,
+      "RAM_MARGIN": 1024,
+      "__scratch_end": 16777488
+    }
+  },
+  "elf_sha256": "5c6afb49f2f42e5013bcdfe127b09838fd70db08214ecf1656e3ff7b0652040e",
+  "drom_sha256": "72e5b0c2afad05035f4d607c814dfb48774103c81e2d2924f707af887f404612",
+  "source_sha256": "b8a71855145ed01b9525723cb65fabc3f5e38e4dfed6646c677b400c0ff43047",
+  "commands": [
+    [
+      "clang",
+      "-O2",
+      "-fno-unroll-loops",
+      "-fno-vectorize",
+      "-fno-slp-vectorize",
+      "-fwrapv",
+      "-std=c11",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/neural-accelerator",
+      "-DNATIVE",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/tictactoe/main.c",
+      "-o",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe/native"
+    ],
+    [
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.venv/lib/python3.13/site-packages/ziglang/zig",
+      "cc",
+      "-target",
+      "riscv32-freestanding",
+      "-mcpu=generic_rv32+m",
+      "-mabi=ilp32",
+      "-O2",
+      "-fno-unroll-loops",
+      "-fno-vectorize",
+      "-fno-slp-vectorize",
+      "-fwrapv",
+      "-std=c11",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe",
+      "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/neural-accelerator",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-nostdlib",
+      "-static",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wl,--gc-sections",
+      "-Wl,-T,/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe/link.ld",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/tictactoe/main.c",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/tiny-llm-rv32/start.S",
+      "-o",
+      "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe/engine.elf"
+    ]
+  ],
+  "memory_map": {
+    "ram": 65536,
+    "drom": 4194304,
+    "code": 262144
+  },
+  "prompt_tokens": [],
+  "steps": 1
+}

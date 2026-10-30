@@ -1,0 +1,36 @@
+{
+  "sha256": {
+    "native_reference_equal": true,
+    "instructions": 11191,
+    "trace_tokens": 25186
+  },
+  "life": {
+    "native_reference_equal": true,
+    "instructions": 346545,
+    "trace_tokens": 403149
+  },
+  "tictactoe": {
+    "native_reference_equal": true,
+    "instructions": 705245,
+    "trace_tokens": 895755,
+    "optimal_cpu_moves_checked": 4
+  },
+  "mnist": {
+    "native_reference_equal": true,
+    "instructions": 121329,
+    "trace_tokens": 189092,
+    "integer_correct": 9605,
+    "test_examples": 10000,
+    "float_accuracy": 0.9606,
+    "integer_accuracy": 0.9605,
+    "native_all_test_predictions_equal": true,
+    "instruction_reduction_ratio": 4.620239184366475,
+    "trace_token_reduction_ratio": 4.152095276373405,
+    "ratio_scope": "deterministic guest work counts; not a measured GPU wall-time speedup"
+  },
+  "mnist-scalar": {
+    "native_reference_equal": true,
+    "instructions": 560569,
+    "trace_tokens": 785128
+  }
+}

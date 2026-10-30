@@ -1,0 +1,78 @@
+{
+  "sha256": {
+    "asan_ubsan_pass": true,
+    "native_output_equal": true,
+    "commands": [
+      [
+        "clang",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-DNATIVE",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/sha256",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/sha256/main.c",
+        "-o",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/sha256/sanitized"
+      ]
+    ]
+  },
+  "life": {
+    "asan_ubsan_pass": true,
+    "native_output_equal": true,
+    "commands": [
+      [
+        "clang",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-DNATIVE",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/life",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/life/main.c",
+        "-o",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/life/sanitized"
+      ]
+    ]
+  },
+  "tictactoe": {
+    "asan_ubsan_pass": true,
+    "native_output_equal": true,
+    "commands": [
+      [
+        "clang",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-DNATIVE",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/tictactoe/main.c",
+        "-o",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/tictactoe/sanitized"
+      ]
+    ]
+  },
+  "mnist": {
+    "asan_ubsan_pass": true,
+    "native_output_equal": true,
+    "commands": [
+      [
+        "clang",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-DNATIVE",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase",
+        "-I/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/experiments/showcase/mnist/main.c",
+        "-o",
+        "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/showcase/mnist/sanitized"
+      ]
+    ]
+  }
+}

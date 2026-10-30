@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "instructions": 11191,
+  "trace_tokens": 25186,
+  "mismatches": 0,
+  "final_ram_bytes_checked": 65536,
+  "all_three_register_copies_equal": true,
+  "output": "SHA256 empty\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\nSHA256 abc\nba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\n",
+  "output_source": "BYTE records independently decoded from actual self-fed GPU trace",
+  "generation_seconds": 6.720754300011322,
+  "tokens_per_second": 3747.496021385214,
+  "stock_hf_prefix_tokens_checked": 4096,
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "actual_trace_sha256": "240ab36e288ef29fc4cd2ddd294854f28554db74a7fda6f1578ff1055b274ded",
+  "final_ram_sha256": "9b5f46f4091557c9748867e09d9311ed5c41ad5d4b07a41af41e37bf7c5836a9",
+  "elf_sha256": "c7b0dbe9da21ada944059ad7a69e6f99f71847306427cff1a7d43906f71c2869",
+  "drom_sha256": "4a2803ee86c495c2bbd79bcecdb19b20f755f03b2675cdd5ead51865a81ff715",
+  "checkpoint_restore_offsets": [
+    25186,
+    25186
+  ],
+  "actual_evidence_path": ".cache/showcase/actual-20261030a/sha256/fused",
+  "stock_minimum_free_bytes": 932184064
+}

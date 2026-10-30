@@ -1,0 +1,23 @@
+{
+  "demo": "stories260K ndot 38-position story",
+  "status": "historical-verified",
+  "elf_sha256": "d3a50d37b122fc6c5f1858872347656483553596609d9601f6faf5373809e212",
+  "drom_image_sha256": "1886e6b6683a5668661145d91aebc0af51189c3b928ed1835c70c56d388100b9",
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "network": "unified W=4 full-map",
+  "weight_hash_scope": "retrospective stock emission from hash-bound constructor, not a hash of historical GPU tensor dumps",
+  "instruction_count": 36563797,
+  "trace_tokens": 53296563,
+  "mismatches": 0,
+  "generation_seconds": 14225.90152749946,
+  "tokens_per_second": 3746.445376201626,
+  "outputs": "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big",
+  "output_source": "BYTE records from actual self-fed GPU trace",
+  "stock_hf_prefix_tokens_checked": 0,
+  "stock_note": "32,768 checked tokens exist for the related five-position ELF, not this 38-position ELF",
+  "evidence_paths": [
+    "experiments/tiny-llm-ndot-fused/evidence/story-validation.json",
+    "experiments/tiny-llm-ndot-fused/evidence/story-fixture.json",
+    "experiments/showcase/evidence/weights.json"
+  ]
+}

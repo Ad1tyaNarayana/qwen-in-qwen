@@ -1,0 +1,17 @@
+{
+  "control": "mocked sync failure after successful atomic acquisition",
+  "release_observed": true,
+  "ssh_calls": [
+    [
+      "ssh",
+      "gpu",
+      "mkdir C:\\Users\\Admin\\gpu-lock"
+    ],
+    [
+      "ssh",
+      "gpu",
+      "rmdir /s /q C:\\Users\\Admin\\gpu-lock"
+    ]
+  ],
+  "actual_gpu_job_started": false
+}

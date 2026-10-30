@@ -1,0 +1,62 @@
+{
+  "status": "pass",
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "total_full_trace_tokens": 2298310,
+  "total_stock_prefix_tokens": 32768,
+  "full_trace_mismatches": 0,
+  "stock_prefix_mismatches": 0,
+  "mnist": {
+    "float_test_accuracy": 0.9606,
+    "integer_test_accuracy": 0.9605,
+    "native_test_examples": 10000,
+    "scalar_generation_seconds": 210.05101309993188,
+    "ndot_generation_seconds": 50.590385999996215,
+    "observed_gpu_speedup": 4.151994671476664,
+    "timing_scope": "one full execution per build; not a repeated benchmark",
+    "scalar_trace_tokens": 785128,
+    "ndot_trace_tokens": 189092,
+    "trace_token_reduction_ratio": 4.152095276373405
+  },
+  "demos": {
+    "sha256": {
+      "instruction_count": 11191,
+      "trace_tokens": 25186,
+      "mismatches": 0,
+      "generation_seconds": 6.720754300011322,
+      "tokens_per_second": 3747.496021385214,
+      "stock_hf_prefix_tokens_checked": 4096
+    },
+    "life": {
+      "instruction_count": 346545,
+      "trace_tokens": 403149,
+      "mismatches": 0,
+      "generation_seconds": 107.86046899997746,
+      "tokens_per_second": 3737.6900335940895,
+      "stock_hf_prefix_tokens_checked": 4096
+    },
+    "tictactoe": {
+      "instruction_count": 705245,
+      "trace_tokens": 895755,
+      "mismatches": 0,
+      "generation_seconds": 239.97101900000416,
+      "tokens_per_second": 3732.763246715156,
+      "stock_hf_prefix_tokens_checked": 4096
+    },
+    "mnist": {
+      "instruction_count": 121329,
+      "trace_tokens": 189092,
+      "mismatches": 0,
+      "generation_seconds": 50.590385999996215,
+      "tokens_per_second": 3737.7062116113157,
+      "stock_hf_prefix_tokens_checked": 16384
+    },
+    "mnist-scalar": {
+      "instruction_count": 560569,
+      "trace_tokens": 785128,
+      "mismatches": 0,
+      "generation_seconds": 210.05101309993188,
+      "tokens_per_second": 3737.7967780925433,
+      "stock_hf_prefix_tokens_checked": 4096
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "sha256": {
+    "retired_opcodes": {
+      "0x17": 4,
+      "0x13": 4939,
+      "0x67": 6,
+      "0x23": 262,
+      "0x37": 40,
+      "0x73": 155,
+      "0x03": 831,
+      "0x63": 525,
+      "0x33": 4429
+    },
+    "first_ndot_trace_offset": null,
+    "stock_prefix_tokens": 4096,
+    "ndot_instructions_completed_in_stock_prefix": 0,
+    "instructions": 11191,
+    "trace_tokens": 25186
+  },
+  "life": {
+    "retired_opcodes": {
+      "0x17": 2,
+      "0x13": 132387,
+      "0x67": 2,
+      "0x23": 3864,
+      "0x37": 3,
+      "0x73": 2066,
+      "0x03": 21139,
+      "0x63": 50220,
+      "0x6f": 25118,
+      "0x33": 111744
+    },
+    "first_ndot_trace_offset": null,
+    "stock_prefix_tokens": 4096,
+    "ndot_instructions_completed_in_stock_prefix": 0,
+    "instructions": 346545,
+    "trace_tokens": 403149
+  },
+  "tictactoe": {
+    "retired_opcodes": {
+      "0x17": 4354,
+      "0x13": 190065,
+      "0x67": 8706,
+      "0x23": 52190,
+      "0x37": 8715,
+      "0x73": 212,
+      "0x03": 200104,
+      "0x63": 157651,
+      "0x6f": 13986,
+      "0x33": 69262
+    },
+    "first_ndot_trace_offset": null,
+    "stock_prefix_tokens": 4096,
+    "ndot_instructions_completed_in_stock_prefix": 0,
+    "instructions": 705245,
+    "trace_tokens": 895755
+  },
+  "mnist": {
+    "retired_opcodes": {
+      "0x17": 11,
+      "0x13": 48360,
+      "0x67": 20,
+      "0x23": 2501,
+      "0x37": 42,
+      "0x6f": 28,
+      "0x33": 21870,
+      "0x03": 5113,
+      "0x73": 1321,
+      "0x63": 23007,
+      "0x0b": 19056
+    },
+    "first_ndot_trace_offset": 12377,
+    "stock_prefix_tokens": 16384,
+    "ndot_instructions_completed_in_stock_prefix": 524,
+    "instructions": 121329,
+    "trace_tokens": 189092
+  },
+  "mnist-scalar": {
+    "retired_opcodes": {
+      "0x17": 11,
+      "0x13": 163650,
+      "0x67": 20,
+      "0x23": 2501,
+      "0x37": 40,
+      "0x6f": 28,
+      "0x33": 155262,
+      "0x03": 157561,
+      "0x73": 1321,
+      "0x63": 80175
+    },
+    "first_ndot_trace_offset": null,
+    "stock_prefix_tokens": 4096,
+    "ndot_instructions_completed_in_stock_prefix": 0,
+    "instructions": 560569,
+    "trace_tokens": 785128
+  }
+}

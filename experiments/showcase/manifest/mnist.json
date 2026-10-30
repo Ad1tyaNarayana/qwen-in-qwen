@@ -1,0 +1,29 @@
+{
+  "demo": "mnist",
+  "status": "verified",
+  "elf_sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75",
+  "drom_image_sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3",
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "network": "unified W=4 full-map",
+  "instruction_count": 121329,
+  "trace_tokens": 189092,
+  "mismatches": 0,
+  "generation_seconds": 50.590385999996215,
+  "tokens_per_second": 3737.7062116113157,
+  "outputs": "MNIST test 0\n                            \n                            \n                            \n                            \n      ##############+       \n            . ...  ##.      \n                  ##.       \n                 ##         \n                ##          \n              .##           \n             ###            \n            ##.             \n           ###              \n          .##               \nLabel 7 prediction 7\nMNIST test 1\n                            \n                            \n         +#######           \n        ###    ##+          \n              ###.          \n            .###            \n           +##+             \n          ###+              \n         ###+               \n        ###                 \n        ########+++#######. \n         ....+###+..        \n                            \n                            \nLabel 2 prediction 2\nMNIST test 2\n                            \n                            \n                 #.         \n                +#          \n               .#           \n               ##           \n              +#.           \n             .#+            \n             ##             \n            +#+             \n            ##.             \n           ##.              \n                            \n                            \nLabel 1 prediction 1\n",
+  "output_source": "actual self-fed GPU BYTE records",
+  "stock_hf_prefix_tokens_checked": 16384,
+  "evidence_paths": [
+    "experiments/showcase/mnist/evidence/build.json",
+    "experiments/showcase/mnist/evidence/fused-mac-validation.json",
+    "experiments/showcase/mnist/evidence/gpu-report.json",
+    "experiments/showcase/mnist/evidence/integer-bounds.json",
+    "experiments/showcase/mnist/evidence/neural-validation.json",
+    "experiments/showcase/mnist/evidence/output.txt",
+    "experiments/showcase/mnist/evidence/reference.json",
+    "experiments/showcase/mnist/evidence/stock-report.json",
+    "experiments/showcase/mnist/evidence/training.json"
+  ],
+  "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+  "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+}

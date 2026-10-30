@@ -1,0 +1,26 @@
+{
+  "demo": "sha256",
+  "status": "verified",
+  "elf_sha256": "c7b0dbe9da21ada944059ad7a69e6f99f71847306427cff1a7d43906f71c2869",
+  "drom_image_sha256": "4a2803ee86c495c2bbd79bcecdb19b20f755f03b2675cdd5ead51865a81ff715",
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "network": "unified W=4 full-map",
+  "instruction_count": 11191,
+  "trace_tokens": 25186,
+  "mismatches": 0,
+  "generation_seconds": 6.720754300011322,
+  "tokens_per_second": 3747.496021385214,
+  "outputs": "SHA256 empty\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\nSHA256 abc\nba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\n",
+  "output_source": "actual self-fed GPU BYTE records",
+  "stock_hf_prefix_tokens_checked": 4096,
+  "evidence_paths": [
+    "experiments/showcase/sha256/evidence/build.json",
+    "experiments/showcase/sha256/evidence/gpu-report.json",
+    "experiments/showcase/sha256/evidence/neural-validation.json",
+    "experiments/showcase/sha256/evidence/output.txt",
+    "experiments/showcase/sha256/evidence/reference.json",
+    "experiments/showcase/sha256/evidence/stock-report.json"
+  ],
+  "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+  "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+}
