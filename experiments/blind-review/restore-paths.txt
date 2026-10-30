@@ -1,0 +1,42 @@
+experiments/tiny-llm-train/finish.py:25:    checkpoint = torch.load("out/ckpt.pt", map_location="cpu", weights_only=False)
+experiments/memory-map-cuda/artifacts/fastexec-standalone.py:356:    def restore():
+experiments/memory-map-cuda/artifacts/fastexec-standalone.py:413:    def restore():
+experiments/tiny-llm-neural/export_gpu.py:15:state = torch.load(checkpoint,map_location='cpu',weights_only=True)
+experiments/tiny-llm-train/evaluate.py:11:    checkpoint = torch.load(path, map_location="cpu", weights_only=False)
+experiments/cuda-compact/artifacts/acceleration-probe/fastexec-standalone.py:356:    def restore():
+experiments/cuda-compact/artifacts/acceleration-probe/fastexec-standalone.py:413:    def restore():
+experiments/checkpoint-integrity/gpu_ckpt.py:22:    base=torch.load(ck,map_location='cpu',weights_only=True)
+experiments/cuda-compact/artifacts/acceleration-probe/fastexec-reserved-qs.py:355:    def restore():
+experiments/cuda-compact/artifacts/acceleration-probe/fastexec-reserved-qs.py:412:    def restore():
+experiments/checkpoint-integrity/test_restore.py:47:                restore=lambda:module.restore_checkpoint(fr,fused,checkpoint,{'fixture':'test'})
+experiments/checkpoint-integrity/test_restore.py:50:                restore=lambda:module.restore_checkpoint(fr,checkpoint)
+experiments/checkpoint-integrity/test_restore.py:54:            original=torch.load(checkpoint,weights_only=True)
+experiments/tiny-llm-neural/worker.py:102:def restore(fr, fused, path, binding):
+experiments/tiny-llm-neural/worker.py:104:    state = torch.load(path, map_location='cpu', weights_only=True)
+experiments/doom-showcase/unified_worker.py:19:from showcase_worker import (FINAL_RAM_SHA, atomic_json, clock_sample, draw_strip, heads, restore_checkpoint,
+experiments/doom-showcase/unified_worker.py:108:            state, surface, coverage = restore_checkpoint(fr, fused, a.out / 'checkpoint.pt', identity)
+experiments/explorer/import_tiny_qwen.py:25:    saved=torch.load(path,map_location='cpu',weights_only=True)
+experiments/explorer/import_showcase.py:35:        saved=torch.load(checkpoint,map_location='cpu',weights_only=True)
+experiments/doom-showcase/test_local.py:68:            restored, got_surface, got_coverage = worker.restore_checkpoint(fr, fusion, root / 'checkpoint.pt', identity)
+experiments/doom-showcase/test_local.py:76:                worker.restore_checkpoint(fr, fusion, root / 'checkpoint.pt', {'fixture': 'wrong'})
+experiments/doom-showcase/showcase_worker.py:176:def restore_checkpoint(fr, fusion, path, identity):
+experiments/doom-showcase/showcase_worker.py:178:    data = torch.load(path, map_location='cpu', weights_only=True)
+experiments/doom-showcase/showcase_worker.py:323:            state, surface, coverage = restore_checkpoint(fr, fusion, a.out / 'checkpoint.pt', identity)
+experiments/tiny-qwen35/verify_gpu.py:68:        saved = torch.load(saved_path,map_location='cpu',weights_only=True)
+experiments/explorer/record.py:184:    checkpoint=torch.load(a.checkpoint,map_location='cpu',weights_only=True)
+experiments/dmc-cuda-profile/inventory_gpu.py:33:    checkpoint = torch.load(checkpoint_path, map_location='cpu', weights_only=True)
+experiments/tiny-llm-ndot/worker.py:133:def restore(fr, fused, path, binding):
+experiments/tiny-llm-ndot/worker.py:135:    state = torch.load(path, map_location='cpu', weights_only=True)
+experiments/tiny-llm-ndot/export.py:20:state=torch.load(checkpoint,map_location='cpu',weights_only=True)
+experiments/dmc-cuda/source/runtime.py:44:def restore_checkpoint(fr,path):
+experiments/dmc-cuda/source/runtime.py:46: data=torch.load(path,map_location='cpu',weights_only=True)
+experiments/tiny-qwen35/pack.py:140:        covariance = torch.load(calibration,map_location='cpu',weights_only=True)
+experiments/dmc-cuda/source/collect_proof.py:19:checkpoint=torch.load(out/'checkpoint.pt',map_location='cpu',weights_only=True)
+experiments/dmc-cuda/source/full_worker_original.py:4:from runtime import ROOT,ELF_SHA,TRACE_SHA,TOTAL_TOKENS,build,restore_checkpoint
+experiments/dmc-cuda/source/full_worker_original.py:44:  sys_state=torch.load(out/'checkpoint.pt',map_location='cpu',weights_only=True)
+experiments/dmc-cuda/source/full_worker_original.py:45:  offset=restore_checkpoint(fr,out/'checkpoint.pt')
+experiments/dmc-cuda/source/full_worker.py:4:from runtime import ROOT,ELF_SHA,TRACE_SHA,TOTAL_TOKENS,build,restore_checkpoint
+experiments/dmc-cuda/source/full_worker.py:52:  sys_state=torch.load(out/'checkpoint.pt',map_location='cpu',weights_only=True)
+experiments/dmc-cuda/source/full_worker.py:53:  offset=restore_checkpoint(fr,out/'checkpoint.pt')
+experiments/dmc-cuda/source/prefix_probe.py:3:from runtime import ROOT,build,save_checkpoint,restore_checkpoint
+experiments/dmc-cuda/source/prefix_probe.py:22:  fr.load(0,spec.tok('GO'));assert restore_checkpoint(fr,checkpoint)==offset

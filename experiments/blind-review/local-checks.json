@@ -1,0 +1,945 @@
+{
+  "checkpoint_cpu_real_entrypoints": {
+    "status": "pass",
+    "result": {
+      "ndot": {
+        "unmodified_restores": true,
+        "mutations_rejected_before_state_copy": [
+          {
+            "case": "x",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "tok",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/hist",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/1/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "legacy_without_checksum",
+            "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+          },
+          {
+            "case": "offset",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "compute_seconds",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "retained_worker_seconds",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          }
+        ]
+      },
+      "neural": {
+        "unmodified_restores": true,
+        "mutations_rejected_before_state_copy": [
+          {
+            "case": "x",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "tok",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/hist",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/1/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "legacy_without_checksum",
+            "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+          },
+          {
+            "case": "offset",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "compute_seconds",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "retained_worker_seconds",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          }
+        ]
+      },
+      "doom": {
+        "unmodified_restores": true,
+        "mutations_rejected_before_state_copy": [
+          {
+            "case": "x",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "tok",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/hist",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/1/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "surface",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "coverage",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "scratch_y",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "legacy_without_checksum",
+            "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+          },
+          {
+            "case": "offset",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          }
+        ]
+      },
+      "legacy_doom": {
+        "unmodified_restores": true,
+        "mutations_rejected_before_state_copy": [
+          {
+            "case": "x",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "tok",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/0/hist",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "heads/1/S",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          },
+          {
+            "case": "legacy_without_checksum",
+            "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+          },
+          {
+            "case": "offset",
+            "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+          }
+        ]
+      }
+    }
+  },
+  "controlled_measurement_full_raw_verifier": {
+    "status": "pass",
+    "result": {
+      "status": "pass",
+      "scope": "One complete run per binary, both from boot on the unified W=4 compiled Qwen3.5-architecture network through the compact fused executor. Bounded stock checks are separate, not complete runs.",
+      "timer": "Successful generation calls including graph replay, feedback, synchronization, token copies and CPU transfer; excluding setup, validation, IO, checkpoint/restart gaps.",
+      "model_sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+      "runs": {
+        "scalar": {
+          "tokens": 16213774,
+          "generation_seconds": 4361.424786300027,
+          "tokens_per_second": 3717.5406649061574,
+          "minutes_per_position": 14.538082621000092,
+          "positions": 5,
+          "prompt_tokens": [
+            1,
+            403
+          ],
+          "prediction_ids": [
+            403,
+            407,
+            261,
+            378,
+            432
+          ],
+          "output": "@0 1 403 2531150448 0\n>Once\n@1 403 407 110482425 0\n> upon\n@2 407 261 1076894511 0\n> a\n@3 261 378 2928627636 0\n> time\n@4 378 432 3057963026 0\n>,\n",
+          "mismatches": 0,
+          "final_ram_bytes_exact": 65536,
+          "final_register_copies_exact": 3,
+          "trace_sha256": "68c7738430dbc024b3d78711be5fee39f8e5c8b6c7cda5de45c8c8f76836efa5",
+          "elf_sha256": "197388a66c479db1fdda53a21a69faae1a798e966341d17a2bffe033d8dd34d0",
+          "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+          "constructor": {
+            "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+            "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+            "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+            "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+            "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+            "reduced": true,
+            "stock_integer_counters": true,
+            "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+            "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+            "replacement_sites": [
+              "from chipformer.rv import ref as RF",
+              "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+              "    n_plain = len(srcs)",
+              "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+              "\"imm\": imm, \"r\": r, \"val\": val,"
+            ]
+          },
+          "checkpoint_restore_offsets": [
+            65536,
+            65792,
+            16213774
+          ],
+          "timed_chunks_verified": 1981,
+          "source_bindings": {
+            "experiments\\tiny-llm-ndot\\worker.py": "f05bfb1894384efc6b930b29315a1c4717ed5ec0b5d0d40ea410a1c5479b17e1",
+            "experiments\\tiny-llm-ndot\\checkpoint_integrity.py": "2d28a9d6a28ac93901ba2ed280ff0cf64008f457d4033cc5739125c5f919051b",
+            "experiments\\neural-accelerator\\constructor.py": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+            "experiments\\neural-accelerator\\compact.py": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+            "experiments\\neural-accelerator\\integer_counters.py": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+            "experiments\\neural-accelerator\\counter_ir.py": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+            "experiments\\tiny-llm-ndot-fused\\story.py": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+            "experiments\\tiny-llm-ndot-fused\\fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+            "experiments\\tiny-llm-ndot-fused\\runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+            "experiments\\dmc-feedback-fusion\\fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+            "experiments/showcase/gpu_worker.py": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459"
+          }
+        },
+        "ndot": {
+          "tokens": 5423298,
+          "generation_seconds": 1446.6262496999807,
+          "tokens_per_second": 3748.928239844086,
+          "minutes_per_position": 4.822087498999935,
+          "positions": 5,
+          "prompt_tokens": [
+            1,
+            403
+          ],
+          "prediction_ids": [
+            403,
+            407,
+            261,
+            378,
+            432
+          ],
+          "output": "@0 1 403 2531150448 0\n>Once\n@1 403 407 110482425 0\n> upon\n@2 407 261 1076894511 0\n> a\n@3 261 378 2928627636 0\n> time\n@4 378 432 3057963026 0\n>,\n",
+          "mismatches": 0,
+          "final_ram_bytes_exact": 65536,
+          "final_register_copies_exact": 3,
+          "trace_sha256": "05d260bc7435b7b22335cb14327229bb7718eea8c263b9874b6575e2a5c28ab7",
+          "elf_sha256": "252929d25b5bb5896b20e017216e3709689d1980cf68b06798f714b771586a66",
+          "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+          "constructor": {
+            "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+            "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+            "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+            "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+            "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+            "reduced": true,
+            "stock_integer_counters": true,
+            "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+            "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+            "replacement_sites": [
+              "from chipformer.rv import ref as RF",
+              "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+              "    n_plain = len(srcs)",
+              "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+              "\"imm\": imm, \"r\": r, \"val\": val,"
+            ]
+          },
+          "checkpoint_restore_offsets": [
+            65536,
+            65792
+          ],
+          "timed_chunks_verified": 663,
+          "source_bindings": {
+            "experiments\\tiny-llm-ndot\\worker.py": "f05bfb1894384efc6b930b29315a1c4717ed5ec0b5d0d40ea410a1c5479b17e1",
+            "experiments\\tiny-llm-ndot\\checkpoint_integrity.py": "2d28a9d6a28ac93901ba2ed280ff0cf64008f457d4033cc5739125c5f919051b",
+            "experiments\\neural-accelerator\\constructor.py": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+            "experiments\\neural-accelerator\\compact.py": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+            "experiments\\neural-accelerator\\integer_counters.py": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+            "experiments\\neural-accelerator\\counter_ir.py": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+            "experiments\\tiny-llm-ndot-fused\\story.py": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+            "experiments\\tiny-llm-ndot-fused\\fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+            "experiments\\tiny-llm-ndot-fused\\runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+            "experiments\\dmc-feedback-fusion\\fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+            "experiments/showcase/gpu_worker.py": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459"
+          }
+        }
+      },
+      "validation_recovery": {
+        "cause": "Older scalar reference writer omitted final_registers; worker stopped at comparison lookup after all tokens matched. No numerical mismatch was waived.",
+        "trace_tokens": 16213774,
+        "trace_sha256": "68c7738430dbc024b3d78711be5fee39f8e5c8b6c7cda5de45c8c8f76836efa5",
+        "literal_trace_reproduced": true,
+        "literal_ram_reproduced": true,
+        "final_registers": [
+          0,
+          262160,
+          16842752,
+          0,
+          0,
+          9,
+          378,
+          4294967286,
+          0,
+          0,
+          0,
+          5,
+          33854180,
+          33854180,
+          16842691,
+          0,
+          3435973837,
+          93,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4294934659,
+          16820820,
+          4294934528,
+          105648
+        ],
+        "reference_writer_sha256": "0b0d43f8725073078e9883693c97081fe6e09ace675c2a8141361ade1bc6d2fb",
+        "recovery": "Complete actual GPU checkpoint will be restored at the terminal offset; no scalar generation is rerun and no reference state is injected."
+      },
+      "scalar_over_ndot_generation_ratio": 3.0148939902096714
+    }
+  },
+  "doom_raw_ff-full": {
+    "status": "pass",
+    "result": {
+      "run": "ff-full",
+      "tokens_compared": 6342933,
+      "differing_tokens": 0,
+      "independent_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+      "actual_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+      "frame_rgb565_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+      "frame_bytes_equal_mac_observer": true,
+      "chunks": 788,
+      "full_size_chunks": 762,
+      "chunk_hashes_verified": true,
+      "microseconds_per_token_full_chunks": {
+        "min": 227.80885009754394,
+        "median": 227.91465454113924,
+        "max": 229.3341552734862
+      },
+      "retained_chunk_seconds": 1446.2763813000174,
+      "uninterrupted_end_to_end_seconds": 1469.4132961000005,
+      "speedup_vs_historical_retained": 2.105112454483517,
+      "historical_retained_seconds": 3044.574422900019
+    }
+  },
+  "doom_raw_unified-full": {
+    "status": "pass",
+    "result": {
+      "run": "unified-full",
+      "tokens_compared": 6342933,
+      "differing_tokens": 0,
+      "independent_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+      "actual_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+      "frame_rgb565_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+      "frame_bytes_equal_mac_observer": true,
+      "chunks": 788,
+      "full_size_chunks": 762,
+      "chunk_hashes_verified": true,
+      "microseconds_per_token_full_chunks": {
+        "min": 266.7166503906859,
+        "median": 266.8337341308336,
+        "max": 268.2981201171941
+      },
+      "retained_chunk_seconds": 1693.106171399988,
+      "uninterrupted_end_to_end_seconds": 1715.4851406999987,
+      "speedup_vs_historical_retained": 1.7982182537215223,
+      "historical_retained_seconds": 3044.574422900019,
+      "final_ram_bytes_equal_mac_observer": true
+    }
+  },
+  "historical_source_bindings_at_e7bd077": {
+    "status": "pass",
+    "result": [
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-qwen35/evidence/gpu.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/tiny-llm-ndot-fused/evidence/story-run.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/life/evidence/gpu-report.json",
+        "file": "experiments/showcase/gpu_worker.py",
+        "bound": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/sha256/evidence/gpu-report.json",
+        "file": "experiments/showcase/gpu_worker.py",
+        "bound": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/tictactoe/evidence/gpu-report.json",
+        "file": "experiments/showcase/gpu_worker.py",
+        "bound": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist/evidence/gpu-report.json",
+        "file": "experiments/showcase/gpu_worker.py",
+        "bound": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+        "file": "experiments/showcase/gpu_worker.py",
+        "bound": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/tiny-llm-ndot/worker.py",
+        "bound": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+        "current_matches": false,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/neural-accelerator/constructor.py",
+        "bound": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/neural-accelerator/compact.py",
+        "bound": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/neural-accelerator/integer_counters.py",
+        "bound": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/neural-accelerator/counter_ir.py",
+        "bound": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/story.py",
+        "bound": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/fusion.py",
+        "bound": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/tiny-llm-ndot-fused/runtime.py",
+        "bound": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/dmc-feedback-fusion/fusion.py",
+        "bound": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+        "current_matches": true,
+        "historical_matches": true
+      },
+      {
+        "report": "experiments/doom-showcase/evidence/unified-full-report.json",
+        "file": "experiments/showcase/gpu_worker.py",
+        "bound": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459",
+        "current_matches": true,
+        "historical_matches": true
+      }
+    ]
+  }
+}

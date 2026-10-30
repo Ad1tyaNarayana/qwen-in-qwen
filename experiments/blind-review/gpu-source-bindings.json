@@ -1,0 +1,46 @@
+{
+  "experiments/neural-accelerator/stock.py": {
+    "remote": "946a1482fe646e0ada2e42a8c7b36e8e46f76535777268bce5cac938c9902424",
+    "local": "946a1482fe646e0ada2e42a8c7b36e8e46f76535777268bce5cac938c9902424"
+  },
+  "experiments/neural-accelerator/constructor.py": {
+    "remote": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+    "local": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9"
+  },
+  "experiments/neural-accelerator/compact.py": {
+    "remote": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+    "local": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c"
+  },
+  "experiments/neural-accelerator/arithmetic.py": {
+    "remote": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+    "local": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a"
+  },
+  "experiments/neural-accelerator/reuse.py": {
+    "remote": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+    "local": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966"
+  },
+  "experiments/neural-accelerator/integer_counters.py": {
+    "remote": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+    "local": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8"
+  },
+  "experiments/neural-accelerator/counter_ir.py": {
+    "remote": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+    "local": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa"
+  },
+  "experiments/tiny-llm-ndot-fused/fusion.py": {
+    "remote": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+    "local": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247"
+  },
+  "experiments/dmc-feedback-fusion/fusion.py": {
+    "remote": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+    "local": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258"
+  },
+  "experiments/memory-map/prepare.py": {
+    "remote": "54e47fd4b31e34825805b25583e558554dc78851691d9e7f17faf1808b73e9ba",
+    "local": "54e47fd4b31e34825805b25583e558554dc78851691d9e7f17faf1808b73e9ba"
+  },
+  "experiments/tiny-llm-ndot/worker.py": {
+    "remote": "f05bfb1894384efc6b930b29315a1c4717ed5ec0b5d0d40ea410a1c5479b17e1",
+    "local": "f05bfb1894384efc6b930b29315a1c4717ed5ec0b5d0d40ea410a1c5479b17e1"
+  }
+}

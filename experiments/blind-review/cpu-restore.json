@@ -1,0 +1,162 @@
+{
+  "ndot": {
+    "unmodified_restores": true,
+    "mutations_rejected_before_state_copy": [
+      {
+        "case": "x",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "tok",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/hist",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/1/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "legacy_without_checksum",
+        "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+      },
+      {
+        "case": "offset",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "compute_seconds",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "retained_worker_seconds",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      }
+    ]
+  },
+  "neural": {
+    "unmodified_restores": true,
+    "mutations_rejected_before_state_copy": [
+      {
+        "case": "x",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "tok",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/hist",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/1/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "legacy_without_checksum",
+        "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+      },
+      {
+        "case": "offset",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "compute_seconds",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "retained_worker_seconds",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      }
+    ]
+  },
+  "doom": {
+    "unmodified_restores": true,
+    "mutations_rejected_before_state_copy": [
+      {
+        "case": "x",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "tok",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/hist",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/1/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "surface",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "coverage",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "scratch_y",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "legacy_without_checksum",
+        "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+      },
+      {
+        "case": "offset",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      }
+    ]
+  },
+  "legacy_doom": {
+    "unmodified_restores": true,
+    "mutations_rejected_before_state_copy": [
+      {
+        "case": "x",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "tok",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/0/hist",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "heads/1/S",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      },
+      {
+        "case": "legacy_without_checksum",
+        "error": "Checkpoint integrity metadata missing or unsupported; legacy checkpoints cannot be restored. Start a fresh run."
+      },
+      {
+        "case": "offset",
+        "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+      }
+    ]
+  }
+}

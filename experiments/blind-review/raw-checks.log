@@ -1,0 +1,93 @@
+All 57 number checks pass
+{
+  "scalar": {
+    "tokens": 16213774,
+    "seconds": 4361.424786300027,
+    "prediction_ids": [
+      403,
+      407,
+      261,
+      378,
+      432
+    ],
+    "text": "Once upon a time,",
+    "chunks": 1981,
+    "all_chunk_hashes_exact": true
+  },
+  "ndot": {
+    "tokens": 5423298,
+    "seconds": 1446.6262496999807,
+    "prediction_ids": [
+      403,
+      407,
+      261,
+      378,
+      432
+    ],
+    "text": "Once upon a time,",
+    "chunks": 663,
+    "all_chunk_hashes_exact": true
+  },
+  "story": {
+    "tokens": 53296563,
+    "seconds": 14225.90152749946,
+    "prediction_ids": [
+      403,
+      407,
+      261,
+      378,
+      432,
+      383,
+      286,
+      261,
+      376,
+      298,
+      315,
+      421,
+      395,
+      317,
+      426,
+      338,
+      401,
+      396,
+      267,
+      337,
+      410,
+      408,
+      419,
+      292,
+      411,
+      322,
+      265,
+      282,
+      295,
+      433,
+      426,
+      385,
+      328,
+      432,
+      358,
+      394,
+      261,
+      370
+    ],
+    "text": "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big",
+    "chunks": 6507,
+    "all_chunk_hashes_exact": true
+  },
+  "qwen": {
+    "tokens": 35836005,
+    "seconds": 10014.168106500378,
+    "prediction_ids": [
+      402,
+      407,
+      261,
+      378,
+      941,
+      383
+    ],
+    "text": "Once upon a time, there",
+    "chunks": 4376,
+    "all_chunk_hashes_exact": true
+  }
+}

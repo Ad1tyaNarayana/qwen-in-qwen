@@ -1,0 +1,401 @@
+[
+  {
+    "claim": "scalar trace tokens",
+    "actual": 16213774,
+    "article_value": 16213774,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/scalar/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "scalar mismatches",
+    "actual": 0,
+    "article_value": 0,
+    "source": ".cache/tiny-llm/neural-stories/reference.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "scalar final RAM bytes",
+    "actual": 65536,
+    "article_value": 65536,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/scalar/actual-ram.bin",
+    "pass_": true
+  },
+  {
+    "claim": "scalar register copies",
+    "actual": 3,
+    "article_value": 3,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/scalar/actual-registers.json",
+    "pass_": true
+  },
+  {
+    "claim": "scalar positions",
+    "actual": 5,
+    "article_value": 5,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/scalar/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "scalar generation seconds",
+    "actual": 4361.424786300027,
+    "article_value": 4361.42,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/scalar/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "scalar min/position",
+    "actual": 14.538082621000092,
+    "article_value": 14.5381,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/scalar/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ndot trace tokens",
+    "actual": 5423298,
+    "article_value": 5423298,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/ndot/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "ndot mismatches",
+    "actual": 0,
+    "article_value": 0,
+    "source": ".cache/tiny-llm/ndot5-20261030/reference.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "ndot final RAM bytes",
+    "actual": 65536,
+    "article_value": 65536,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/ndot/actual-ram.bin",
+    "pass_": true
+  },
+  {
+    "claim": "ndot register copies",
+    "actual": 3,
+    "article_value": 3,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/ndot/actual-registers.json",
+    "pass_": true
+  },
+  {
+    "claim": "ndot positions",
+    "actual": 5,
+    "article_value": 5,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/ndot/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "ndot generation seconds",
+    "actual": 1446.6262496999807,
+    "article_value": 1446.63,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/ndot/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ndot min/position",
+    "actual": 4.822087498999935,
+    "article_value": 4.8221,
+    "source": ".cache/checkpoint-integrity/actual-20261030a/ndot/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "story trace tokens",
+    "actual": 53296563,
+    "article_value": 53296563,
+    "source": ".cache/tiny-llm/ndot-story38-20261030-actual/main/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "story mismatches",
+    "actual": 0,
+    "article_value": 0,
+    "source": ".cache/tiny-llm/ndot-story38-20261030/reference.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "story final RAM bytes",
+    "actual": 65536,
+    "article_value": 65536,
+    "source": ".cache/tiny-llm/ndot-story38-20261030-actual/main/actual-ram.bin",
+    "pass_": true
+  },
+  {
+    "claim": "story register copies",
+    "actual": 3,
+    "article_value": 3,
+    "source": ".cache/tiny-llm/ndot-story38-20261030-actual/main/actual-registers.json",
+    "pass_": true
+  },
+  {
+    "claim": "story positions",
+    "actual": 38,
+    "article_value": 38,
+    "source": ".cache/tiny-llm/ndot-story38-20261030-actual/main/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "story generation seconds",
+    "actual": 14225.90152749946,
+    "article_value": 14225.9,
+    "source": ".cache/tiny-llm/ndot-story38-20261030-actual/main/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "story min/position",
+    "actual": 6.239430494517307,
+    "article_value": 6.2394,
+    "source": ".cache/tiny-llm/ndot-story38-20261030-actual/main/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "qwen trace tokens",
+    "actual": 35836005,
+    "article_value": 35836005,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/main/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "qwen mismatches",
+    "actual": 0,
+    "article_value": 0,
+    "source": ".cache/tiny-qwen35/trained-program/reference.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "qwen final RAM bytes",
+    "actual": 65536,
+    "article_value": 65536,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/main/actual-ram.bin",
+    "pass_": true
+  },
+  {
+    "claim": "qwen register copies",
+    "actual": 3,
+    "article_value": 3,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/main/actual-registers.json",
+    "pass_": true
+  },
+  {
+    "claim": "qwen positions",
+    "actual": 6,
+    "article_value": 6,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/main/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "qwen generation seconds",
+    "actual": 10014.168106500378,
+    "article_value": 10014.17,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/main/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "qwen min/position",
+    "actual": 27.817133629167714,
+    "article_value": 27.82,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/main/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "scalar trace tokens/s",
+    "actual": 3717.5406649061574,
+    "article_value": 3717.54,
+    "source": "scalar raw count/chunk timer",
+    "pass_": true
+  },
+  {
+    "claim": "NDOT trace tokens/s",
+    "actual": 3748.928239844086,
+    "article_value": 3748.93,
+    "source": "NDOT raw count/chunk timer",
+    "pass_": true
+  },
+  {
+    "claim": "scalar/NDOT ratio",
+    "actual": 3.0148939902096714,
+    "article_value": 3.0149,
+    "source": "both complete raw chunk journals",
+    "pass_": true
+  },
+  {
+    "claim": "Qwen min/new token including prefill",
+    "actual": 33.38056035500126,
+    "article_value": 33.38,
+    "source": "qwen raw chunk journal",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full tokens",
+    "actual": 6342933,
+    "article_value": 6342933,
+    "source": ".cache/doom-showcase/export-ff-full/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full generation seconds",
+    "actual": 1446.2763813000174,
+    "article_value": 1446.28,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full tokens/s",
+    "actual": 4385.699083530988,
+    "article_value": 4385.7,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full us/token",
+    "actual": 228.01381967932144,
+    "article_value": 228.01,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full wall seconds",
+    "actual": 1469.4132961000005,
+    "article_value": 1469.41,
+    "source": ".cache/doom-showcase/export-ff-full/report.json",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full full chunks",
+    "actual": 762,
+    "article_value": 762,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full frame pixels",
+    "actual": 76800,
+    "article_value": 76800,
+    "source": ".cache/doom-showcase/export-ff-full/frame-0001.rgb565",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full min us/token",
+    "actual": 227.80885009754394,
+    "article_value": 227.809,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full median us/token",
+    "actual": 227.91465454113924,
+    "article_value": 227.915,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "ff-full max us/token",
+    "actual": 229.3341552734862,
+    "article_value": 229.334,
+    "source": ".cache/doom-showcase/export-ff-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full tokens",
+    "actual": 6342933,
+    "article_value": 6342933,
+    "source": ".cache/doom-showcase/export-unified-full/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full generation seconds",
+    "actual": 1693.106171399988,
+    "article_value": 1693.11,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full tokens/s",
+    "actual": 3746.3291476607073,
+    "article_value": 3746.33,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full us/token",
+    "actual": 266.92796083452055,
+    "article_value": 266.93,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full wall seconds",
+    "actual": 1715.4851406999987,
+    "article_value": 1715.49,
+    "source": ".cache/doom-showcase/export-unified-full/report.json",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full full chunks",
+    "actual": 762,
+    "article_value": 762,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full frame pixels",
+    "actual": 76800,
+    "article_value": 76800,
+    "source": ".cache/doom-showcase/export-unified-full/frame-0001.rgb565",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full min us/token",
+    "actual": 266.7166503906859,
+    "article_value": 266.717,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full median us/token",
+    "actual": 266.8337341308336,
+    "article_value": 266.834,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "unified-full max us/token",
+    "actual": 268.2981201171941,
+    "article_value": 268.298,
+    "source": ".cache/doom-showcase/export-unified-full/chunks.jsonl",
+    "pass_": true
+  },
+  {
+    "claim": "quality matched predictions",
+    "actual": 291,
+    "article_value": 291,
+    "source": "covariance-quality.json per-prompt integer_records vs float_continuation",
+    "pass_": true
+  },
+  {
+    "claim": "quality denominator",
+    "actual": 327,
+    "article_value": 327,
+    "source": "same",
+    "pass_": true
+  },
+  {
+    "claim": "quality prompts",
+    "actual": 6,
+    "article_value": 6,
+    "source": "same",
+    "pass_": true
+  },
+  {
+    "claim": "Qwen stock prefix tokens",
+    "actual": 16384,
+    "article_value": 16384,
+    "source": ".cache/tiny-qwen35/actual-covariance-20261030/stock/actual.tokens.u32",
+    "pass_": true
+  },
+  {
+    "claim": "Qwen stock prefix mismatches",
+    "actual": 0,
+    "article_value": 0,
+    "source": "same, against reference trace",
+    "pass_": true
+  }
+]

@@ -1,0 +1,35 @@
+{'ndot': 9, 'neural': 9, 'doom': 10, 'legacy_doom': 7}
+checkpoint_cpu_real_entrypoints pass
+{
+  "scalar": {
+    "tokens": 16213774,
+    "generation_seconds": 4361.424786300027,
+    "tokens_per_second": 3717.5406649061574,
+    "minutes_per_position": 14.538082621000092,
+    "prediction_ids": [
+      403,
+      407,
+      261,
+      378,
+      432
+    ]
+  },
+  "ndot": {
+    "tokens": 5423298,
+    "generation_seconds": 1446.6262496999807,
+    "tokens_per_second": 3748.928239844086,
+    "minutes_per_position": 4.822087498999935,
+    "prediction_ids": [
+      403,
+      407,
+      261,
+      378,
+      432
+    ]
+  }
+}
+scalar / NDOT generation time: 3.0148939902096714
+controlled_measurement_full_raw_verifier pass
+doom_raw_ff-full pass
+doom_raw_unified-full pass
+historical_source_bindings_at_e7bd077 pass
