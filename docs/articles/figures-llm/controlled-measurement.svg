@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="45" y="45" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#222222" text-anchor="start">One complete stories260K run per binary</text>
+<text x="45" y="78" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#555555" text-anchor="start">Same unified W=4 network, model data, prompt, five positions, and compact fused executor</text>
+<line x1="240.0" y1="120" x2="240.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="240.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">0</text>
+<line x1="340.0" y1="120" x2="340.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="340.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">10</text>
+<line x1="440.0" y1="120" x2="440.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="440.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">20</text>
+<line x1="540.0" y1="120" x2="540.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="540.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">30</text>
+<line x1="640.0" y1="120" x2="640.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="640.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">40</text>
+<line x1="740.0" y1="120" x2="740.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="740.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">50</text>
+<line x1="840.0" y1="120" x2="840.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="840.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">60</text>
+<line x1="940.0" y1="120" x2="940.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="940.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">70</text>
+<line x1="1040.0" y1="120" x2="1040.0" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="1040.0" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">80</text>
+<text x="220" y="193" font-family="Arial, DejaVu Sans, sans-serif" font-size="22" fill="#222222" text-anchor="end">Scalar</text>
+<rect x="240" y="165" width="726.9041310500046" height="40" fill="#c77d34"/>
+<text x="240" y="237" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">4,361.42 s; 16,213,774 trace tokens; 14.5381 min/position</text>
+<text x="220" y="318" font-family="Arial, DejaVu Sans, sans-serif" font-size="22" fill="#222222" text-anchor="end">NDOT4</text>
+<rect x="240" y="290" width="241.10437494999678" height="40" fill="#0072b2"/>
+<text x="240" y="362" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">1,446.63 s; 5,423,298 trace tokens; 4.8221 min/position</text>
+<text x="650" y="425" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="middle">Retained generation minutes</text>
+<text x="45" y="480" font-family="Arial, DejaVu Sans, sans-serif" font-size="23" fill="#222222" text-anchor="start">Scalar / NDOT4 generation time = 3.0149×</text>
+<text x="45" y="520" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Every token, final RAM, and all register copies match each binary&#x27;s own reference.</text>
+<text x="45" y="550" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Stock generation covered bounded prefixes only; these full runs use the compact fused executor.</text>
+<text x="45" y="580" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">No repeated-run variability or uninterrupted end-to-end wall-time claim.</text>
+</svg>

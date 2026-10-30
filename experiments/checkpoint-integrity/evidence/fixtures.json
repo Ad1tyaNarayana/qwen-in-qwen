@@ -1,0 +1,24 @@
+{
+  "neural-stories": {
+    "elf_sha256": "197388a66c479db1fdda53a21a69faae1a798e966341d17a2bffe033d8dd34d0",
+    "model_sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+    "reference_sha256": "68c7738430dbc024b3d78711be5fee39f8e5c8b6c7cda5de45c8c8f76836efa5",
+    "tokens": 16213774,
+    "steps": 5,
+    "prompt_tokens": [
+      1,
+      403
+    ]
+  },
+  "ndot5-20261030": {
+    "elf_sha256": "252929d25b5bb5896b20e017216e3709689d1980cf68b06798f714b771586a66",
+    "model_sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+    "reference_sha256": "05d260bc7435b7b22335cb14327229bb7718eea8c263b9874b6575e2a5c28ab7",
+    "tokens": 5423298,
+    "steps": 5,
+    "prompt_tokens": [
+      1,
+      403
+    ]
+  }
+}

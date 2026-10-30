@@ -1,0 +1,36 @@
+{
+ "none": {
+  "token_mismatches": 0,
+  "first": null,
+  "final_ram_equal": true,
+  "final_registers_equal": true
+ },
+ "binding": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ },
+ "live_register_S": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ },
+ "next_embedding_x": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ },
+ "token_word": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ },
+ "lag_history": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ },
+ "unused_drom_row": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ },
+ "unused_ram_row": {
+  "rejected_at_restore": true,
+  "error": "Checkpoint content checksum mismatch; refusing restore before copying any state to the GPU."
+ }
+}

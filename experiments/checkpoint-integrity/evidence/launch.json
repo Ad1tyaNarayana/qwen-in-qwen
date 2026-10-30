@@ -1,0 +1,41 @@
+{
+  "base": "C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a",
+  "label": "20261030a",
+  "commands": [
+    {
+      "name": "scalar",
+      "stage": "prefix",
+      "arguments": "C:/Users/Admin/qwenputer-games-work/repo/experiments/showcase/gpu_worker.py --repo C:/Users/Admin/qwenputer-games-work/repo --upstream C:/Users/Admin/qwenputer-games-work/.upstream/qwenputer --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/neural-stories --out C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a/scalar --max-seconds 9800 --stop-after 65536"
+    },
+    {
+      "name": "scalar",
+      "stage": "restore",
+      "arguments": "C:/Users/Admin/qwenputer-games-work/repo/experiments/showcase/gpu_worker.py --repo C:/Users/Admin/qwenputer-games-work/repo --upstream C:/Users/Admin/qwenputer-games-work/.upstream/qwenputer --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/neural-stories --out C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a/scalar --max-seconds 9800 --stop-after 65792"
+    },
+    {
+      "name": "scalar",
+      "stage": "full",
+      "arguments": "C:/Users/Admin/qwenputer-games-work/repo/experiments/showcase/gpu_worker.py --repo C:/Users/Admin/qwenputer-games-work/repo --upstream C:/Users/Admin/qwenputer-games-work/.upstream/qwenputer --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/neural-stories --out C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a/scalar --max-seconds 9800 "
+    },
+    {
+      "name": "ndot",
+      "stage": "prefix",
+      "arguments": "C:/Users/Admin/qwenputer-games-work/repo/experiments/showcase/gpu_worker.py --repo C:/Users/Admin/qwenputer-games-work/repo --upstream C:/Users/Admin/qwenputer-games-work/.upstream/qwenputer --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/ndot5-20261030 --out C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a/ndot --max-seconds 9800 --stop-after 65536"
+    },
+    {
+      "name": "ndot",
+      "stage": "restore",
+      "arguments": "C:/Users/Admin/qwenputer-games-work/repo/experiments/showcase/gpu_worker.py --repo C:/Users/Admin/qwenputer-games-work/repo --upstream C:/Users/Admin/qwenputer-games-work/.upstream/qwenputer --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/ndot5-20261030 --out C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a/ndot --max-seconds 9800 --stop-after 65792"
+    },
+    {
+      "name": "ndot",
+      "stage": "full",
+      "arguments": "C:/Users/Admin/qwenputer-games-work/repo/experiments/showcase/gpu_worker.py --repo C:/Users/Admin/qwenputer-games-work/repo --upstream C:/Users/Admin/qwenputer-games-work/.upstream/qwenputer --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/ndot5-20261030 --out C:/Users/Admin/qwenputer-games-work/artifacts/checkpoint-integrity-20261030a/ndot --max-seconds 9800 "
+    }
+  ],
+  "detach": {
+    "ProcessId": 24912,
+    "ReturnValue": 0,
+    "PSComputerName": null
+  }
+}

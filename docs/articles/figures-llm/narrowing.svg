@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="45" y="45" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#222222" text-anchor="start">Narrowing made dense stock storage plausible</text>
+<text x="45" y="78" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#555555" text-anchor="start">Exact parameter counts × BF16 bytes; this is not an allocation or timing chart</text>
+<line x1="270" y1="120" x2="270" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="270" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">0</text>
+<line x1="380" y1="120" x2="380" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="380" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">5</text>
+<line x1="490" y1="120" x2="490" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="490" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">10</text>
+<line x1="600" y1="120" x2="600" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="600" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">15</text>
+<line x1="710" y1="120" x2="710" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="710" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">20</text>
+<line x1="820" y1="120" x2="820" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="820" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">25</text>
+<line x1="930" y1="120" x2="930" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="930" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">30</text>
+<line x1="1040" y1="120" x2="1040" y2="355" stroke="#dddddd" stroke-width="1"/>
+<text x="1040" y="384" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">35</text>
+<text x="250" y="187" font-family="Arial, DejaVu Sans, sans-serif" font-size="22" fill="#222222" text-anchor="end">First W=4</text>
+<rect x="270" y="160" width="657.1079046726227" height="40" fill="#c77d34"/>
+<text x="939.1079046726227" y="188" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="start">29.87 GiB</text>
+<text x="270" y="230" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Residual dimensions 4,794; stock hidden width 5,120</text>
+<text x="250" y="312" font-family="Arial, DejaVu Sans, sans-serif" font-size="22" fill="#222222" text-anchor="end">Reduced W=4</text>
+<rect x="270" y="285" width="291.58204555511475" height="40" fill="#0072b2"/>
+<text x="573.5820455551147" y="313" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="start">13.25 GiB</text>
+<text x="270" y="355" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Residual dimensions 2,113; stock hidden width 2,304</text>
+<text x="650" y="424" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="middle">Dense BF16 parameter storage (GiB)</text>
+<text x="45" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Recurrent state, allocator overhead, and desktop VRAM use require additional space.</text>
+<text x="45" y="505" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#555555" text-anchor="start">Source: experiments/neural-accelerator/resources.json</text>
+</svg>

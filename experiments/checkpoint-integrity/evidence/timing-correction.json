@@ -1,0 +1,6 @@
+{
+  "historical_ratios": "3.4x mixes projection and measurement; 5.3x compares projections; 1.86x changes network and executor. None is a measured same-network accelerator gain.",
+  "controlled_five_position_evidence": "experiments/checkpoint-integrity/evidence/controlled-measurement.json",
+  "controlled_scalar_over_ndot_generation_ratio": 3.0148939902096714,
+  "scope": "One complete five-position execution per build, same unified W=4 network and compact fused executor. This ratio is not applied to the 38-position story. Stock remains bounded-prefix evidence."
+}

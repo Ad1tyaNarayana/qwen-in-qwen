@@ -162,3 +162,21 @@ The observed text is `Once upon a time, there was a little girl named Lily. She 
 copies match independently on the Mac. Actual GPU checkpoints restore at 65,536
 and 65,792 tokens. [story-validation.json](evidence/story-validation.json) retains
 all acceptance checks. No reference-seeded state enters the story.
+
+
+<!-- AUDIT_TIMING_CORRECTION_BEGIN -->
+## 2026-10-31 timing correction after the audit
+
+The historical approximately 3.4× ratio mixes an original-unfused projection with a shorter measured run. The approximately 5.3× ratio compares projections. The 1.86× historical ratio changes both network and executor. These are not measured same-network accelerator gains. Earlier projection tables retain their stated scope and are not measurements of complete scalar execution.
+
+One complete run per binary, from boot on the same unified W=4 compiled Qwen3.5-architecture network, with identical model data, prompt `[1, 403]`, a five-position budget and compact fused executor. Every token matches each binary's own independent reference, as do final RAM and all register copies. Both prediction-ID sequences are `[403, 407, 261, 378, 432]`. The shared stock-emitted BF16 weight identity is `0e515bbb…`; compact evaluation is fp32, bound to the same constructor. Stock `Qwen3_5ForCausalLM.generate` coverage remains bounded prefixes only, separate from these full runs. The scalar worker initially stopped after generation because its older reference JSON omitted final registers. A fresh local replay reproduced its entire reference trace and RAM literally; validation then restored the terminal actual GPU checkpoint without new generation. The error, repair and validation-only restart are retained in the evidence.
+
+| Build | Generation seconds | CPU trace tokens | Trace tokens/s | Min/inference position |
+| --- | ---: | ---: | ---: | ---: |
+| Scalar | 4,361.42 | 16,213,774 | 3,717.54 | 14.5381 |
+| NDOT4 | 1,446.63 | 5,423,298 | 3,748.93 | 4.8221 |
+
+Scalar / NDOT4 generation time is **3.0149×**, one complete execution each. This is an accelerator comparison with the same fused executor on both sides. It does not apply the shorter fixture's ratio to the 38-position story. Generation timing excludes setup, comparisons, IO, checkpoint/restart gaps. The audit report is unchanged.
+
+Evidence: [controlled measurement](../checkpoint-integrity/evidence/controlled-measurement.json), independently checked by [verify.py](../checkpoint-integrity/verify.py).
+<!-- AUDIT_TIMING_CORRECTION_END -->

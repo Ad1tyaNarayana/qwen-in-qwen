@@ -175,3 +175,10 @@ The lesson is that execution protocol and network topology constrain one another
 ## What's next
 
 The [neural accelerator](../../experiments/neural-accelerator/README.md) adds NDOT4 to the unified CPU, and the [fused tiny-LLM run](../../experiments/tiny-llm-ndot-fused/README.md#complete-autonomous-story) completed a 38-position autonomous story beginning `Once upon a time`, at 6.2394 measured generation minutes per inference position. The [trained tiny Qwen3.5 guest](../../experiments/tiny-qwen35/README.md#measured-results) generated `Once upon a time, there` at 33.38 retained generation minutes per new token including prefill, with shutdown and replay excluded. Doom now shares the unified network used for these guests; continuing frames and the cost of longer guest computations remain the next questions.
+
+
+<!-- LLM_TIMING_CORRECTION_BEGIN -->
+## 2026-10-31 LLM timing correction
+
+The [second article](tiny-llm-inside-qwen.md) replaces earlier LLM timing shorthand with a controlled same-network comparison. Its one complete scalar run and one complete NDOT4 run use the unified W=4 compiled Qwen3.5-architecture network and compact fused executor. The measured scalar/NDOT4 generation-time ratio is 3.0149× for that five-position stories260K fixture. Stock generation remains bounded-prefix evidence only. This does not alter the Doom measurements above or turn a historical cross-network comparison into an executor speedup.
+<!-- LLM_TIMING_CORRECTION_END -->

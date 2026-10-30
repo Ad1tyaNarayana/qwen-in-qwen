@@ -119,3 +119,7 @@ The article is an explanation, not an execution guide. Regenerate its five figur
 ```
 
 The repository environment was checked with `.venv/bin/python -c "import matplotlib"`; matplotlib is absent. The script writes plain SVG and uses the existing Pillow installation to rasterize identical drawing commands. No package installation is needed. Arial on macOS or DejaVu Sans on Linux supplies the text font. The original four PNGs were visually inspected during drafting. The new full-frame comparison PNG was visually inspected after regeneration; all five SVGs and PNGs were structurally validated. Frame imagery appears only in PRIVATE comments and is absent from this directory.
+
+## Second article
+
+The evidence ledger for [A tiny language model inside a compiled Qwen3.5-architecture network](tiny-llm-inside-qwen.md), including its figures and dated timing correction, is [SOURCES-LLM.md](SOURCES-LLM.md).

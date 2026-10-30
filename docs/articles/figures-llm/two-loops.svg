@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="45" y="45" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#222222" text-anchor="start">The guest model and the CPU have different recurrence</text>
+<text x="45" y="78" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#555555" text-anchor="start">Conceptual data flow; full workloads use the compact fused executor</text>
+<rect x="45" y="115" width="1110" height="385" fill="#e7f0f5"/>
+<text x="70" y="150" font-family="Arial, DejaVu Sans, sans-serif" font-size="24" fill="#00577f" text-anchor="start">Compiled Qwen3.5-architecture network</text>
+<text x="70" y="180" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Outer weights are compiled CPU logic. Recurrent tables hold guest machine state.</text>
+<rect x="80" y="220" width="300" height="90" fill="#ffffff"/>
+<text x="230" y="253" font-family="Arial, DejaVu Sans, sans-serif" font-size="21" fill="#222222" text-anchor="middle">Fetch and read</text>
+<text x="230" y="283" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">Code, registers, ROM, RAM</text>
+<rect x="450" y="220" width="300" height="90" fill="#ffffff"/>
+<text x="600" y="253" font-family="Arial, DejaVu Sans, sans-serif" font-size="21" fill="#222222" text-anchor="middle">Compute</text>
+<text x="600" y="283" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">Integer CPU and NDOT</text>
+<rect x="820" y="220" width="300" height="90" fill="#ffffff"/>
+<text x="970" y="253" font-family="Arial, DejaVu Sans, sans-serif" font-size="21" fill="#222222" text-anchor="middle">Encode result</text>
+<text x="970" y="283" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">CPU protocol token</text>
+<line x1="380" y1="263" x2="445" y2="263" stroke="#555555" stroke-width="3"/>
+<line x1="433" y1="256" x2="445" y2="263" stroke="#555555" stroke-width="3"/>
+<line x1="433" y1="270" x2="445" y2="263" stroke="#555555" stroke-width="3"/>
+<line x1="750" y1="263" x2="815" y2="263" stroke="#555555" stroke-width="3"/>
+<line x1="803" y1="256" x2="815" y2="263" stroke="#555555" stroke-width="3"/>
+<line x1="803" y1="270" x2="815" y2="263" stroke="#555555" stroke-width="3"/>
+<line x1="970" y1="312" x2="970" y2="355" stroke="#777777" stroke-width="2"/>
+<line x1="970" y1="355" x2="230" y2="355" stroke="#777777" stroke-width="2"/>
+<line x1="230" y1="355" x2="230" y2="312" stroke="#555555" stroke-width="3"/>
+<line x1="223" y1="324" x2="230" y2="312" stroke="#555555" stroke-width="3"/>
+<line x1="237" y1="324" x2="230" y2="312" stroke="#555555" stroke-width="3"/>
+<text x="600" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="19" fill="#222222" text-anchor="middle">Generated token selects the next embedding</text>
+<rect x="80" y="410" width="1040" height="65" fill="#d0e7d7"/>
+<text x="600" y="438" font-family="Arial, DejaVu Sans, sans-serif" font-size="19" fill="#222222" text-anchor="middle">Guest inference program: activations, attention state, logits, next text ID</text>
+<text x="600" y="463" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">Learned guest weights and tables are data ROM; working state is recurrent RAM.</text>
+<rect x="45" y="530" width="510" height="70" fill="#eee9df"/>
+<text x="65" y="559" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Host provides ELF boot state and prompt IDs.</text>
+<text x="65" y="585" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">No intermediate guest results enter after boot.</text>
+<rect x="590" y="530" width="565" height="70" fill="#eee9df"/>
+<text x="610" y="559" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Reference traces compare generated values only.</text>
+<text x="610" y="585" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">Bounded stock prefixes do not establish a full run.</text>
+</svg>

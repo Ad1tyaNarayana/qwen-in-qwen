@@ -12,6 +12,10 @@ import shutil
 import struct
 import subprocess
 import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tiny-llm-ndot'))
+from checkpoint_integrity import seal, verify
+
 import threading
 sys.dont_write_bytecode = True
 import traceback
@@ -160,6 +164,7 @@ def save_checkpoint(fr, fusion, path, metadata, surface, coverage):
             'heads': [{k: s[k].detach().cpu().clone() for k in ('S', 'hist')} for s in heads(fr)],
             'surface': torch.from_numpy(surface.astype('int32')), 'coverage': torch.from_numpy(coverage.copy()),
             'scratch_y': fusion['scratch_y'].detach().cpu().clone()}
+    seal(data)
     temporary = path.with_suffix('.tmp')
     with temporary.open('wb') as stream:
         torch.save(data, stream)
@@ -171,6 +176,7 @@ def save_checkpoint(fr, fusion, path, metadata, surface, coverage):
 def restore_checkpoint(fr, fusion, path, identity):
     import torch
     data = torch.load(path, map_location='cpu', weights_only=True)
+    verify(data)
     assert data['metadata']['identity'] == identity, 'Checkpoint inputs or executable sources changed'
     assert len(heads(fr)) == len(data['heads'])
     for state, saved in zip(heads(fr), data['heads']):

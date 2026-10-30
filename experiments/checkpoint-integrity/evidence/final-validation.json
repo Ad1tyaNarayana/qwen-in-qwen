@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "branch": "tiny-llm",
+  "head": "e7bd0777c41ffa36c1f22602ac02663e4cb15bdb",
+  "audit_unchanged": true,
+  "upstream_clean": true,
+  "article_sha256": "ed2b7e9b783187665770bce2ef51d680961842031803ea845f15eeb08da6042c",
+  "figures_visually_inspected": [
+    "two-loops.png",
+    "narrowing.png",
+    "controlled-measurement.png"
+  ],
+  "gpu_mutations_rejected": 7,
+  "unmodified_checkpoint_exact": true,
+  "controlled_measurement_status": "pass",
+  "scalar_over_ndot_generation_ratio": 3.0148939902096714,
+  "gpu_lock_released": true,
+  "no_gpu_workers": true,
+  "commits_created": false,
+  "pushes": false,
+  "remaining_limits": [
+    "One complete execution per binary; no repeated-run uncertainty estimate",
+    "Stock checks are bounded prefixes only",
+    "Blind review pending",
+    "Legacy checkpoints without integrity metadata rejected"
+  ]
+}

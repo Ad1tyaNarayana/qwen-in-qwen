@@ -11,6 +11,8 @@ import threading
 import time
 import types
 
+from checkpoint_integrity import seal, verify
+
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -83,6 +85,7 @@ def build(a, meta):
         reference_tokens_used_as_inputs=False, reference_machine_run_called=False,
         boot_state_only=True, explicit_full_history_reset=True,
         scripts={str(p.relative_to(a.repo)):sha(p) for p in [Path(__file__),
+            a.repo / 'experiments/tiny-llm-ndot/checkpoint_integrity.py',
             a.repo / 'experiments/neural-accelerator/constructor.py',
             a.repo / 'experiments/neural-accelerator/compact.py',
             a.repo / 'experiments/neural-accelerator/integer_counters.py',
@@ -121,6 +124,7 @@ def save(fr, fused, path, binding, offset, seconds, wall):
     state = dict(binding=binding, offset=offset, compute_seconds=seconds, retained_worker_seconds=wall,
                  x=fr.x.detach().cpu().clone(), tok=fr.tok.detach().cpu().clone(),
                  heads=[{k:st[k].detach().cpu().clone() for k in ('S','hist')} for st in heads])
+    seal(state)
     temp = path.with_suffix('.tmp')
     torch.save(state, temp)
     replace(temp, path)
@@ -129,15 +133,16 @@ def save(fr, fused, path, binding, offset, seconds, wall):
 def restore(fr, fused, path, binding):
     import torch
     state = torch.load(path, map_location='cpu', weights_only=True)
+    verify(state)
     assert state['binding'] == binding
     heads = [st for st in fr.ex.steps if st['kind'] == 'head']
     assert len(heads) == len(state['heads'])
-    for st, saved in zip(heads, state['heads']):
-        for k in ('S','hist'):
-            assert st[k].shape == saved[k].shape
-            st[k].copy_(saved[k])
-    fr.x.copy_(state['x'])
-    fr.tok.copy_(state['tok'])
+    pairs = [(st[k], saved[k]) for st, saved in zip(heads, state['heads'])
+             for k in ('S', 'hist')] + [(fr.x, state['x']), (fr.tok, state['tok'])]
+    for target, saved in pairs:
+        assert target.shape == saved.shape and target.dtype == saved.dtype
+    for target, saved in pairs:
+        target.copy_(saved)
     fr.ex.y.zero_()
     fused['scratch_y'].zero_()
     return state

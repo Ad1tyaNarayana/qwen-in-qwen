@@ -1,0 +1,83 @@
+{
+  "query_ids": [
+    41,
+    1074,
+    6008
+  ],
+  "query_window": "four days preceding 2026-10-30 query",
+  "events": [
+    {
+      "utc": "2026-10-30T14:48:59.465000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-30T06:24:34.461000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Home for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-29T07:35:43.531000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-28T18:23:15.832000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-28T14:05:18.700000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-28T11:25:42.730000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Home for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-28T10:08:57.118000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-28T06:54:45.641000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-28T04:13:47.524000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\WINDOWS\\system32\\winlogon.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: No title for this reason could be found\r\n Reason Code: 0x500ff\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-27T14:40:31.095000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\WINDOWS\\system32\\winlogon.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user NT AUTHORITY\\SYSTEM for the following reason: No title for this reason could be found\r\n Reason Code: 0x500ff\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-27T08:48:53.273000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    },
+    {
+      "utc": "2026-10-26T18:59:30.539000+00:00",
+      "id": 1074,
+      "provider": "User32",
+      "message": "The process C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe (DESKTOP-SQKKRHI) has initiated the power off of computer DESKTOP-SQKKRHI on behalf of user DESKTOP-SQKKRHI\\Admin for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: power off\r\n Comment: "
+    }
+  ],
+  "interpretation": "The two recent interruptions have StartMenuExperienceHost-initiated power-off events under Home and Admin. No matching 41 or 6008 event was returned in this query. The log does not establish who operated the account or why."
+}

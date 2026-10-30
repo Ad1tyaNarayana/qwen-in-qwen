@@ -1,0 +1,9 @@
+[
+  "experiments/tiny-llm-ndot/README.md",
+  "experiments/tiny-llm-ndot-fused/README.md",
+  "experiments/tiny-llm-neural/README.md",
+  "experiments/showcase/README.md",
+  "docs/articles/doom-on-qwenputer.md",
+  "experiments/showcase/manifest/stories260k-38.json",
+  "experiments/showcase/make_manifests.py"
+]

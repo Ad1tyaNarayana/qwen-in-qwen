@@ -1,0 +1,10 @@
+{
+  "ram_bytes": 65536,
+  "data_rom_bytes": 4194304,
+  "code_rom_bytes": 262144,
+  "hypothetical_parameters": 800000000,
+  "assumed_bytes_per_weight": 1,
+  "weight_bytes_at_assumed_format": 800000000,
+  "weights_fit_data_rom": false,
+  "scope": "Capacity calculation for the user-named 0.8B hypothetical model, not a built fixture. Conventional one-byte weights alone exceed data ROM, before tokenizer, tables and working state."
+}

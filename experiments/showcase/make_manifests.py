@@ -20,6 +20,9 @@ def drom_hash(path):
             image[addr-0x02000000:addr-0x02000000+length]=raw[off:off+length]
     return hashlib.sha256(image).hexdigest()
 def save(name,value):
+    correction=ROOT/'experiments/checkpoint-integrity/evidence/timing-correction.json'
+    if name=='stories260k-38' and correction.exists():
+        value['timing_correction_2026_10_31']=json.loads(correction.read_text())
     (HERE/'manifest'/f'{name}.json').write_text(json.dumps(value,indent=2)+'\n')
 
 
