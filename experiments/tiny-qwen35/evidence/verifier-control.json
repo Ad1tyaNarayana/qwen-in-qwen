@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "scope": "synthetic verifier unit control, not GPU evidence",
+  "clean_prefix_passes": true,
+  "corrupted_final_token_mismatches": 1,
+  "tokens": 16384
+}

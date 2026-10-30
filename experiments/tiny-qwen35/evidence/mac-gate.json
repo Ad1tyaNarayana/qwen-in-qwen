@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "parts": [
+    "A",
+    "B",
+    "C"
+  ],
+  "legacy_reference": [
+    {
+      "model": "stories-0",
+      "positions": 64,
+      "tokens": 121425233,
+      "output_sha256": "3e5d30301e9671ac5ecaf35fc751d9f533aa313211a9debacacefc35afa8021f"
+    },
+    {
+      "model": "custom-0",
+      "positions": 129,
+      "tokens": 1535596435,
+      "output_sha256": "faa60f90e57760f3f7a1ed5c07b0fac7d5623702c5c04d8bdb8cff2b161edb8c"
+    }
+  ],
+  "native_legacy_positions": 579,
+  "trained_free_running_agreement": 1.0,
+  "qwen_reference_positions": 6,
+  "qwen_trace_tokens": 35836005,
+  "executable_sha256": [
+    "532b05069132a30e55c560e1017989caa0795752ab6cf1f332bd78ca3088adc4"
+  ],
+  "same_executable_for_llama_and_qwen": true,
+  "sources": {
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-qwen35/final-safe/stories-0/reference.json": "b9039c721ef2d933cf38dc3ffa22268cdfddc4dd5751cc3fbf4cdfa77c11b99c",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-qwen35/final-safe/custom-0/reference.json": "dd0219ad89dda3a2db58e405aadf6fc938549751b254838653cc174729ecfda7",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-qwen35/final-safe/legacy-parity.json": "b9893a341de38150ec6b3c79b0c958be3f15c0b289d00a19556f62478f7ffd83",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-qwen35/trained-quality/quality.json": "1f5139bbde1ff1f6d6b97891b5ff3fa4c9ef2c6385207ca687c3184f92f25f0c",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-qwen35/trained-program/reference.json": "89c70371e6b75e5df09f2234e70286dca4a7cfbe6c1ece6f5d0d573394f5289b",
+    "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-qwen35/trained-program/engine.elf": "c2d16c876271ce64ae3a5faee45654ac676b462e79751b0c60f71aa7aa9202f1"
+  },
+  "projected_minutes_per_position_at_3735": 26.651796073181615
+}

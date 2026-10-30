@@ -1,0 +1,21 @@
+{
+  "stage": "complete",
+  "mac_gate": "pass",
+  "native_legacy_positions": 579,
+  "legacy_reference_positions": {
+    "stories260K": 64,
+    "custom": 129
+  },
+  "trained_reference_positions": 6,
+  "training_seconds": 2609.6109134,
+  "primary_float_matches": 167,
+  "primary_float_predictions": 167,
+  "all_six_float_matches": 291,
+  "all_six_float_predictions": 327,
+  "all_six_free_running_agreement": 0.8899082568807339,
+  "neural": "pass: full trace, all RAM and all register copies exact on Mac",
+  "stock": "pass: 16,384 actual stock HF trace tokens exact, guarded full-map resident model",
+  "remote": "C:/Users/Admin/qwenputer-games-work/artifacts/tiny-qwen35-covariance-20261030",
+  "updated_utc": "2026-10-30T08:21:31.853378+00:00",
+  "gpu_lock": "released; no GPU lock observed after export"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "output_sha256": "2f7a8ceed5bc71b7322e54ec539d8badf68d214c34d3f0c9178d715697d69ff0",
+  "asan": true,
+  "ubsan": true,
+  "fwrapv": false
+}

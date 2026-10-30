@@ -1,0 +1,35 @@
+{
+  "prompt": "A little rabbit found a shiny stone.",
+  "first_divergence_position": 28,
+  "integer_token": 880,
+  "float_token": 282,
+  "float_margin_for_selected_tokens": 0.008739233016967773,
+  "float_top5": [
+    {
+      "id": 282,
+      "piece": " p",
+      "logit": 3.326157331466675
+    },
+    {
+      "id": 880,
+      "piece": " shiny",
+      "logit": 3.317418098449707
+    },
+    {
+      "id": 748,
+      "piece": " pretty",
+      "logit": 3.139415979385376
+    },
+    {
+      "id": 268,
+      "piece": " b",
+      "logit": 3.0154621601104736
+    },
+    {
+      "id": 768,
+      "piece": " red",
+      "logit": 2.8510570526123047
+    }
+  ],
+  "scope": "Free-running float generate scores at first divergence; no guest state or teacher-forced neural values"
+}

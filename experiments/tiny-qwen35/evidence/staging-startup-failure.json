@@ -1,0 +1,9 @@
+{
+  "stage": "failed",
+  "utc": "2026-10-30T04:44:56.842920+00:00",
+  "error": "CalledProcessError(1, ['ssh', 'gpu', 'if not exist C:/Users/Admin/qwenputer-games-work/tiny-qwen35-runtime mkdir C:/Users/Admin/qwenputer-games-work/tiny-qwen35-runtime'])",
+  "kind": "staging startup failure before GPU launch",
+  "numerical_failure": false,
+  "gpu_tokens_generated": 0,
+  "fix": "Use a quoted Windows backslash path for cmd mkdir"
+}

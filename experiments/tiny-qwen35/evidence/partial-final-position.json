@@ -1,0 +1,7 @@
+{
+  "scope": "partial actual GPU trace entering final position; not final validation",
+  "trace_tokens": 30064896,
+  "mismatches": 0,
+  "observed_BYTE_output": "@0 1 402 580338588 0\n>Once\n@1 402 407 2869108005 0\n> upon\n@2 407 261 1834393023 0\n> a\n@3 261 378 4150177918 0\n> time\n@4 378 941 2897540521 0\n>,\n",
+  "actual_sha256": "4071a5de9e9a54f24a288bcd854896c48cb0967170eb7568a54d3ca7d9b2e26a"
+}

@@ -1,0 +1,20 @@
+{
+  "observed_utc": "2026-10-30T06:26:23.260301+00:00",
+  "ssh_error": "No route to host 192.168.29.162 port 22",
+  "last_heartbeat_tokens": 16253184,
+  "last_heartbeat_mismatches": 0,
+  "partial_mac_checked_tokens": 15384832,
+  "worker_state": "unknown while host unreachable",
+  "action": "read-only retries; detached worker and existing checkpoints not modified",
+  "coordination": "Orchestrator confirms missing shared ControlMaster; user restoring access. Only ssh -O check gpu retries until restored.",
+  "mac_observer_pids_suspended": [
+    10421,
+    25726
+  ],
+  "remote_job_or_checkpoint_changes": false,
+  "run_failure": false,
+  "resolved_utc": "2026-10-30T06:37:23.508883+00:00",
+  "resolution": "Orchestrator reports PC power shutdown and restart; access restored; no Python jobs; own lock retained",
+  "checkpoint_restore_offset": 16318720,
+  "replay_tokens": 40960
+}

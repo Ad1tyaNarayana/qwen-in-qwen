@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "updated_utc": "2026-10-30T08:21:31.853378+00:00",
+  "parts": {
+    "A": "pass",
+    "B": "pass",
+    "C": "pass",
+    "D": "pass"
+  },
+  "artifact_bindings": {
+    "mac-gate.json": "d6638a5dc4e192eb886a76e502681ecaf2df6c050d55c6c1dc9dcfba94a13c1f",
+    "neural-validation.json": "af41da1e5ec1d3135c4cc5208c7eb4868bab524783fbd9b8cd45c0dbf0c13a9b",
+    "gpu.json": "43ceaa5fa59651e8dbd8756c30c2b776364523b8b272b163ad158fffc9f31e7c",
+    "stock.json": "5b2159a1833359f226277c5054430abd0285ac6f4b01f89738f3cfe34da6c72e",
+    "summary.json": "73137b089acbfc2a0d7002902e3e527df6b020f9833761722f05fdf08d07f652",
+    "recovery-checkpoint.json": "346869bb31b7b449aa39eb68ec5e33c983061974d854b91b77d9e0481637bdf0"
+  },
+  "validator_sha256": "54388ac8bc6830cdcea5ce33662a3ba7e5476d5252f1e4e3df353fed20e389b9",
+  "runtime_sha256": "4e071bdb7f15c9733464685711ae6cac12e86bda564655ec2d529938792ceda8",
+  "gpu_lock_released": true,
+  "commits_created": false,
+  "limits": [
+    "Runtime context 64 for the trained model",
+    "89.0% free-running greedy agreement across six inspected prompts; these are not unseen evaluation prompts",
+    "Stock HF result is a low-level trace prefix and completes no guest LLM prediction",
+    "Neural timing excludes the power outage and discarded work replayed after the last actual checkpoint"
+  ]
+}

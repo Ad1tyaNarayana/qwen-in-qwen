@@ -1,0 +1,4 @@
+{
+    "error":  "Resumed full stage failed: 1\r\nAt C:\\Users\\Admin\\qwenputer-games-work\\tiny-qwen35-runtime\\.cache\\tiny-qwen35\\resume-covariance-20\r\n261030.ps1:26 char:24\r\n+ ... p.ExitCode -ne 0) {throw (\u0027Resumed full stage failed: \u0027+$p.ExitCode)}\r\n+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (Resumed full stage failed: 1:String) [], Runtime \r\n   Exception\r\n    + FullyQualifiedErrorId : Resumed full stage failed: 1\r\n \r\n",
+    "complete":  false
+}

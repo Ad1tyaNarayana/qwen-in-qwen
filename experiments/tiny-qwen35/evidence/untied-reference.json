@@ -1,0 +1,896 @@
+{
+  "status": "pass",
+  "kind": "independent RV32IM+NDOT4 reference from ELF boot",
+  "native_output_exact": true,
+  "complete": true,
+  "fault": null,
+  "exit_code": 0,
+  "tokens": 11304670,
+  "instructions": 8006395,
+  "ndot4_instructions": 696672,
+  "sha256": "b18c9a573ca64e4f8a521218bf74246ae7f8909a22994d1691e5017962d88f7e",
+  "chunks": [
+    {
+      "end_token": 65536,
+      "sha256": "c5d943347423d93628454c779341c77b7a830f70899c91120e61bd773a11a6fd"
+    },
+    {
+      "end_token": 131072,
+      "sha256": "46d1c98b2e76bf1c6576a08f919a301d21830dc7be91b86415d459323ba4536c"
+    },
+    {
+      "end_token": 196608,
+      "sha256": "badb323c18cd00961b668348f1940ac7fb4e88e647ae69544f3fcd1227c84c64"
+    },
+    {
+      "end_token": 262145,
+      "sha256": "859cebc649e7d717a8f28a63145b2ad9eff01680fbc8cdd89d87a0df26323add"
+    },
+    {
+      "end_token": 327682,
+      "sha256": "cf75f58ca8010dc18654db3df5bf4be7467df67723b48df56bf15ddd39c5b677"
+    },
+    {
+      "end_token": 393219,
+      "sha256": "25ea6c562edcd53abe5cc15ff2e5b4ef2d990d9a81d5a1d338acefea35eefab7"
+    },
+    {
+      "end_token": 458756,
+      "sha256": "26793e03cecf79f73d5a5abbc3af329da17a7d08ddece63743be8155694190dc"
+    },
+    {
+      "end_token": 524292,
+      "sha256": "9e02d66db07ce2479fc824e3d75cfe5723314a732abef29c8ff02755f6be1e40"
+    },
+    {
+      "end_token": 589828,
+      "sha256": "ac7e9c56331e6ce6b4d6d51610b27193279010c21b3f213b4604eee6f017cd16"
+    },
+    {
+      "end_token": 655365,
+      "sha256": "b3b83b9a822544cd7d774f567557a71e69596d357985a3496090547676a6e176"
+    },
+    {
+      "end_token": 720901,
+      "sha256": "e8779d968a3c9191bea3eb36a8dca998fb9820d16356780a381966925dc7848e"
+    },
+    {
+      "end_token": 786437,
+      "sha256": "549d78d022142cc3ced9cba940dec00c101be870363fff19fbd3f5a9c69af83a"
+    },
+    {
+      "end_token": 851973,
+      "sha256": "8cf2b70679d2d00759307462166e6c1885fb3ddbdd95d1dd5292b7ede2c688f4"
+    },
+    {
+      "end_token": 917509,
+      "sha256": "f7a05bc498d7885aeffa70bd88530688b30c8a393bf55ba5e2f5c0d518e2f9a8"
+    },
+    {
+      "end_token": 983045,
+      "sha256": "679a7ff2ccee1437525caa915b7be612ce22edff1cdd530e8583b431dd6269db"
+    },
+    {
+      "end_token": 1048581,
+      "sha256": "621e7befe9e801acf267715c458db9cb38f2737b1ef38e6522de8420f6755e43"
+    },
+    {
+      "end_token": 1114117,
+      "sha256": "f6578b959c63bca8b7b7b4041bb69aa9a31d9f9d62a82350bf7c269cb05538b9"
+    },
+    {
+      "end_token": 1179653,
+      "sha256": "8c03c9208aeb0c729f0c8dd8e6f2d403cbadbd6302987c10a24a1548df6f15a1"
+    },
+    {
+      "end_token": 1245190,
+      "sha256": "e9772e0158e0d13d9d36b8f1544b79898061def17142d0e6fce98264a2d0f61e"
+    },
+    {
+      "end_token": 1310726,
+      "sha256": "f8031b536a5097bc18acabfc4329572cdec2fa394a89fc166fea17585a9c2175"
+    },
+    {
+      "end_token": 1376262,
+      "sha256": "11656155d97d69cabafe53eebb0e2d45ae9b34f0fab98164e703191ae6952e87"
+    },
+    {
+      "end_token": 1441798,
+      "sha256": "8915b15102257cf7ddcbab24d5b4df6ad4a023115fe3050fee5c80f2df5231e0"
+    },
+    {
+      "end_token": 1507334,
+      "sha256": "513c39880817c4c82e6ce6b309d11dbc0d57025ef3568edb00f9949e004a21b4"
+    },
+    {
+      "end_token": 1572870,
+      "sha256": "cf57e85c6c9aa5b34877190294626cfe6604cfef72cf97c85aed54641e6f4259"
+    },
+    {
+      "end_token": 1638406,
+      "sha256": "d33ae6f891cd8bce9633b1e25fecd64f9c3f3f0fa9724b5224d3803d45242c1d"
+    },
+    {
+      "end_token": 1703942,
+      "sha256": "bf34996b7b625694bc4fbcb490c9f192b75e62a3191d205a25f0614192a4bc4e"
+    },
+    {
+      "end_token": 1769478,
+      "sha256": "a9ac0895b4eff24a10082533c08fa59793f4c75def2106608075b327d8f8433f"
+    },
+    {
+      "end_token": 1835014,
+      "sha256": "785ac15c9b100f7ecb947cb0b04d8335db1f21d12cb8ff0b983861f87607699d"
+    },
+    {
+      "end_token": 1900550,
+      "sha256": "ece326a2d478702486047a73ae0dd20c44c0f2fe387da072039f95a13a28bac3"
+    },
+    {
+      "end_token": 1966086,
+      "sha256": "edb2fb2d74682f41accc37b2c07dea7d7c77b2ef9837f116611f5fba67600af5"
+    },
+    {
+      "end_token": 2031622,
+      "sha256": "6c9ade85fc0065dbe0523ececa25a1f8b9b52d9ccec48a7e26c6958553639b33"
+    },
+    {
+      "end_token": 2097159,
+      "sha256": "57f211037b16d829079e364338b1affa254daef1bed44b667046c3f463e0318c"
+    },
+    {
+      "end_token": 2162695,
+      "sha256": "bdd0714000e66e58592e3be5464ff10effbeb388ef6c86bb9a7619e4be6293fd"
+    },
+    {
+      "end_token": 2228231,
+      "sha256": "5d786ab38ac378c00666766f223b56e074fa4dca8397d796fe6d788a01aecab8"
+    },
+    {
+      "end_token": 2293767,
+      "sha256": "7443733f0067a1d590d22cddf2c9347be7580cb9511f1e9bca4896a52b70994a"
+    },
+    {
+      "end_token": 2359303,
+      "sha256": "33ef50cffd33ea842817b4de5aad8ed4cc40551ffcc8052df9e56c8db4fa0117"
+    },
+    {
+      "end_token": 2424839,
+      "sha256": "e4188dd9483dc6cd3c84140857a8054141257c77c13bad4bdcbadd8ad2c97fab"
+    },
+    {
+      "end_token": 2490375,
+      "sha256": "c6ed953d17e448c77d4e4802028b3ab008b46b95c18573ab5d637bbb80aa9d4a"
+    },
+    {
+      "end_token": 2555912,
+      "sha256": "1e4b053def4906b6e712d79c3f5145ea963a467853cae531dfd50b70667da3b6"
+    },
+    {
+      "end_token": 2621448,
+      "sha256": "ddb9365935901580f62cb7d8202fdb59db15bfce5bf178c3bdfd90b6de14a855"
+    },
+    {
+      "end_token": 2686984,
+      "sha256": "b12ad01c8d25720df813b5b46301f247eda416fb9123e6a5bfdcd9aa138b2f09"
+    },
+    {
+      "end_token": 2752520,
+      "sha256": "28d37ff25d39c1f351306733947de70f295956ad63e3889d14de3206d697c9ef"
+    },
+    {
+      "end_token": 2818057,
+      "sha256": "76f67910814a0bcad1ae61731cb940484ba219a330886d3987d7771d1715d9ba"
+    },
+    {
+      "end_token": 2883593,
+      "sha256": "8554d650c904a1027f6b11f0e2c4a3a3ec28843053496fd9a427191af1675c89"
+    },
+    {
+      "end_token": 2949129,
+      "sha256": "d7f04d376e6a6666d8a1dbf6b30cf23b612a3cfcaa305a6ce0ee348dedf77c7f"
+    },
+    {
+      "end_token": 3014665,
+      "sha256": "a57ae84f4beab251a181f387a4bbef534a3e32f50c579e49c1a1db4acd04df23"
+    },
+    {
+      "end_token": 3080201,
+      "sha256": "b7fe87e6607e05202ba688279fb92ee8f3b30964ad23cf48b8ee458a1eb13b53"
+    },
+    {
+      "end_token": 3145738,
+      "sha256": "781e02f18955887dac3f1830dae448d75081ebc3ef8752b07aaba0604a234e2e"
+    },
+    {
+      "end_token": 3211274,
+      "sha256": "2519b9916e0c79b164e7ca8ab45af89ca99debfd595e36011f4e2c34abe5cb19"
+    },
+    {
+      "end_token": 3276810,
+      "sha256": "b4d2e1fc6c5214a2e1c89b51820f53e71bfe78c3bfff6a9fc9d19f3027310ed3"
+    },
+    {
+      "end_token": 3342346,
+      "sha256": "8fd860020b9f359b180e48577d6faf579e8bcae23933064de0c6d6f4da1d7d38"
+    },
+    {
+      "end_token": 3407883,
+      "sha256": "6440b4a666ef142fc6ebb70885eb9fbe618279c772b39d9342929e8e8cc11c8e"
+    },
+    {
+      "end_token": 3473419,
+      "sha256": "865e8d3f2b83ce0a88880dd8a036eb6170decb13bcf9d9ca92cd949d276c2ec7"
+    },
+    {
+      "end_token": 3538955,
+      "sha256": "6af827a2c4c1b7450135fe410d244ea94a2d255e4615b9520b636d85ed391b36"
+    },
+    {
+      "end_token": 3604492,
+      "sha256": "0739eb9ad6da75db38519019cbad9d5bfa727c21150567d60349c9003d8d9bd0"
+    },
+    {
+      "end_token": 3670028,
+      "sha256": "91ac435af4d8141639080aa56f48d37305411c68d8a53440214d53a9efe13062"
+    },
+    {
+      "end_token": 3735565,
+      "sha256": "ccb14f0b109e40c63bcef315c49b9b46231aae27c47b74fcf8deac42c74b18fe"
+    },
+    {
+      "end_token": 3801101,
+      "sha256": "29f2dee031128bdbe199666cec083cbc16ff2b69b405e9fd3c95b7adeed5cc1b"
+    },
+    {
+      "end_token": 3866637,
+      "sha256": "da6269ae33879f075dcbe6577b14e188fed1d02eef09ca099bfc754f8f847a61"
+    },
+    {
+      "end_token": 3932174,
+      "sha256": "942dd27d1bd782fe12f1d8ee092456fffd9ebc7220a94bde5c5ceeeb97b792fa"
+    },
+    {
+      "end_token": 3997710,
+      "sha256": "2a50e22ae3fd1aa1fe8cae768b2824e378cfb5f66de25991d5d971fd8c360e74"
+    },
+    {
+      "end_token": 4063246,
+      "sha256": "804a78a5170840f44d847ffd39cd0cc7f04d5521400c950b42c8b11f15ef9ca3"
+    },
+    {
+      "end_token": 4128783,
+      "sha256": "df96bf1bdf9e5396bc7f2725c3477983524e0e834b38d0c7aca67b7b1fc56fa1"
+    },
+    {
+      "end_token": 4194319,
+      "sha256": "12353e29b4ee2316042df30cde3b9ac85f54839c7d16432293fb5175e0ab3d5e"
+    },
+    {
+      "end_token": 4259855,
+      "sha256": "833eb3138fa573b8ae4d156d9cf531e570c4a4555fbac1154636135c25e7af69"
+    },
+    {
+      "end_token": 4325391,
+      "sha256": "5a4760063f9469a2bd7916f25e8e23b47d168780623221f7da41238f87306e05"
+    },
+    {
+      "end_token": 4390928,
+      "sha256": "e72796af22647d8632b55e9b6c6f0306bf870de6c4629df583e06b9e30b5fa0c"
+    },
+    {
+      "end_token": 4456464,
+      "sha256": "d03a63e3006677c23e478ca2d8585c6bb85460b8d7af811e121610da8db280f7"
+    },
+    {
+      "end_token": 4522000,
+      "sha256": "571bc03672c0026fb1b2e16b3725e6d76921ffc044aad32cc241687f377321ac"
+    },
+    {
+      "end_token": 4587536,
+      "sha256": "a2fc6ca83f52c4c5291425d35b8966a145e7689d2137da1952486fe1d0675aa9"
+    },
+    {
+      "end_token": 4653072,
+      "sha256": "182ce5d68625570f72014f9e569e1ad96b276d6a9818270f9418ba4c158ee4aa"
+    },
+    {
+      "end_token": 4718609,
+      "sha256": "441d47c1cc5cd4b73e5d8310b3cce5d2f37a4c3b1650c3ed45ae7de4345b24fc"
+    },
+    {
+      "end_token": 4784145,
+      "sha256": "c71f83b4806289b16be20d4f937b284f051912f69dfa0c79bfd9474111830ce9"
+    },
+    {
+      "end_token": 4849681,
+      "sha256": "0cb84fce6a2158b11f209a675bed5419ab5060185261895b9f75b0031c85aaed"
+    },
+    {
+      "end_token": 4915217,
+      "sha256": "257894fce46a8706ce26ced0a17d925875f5347eab4de80e6697e5adeaecf2da"
+    },
+    {
+      "end_token": 4980753,
+      "sha256": "cc6ff5ee015330ec7e00283049479db74c8883d9751fd99713cc7476c62182c5"
+    },
+    {
+      "end_token": 5046290,
+      "sha256": "b2964c32bbc03f52360e8b9afdf4a09f071a9acc4be1fb75949920f773c51108"
+    },
+    {
+      "end_token": 5111826,
+      "sha256": "8b2e43245ee2c4921970e369cd9ee955e040a4779e31673da80805052e60623a"
+    },
+    {
+      "end_token": 5177363,
+      "sha256": "3144f4a1728620c3aa8c47bfc3757393c76168431629cdc03032e8437b2d8823"
+    },
+    {
+      "end_token": 5242899,
+      "sha256": "1e2a68c0e2fa83a89daa371dd65de9744266bee61cd649237c5ecc0a85b1093c"
+    },
+    {
+      "end_token": 5308436,
+      "sha256": "583eea22202a3d688740403ee58702ebb592170d1051b5819fb3414f54cf5d7d"
+    },
+    {
+      "end_token": 5373972,
+      "sha256": "680e31126416d74d1183f75b1d166f9b3584eefca00415e1e0204ab706a4d3be"
+    },
+    {
+      "end_token": 5439508,
+      "sha256": "89d539d3658e36de760d720e424b2b7904c6496eba4744047e044eec98c537de"
+    },
+    {
+      "end_token": 5505044,
+      "sha256": "68460a60897177d40d3c5eca10a309ea603249580b721359b3fc4bf2287c51e1"
+    },
+    {
+      "end_token": 5570580,
+      "sha256": "17c63787d86cf5d24b985c6cd695d1627547c7ed9916d1ea613d92d42ff1e930"
+    },
+    {
+      "end_token": 5636117,
+      "sha256": "98ff556ee3d4154f07afeeecf69715e9fc494870680f417c09381faae772fe3a"
+    },
+    {
+      "end_token": 5701653,
+      "sha256": "22ee23d30f7706a13de2646fc2d72f81fea1c806c5a1ef030c4ca94a09e47523"
+    },
+    {
+      "end_token": 5767189,
+      "sha256": "fd316a265c3e41d21a03df795f183fd56f1110a843f4453d253dd151d7472277"
+    },
+    {
+      "end_token": 5832726,
+      "sha256": "30e489033a65b1a6c4933c657eb0533a64a60a3f4f07a48a7c47aec201518e73"
+    },
+    {
+      "end_token": 5898262,
+      "sha256": "2619d6d0693243f8dd04e2dec067af65a9a0fa171e921549b2d9e1897a0aed43"
+    },
+    {
+      "end_token": 5963798,
+      "sha256": "a0814003cd01c2ad2720aeb887bfc4a40d30243b785f2b885a3d23559ab3a286"
+    },
+    {
+      "end_token": 6029334,
+      "sha256": "b0ac9f4abf92f0fa8579430cc095b02ecdea0f18dc4229f97590ae1e9b328f0a"
+    },
+    {
+      "end_token": 6094870,
+      "sha256": "96faf4999f681418450d6e2c5bf4c72126acc9fcbd8e10898828b50a421c8ef4"
+    },
+    {
+      "end_token": 6160406,
+      "sha256": "0c6ffc9db360006539980fe2c67afa78155f82d38a7d358ab3c2997d32f93fea"
+    },
+    {
+      "end_token": 6225942,
+      "sha256": "8ded7e9973ff4bb1c5c1e881989c3869085db8b3361cead467e97223ce680509"
+    },
+    {
+      "end_token": 6291479,
+      "sha256": "7a699ac6b029bb79d735de2906019e7a2cc7d5224afb24a8ccb6505ed72077f5"
+    },
+    {
+      "end_token": 6357015,
+      "sha256": "7c681605e0b6511261838ab4b14880cdc55868704c7ba5acd68a835d57ff2189"
+    },
+    {
+      "end_token": 6422551,
+      "sha256": "6ea01c46e08da717a2d85af9054dd621979c3167346b03ffac219b3ad7f7b481"
+    },
+    {
+      "end_token": 6488088,
+      "sha256": "85bdac2f448819e010a3fac14a6f36b9639218dfb786ecc8b029ff55b361c147"
+    },
+    {
+      "end_token": 6553624,
+      "sha256": "9c53181b88527f785225d262389f3608cb003d6feec8e1cf0246eb91e47e6ce1"
+    },
+    {
+      "end_token": 6619161,
+      "sha256": "4817d16cbb6ae8867592706cb303771367b2f613817f0e73d0c89b95bede6979"
+    },
+    {
+      "end_token": 6684698,
+      "sha256": "cb76daf5add27dcc25121c5f11c6aa84afd460e9ee93d9f9609483971b8aaae4"
+    },
+    {
+      "end_token": 6750236,
+      "sha256": "da6abc6d6564904cf8c862bb5505489eb72503b86fbf574492dd281d8a8a59c1"
+    },
+    {
+      "end_token": 6815773,
+      "sha256": "254fa50c2683a3f62a52cc48310c6dfd3e4dee39ad8c685e0fc6dd2fe2a0d16f"
+    },
+    {
+      "end_token": 6881309,
+      "sha256": "516397e102de3f53f877495c6e9c88b4aba5c64ec0e6f2ad6d5da845ea3f402d"
+    },
+    {
+      "end_token": 6946845,
+      "sha256": "1ea67cb3ddb83906e5368dc991c827a0a7e85ff04b5c84abfa6e329da9083d1d"
+    },
+    {
+      "end_token": 7012382,
+      "sha256": "ca4993f5102c1930432ef3bfbb98e69fe1be8e8e1fd363e85b3b343c6d23bbab"
+    },
+    {
+      "end_token": 7077918,
+      "sha256": "0fe8a6bb3c6ccb6d188c956b6bf0c017d51a230bb72416c51cb7b1186ff65bca"
+    },
+    {
+      "end_token": 7143455,
+      "sha256": "6684f43d0fd69c77ee0f6370aadd447a94f6d39adb5f5385a37c8b028dbddbd1"
+    },
+    {
+      "end_token": 7208991,
+      "sha256": "c487a4bab711f495898aa66cb6412d41868abbe891e4645e978a975ea7f21aeb"
+    },
+    {
+      "end_token": 7274527,
+      "sha256": "5035b3820d4de6cbe4652a31c41da66e4080f5f200e88678b5c9ea440d301ca7"
+    },
+    {
+      "end_token": 7340063,
+      "sha256": "eb31550d03a72e67f400ad6e4172e21048ad76fed0840616ca14a12762cf9155"
+    },
+    {
+      "end_token": 7405599,
+      "sha256": "2518f44cb84a2c7435919cb9e7cbd7e09ebe5337c77976e17412b4e5b44a8c88"
+    },
+    {
+      "end_token": 7471135,
+      "sha256": "9bb6a7093924d7011910feace5df0d2b2969ea28db0cb3d964d54ba60d22688c"
+    },
+    {
+      "end_token": 7536671,
+      "sha256": "43392c9c8abf706ebd0e8c4c0329f85e3cbf151e920327bddeace1a43d459207"
+    },
+    {
+      "end_token": 7602207,
+      "sha256": "ac1eeba73b2f505efbcde9ca6c7d3588e2b182d3a29b655d0fa57a515a5b3c9a"
+    },
+    {
+      "end_token": 7667743,
+      "sha256": "83541a7274bdbf989d28e31442ba82b9b2d75d66938f5d91e59723a3e53c03e1"
+    },
+    {
+      "end_token": 7733280,
+      "sha256": "4365150984ab114904c2f090f92d6d97d929a6796d03ee52b19b9a49591a70ec"
+    },
+    {
+      "end_token": 7798816,
+      "sha256": "06aef043e00c001407ecb8414d33c9d680d405ae555adf2654702b56e871a41c"
+    },
+    {
+      "end_token": 7864352,
+      "sha256": "2dd814701f50f40cf0f84fa0b9b110e7c88922442d7c99d28b96af9760f0b2c8"
+    },
+    {
+      "end_token": 7929889,
+      "sha256": "9e02f88878a7f7dddca6d59317178ca685819ee17207299882392f1b8e1922a5"
+    },
+    {
+      "end_token": 7995425,
+      "sha256": "40def296635716659011a558280135d09837dfef88d97a5a79e6ce844ea2f151"
+    },
+    {
+      "end_token": 8060962,
+      "sha256": "069a0709b968fcb1a730cda71a25ed87d56bab8e8bfecb766ae48f607099c91d"
+    },
+    {
+      "end_token": 8126498,
+      "sha256": "ce0ae16f0bfac2eff33a566354010d4d56c92f82cb1ab6c0c742e79bb6e2eebf"
+    },
+    {
+      "end_token": 8192034,
+      "sha256": "01dfb43b88e2351bf4f581e561940317112d5b8a840c050f76ddf99f441f4596"
+    },
+    {
+      "end_token": 8257574,
+      "sha256": "b25a8cc6cffc0f03af03ec24a2ecf735cdd66f36ca7c18d6d8d8f05c18a943f7"
+    },
+    {
+      "end_token": 8323110,
+      "sha256": "a16a79f45a2e87cc3bc5e3dad5fd78adf245fdfe86bf1a54fb317fb42dff4ff7"
+    },
+    {
+      "end_token": 8388647,
+      "sha256": "f2055a36002f9c8cc34595d8b63af079b0c4234040e3ed0007bb624c49e91042"
+    },
+    {
+      "end_token": 8454184,
+      "sha256": "d4b7e642822922417fcf17fab710823386404a5d5ff1999227df51386bc44109"
+    },
+    {
+      "end_token": 8519721,
+      "sha256": "b9ec2e0d6b31e25caf1488aa397dfbb0cfa7a07b93889324e803e3ef9a9f8c3a"
+    },
+    {
+      "end_token": 8585257,
+      "sha256": "8e539660a0fa169475a06562b6e71fb514f8bc7eb601139133fecb32896fc0f3"
+    },
+    {
+      "end_token": 8650793,
+      "sha256": "c244038517afcf2a1cffd3e2196429c787e80628bf0b3bff854d992d55601921"
+    },
+    {
+      "end_token": 8716329,
+      "sha256": "f3dea971b67e883f3e4a4386046b1523869d6328dfb2b202821546f4886c6554"
+    },
+    {
+      "end_token": 8781865,
+      "sha256": "c744e3c013b1d66be5301f7306124cbea6891ae4aafea56225c4e33e41b78616"
+    },
+    {
+      "end_token": 8847402,
+      "sha256": "8b4d90dea92d1038cd33276e22b2a52cdd5d78fd36985e60456b7c2a6e595d5d"
+    },
+    {
+      "end_token": 8912938,
+      "sha256": "1ea3465d28a202bc87150b4bfd6e5b61abea4a2525c416079b54dbd14a984f46"
+    },
+    {
+      "end_token": 8978474,
+      "sha256": "ec92bc2f736e224fa3c76243b176b44834e007ea905f1049e46f8ae099353103"
+    },
+    {
+      "end_token": 9044011,
+      "sha256": "b7cec5a18a14db02ac69c6e4085da45c256804893ee1d16deefb29408ca60bac"
+    },
+    {
+      "end_token": 9109547,
+      "sha256": "67be7356c97bfd16ff1cff69ffb07dcd0935406ebb348afc64ec3c04fad8a4f9"
+    },
+    {
+      "end_token": 9175084,
+      "sha256": "38047540735705295a2956cdc10dc9d5e81462496aa414fe465c5676ff6d56d9"
+    },
+    {
+      "end_token": 9240620,
+      "sha256": "6c3590c631a7719e8be44488f52d1ebe56b56075f4d037adce96ab5194650738"
+    },
+    {
+      "end_token": 9306157,
+      "sha256": "ff6f87932f3ac0d28ebe93154992351a6b89dfabaa6e66e94d857bb525909f89"
+    },
+    {
+      "end_token": 9371694,
+      "sha256": "3c191a6cf6877604d123644e03ed9d55f0dd12670da08e06244a5627b16e6fa3"
+    },
+    {
+      "end_token": 9437231,
+      "sha256": "e754733e5e7a8df3e57e5aa6b0d490a8bf7b04822c07e845b8db1c7e8e46a113"
+    },
+    {
+      "end_token": 9502767,
+      "sha256": "4a3cb86722ccb58d64cb24bc2ffa5049957a7c06437338ec0aa17e11491bd660"
+    },
+    {
+      "end_token": 9568303,
+      "sha256": "c585cd2eac90f6488450a26b7d095380250122d018d2e1ecb3ac918e3fa3acf8"
+    },
+    {
+      "end_token": 9633839,
+      "sha256": "90a3d2101cbf7af43e873cdfb90f5815ee54bd3ce545e50a976e552b9535c065"
+    },
+    {
+      "end_token": 9699376,
+      "sha256": "3f40864b9923cf4daf79561de1b17e1aa9c3ecc73b47d78e3d125994966c312d"
+    },
+    {
+      "end_token": 9764913,
+      "sha256": "fc825ae7185dc64f7a5feb765b2552cdb6287800b23b72ecb59fa5b9917e92f9"
+    },
+    {
+      "end_token": 9830449,
+      "sha256": "66bfac72657efdb8155c175cef59564b9683871d633a80ff76eaf107704d7796"
+    },
+    {
+      "end_token": 9895985,
+      "sha256": "15bd1fb8906435a8fce6a5e0c1d8f01f0129f2249a57ab8d62b7fbab93d9c4d0"
+    },
+    {
+      "end_token": 9961522,
+      "sha256": "0d97377c2eb35bee64efc98f5bbb5d374d95448d5f4f37dd72abd13c48e7ad70"
+    },
+    {
+      "end_token": 10027058,
+      "sha256": "5db56e338600b621a480a76d1375a6da63019d5ccc70393271432dc3cb6e19a4"
+    },
+    {
+      "end_token": 10092594,
+      "sha256": "be37248e2db00c6b11e525c16a0e5d47fca268b897cf91a22014724148534e83"
+    },
+    {
+      "end_token": 10158130,
+      "sha256": "7d72479000b8ff973d08e4e82cc277ca257351e3e6579806d4bbec10b80db56f"
+    },
+    {
+      "end_token": 10223666,
+      "sha256": "917882021e90f38a4517961f4ee2be894383b73471c7e2e378b3f61219c663f7"
+    },
+    {
+      "end_token": 10289202,
+      "sha256": "2a961d4d5b239b396b8716927c93130697e9628ba3ca86f54f9e875d2b810427"
+    },
+    {
+      "end_token": 10354738,
+      "sha256": "74d36d39fa49779594bd34fe9e3ab7b1d86bc3b791f2a638708f2b838fa53227"
+    },
+    {
+      "end_token": 10420274,
+      "sha256": "bfda499ea9b43436132f4b217108724638cf185b17fcd8b22b937c87d082460c"
+    },
+    {
+      "end_token": 10485810,
+      "sha256": "b75b69d8cebf73f37e2a087461c44153253e14dffb1cc84cb6ea1d00c2e3acdf"
+    },
+    {
+      "end_token": 10551346,
+      "sha256": "9208d5217e0d8dab6bb02ef3110e70dd6aaca91f9036c25b2a886782cc75f3a1"
+    },
+    {
+      "end_token": 10616882,
+      "sha256": "a6bc25b00d46ebdbafc7d75d293faa2bc9bfb61104a9cef25b1d26dc99b291bd"
+    },
+    {
+      "end_token": 10682418,
+      "sha256": "25b9975a5787ea824ae7bb958b6f876c4829aa71483e6b268004b3713445f4e5"
+    },
+    {
+      "end_token": 10747954,
+      "sha256": "e2b8469d9c98fa53bb6d5b4760663bfe6c635823feb822f32f4abbcfb46bf439"
+    },
+    {
+      "end_token": 10813491,
+      "sha256": "b15103a0b7816be5f5e91bfe25a212b9db94791aa1592e4620a2d6adbb038a4e"
+    },
+    {
+      "end_token": 10879028,
+      "sha256": "71552637fa3ecce0c5c10f779b57095d3662b9c5e581050133c71ee082594378"
+    },
+    {
+      "end_token": 10944564,
+      "sha256": "fdffeaf8f460a737323d51f057721ff350be16406658a061ae488e7e84f8c4d0"
+    },
+    {
+      "end_token": 11010101,
+      "sha256": "8b9fc416368a1c16db29fe38f7af3212ec32bf930badb37d7296f5b4ce8cb6e2"
+    },
+    {
+      "end_token": 11075637,
+      "sha256": "a383d16aaa04f600c609e2375605e555dc518f8bf20df15d29365162bf1e371e"
+    },
+    {
+      "end_token": 11141173,
+      "sha256": "ccfae7fce9791a6f8f1993432a621e800371b9fc60ed22a8dc49f310ea2d95f0"
+    },
+    {
+      "end_token": 11206710,
+      "sha256": "f1fff27c88ad1ab538ba9a10becc541656f863dc7244c9b9e446c4d2468932b6"
+    },
+    {
+      "end_token": 11272247,
+      "sha256": "fa30e3224823254c3e093f938b1d4bd7e723c985e8024e162aff061f8950c697"
+    },
+    {
+      "end_token": 11304670,
+      "sha256": "a2350021f1b9c0c48ed54ed7c3227e5850118ed59bb9ca1f006c962c5801182c"
+    }
+  ],
+  "positions": [
+    {
+      "position": 0,
+      "instructions": 1319769,
+      "trace_tokens": 1862588,
+      "end_token": 1862708,
+      "projected_minutes_at_3735": 8.311414547077197
+    },
+    {
+      "position": 1,
+      "instructions": 1326439,
+      "trace_tokens": 1874143,
+      "end_token": 3737437,
+      "projected_minutes_at_3735": 8.36297634984382
+    },
+    {
+      "position": 2,
+      "instructions": 1332055,
+      "trace_tokens": 1881133,
+      "end_token": 5619241,
+      "projected_minutes_at_3735": 8.394167782240071
+    },
+    {
+      "position": 3,
+      "instructions": 1336613,
+      "trace_tokens": 1888199,
+      "end_token": 7508094,
+      "projected_minutes_at_3735": 8.42569834895136
+    },
+    {
+      "position": 4,
+      "instructions": 1342149,
+      "trace_tokens": 1894391,
+      "end_token": 9403132,
+      "projected_minutes_at_3735": 8.453328871039714
+    },
+    {
+      "position": 5,
+      "instructions": 1346470,
+      "trace_tokens": 1900231,
+      "end_token": 11304016,
+      "projected_minutes_at_3735": 8.479388665774207
+    }
+  ],
+  "stack_bytes": 368,
+  "minimum_sp": 16842384,
+  "stack_clearance": 1776,
+  "elf_sha256": "1fe1d7daea5ec6db562f646ebb6f54f730f2688d17219584e27fcdfb9f888f6d",
+  "final_ram_sha256": "3ec1b47eeaa5a127f184c12657464d717eacc4ed1ae6c0b26d2d7f6e71ff5c81",
+  "registers": [
+    0,
+    262160,
+    16842752,
+    0,
+    0,
+    6,
+    9,
+    3435973837,
+    0,
+    0,
+    0,
+    34246056,
+    34246056,
+    689432,
+    6,
+    0,
+    33554432,
+    93,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    620,
+    4294967288,
+    4294967271,
+    8388609
+  ],
+  "final_registers": [
+    0,
+    262160,
+    16842752,
+    0,
+    0,
+    6,
+    9,
+    3435973837,
+    0,
+    0,
+    0,
+    34246056,
+    34246056,
+    689432,
+    6,
+    0,
+    33554432,
+    93,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    620,
+    4294967288,
+    4294967271,
+    8388609
+  ],
+  "steps": 6,
+  "prompt_tokens": [
+    1,
+    402
+  ],
+  "output": "@0 1 142 666037166 0\n>Once\n@1 402 142 4270131924 0\n>\ufffd\n@2 142 332 3309441460 0\n>ith\n@3 332 703 1611115762 0\n>ace\n@4 703 620 2391763897 0\n>ell\n@5 620 465 1478904540 0\n>ec\n",
+  "output_sha256": "1a74aadeedc5e84f18475d24498e61c60d2b903d928f05fd07c6c5c5770caa2a",
+  "elapsed_seconds": 16.951065915985964,
+  "prepare_manifest": {
+    "rv/spec.py": {
+      "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+      "scratch_sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016",
+      "replacements": [
+        [
+          "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+          "DROM_BASE, DROM_WORDS = 0x02000000, 1048576"
+        ],
+        [
+          "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+          "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+        ],
+        [
+          "DATA_BASE = 0x100",
+          "DATA_BASE = RAM_BASE + 0x100"
+        ]
+      ]
+    },
+    "rv/core.py": {
+      "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+      "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+      "replacements": [
+        [
+          "def build(target:",
+          "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+        ],
+        [
+          "    c = RvCore(target, text)",
+          "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+        ],
+        [
+          "hl = lits_of(EA[13:17], h)",
+          "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+        ],
+        [
+          "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+          "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+        ],
+        [
+          "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+          "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+        ],
+        [
+          "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+          "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+        ]
+      ]
+    },
+    "rv/ref.py": {
+      "original_sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638",
+      "scratch_sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638",
+      "replacements": []
+    },
+    "q35/ir.py": {
+      "original_sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b",
+      "scratch_sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b",
+      "replacements": []
+    },
+    "q35/prims.py": {
+      "original_sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01",
+      "scratch_sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01",
+      "replacements": []
+    }
+  }
+}

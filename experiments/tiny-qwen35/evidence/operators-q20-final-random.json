@@ -1,0 +1,120 @@
+{
+  "status": "measured",
+  "scope": "C operators versus unmodified HF, not neural tolerance",
+  "checkpoint": ".cache/tiny-qwen35/random-hf",
+  "l2_max_absolute_error": 2.720952033996582e-05,
+  "layers": [
+    {
+      "layer": 0,
+      "kind": 3,
+      "positions": [
+        {
+          "position": 0,
+          "max_absolute_error": 0.00027340438100509346,
+          "rmse": 0.00015624199104060155,
+          "float_rms": 0.0002983231097459793
+        },
+        {
+          "position": 1,
+          "max_absolute_error": 0.000263556488789618,
+          "rmse": 0.0001402434473735282,
+          "float_rms": 0.00044077509664930403
+        },
+        {
+          "position": 2,
+          "max_absolute_error": 0.00030681927455589175,
+          "rmse": 0.0001477251847435602,
+          "float_rms": 0.0009548872476443648
+        },
+        {
+          "position": 3,
+          "max_absolute_error": 0.0002707189996726811,
+          "rmse": 0.00014432849041261933,
+          "float_rms": 0.0005904108402319252
+        },
+        {
+          "position": 4,
+          "max_absolute_error": 0.0003156587481498718,
+          "rmse": 0.00016141292906368668,
+          "float_rms": 0.0028870387468487024
+        },
+        {
+          "position": 5,
+          "max_absolute_error": 0.0003008385538123548,
+          "rmse": 0.00014450146140322002,
+          "float_rms": 0.001203073188662529
+        },
+        {
+          "position": 6,
+          "max_absolute_error": 0.00030207529198378325,
+          "rmse": 0.00014981235560019253,
+          "float_rms": 0.0016221230616793036
+        },
+        {
+          "position": 7,
+          "max_absolute_error": 0.0003498280420899391,
+          "rmse": 0.0001474048185125128,
+          "float_rms": 0.005094760563224554
+        }
+      ],
+      "numeric_clips": 0
+    },
+    {
+      "layer": 3,
+      "kind": 2,
+      "positions": [
+        {
+          "position": 0,
+          "max_absolute_error": 0.0007467456161975861,
+          "rmse": 0.0002529138578265667,
+          "float_rms": 0.022652357816696167
+        },
+        {
+          "position": 1,
+          "max_absolute_error": 0.0007280576974153519,
+          "rmse": 0.0002771411759764677,
+          "float_rms": 0.02139272913336754
+        },
+        {
+          "position": 2,
+          "max_absolute_error": 0.0008158823475241661,
+          "rmse": 0.0002749495129895499,
+          "float_rms": 0.016237076371908188
+        },
+        {
+          "position": 3,
+          "max_absolute_error": 0.0008125267922878265,
+          "rmse": 0.000257883563607938,
+          "float_rms": 0.017298609018325806
+        },
+        {
+          "position": 4,
+          "max_absolute_error": 0.0008485913276672363,
+          "rmse": 0.00025815819581578815,
+          "float_rms": 0.01972971111536026
+        },
+        {
+          "position": 5,
+          "max_absolute_error": 0.0006116516888141632,
+          "rmse": 0.0002273853726988039,
+          "float_rms": 0.019532810896635056
+        },
+        {
+          "position": 6,
+          "max_absolute_error": 0.0006919112056493759,
+          "rmse": 0.00022578406466330325,
+          "float_rms": 0.017871778458356857
+        },
+        {
+          "position": 7,
+          "max_absolute_error": 0.0006650928407907486,
+          "rmse": 0.00028533992938450936,
+          "float_rms": 0.0156005984172225
+        }
+      ],
+      "numeric_clips": 0
+    }
+  ],
+  "source_sha256": "4b51c7351c25539d446858918663add68b06220a49c8afe05a892ddcd1883fd3",
+  "model_sha256": "b27bb48881950896964c730cbd279a35d2e7510f1836c0f53d3af9fbdedbc52e"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "method": "midpoint+covariance+equalize",
+    "agreement": 0.8899082568807339,
+    "matches": [
+      60,
+      53,
+      54,
+      17,
+      56,
+      51
+    ],
+    "counts": [
+      60,
+      53,
+      54,
+      53,
+      56,
+      51
+    ]
+  },
+  {
+    "method": "midpoint+covariance+minmse",
+    "agreement": 0.7522935779816514,
+    "matches": [
+      26,
+      43,
+      54,
+      17,
+      56,
+      50
+    ],
+    "counts": [
+      60,
+      53,
+      54,
+      53,
+      56,
+      51
+    ]
+  },
+  {
+    "method": "midpoint+covariance+minmse+equalize",
+    "agreement": 0.7522935779816514,
+    "matches": [
+      26,
+      43,
+      54,
+      17,
+      56,
+      50
+    ],
+    "counts": [
+      60,
+      53,
+      54,
+      53,
+      56,
+      51
+    ]
+  }
+]

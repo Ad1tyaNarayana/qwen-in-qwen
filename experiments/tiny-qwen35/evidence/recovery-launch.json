@@ -1,0 +1,7 @@
+{
+  "offset": 16318720,
+  "checkpoint_sha256": "cae4b92b719168d48a9f5c7b6957462505e51b929bbb5c1e273780b0d8a44773",
+  "launcher_sha256": "d6de777e35c57fa360d3bb73d4c668204e177a54b8191bad90fbd11e1740c182",
+  "existing_lock_retained": true,
+  "stdout": "{\n    \"ProcessId\":  23568,\n    \"ReturnValue\":  0,\n    \"PSComputerName\":  null\n}\n"
+}

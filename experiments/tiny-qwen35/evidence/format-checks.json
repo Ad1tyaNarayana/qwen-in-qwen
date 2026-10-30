@@ -1,0 +1,27 @@
+{
+  "abi_words": {
+    "header": 40,
+    "layer": 46
+  },
+  "arena_bytes": 63120,
+  "oversize_context_rejected": "Guest arena needs 63408 > 63120 bytes",
+  "tied": {
+    "asan_ubsan": true,
+    "fwrapv": false,
+    "output_sha256": "e4da3039035f07a68240d0822b48e0b789153d902b7173ba29428f80c065b849"
+  },
+  "untied": {
+    "asan_ubsan": true,
+    "fwrapv": false,
+    "output_sha256": "1a74aadeedc5e84f18475d24498e61c60d2b903d928f05fd07c6c5c5770caa2a"
+  },
+  "untied_reference": {
+    "status": "pass",
+    "steps": 6,
+    "tokens": 11290965,
+    "instructions": 7998634,
+    "stack_bytes": 368,
+    "native_output_exact": true
+  },
+  "all_executable_bytes_equal": true
+}

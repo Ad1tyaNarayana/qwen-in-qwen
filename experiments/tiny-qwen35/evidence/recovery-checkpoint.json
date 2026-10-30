@@ -1,0 +1,811 @@
+{
+  "status": "valid actual GPU checkpoint",
+  "checkpoint_sha256": "cae4b92b719168d48a9f5c7b6957462505e51b929bbb5c1e273780b0d8a44773",
+  "offset": 16318720,
+  "token": [
+    21845
+  ],
+  "compute_seconds": 4784.183653400411,
+  "actual_trace_tokens": 16359680,
+  "actual_trace_sha256": "ff7dd82efa7f1adc56af1ec30c13b5dd68defaf02edfc8db8b852746e342fda1",
+  "trace_mismatches": 0,
+  "replay_tokens": 40960,
+  "binding": {
+    "elf": "c2d16c876271ce64ae3a5faee45654ac676b462e79751b0c60f71aa7aa9202f1",
+    "reference": "4f277a82f585f203f61e4f632e7b25a11a79664a4f9ce6e31d077a4dd70ef012",
+    "scripts": {
+      "experiments\\tiny-llm-ndot\\worker.py": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+      "experiments\\neural-accelerator\\constructor.py": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+      "experiments\\neural-accelerator\\compact.py": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+      "experiments\\neural-accelerator\\integer_counters.py": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+      "experiments\\neural-accelerator\\counter_ir.py": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+      "experiments\\tiny-llm-ndot-fused\\story.py": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+      "experiments\\tiny-llm-ndot-fused\\fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+      "experiments\\tiny-llm-ndot-fused\\runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+      "experiments\\dmc-feedback-fusion\\fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258"
+    },
+    "mode": "unified W=4 unchanged circuit with data-ROM batching and single-kernel feedback"
+  },
+  "heads": [
+    {
+      "S": {
+        "shape": [
+          1,
+          4,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          11,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    {
+      "S": {
+        "shape": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "dtype": "torch.float32"
+      },
+      "hist": {
+        "shape": [
+          1,
+          3,
+          2113
+        ],
+        "dtype": "torch.float32"
+      }
+    }
+  ],
+  "shutdown_not_numerical_failure": true
+}

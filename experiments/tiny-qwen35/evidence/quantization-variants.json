@@ -1,0 +1,100 @@
+[
+  {
+    "method": "midpoint",
+    "free_running_agreement": 0.9760479041916168,
+    "matches": [
+      56,
+      53,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  },
+  {
+    "method": "minmse",
+    "free_running_agreement": 0.7604790419161677,
+    "matches": [
+      56,
+      17,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  },
+  {
+    "method": "equalize",
+    "free_running_agreement": 0.9281437125748503,
+    "matches": [
+      56,
+      45,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  },
+  {
+    "method": "midpoint+minmse",
+    "free_running_agreement": 0.7604790419161677,
+    "matches": [
+      56,
+      17,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  },
+  {
+    "method": "midpoint+equalize",
+    "free_running_agreement": 0.9760479041916168,
+    "matches": [
+      56,
+      53,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  },
+  {
+    "method": "minmse+equalize",
+    "free_running_agreement": 0.7604790419161677,
+    "matches": [
+      56,
+      17,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  },
+  {
+    "method": "midpoint+minmse+equalize",
+    "free_running_agreement": 0.7604790419161677,
+    "matches": [
+      56,
+      17,
+      54
+    ],
+    "counts": [
+      60,
+      53,
+      54
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "probe": "zero embeddings and maximal Q12 dt_bias; all output logits stay zero",
+  "steps": 6,
+  "output_sha256": "698d01af5577ec378e213b5c97b78d51a27abdd1134a6fbefc7b0f1a6c9f5f96",
+  "source_sha256": "4e071bdb7f15c9733464685711ae6cac12e86bda564655ec2d529938792ceda8",
+  "asan": true,
+  "ubsan": true,
+  "fwrapv": false
+}

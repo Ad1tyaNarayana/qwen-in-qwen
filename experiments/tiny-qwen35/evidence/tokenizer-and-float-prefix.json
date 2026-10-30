@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "kind": "observed Mac float FP32 HF prefixes versus original GPU FP32 HF samples",
+  "cases": [
+    {
+      "prompt": "Once upon a time",
+      "prompt_tokens_equal": true,
+      "float_greedy_prefix_equal": true,
+      "predictions": 60
+    },
+    {
+      "prompt": "Lily found a small bird in the garden.",
+      "prompt_tokens_equal": true,
+      "float_greedy_prefix_equal": true,
+      "predictions": 53
+    },
+    {
+      "prompt": "Tom was sad because he lost his toy.",
+      "prompt_tokens_equal": true,
+      "float_greedy_prefix_equal": true,
+      "predictions": 54
+    }
+  ]
+}

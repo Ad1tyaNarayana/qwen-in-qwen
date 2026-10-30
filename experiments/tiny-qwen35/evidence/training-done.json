@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "steps": 60000,
+  "training_seconds": 2607.9045883999934,
+  "wall_seconds": 2609.6109134,
+  "peak_allocated": 381003776,
+  "hf_files": {
+    "config.json": {
+      "bytes": 1187,
+      "sha256": "06262dc109daf6213c1a7ccaf26b9210e50d0b358b01b25ea8370ca291f41b17"
+    },
+    "generation_config.json": {
+      "bytes": 226,
+      "sha256": "ddf8feea04d241adc019b4df23dc3657283a1255b84de329535a91df8a255a51"
+    },
+    "model.safetensors": {
+      "bytes": 6054688,
+      "sha256": "b7929b5dc3d6a2289ad5406ee06822d88484df98e6fc81150ff71519d87e626c"
+    }
+  }
+}

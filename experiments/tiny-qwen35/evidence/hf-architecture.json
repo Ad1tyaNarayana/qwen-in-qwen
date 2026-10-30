@@ -1,0 +1,21 @@
+{
+  "transformers": "5.21.0",
+  "files": {
+    "modeling_qwen3_5.py": "af05d0acfe79fff8aea1c75f93516a6a72bc80f6f901329a73e66a3866fe1e7c",
+    "modular_qwen3_5.py": "0b6f7aa5550397538f914ae3c53fda58828c8b301166dbc1d2354462878beaaf",
+    "tokenization_qwen3_5.py": "3d2f98abc1c6eec61e4548171286b88f5e8173ac6d63954b8fd225b7e24cf25a",
+    "configuration_qwen3_5.py": "332ea31ed31cc81ddb72da28737e9868a55d295f9f1daa3e0ad0d57d56d4e657"
+  },
+  "source_directory": "/Users/aditya/Me/qwenputer/qwenputer-games/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5",
+  "inspected": [
+    "Qwen3_5TextConfig",
+    "Qwen3_5GatedDeltaNet",
+    "Qwen3_5Attention",
+    "Qwen3_5RMSNorm",
+    "Qwen3_5RMSNormGated",
+    "Qwen3_5TextRotaryEmbedding",
+    "torch_recurrent_gated_delta_rule",
+    "l2norm"
+  ],
+  "text_positions": "identical t/h/w position IDs; default partial RoPE"
+}

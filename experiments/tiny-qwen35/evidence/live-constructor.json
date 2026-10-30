@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "scope": "live worker constructor provenance, not final neural acceptance",
+  "same_constructor_as_accepted_llama": true,
+  "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+  "ram_bytes": 65536,
+  "drom_bytes": 4194304,
+  "code_rom_bytes": 262144,
+  "stock_hf": false,
+  "mode": "unified W=4 unchanged circuit with data-ROM batching and single-kernel feedback"
+}

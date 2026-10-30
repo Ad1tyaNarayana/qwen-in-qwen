@@ -1,0 +1,7 @@
+{
+  "scope": "partial actual GPU trace after power-recovery; not final validation",
+  "trace_tokens": 18096384,
+  "mismatches": 0,
+  "observed_BYTE_output": "@0 1 402 580338588 0\n>Once\n@1 402 407 2869108005 0\n> upon\n@2 407 261 1834393023 0\n> a\n",
+  "actual_sha256": "f4703c4fe0fe0aa87cb4bccaa95ef6d88f7365bf54b997f44133c5b1c212b9c2"
+}
