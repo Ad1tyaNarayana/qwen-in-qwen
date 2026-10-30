@@ -1,0 +1,36 @@
+{
+  "left": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-fused-gate-20261030a\\baseline",
+  "right": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-fused-gate-20261030a\\fused",
+  "windows": {
+    "boot": {
+      "tokens": 65536,
+      "digest_mismatches": 0,
+      "first": null,
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-fused-gate-20261030a\\baseline\\boot-digests.jsonl",
+          "sha256": "a4d8e89b3b2f214b8c970cac04cec12bb5b7eb4dc6b59ce8960785b7589b03ab"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-fused-gate-20261030a\\fused\\boot-digests.jsonl",
+          "sha256": "c8662f1f7fdd0a52be171e0f4eab827a13e2190ecd6acae2e6c9281fc5d430cb"
+        }
+      ]
+    },
+    "ndot_matvec_reference_seeded": {
+      "tokens": 65536,
+      "digest_mismatches": 0,
+      "first": null,
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-fused-gate-20261030a\\baseline\\ndot_matvec_reference_seeded-digests.jsonl",
+          "sha256": "702a321202a879fcce356f29009e362bec57041eaccb2bc824a8fe995ff539bf"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-fused-gate-20261030a\\fused\\ndot_matvec_reference_seeded-digests.jsonl",
+          "sha256": "8c424e6e5bb4be1fcba1e32e19f3e75a5dc62031854fe7c56571e02c5c0cec07"
+        }
+      ]
+    }
+  }
+}

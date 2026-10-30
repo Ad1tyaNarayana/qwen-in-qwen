@@ -1,0 +1,11 @@
+{
+  "kind": "Independent reference coverage, equivalence and performance fixture only; never autonomous",
+  "start_token": 32768,
+  "end_token": 98305,
+  "requested_tokens": 65536,
+  "start_pc": "0x40168",
+  "end_pc": "0x40158",
+  "ndot4_instructions": 3127,
+  "retired_instructions": 44870,
+  "elf_sha256": "252929d25b5bb5896b20e017216e3709689d1980cf68b06798f714b771586a66"
+}

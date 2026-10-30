@@ -1,0 +1,11 @@
+{
+  "prompt": "Once",
+  "steps": 38,
+  "trace_tokens": 53296563,
+  "elf_sha256": "d3a50d37b122fc6c5f1858872347656483553596609d9601f6faf5373809e212",
+  "reference_sha256": "72110de645a5ac4f917d6b7640a79c5b10650abbc3a3741c124457666ef03443",
+  "model_sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+  "guest_model_identical_to_m5": true,
+  "unified_generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+  "reference_source": "Independent Mac Machine plus native output equality; comparison only"
+}

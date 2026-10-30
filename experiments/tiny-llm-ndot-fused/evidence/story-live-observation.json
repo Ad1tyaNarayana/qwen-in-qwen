@@ -1,0 +1,8 @@
+{
+  "source": "Read-only snapshot of actual self-fed GPU trace; independent Mac prefix comparison",
+  "generated_tokens": 2310400,
+  "mismatches": 0,
+  "sha256": "fa37a65edeab2c5dcb4382de7c4024fab9ce3021908a9acc754f054c8ac75d0a",
+  "observed_byte_output": "@0 1 403 2531150448 0\n>Once\n@1 403 407 110482425 0\n> upon\n",
+  "remote_artifacts": "C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-story-38-20261030b"
+}

@@ -1,0 +1,44 @@
+{
+  "boot": {
+    "speedup": 1.560991945699529,
+    "baseline": {
+      "median_us_per_token": 419.08308715821187,
+      "range_us_per_token": [
+        418.35821685798356,
+        419.96789093023955
+      ],
+      "projected_min_per_position": 7.576041561396521,
+      "projection": "Five-position Once workload mean, bounded window rate; not a full execution"
+    },
+    "fused": {
+      "median_us_per_token": 268.47229309079347,
+      "range_us_per_token": [
+        268.2501296997764,
+        268.6811920166177
+      ],
+      "projected_min_per_position": 4.853350833915713,
+      "projection": "Five-position Once workload mean, bounded window rate; not a full execution"
+    }
+  },
+  "ndot_matvec_reference_seeded": {
+    "speedup": 1.5602552899265951,
+    "baseline": {
+      "median_us_per_token": 418.5428573608707,
+      "range_us_per_token": [
+        418.48319854731477,
+        418.7058975219093
+      ],
+      "projected_min_per_position": 7.566275470798318,
+      "projection": "Five-position Once workload mean, bounded window rate; not a full execution"
+    },
+    "fused": {
+      "median_us_per_token": 268.2528045654386,
+      "range_us_per_token": [
+        268.2458099365625,
+        268.26083984377027
+      ],
+      "projected_min_per_position": 4.849382994980448,
+      "projection": "Five-position Once workload mean, bounded window rate; not a full execution"
+    }
+  }
+}

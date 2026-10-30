@@ -1,0 +1,7 @@
+{
+  "exit_code": 1,
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\tiny-llm-ndot-fused\\bench.py\", line 72, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\tiny-llm-ndot-fused\\bench.py\", line 31, in main\n    from fusion import install\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\tiny-llm-ndot-fused\\fusion.py\", line 5, in <module>\n    from chipformer.rv.tritonexec import _head_kernel\nModuleNotFoundError: No module named 'chipformer'\n",
+  "tokens_generated": 0,
+  "repaired": "Import fusion after runtime.build prepares chipformer",
+  "accepted_timing_artifacts": "C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-extra-20261030a"
+}

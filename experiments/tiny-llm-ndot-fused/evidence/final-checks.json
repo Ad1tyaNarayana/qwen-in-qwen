@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "fusion": {
+    "status": "pass",
+    "isolated_tokens_per_side": 131072,
+    "windows": 2,
+    "reference_mismatches": 0,
+    "full_state_digest_mismatches": 0,
+    "standalone_queued_replays": 8192,
+    "timing_repeats_per_side_per_window": 5,
+    "timed_tokens": 1310720,
+    "profiled_checked_tokens": 2112,
+    "standalone_source_bindings": true,
+    "timing_reference_mismatches": 0,
+    "source_sha256": {
+      "fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+      "runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+      "isolation.py": "fe539fb71d189ffa5fa84c041cb2620cb5da1b9e9e009031be266921afc016ce",
+      "bench.py": "8d9f51d4a8e4bacfcfa67b676b8e77ceb1039657d27e578c95083d86aa1e9b94"
+    }
+  },
+  "story": {
+    "tokens": 53296563,
+    "positions": 38,
+    "mismatches": 0,
+    "all_final_ram_bytes_equal": true,
+    "all_three_register_copies_equal": true,
+    "autonomous": true,
+    "trace_sha256": "72110de645a5ac4f917d6b7640a79c5b10650abbc3a3741c124457666ef03443",
+    "compute_seconds": 14225.90152749946
+  },
+  "evidence_sha256": {
+    "checks.json": "967ec4e70a3cd00bb3cc8aa14d3c8105120e65fee79b80d9ce0ac0dc17dcc19a",
+    "story-validation.json": "ba5128f7b54b146b6321a94f99cf4a89e2c498ef6cb2a9aec434bc615ac491a1",
+    "story-run.json": "f05bbba0a2db4db3b40ea82bc325f6d3f09a22607683197d9089d147e4f4a0f6",
+    "story-checkpoint.json": "d173685e4cb5c690164b79966ee6674a582acd81efbf5cef9270f58919132f7f"
+  }
+}

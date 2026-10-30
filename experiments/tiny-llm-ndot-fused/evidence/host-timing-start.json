@@ -1,0 +1,23 @@
+{
+    "gpu":  [
+                "timestamp, name, utilization.gpu [%], memory.free [MiB], clocks.current.sm [MHz], power.draw [W]",
+                "2026/10/30 04:51:32.669, NVIDIA GeForce RTX 5070 Ti, 100 %, 14215 MiB, 2887 MHz, 73.41 W"
+            ],
+    "utc":  "2026-10-29T23:21:31.4047585Z",
+    "cpu":  [
+                {
+                    "NumberOfLogicalProcessors":  12,
+                    "LoadPercentage":  3
+                }
+            ],
+    "python":  [
+                   {
+                       "ProcessId":  9180,
+                       "CommandLine":  "\"C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe\" C:/Users/Admin/qwenputer-games-work/repo/experiments/tiny-llm-ndot-fused/bench.py --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/ndot5-20261030 --out C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-extra-20261030a/bench --gate C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-gate-20261030a --tokens 65536 "
+                   },
+                   {
+                       "ProcessId":  26616,
+                       "CommandLine":  "\"C:\\Users\\Admin\\qwenputer-games-work\\.venv\\Scripts\\python.exe\" C:/Users/Admin/qwenputer-games-work/repo/experiments/tiny-llm-ndot-fused/bench.py --inputs C:/Users/Admin/qwenputer-games-work/repo/.cache/tiny-llm/ndot5-20261030 --out C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-extra-20261030a/bench --gate C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-gate-20261030a --tokens 65536 "
+                   }
+               ]
+}

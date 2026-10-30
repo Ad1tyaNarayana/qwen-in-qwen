@@ -1,0 +1,13 @@
+{
+  "kind": "Reference workload counts for budget selection only; not an autonomous result",
+  "selected_positions": 38,
+  "budget_seconds": 14400,
+  "conservative_us_per_token": 268.47229309079347,
+  "selected_complete_trace_tokens": 53296563,
+  "selected_projected_seconds": 14308.65048246794,
+  "first_38_reference_position_boundaries_agree": true,
+  "next_position": 39,
+  "next_position_end_tokens": 55048792,
+  "next_position_end_projected_seconds": 14779.075420118128,
+  "next_position_projection_excludes_final_diagnostic_output_and_halt": true
+}

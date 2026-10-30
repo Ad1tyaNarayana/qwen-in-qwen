@@ -1,0 +1,32 @@
+{
+  "remote_artifacts": "C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-gate-20261030a",
+  "extra_artifacts": "C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-extra-20261030a",
+  "private_export": "/Users/aditya/Me/qwenputer/qwenputer-games/.cache/tiny-llm/tiny-llm-ndot-fused-gate-20261030a-actual",
+  "files": [
+    "baseline/isolation.json",
+    "fused/isolation.json",
+    "comparison.json",
+    "apply.json",
+    "feedback.json",
+    "apply.exit.json",
+    "feedback.exit.json",
+    "baseline.exit.json",
+    "fused.exit.json",
+    "compare.exit.json",
+    "bench.exit.json",
+    "bench.stderr.log",
+    "tasklist.log",
+    "venv.log"
+  ],
+  "extra_files": [
+    "bench/bench.json",
+    "apply.json",
+    "profile/report.json",
+    "sequence.json",
+    "bench.exit.json",
+    "apply.exit.json",
+    "profile.exit.json",
+    "tasklist.log",
+    "venv.log"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "report": {
+    "complete": false,
+    "error": "ValueError('Choose a fresh scratch directory. Package already exists at C:\\\\Users\\\\Admin\\\\qwenputer-games-work\\\\artifacts\\\\tiny-llm-ndot-story-38-20261030a\\\\main\\\\scratch\\\\chipformer.')",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\tiny-llm-ndot\\worker.py\", line 171, in main\n    fr, fused, spec, metadata = build(a, meta)\n                                ~~~~~^^^^^^^^^\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\tiny-llm-ndot-fused\\story.py\", line 13, in build\n    fr,info,spec,metadata=build_unfused(a,meta)\n                          ~~~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\tiny-llm-ndot\\worker.py\", line 45, in build\n    manifest = prep.prepare(a.upstream, a.out / 'scratch', 64, 4096)\n  File \"C:\\Users\\Admin\\qwenputer-games-work\\repo\\experiments\\memory-map\\prepare.py\", line 55, in prepare\n    raise ValueError(f'Choose a fresh scratch directory. Package already exists at {destination}.')\nValueError: Choose a fresh scratch directory. Package already exists at C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\tiny-llm-ndot-story-38-20261030a\\main\\scratch\\chipformer.\n"
+  },
+  "prefix_generated_tokens": 65536,
+  "prefix_mismatches": 0,
+  "disposition": "Preserved failed scratch-directory guard; fresh story b starts from boot; no failed numerical comparison"
+}

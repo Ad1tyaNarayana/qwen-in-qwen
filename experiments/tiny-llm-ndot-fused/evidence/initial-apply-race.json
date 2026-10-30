@@ -1,0 +1,24 @@
+{
+  "tokens": 8192,
+  "kernels": {
+    "original": {
+      "bad_token_blocks": 1,
+      "mismatched_words": 8,
+      "first": {
+        "token": 4637,
+        "word": 547,
+        "actual_bits": 1104674816,
+        "expected_bits": 1106771968
+      }
+    },
+    "barrier": {
+      "bad_token_blocks": 0,
+      "mismatched_words": 0,
+      "first": null
+    }
+  },
+  "scripts": {
+    "fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+    "apply_race.py": "973feeeee34883cc6334e00bd985d128b3609e753f1bf09c759da48eb30a1360"
+  }
+}

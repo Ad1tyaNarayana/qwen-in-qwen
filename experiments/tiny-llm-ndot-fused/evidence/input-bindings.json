@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "utc": "2026-10-30T02:41:54.386745+00:00",
+  "mac_pc_sha256_equal": true,
+  "files": {
+    ".cache/tiny-llm/ndot5-20261030/engine.elf": "252929d25b5bb5896b20e017216e3709689d1980cf68b06798f714b771586a66",
+    ".cache/tiny-llm/ndot5-20261030/reference.json": "51bf3162a81e5ecaf7f6ed37d90b3b30543398059a2f8e7387537071b48e9bd2",
+    ".cache/tiny-llm/ndot5-20261030/reference.tokens.u32": "05d260bc7435b7b22335cb14327229bb7718eea8c263b9874b6575e2a5c28ab7",
+    ".cache/tiny-llm/ndot5-20261030/model.bin": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+    ".cache/tiny-llm/ndot-story38-20261030/engine.elf": "d3a50d37b122fc6c5f1858872347656483553596609d9601f6faf5373809e212",
+    ".cache/tiny-llm/ndot-story38-20261030/reference.json": "7b8fa51348ba3c10ccf8bcfef7fb1db8249250fb2eb8001f857995910bb92000",
+    ".cache/tiny-llm/ndot-story38-20261030/reference.tokens.u32": "72110de645a5ac4f917d6b7640a79c5b10650abbc3a3741c124457666ef03443",
+    ".cache/tiny-llm/ndot-story38-20261030/model.bin": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612",
+    "experiments/dmc-feedback-fusion/fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+    "experiments/dmc-rom-fusion/fusion.py": "ccb8abe273c55f100d93369be8938a031620d243af6bd8a645b04e791dceb678",
+    "experiments/tiny-llm-ndot-fused/fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+    "experiments/tiny-llm-ndot-fused/runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+    "experiments/tiny-llm-ndot-fused/isolation.py": "fe539fb71d189ffa5fa84c041cb2620cb5da1b9e9e009031be266921afc016ce",
+    "experiments/tiny-llm-ndot-fused/bench.py": "8d9f51d4a8e4bacfcfa67b676b8e77ceb1039657d27e578c95083d86aa1e9b94"
+  },
+  "scope": "Read-only provenance binding after fusion acceptance and during the autonomous story. No input or GPU state altered."
+}

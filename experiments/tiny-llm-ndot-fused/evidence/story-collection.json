@@ -1,0 +1,22 @@
+{
+  "remote_artifacts": "C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-story-38-20261030b",
+  "files": [
+    "main/report.json",
+    "main/prefix-report.json",
+    "main/restore-report.json",
+    "main/full-report.json",
+    "main/actual.tokens.u32",
+    "main/actual-ram.bin",
+    "main/actual-output.bin",
+    "main/actual-registers.json",
+    "main/chunks.jsonl",
+    "prefix.exit.json",
+    "restore.exit.json",
+    "full.exit.json",
+    "checkpoint-metadata.json",
+    "sequence.json",
+    "tasklist.log",
+    "venv.log",
+    "gpu-before.csv"
+  ]
+}
