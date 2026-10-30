@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "initialization",
+    "graph geometry",
+    "head search",
+    "semantic RAM axes",
+    "ELF function timeline",
+    "neural register and RAM sample",
+    "inner KV decoder",
+    "no sample interpolation",
+    "compact viewport",
+    "no uncaught exceptions",
+    "reference Life provenance",
+    "all asset requests stay on localhost",
+    "every hidden coordinate represented",
+    "complete zero-padded stock capacity"
+  ],
+  "screenshots": 8,
+  "errors": []
+}

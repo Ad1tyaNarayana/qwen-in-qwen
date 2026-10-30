@@ -1,0 +1,13 @@
+choice	reason	evidence	result
+Immutable bundles	Offline browsing and explicit observation boundaries	worker.py checkpoints and generated tokens	Selected
+Canvas 3D projection	No dependency download and one batched point pass	~70k active FFN units and ~1.2k heads	Selected
+Residual owner intervals	Reused slots have multiple meanings	reuse.py and generated liveness ledger	Selected
+Retained story import	GPU lock is held by training	ssh gpu owner.txt	Continue CPU work; retry capture later
+Pending feedback boundary	Do not rewrite neural PC to match a post-HALT reference	Decoded checkpoint PC=0x40014, pending HALT; reference PC=0x40018	Asserted and labelled
+DROM paired rows	Correct address axes for complementary halves	Pinned core.byte_rows and snapshot	Rows p and p+64 map distinct 32-byte halves
+Dense emitter verification	Check exported statistics against actual emitted weights	Layer 8 units 0,1,10,2392 and final ballast clear	Pass
+Real state verification	Keep comparison separate from observation	65536 actual RAM bytes and 96 register values	Pass
+Full position PC check	Ground program view in generated tokens	1041913 tokens across 714391 reference records	Pass
+Shared GPU unavailable	Do not interfere with another task	Lock acquisition refused; final owner showcase-20261030a	Periodic capture remains unexecuted
+Hidden residual layout	Include all stock coordinates	Emitter Layout maps ballast, tau, IR slots and padding	2304 coordinates per layer
+Browser verification	Check actual offline UI and missing sample behavior	14 checks and 8 PNG screenshots	Pass
