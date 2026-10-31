@@ -1,8 +1,8 @@
 {
   "format": 1,
   "archive": "qwenputer-evidence-v1.tar.gz",
-  "archive_bytes": 238003616,
-  "archive_sha256": "6cb1c01aca0db7c08aecd8d80ccf494c22bb90dd27cc3e4e1f54abcfeca2f20c",
+  "archive_bytes": 238005501,
+  "archive_sha256": "638764c250a16661db37afa284baf7afee50f2df67bcf49970f6d6b3c4b87b9c",
   "files": {
     "LICENSE": {
       "bytes": 1085,
@@ -101,8 +101,10 @@
       "sha256": "9c120a1aa1f6dd336831dbf2f5123e9ea3be92ea41b5a7bc2a5ce349ea49025e"
     },
     "checkpoint-integrity/actual-20261030a/scalar/full-initial-failure-report.json": {
-      "bytes": 7239,
-      "sha256": "e54069d59273986ba08a9000a609fb33883c4ecfcf3355c71e1c2f1a4cec2742"
+      "bytes": 7086,
+      "sha256": "091bfde7cec15c906e9a95295a5c2a583019c287d1c7606d2f67c6561b0a57f9",
+      "source_sha256": "e54069d59273986ba08a9000a609fb33883c4ecfcf3355c71e1c2f1a4cec2742",
+      "redacted_home_paths": 1
     },
     "checkpoint-integrity/actual-20261030a/scalar/prefix-report.json": {
       "bytes": 7634,
@@ -401,8 +403,10 @@
       "sha256": "9af1ab1a97573780c898eb658bf53449ee6c53b15dad82ed590387030f063783"
     },
     "showcase/life/build.json": {
-      "bytes": 3103,
-      "sha256": "12223fa893cdbdd4f3914a5ab135690f1752d7c634400c587593fadad901db5f"
+      "bytes": 3116,
+      "sha256": "ae0d3ec82856c3bb5e9e628d18edfa2f48cf50e4764f1d422087e1b202e994c8",
+      "source_sha256": "12223fa893cdbdd4f3914a5ab135690f1752d7c634400c587593fadad901db5f",
+      "redacted_home_paths": 13
     },
     "showcase/life/drom.bin": {
       "bytes": 4194304,
@@ -453,8 +457,10 @@
       "sha256": "79713a6a2a6ae656a1a08998fa849d58f7b121413f0c9938e2b9d68d187734fc"
     },
     "showcase/mnist-scalar/build.json": {
-      "bytes": 3499,
-      "sha256": "e878429c96404c1dbfd2d0b3f063b78cf8fdfba08f2805165e28cc14e77d70d2"
+      "bytes": 3513,
+      "sha256": "6300329c224697293f73d0cf1f4b812c39ddb957ab0a766fce630131bfe91275",
+      "source_sha256": "e878429c96404c1dbfd2d0b3f063b78cf8fdfba08f2805165e28cc14e77d70d2",
+      "redacted_home_paths": 14
     },
     "showcase/mnist-scalar/drom.bin": {
       "bytes": 4194304,
@@ -485,8 +491,10 @@
       "sha256": "3c0277c3b7e9f421202f82da1e270d2a1a6d1efb58d3da2730175a03756e1f06"
     },
     "showcase/mnist/build.json": {
-      "bytes": 3414,
-      "sha256": "6356e341cd025ee5f6ba09d6e36f6fd84f0bdb03423c17c95663d7ff4e072100"
+      "bytes": 3428,
+      "sha256": "7b3231be57877c0a5cd87ea141592348d3ac96e4e45934be69d551d0b8565820",
+      "source_sha256": "6356e341cd025ee5f6ba09d6e36f6fd84f0bdb03423c17c95663d7ff4e072100",
+      "redacted_home_paths": 14
     },
     "showcase/mnist/drom.bin": {
       "bytes": 4194304,
@@ -517,8 +525,10 @@
       "sha256": "c92bf5750e1126ad8b99c3738f1c4854f6741cb23b1f46ef734ae8af8bf04ba5"
     },
     "showcase/sha256/build.json": {
-      "bytes": 3078,
-      "sha256": "7d365365ef712c7e6d9713c5063cdad69df45f22ddbf6d984472cc146a2bff65"
+      "bytes": 3091,
+      "sha256": "f7e7dc19dcda7ab35a00c1f404858d365034ae0ff0c910998effef212581431b",
+      "source_sha256": "7d365365ef712c7e6d9713c5063cdad69df45f22ddbf6d984472cc146a2bff65",
+      "redacted_home_paths": 13
     },
     "showcase/sha256/drom.bin": {
       "bytes": 4194304,
@@ -545,8 +555,10 @@
       "sha256": "240ab36e288ef29fc4cd2ddd294854f28554db74a7fda6f1578ff1055b274ded"
     },
     "showcase/tictactoe/build.json": {
-      "bytes": 3181,
-      "sha256": "c6cacf466fb9820feac9844df8a27f9b32b85286acffdf69eb1399e66457287a"
+      "bytes": 3194,
+      "sha256": "ac822fd38da7d93fed6ccfa2f27509aaebe452a369990cb893bd18f601c74f7c",
+      "source_sha256": "c6cacf466fb9820feac9844df8a27f9b32b85286acffdf69eb1399e66457287a",
+      "redacted_home_paths": 13
     },
     "showcase/tictactoe/drom.bin": {
       "bytes": 4194304,
@@ -2034,5 +2046,6 @@
     "training": "Multi-GB training and quantization sweeps are unnecessary for retained-output checks.",
     "separate trained PyTorch guest checkpoint": "Not needed to validate retained traces. The required quantized guest weights are embedded in the program ELF."
   },
+  "metadata_note": "Six bundle-only JSON copies redact home-directory paths. source_sha256 binds the unchanged private input; sha256 binds the distributed copy. Numerical fields and verifier assertions are unchanged.",
   "checkpoint_note": "pre-shutdown/checkpoint.pt is actual CPU circuit recurrent state, not trained guest weights. See THIRD_PARTY_NOTICES.md."
 }
