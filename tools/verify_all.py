@@ -68,6 +68,7 @@ def main():
                 record(claim, 'FAIL', f'Exceeded {timeout}s bound', time.perf_counter()-begin)
                 return False
 
+        run('release attack controls', ['-m', 'pytest', '-q', 'tools/test_release.py'])
         run('release policy', ['tools/check_release.py', '--root', str(ROOT)], cwd=ROOT)
         # Hashes detect changes, not execution provenance. This covers every retained
         # evidence/report/data file selected in the immutable baseline manifest.
