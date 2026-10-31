@@ -19,9 +19,13 @@ def allowlist(cache):
             files.add(directory + '/' + name)
 
     def package(directory):
-        # Only Python source from the frozen independent reference package.
-        for p in (cache / directory / 'reference-package').rglob('*.py'):
-            files.add(str(p.relative_to(cache)))
+        # The tracked vendor pin is an exact filename allowlist. Never discover
+        # arbitrary files from a private cache directory.
+        pinned = json.loads((ROOT/'vendor/qwenputer/PIN.json').read_text())['files']
+        for name in pinned:
+            if name.startswith('experimental/riscv/chipformer/') and name.endswith('.py'):
+                relative = name.removeprefix('experimental/riscv/')
+                files.add(directory + '/reference-package/' + relative)
 
     reference = 'engine.elf reference.json reference.tokens.u32 reference-ram.bin reference-output.bin'
     actual = 'actual.tokens.u32 actual-ram.bin actual-registers.json actual-output.bin report.json prefix-report.json restore-report.json chunks.jsonl'
