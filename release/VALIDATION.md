@@ -53,3 +53,7 @@ Commit messages were edited after this validation to remove a co-author trailer,
 ## Doom split
 
 Doom-only experiments, the Doom article and its figures moved to the public [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom) repository. Their entries left `tracked-evidence.json`. The tier tables above predate this. The Doom output row is gone, the three executor rows were relabelled, and Doom worker cases left the restore and export controls. A fresh clone afterward gave tier 0: 12 PASS, 0 FAIL, 12 SKIPPED; tier 1: 22 PASS, 0 FAIL, 4 SKIPPED; tier 2: 23 PASS, 0 FAIL, 3 SKIPPED.
+
+## Publication
+
+The bundle pinned by `release/bundle-manifest.json` (SHA-256 `638764c2…c4b87b9c`) is hosted as a GitHub release asset: [evidence-v1](https://github.com/Ad1tyaNarayana/qwen-in-qwen/releases/tag/evidence-v1). The trained tiny-Qwen float checkpoint, tokenizer, DROM image and training log are published on Hugging Face as [`Ayt1da/qwen-in-qwen-tiny`](https://huggingface.co/Ayt1da/qwen-in-qwen-tiny). Its `model.safetensors` SHA-256 is `b7929b5d…f87e626c`, matching `experiments/tiny-qwen35/evidence/calibration.json`. Licence notes for TinyStories, stories260K and MNIST are in `THIRD_PARTY_NOTICES.md`. The evidence numbers above are unchanged by publication.

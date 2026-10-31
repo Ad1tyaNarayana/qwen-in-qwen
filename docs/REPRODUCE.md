@@ -54,6 +54,16 @@ The tree policy limits individual files to 100 MiB. Bundle members are limited t
 
 The full IR scripts were written as command-line `main()` functions, so pytest originally collected no tests. They now expose `test_isa` and `test_ir`. The ISA gate runs at tier 0. The complete neural IR gate is long and runs only with the explicit tier-2 option; collection alone does not establish neural IR correctness.
 
+## Published bundle
+
+Release [`evidence-v1`](https://github.com/Ad1tyaNarayana/qwen-in-qwen/releases/tag/evidence-v1) hosts `qwenputer-evidence-v1.tar.gz` (238,005,501 bytes, SHA-256 `638764c250a16661db37afa284baf7afee50f2df67bcf49970f6d6b3c4b87b9c`). Pass its URL or a downloaded copy to `--bundle`:
+
+```sh
+python tools/verify_all.py --tier 1 --bundle https://github.com/Ad1tyaNarayana/qwen-in-qwen/releases/download/evidence-v1/qwenputer-evidence-v1.tar.gz
+```
+
+The tracked manifest pins the archive, so a changed or substituted download fails before use.
+
 ## Build and authenticate a bundle
 
 Only the owner or a researcher with the retained non-Doom outputs can build v1:
@@ -68,7 +78,7 @@ The builder prints the size of every allowlisted entry. It writes the compressed
 
 The bundle includes complete story and tiny-Qwen actual/reference traces, final RAM/registers, output bytes, chunk journals, restore metadata, packed ELF inputs, the actual pre-shutdown CPU-state checkpoint required by the Qwen recovery verifier, showcase local/reference and GPU/stock outputs, and MNIST test inputs. Frozen independent reference packages are Python source only. Six bundle-only JSON metadata copies redact local home-directory paths. Their manifest entries record both the original source SHA-256 and the distributed SHA-256, with a redaction count. The builder never modifies the retained inputs. No numerical, output, timing, script-binding, or verifier assertion changes. Native showcase executables are rebuilt with `clang` on the verifier's platform.
 
-The tiny-Qwen program ELF necessarily embeds its quantized guest model. A separate trained PyTorch guest checkpoint is unnecessary and excluded. The recovery `.pt` is recurrent CPU execution state, not guest training weights. The multi-GB training and quantization sweeps are excluded because the retained-output verifiers do not consume them. The TinyStories corpus and all Doom inputs and derived outputs are excluded. See [licence notes](../THIRD_PARTY_NOTICES.md) before redistributing the bundle.
+The tiny-Qwen program ELF necessarily embeds its quantized guest model. The trained float checkpoint is not needed by the verifiers and is excluded from the bundle; it is published separately on Hugging Face as [`Ayt1da/qwen-in-qwen-tiny`](https://huggingface.co/Ayt1da/qwen-in-qwen-tiny), with the same DROM image and the training log. The recovery `.pt` is recurrent CPU execution state, not guest training weights. The multi-GB training and quantization sweeps are excluded because the retained-output verifiers do not consume them. The TinyStories corpus and all Doom inputs and derived outputs are excluded. See [licence notes](../THIRD_PARTY_NOTICES.md) before redistributing the bundle.
 
 ## Match claims to evidence and commands
 
