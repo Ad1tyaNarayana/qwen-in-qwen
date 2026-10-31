@@ -21,6 +21,7 @@ def members(archive):
     for item in archive.getmembers():
         path = PurePosixPath(item.name)
         if (not item.isfile() or path.is_absolute() or '..' in path.parts
+                or '\\' in item.name or ':' in item.name
                 or item.name in seen or str(path) != item.name):
             raise ValueError(f'Unsafe or duplicate archive entry: {item.name}')
         seen.add(item.name)

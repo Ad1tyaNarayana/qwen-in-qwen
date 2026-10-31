@@ -33,7 +33,8 @@ def test_policy_rejects_game_data_secrets_and_absolute_links(tmp_path):
     assert any('credential.txt' in error and 'likely secret' in error for error in errors)
 
 
-@pytest.mark.parametrize('name,kind', [('../escape', None), ('/absolute', None), ('link', 'symlink')])
+@pytest.mark.parametrize('name,kind', [('../escape', None), ('/absolute', None), ('C:/escape', None),
+                                      (r'..\escape', None), ('link', 'symlink')])
 def test_unsafe_archive_members_are_rejected(tmp_path, name, kind):
     bundle = tmp_path/'bad.tar.gz'
     archive(bundle, name=name, kind=kind)
