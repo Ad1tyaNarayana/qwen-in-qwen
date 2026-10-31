@@ -1,4 +1,8 @@
 """Observe a detached story and run the independent Mac verifier when it exits."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import bisect
@@ -12,7 +16,7 @@ p.add_argument('--base',required=True)
 p.add_argument('--inputs',type=Path,required=True)
 p.add_argument('--actual',type=Path,required=True)
 a=p.parse_args()
-assert a.base.startswith('C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-story-')
+assert a.base.startswith((REMOTE_ROOT + '/artifacts/tiny-llm-ndot-story-'))
 D=Path(__file__).resolve().parent
 meta=json.loads((a.inputs/'reference.json').read_text())
 boundaries=[x['end_token'] for x in meta['positions']]
@@ -27,7 +31,7 @@ $r | ConvertTo-Json -Depth 6
 encoded=base64.b64encode(script.encode('utf-16-le')).decode()
 while True:
     try:
-        result=subprocess.check_output(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],timeout=30)
+        result=subprocess.check_output(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],timeout=30)
         state=json.loads(result)
     except (subprocess.SubprocessError,json.JSONDecodeError) as error:
         print(json.dumps(dict(observation_error=str(error),generation_not_restarted=True)),flush=True)

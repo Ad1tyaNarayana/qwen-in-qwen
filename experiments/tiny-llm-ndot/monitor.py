@@ -1,4 +1,8 @@
 """Retain bounded live progress and GPU utilization without starting a GPU job."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import json
@@ -11,7 +15,7 @@ parser.add_argument('--label',required=True)
 parser.add_argument('--log',type=Path,required=True)
 args=parser.parse_args()
 assert args.label.replace('-','').isalnum()
-base='C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-'+args.label
+base=(REMOTE_ROOT + '/artifacts/tiny-llm-ndot-')+args.label
 script=f'''$ProgressPreference='SilentlyContinue'
 $r=@{{}}
 $base='{base}'
@@ -27,7 +31,7 @@ $r | ConvertTo-Json -Depth 5 -Compress
 encoded=base64.b64encode(script.encode('utf-16-le')).decode()
 started=time.monotonic()
 while time.monotonic()-started < 4*3600:
-    output=subprocess.check_output(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],text=True)
+    output=subprocess.check_output(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],text=True)
     data=json.loads(output)
     with args.log.open('a') as stream:
         stream.write(json.dumps(data)+'\n')

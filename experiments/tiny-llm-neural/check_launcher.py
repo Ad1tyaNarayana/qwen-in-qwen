@@ -1,18 +1,16 @@
 """Exercise success and failure exit propagation through detached-process handles."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import base64
 import json
 from pathlib import Path
 import subprocess
 
-script = '''$ErrorActionPreference='Stop'; $rows=@(); foreach($code in @(0,7)) {
-$arg='-c "import time; time.sleep(0.2); raise SystemExit('+ $code +')"'
-$p=Start-Process -FilePath 'C:/Users/Admin/qwenputer-games-work/.venv/Scripts/python.exe' -ArgumentList $arg -PassThru
-$handle=$p.Handle
-$p.WaitForExit()
-$rows+=@{expected=$code; actual=$p.ExitCode; has_exited=$p.HasExited}
-}; $rows | ConvertTo-Json'''
+script = ('$ErrorActionPreference=\'Stop\'; $rows=@(); foreach($code in @(0,7)) {\n$arg=\'-c "import time; time.sleep(0.2); raise SystemExit(\'+ $code +\')"\'\n$p=Start-Process -FilePath \'' + REMOTE_ROOT + "/.venv/Scripts/python.exe' -ArgumentList $arg -PassThru\n$handle=$p.Handle\n$p.WaitForExit()\n$rows+=@{expected=$code; actual=$p.ExitCode; has_exited=$p.HasExited}\n}; $rows | ConvertTo-Json")
 encoded = base64.b64encode(script.encode('utf-16-le')).decode()
-result = subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],capture_output=True,check=True)
+result = subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],capture_output=True,check=True)
 rows = json.loads(result.stdout)
 assert len(rows) == 2
 assert all(r['expected'] == r['actual'] and r['has_exited'] for r in rows)

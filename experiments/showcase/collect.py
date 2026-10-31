@@ -1,4 +1,8 @@
 """Collect only actual trace/state and small reports, excluding GPU checkpoints."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import json
 from pathlib import Path
@@ -23,7 +27,7 @@ def main():
             paths += [f'{demo}-{name}.{suffix}' for suffix in ['exit.json','stdout.log','stderr.log']]
     archive=out/'actual.tar'
     with archive.open('wb') as f:
-        subprocess.run(['ssh','gpu',f'tar -cf - -C {base} '+' '.join(paths)],stdout=f,check=True)
+        subprocess.run(['ssh',SSH_HOST,f'tar -cf - -C {base} '+' '.join(paths)],stdout=f,check=True)
     with tarfile.open(archive) as tar:tar.extractall(out,filter='data')
     print(out)
 

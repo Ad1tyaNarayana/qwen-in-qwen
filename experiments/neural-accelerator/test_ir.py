@@ -17,10 +17,10 @@ def main():
     p.add_argument('--resume-controls', type=Path)
     p.add_argument('--chunk-size', type=int, default=2048)
     p.add_argument('--unreduced', action='store_true')
-    p.add_argument('--out', type=Path, default=Path(__file__).parent)
+    p.add_argument('--out', type=Path, default=ROOT / '.cache/neural-accelerator/ir-results')
     args = p.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
-    scratch = Path(tempfile.mkdtemp(prefix='ir-', dir=ROOT / '.cache/neural-accelerator'))
+    scratch = Path(tempfile.mkdtemp(prefix='ir-'))
     manifest = prepare(scratch)
     import numpy as np
     import torch
@@ -390,3 +390,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+def test_ir(tmp_path):
+    """Run the full neural IR gate in a separate process with isolated outputs."""
+    import subprocess
+    import sys
+    subprocess.run([sys.executable, str(Path(__file__).resolve()), '--out', str(tmp_path)], check=True)

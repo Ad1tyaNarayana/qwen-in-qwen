@@ -1,4 +1,8 @@
 """Launch detached workers through WMI, Start-Process, and encoded PowerShell."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 from pathlib import Path
@@ -11,7 +15,7 @@ p.add_argument('--hf-after-main', action='store_true')
 a = p.parse_args()
 if not a.label.replace('-','').isalnum():
     raise ValueError('Label must be alphanumeric with optional hyphens')
-root = 'C:/Users/Admin/qwenputer-games-work'
+root = REMOTE_ROOT
 base = f'{root}/artifacts/tiny-llm-neural'
 wait = ''
 if a.hf_after_main:
@@ -57,11 +61,11 @@ local_root = Path(__file__).resolve().parents[2]
 launch_file = local_root / f'.cache/tiny-llm/neural-launch-{a.label}.ps1'
 launch_file.write_text(script)
 archive = subprocess.Popen(['tar','-cf','-',str(launch_file.relative_to(local_root))],cwd=local_root,stdout=subprocess.PIPE)
-subprocess.run(['ssh','gpu',f'tar -xf - -C {root}/repo'],stdin=archive.stdout,check=True)
+subprocess.run(['ssh',SSH_HOST,f'tar -xf - -C {root}/repo'],stdin=archive.stdout,check=True)
 archive.stdout.close()
 assert archive.wait() == 0
 child_script = f"& '{root}/repo/{launch_file.relative_to(local_root)}'"
 child = base64.b64encode(child_script.encode('utf-16-le')).decode()
 launcher = "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='powershell -ExecutionPolicy Bypass -NoProfile -EncodedCommand " + child + "'} | ConvertTo-Json"
 encoded = base64.b64encode(launcher.encode('utf-16-le')).decode()
-subprocess.run(['ssh','gpu',f'powershell -NoProfile -EncodedCommand {encoded}'],check=True)
+subprocess.run(['ssh',SSH_HOST,f'powershell -NoProfile -EncodedCommand {encoded}'],check=True)

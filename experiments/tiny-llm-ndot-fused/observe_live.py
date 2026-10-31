@@ -1,4 +1,8 @@
 """Read an actual trace prefix without altering the running GPU process."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import hashlib
@@ -12,7 +16,7 @@ p.add_argument('--base',required=True)
 p.add_argument('--inputs',type=Path,required=True)
 p.add_argument('--out',type=Path,required=True)
 a=p.parse_args()
-assert a.base.startswith('C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-story-')
+assert a.base.startswith((REMOTE_ROOT + '/artifacts/tiny-llm-ndot-story-'))
 script=f'''$ProgressPreference='SilentlyContinue'
 $f=[System.IO.File]::Open('{a.base}/main/actual.tokens.u32',[System.IO.FileMode]::Open,[System.IO.FileAccess]::Read,[System.IO.FileShare]::ReadWrite)
 try {{
@@ -24,7 +28,7 @@ while($offset -lt $n) {{$read=$f.Read($b,$offset,$n-$offset); if($read -eq 0) {{
 }} finally {{$f.Dispose()}}
 '''
 encoded=base64.b64encode(script.encode('utf-16-le')).decode()
-raw=base64.b64decode(subprocess.check_output(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded]))
+raw=base64.b64decode(subprocess.check_output(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded]))
 actual=np.frombuffer(raw,dtype='<u4')
 reference=np.memmap(a.inputs/'reference.tokens.u32',dtype='<u4',mode='r')
 assert np.array_equal(actual,reference[:len(actual)])

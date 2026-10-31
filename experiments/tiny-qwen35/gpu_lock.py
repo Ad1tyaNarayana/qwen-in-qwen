@@ -1,5 +1,8 @@
 """PowerShell wrapper for the shared, atomic GPU lock convention."""
-LOCK = r'C:\Users\Admin\gpu-lock'
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 
 
 def locked(action, owner, expected_minutes):

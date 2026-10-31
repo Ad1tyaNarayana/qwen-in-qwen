@@ -1,4 +1,8 @@
 """Detach a fresh story only after the exact-state fusion gate passes."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import json
@@ -62,7 +66,7 @@ Copy-Item '{base}/main/report.json' '{base}/main/{name}-report.json'
     child=base64.b64encode(f"& '{repo}/{path.relative_to(ROOT).as_posix()}'".encode('utf-16-le')).decode()
     command="Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='powershell -ExecutionPolicy Bypass -NoProfile -EncodedCommand "+child+"'} | ConvertTo-Json"
     encoded=base64.b64encode(command.encode('utf-16-le')).decode()
-    subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],check=True)
+    subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],check=True)
     print(base)
 
 

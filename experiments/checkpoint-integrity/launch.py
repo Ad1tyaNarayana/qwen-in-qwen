@@ -3,6 +3,10 @@
 Run under an already atomically acquired lock owned by this task. Resume only
 this batch's actual checkpoints; never reference-seed the execution.
 """
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import base64
 import json
 from pathlib import Path
@@ -13,7 +17,7 @@ sys.path.insert(0, str(ROOT/'experiments/neural-accelerator'))
 from launch_legacy import REMOTE, sync
 
 def ps(script):
-    return subprocess.check_output(['ssh','gpu','powershell -NoProfile -EncodedCommand '+base64.b64encode(script.encode('utf-16-le')).decode()], text=True)
+    return subprocess.check_output(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+base64.b64encode(script.encode('utf-16-le')).decode()], text=True)
 
 
 def main():
@@ -28,7 +32,7 @@ def main():
     repo=f'{REMOTE}/repo'
     owner=f'checkpoint-integrity-{label}'
     # The caller acquires with ssh gpu mkdir before any work; never claim an existing hold.
-    assert owner in ps("Get-Content 'C:/Users/Admin/gpu-lock/owner.txt'")
+    assert owner in ps(("Get-Content '" + LOCK + "/owner.txt'"))
     script=f'''$ErrorActionPreference='Stop'
 $ProgressPreference='SilentlyContinue'
 try {{
@@ -69,7 +73,7 @@ try {{
  @{{complete=$false;status='fail';error=$_.ToString()}} | ConvertTo-Json | Set-Content '{base}/sequence.json'
  throw
 }} finally {{
- cmd /c 'rmdir /s /q C:\\Users\\Admin\\gpu-lock'
+ cmd /c 'rmdir /s /q {LOCK}'
 }}
 '''
     path=ROOT/f'.cache/checkpoint-integrity/{label}.ps1'
@@ -99,7 +103,7 @@ try {{
         (ROOT/'experiments/checkpoint-integrity/evidence/launch.json').write_text(json.dumps(dict(base=base,label=label,commands=commands,detach=json.loads(result)),indent=2)+'\n')
         print(base)
     finally:
-        if not detached: subprocess.run(['ssh','gpu',r'rmdir /s /q C:\Users\Admin\gpu-lock'],check=True)
+        if not detached: subprocess.run(['ssh',SSH_HOST,('rmdir /s /q ' + LOCK + '')],check=True)
 
 
 if __name__=='__main__': main()

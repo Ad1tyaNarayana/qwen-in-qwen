@@ -1,4 +1,8 @@
 """Acquire the shared GPU lock and detach a sequential, bounded showcase batch."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 from datetime import datetime,timezone
@@ -10,12 +14,11 @@ import time
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'experiments/neural-accelerator'))
 from launch_legacy import REMOTE,sync
-LOCK=r'C:\Users\Admin\gpu-lock'
 
 
 def ps(script):
     encoded=base64.b64encode(script.encode('utf-16-le')).decode()
-    return subprocess.check_output(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],text=True)
+    return subprocess.check_output(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],text=True)
 
 
 def launch(label,demos):
@@ -25,7 +28,7 @@ def launch(label,demos):
         ref=json.loads((out/'reference.json').read_text())
         if ref['tokens']>2000000:raise ValueError('Guest exceeds batch budget')
     # mkdir is the atomic acquisition. No GPU job or sync starts before ownership.
-    acquired=subprocess.run(['ssh','gpu',f'mkdir {LOCK}'],capture_output=True,text=True)
+    acquired=subprocess.run(['ssh',SSH_HOST,f'mkdir {LOCK}'],capture_output=True,text=True)
     if acquired.returncode:
         print('GPU lock is held. No job started. '+acquired.stderr.strip(),flush=True)
         return False
@@ -95,7 +98,7 @@ try {{
         (ROOT/'.cache/showcase/remote.json').write_text(json.dumps(dict(base=base,label=label,demos=demos),indent=2)+'\n')
         return True
     finally:
-        if not detached:subprocess.run(['ssh','gpu',f'rmdir /s /q {LOCK}'],check=True)
+        if not detached:subprocess.run(['ssh',SSH_HOST,f'rmdir /s /q {LOCK}'],check=True)
 
 
 if __name__=='__main__':

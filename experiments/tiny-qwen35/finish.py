@@ -1,4 +1,8 @@
 """Continue the milestone through retained, fail-closed verification gates."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -19,7 +23,7 @@ from gpu_lock import locked
 import base64
 
 CACHE = ROOT/'.cache/tiny-qwen35'
-TRAIN = 'C:/Users/Admin/tiny-llm-train/tiny-qwen35-20261030/result'
+TRAIN = (TRAIN_ROOT + '/tiny-qwen35-20261030/result')
 
 
 def progress(stage, **details):
@@ -29,7 +33,7 @@ def progress(stage, **details):
 
 
 def remote_json(path):
-    result = subprocess.run(['ssh','gpu','type '+path.replace('/','\\')],capture_output=True)
+    result = subprocess.run(['ssh',SSH_HOST,'type '+path.replace('/','\\')],capture_output=True)
     return json.loads(result.stdout.decode('utf-8-sig')) if result.returncode == 0 else None
 
 
@@ -45,7 +49,7 @@ def wait_json(path, seconds):
 
 def pull(remote, files, local):
     local.mkdir(parents=True,exist_ok=True)
-    child = subprocess.Popen(['ssh','gpu','tar -cf - -C '+remote+' '+' '.join(files)],stdout=subprocess.PIPE)
+    child = subprocess.Popen(['ssh',SSH_HOST,'tar -cf - -C '+remote+' '+' '.join(files)],stdout=subprocess.PIPE)
     try:
         subprocess.run(['tar','-xf','-','-C',str(local)],stdin=child.stdout,check=True)
     finally:
@@ -127,7 +131,7 @@ def collect(label,program):
     action = f"& {export}\nif($LASTEXITCODE -ne 0) {{throw 'Checkpoint metadata export failed'}}\n"
     script = "$ErrorActionPreference='Stop'\n"+locked(action,'tiny-qwen35-'+label+'-export',15)
     encoded = base64.b64encode(script.encode('utf-16le')).decode()
-    subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],check=True)
+    subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],check=True)
     files = ['main/'+name for name in ['report.json','prefix-report.json','restore-report.json','full-report.json',
              'actual.tokens.u32','actual-ram.bin','actual-output.bin','actual-registers.json','chunks.jsonl']]
     files += ['stock/report.json','stock/actual.tokens.u32','prefix.exit.json','restore.exit.json','full.exit.json',

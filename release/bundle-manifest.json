@@ -1,0 +1,1743 @@
+{
+  "format": 1,
+  "archive": "qwenputer-evidence-v1.tar.gz",
+  "archive_bytes": 236909800,
+  "archive_sha256": "235f2c3234abb674724423957b6c3d1a682679f4d1436eb41cdad1cee7c3306a",
+  "files": {
+    "checkpoint-integrity/actual-20261030a/mutations/report.json": {
+      "bytes": 1270,
+      "sha256": "b349538a979bb6ef6daf957920ca86e3eeabb4aa92ed96c2bf4e8fcf6baa5348"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot-full.exit.json": {
+      "bytes": 81,
+      "sha256": "42bdb25dee1e4adf9f51d398945ae86e277e35bde5c697197303727ffcec68cf"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot-prefix.exit.json": {
+      "bytes": 81,
+      "sha256": "7e9ca0a7ba2ffb3372842853d3f13dd6f364e054a37e28e8aac95b5923d35cdf"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot-restore.exit.json": {
+      "bytes": 81,
+      "sha256": "85f6fbb81f9d47cb0c1d8937e11b573a5cb98361346487c5045bc07010aa137f"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/actual-output.bin": {
+      "bytes": 144,
+      "sha256": "34d69005fafd40a5da3584041826a9c482388a878465c51710338f212a4ffff6"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/actual-ram.bin": {
+      "bytes": 65536,
+      "sha256": "b087e3d442bb803ab0269f0095989f10485dd88a6a4d2ef46f51d7745954ad6c"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/actual-registers.json": {
+      "bytes": 1096,
+      "sha256": "3e4d73bd81a53ad2818e3f54b460d4525c3ba335ab476fe89b13a7edff1c66ae"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/actual.tokens.u32": {
+      "bytes": 21693192,
+      "sha256": "05d260bc7435b7b22335cb14327229bb7718eea8c263b9874b6575e2a5c28ab7"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/chunks.jsonl": {
+      "bytes": 104173,
+      "sha256": "44c48b7a8b73cd1138061fc69cacefe7530f621a6d32c900b9286fc1ab2fca14"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/prefix-report.json": {
+      "bytes": 7630,
+      "sha256": "95e98fdd21bdbb983451438ade3aea6a56649ab878cd22b572e9d79e00077160"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/report.json": {
+      "bytes": 7790,
+      "sha256": "568710b553fd6cd77e7ff90489e345d98ba9fa12be06376cb18073c2f7384885"
+    },
+    "checkpoint-integrity/actual-20261030a/ndot/restore-report.json": {
+      "bytes": 7635,
+      "sha256": "ba236b87eb51a9752ba5acd6326b82eb31532e9fdd506a4c8eba0a4745cfac0c"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar-full.exit.json": {
+      "bytes": 81,
+      "sha256": "850f10fee96395e73fa20d3e4430bca312d55ee0805fb3856d6d2ea0583a31e7"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar-prefix.exit.json": {
+      "bytes": 81,
+      "sha256": "d0123659a28c80359ce59fc86a6379b554cd98d745e425ca8374030cb72a8c64"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar-restore.exit.json": {
+      "bytes": 81,
+      "sha256": "754988f3e200b8c2a9dd012449549fdf53b90ca18709d4f869b1e97426344067"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/actual-output.bin": {
+      "bytes": 144,
+      "sha256": "34d69005fafd40a5da3584041826a9c482388a878465c51710338f212a4ffff6"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/actual-ram.bin": {
+      "bytes": 65536,
+      "sha256": "12df2b61385c166fd54b3d6d8da94b8d6981eefb9dfddd75f4a798b812142353"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/actual-registers.json": {
+      "bytes": 1090,
+      "sha256": "6d0add296642adda735beb90b385c5d96ed9f207934e0eb706c9ab6c96896ab8"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/actual.tokens.u32": {
+      "bytes": 64855096,
+      "sha256": "68c7738430dbc024b3d78711be5fee39f8e5c8b6c7cda5de45c8c8f76836efa5"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/chunks.jsonl": {
+      "bytes": 312337,
+      "sha256": "9c120a1aa1f6dd336831dbf2f5123e9ea3be92ea41b5a7bc2a5ce349ea49025e"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/full-initial-failure-report.json": {
+      "bytes": 7239,
+      "sha256": "e54069d59273986ba08a9000a609fb33883c4ecfcf3355c71e1c2f1a4cec2742"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/prefix-report.json": {
+      "bytes": 7634,
+      "sha256": "c4c18b512be069934311685458c6c91cce8e3274dc0da4f05d9065700b0ebd3c"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/report.json": {
+      "bytes": 7795,
+      "sha256": "76150488401053a464de71d9478da816c8494b63e7ba499464e34e5093ff4209"
+    },
+    "checkpoint-integrity/actual-20261030a/scalar/restore-report.json": {
+      "bytes": 7637,
+      "sha256": "13262cb0c2465f8aa23d1daff160502b86351e3206280965e9171a8e4d354e65"
+    },
+    "checkpoint-integrity/actual-20261030a/sequence.json": {
+      "bytes": 53,
+      "sha256": "14098b8f6c6e5d8f504202b2f8a89286fabcb8ce28108a5cf2e3c05a65b2387b"
+    },
+    "showcase/life/build.json": {
+      "bytes": 3103,
+      "sha256": "12223fa893cdbdd4f3914a5ab135690f1752d7c634400c587593fadad901db5f"
+    },
+    "showcase/life/drom.bin": {
+      "bytes": 4194304,
+      "sha256": "26bcba9062e72a9f466fcf27dcc4d1f4f36412191e354e1f243841ecc25cb8d6"
+    },
+    "showcase/life/engine.elf": {
+      "bytes": 12908,
+      "sha256": "8b7fbc0697ccb6d67e7a2b4ccee63c19ac1ac9028829e7939ba7d47ad3d237d1"
+    },
+    "showcase/life/reference-output.bin": {
+      "bytes": 2065,
+      "sha256": "c9098d77e890827ca919d3999ba5108983d5b0eec5bf247d5b6a67b64614d590"
+    },
+    "showcase/life/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "e3aad589c733305f8bd1ab0bc2f179ed8a1b48353d8ed1c1324bddfeee4610e5"
+    },
+    "showcase/life/reference.json": {
+      "bytes": 3084,
+      "sha256": "e5c13ae8b37384409f1838e78cacc9f6b95f69e631aa4aafadbeb0d69b24f285"
+    },
+    "showcase/life/reference.tokens.u32": {
+      "bytes": 1612596,
+      "sha256": "8199ad589f841fe14d9d1ebea83de749ed88f2512ba1f2bc04d675a4ae5ebd9a"
+    },
+    "showcase/mnist-model/integer.npz": {
+      "bytes": 27182,
+      "sha256": "e705da8a756abdc92f2e46b03bf88e7e28ab59d2c233d0c3d6d5d4b9519514ed"
+    },
+    "showcase/mnist-model/model.h": {
+      "bytes": 87526,
+      "sha256": "058ba31bf40413dba37082d6435753e77d9ed0965f50bc6880f63a915d94ae73"
+    },
+    "showcase/mnist-model/test-images.bin": {
+      "bytes": 7840000,
+      "sha256": "6d87418db22cc8025d05968bec9bd5c3932904b23485740db143a061a2c9d161"
+    },
+    "showcase/mnist-model/test-labels.bin": {
+      "bytes": 10000,
+      "sha256": "ddeff807876a9661a1110d45c266c86239a3a1b7d37da0c3716a7a683c852ff5"
+    },
+    "showcase/mnist-model/test-predictions.bin": {
+      "bytes": 10000,
+      "sha256": "d7e33a26513afb6d6ad8ed1fffc9b69a33c03e29e92468023087ad9ef9e102b3"
+    },
+    "showcase/mnist-model/training.json": {
+      "bytes": 2443,
+      "sha256": "79713a6a2a6ae656a1a08998fa849d58f7b121413f0c9938e2b9d68d187734fc"
+    },
+    "showcase/mnist-scalar/build.json": {
+      "bytes": 3499,
+      "sha256": "e878429c96404c1dbfd2d0b3f063b78cf8fdfba08f2805165e28cc14e77d70d2"
+    },
+    "showcase/mnist-scalar/drom.bin": {
+      "bytes": 4194304,
+      "sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3"
+    },
+    "showcase/mnist-scalar/engine.elf": {
+      "bytes": 44056,
+      "sha256": "ef17af097e7d35ddad923212d14b56ef95afb09fd29a4ece8080a1c3887ff519"
+    },
+    "showcase/mnist-scalar/model.h": {
+      "bytes": 87526,
+      "sha256": "058ba31bf40413dba37082d6435753e77d9ed0965f50bc6880f63a915d94ae73"
+    },
+    "showcase/mnist-scalar/reference-output.bin": {
+      "bytes": 1320,
+      "sha256": "0642b473ae774399d31363ca5dc07831081601dba71c02639e9d01a4c15cf85e"
+    },
+    "showcase/mnist-scalar/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "2af4d4226db5110e469703427dfa9bbcdc00d3b2def4c7db852fae16ecafef80"
+    },
+    "showcase/mnist-scalar/reference.json": {
+      "bytes": 2272,
+      "sha256": "b9c59eff4b2daa76a5f19cf5685dae85f71163b1ab08013a02700969b29337e4"
+    },
+    "showcase/mnist-scalar/reference.tokens.u32": {
+      "bytes": 3140512,
+      "sha256": "3c0277c3b7e9f421202f82da1e270d2a1a6d1efb58d3da2730175a03756e1f06"
+    },
+    "showcase/mnist/build.json": {
+      "bytes": 3414,
+      "sha256": "6356e341cd025ee5f6ba09d6e36f6fd84f0bdb03423c17c95663d7ff4e072100"
+    },
+    "showcase/mnist/drom.bin": {
+      "bytes": 4194304,
+      "sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3"
+    },
+    "showcase/mnist/engine.elf": {
+      "bytes": 44368,
+      "sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75"
+    },
+    "showcase/mnist/model.h": {
+      "bytes": 87526,
+      "sha256": "058ba31bf40413dba37082d6435753e77d9ed0965f50bc6880f63a915d94ae73"
+    },
+    "showcase/mnist/reference-output.bin": {
+      "bytes": 1320,
+      "sha256": "0642b473ae774399d31363ca5dc07831081601dba71c02639e9d01a4c15cf85e"
+    },
+    "showcase/mnist/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "c8a88ac035be07bfb2ed3f7f7c7609069fab4e74ecc5639eabb586ee6fc9343b"
+    },
+    "showcase/mnist/reference.json": {
+      "bytes": 2277,
+      "sha256": "3b84c79b0d6645989a9affae85ab7e7414024e9706c79d22bc257d5cba311e73"
+    },
+    "showcase/mnist/reference.tokens.u32": {
+      "bytes": 756368,
+      "sha256": "c92bf5750e1126ad8b99c3738f1c4854f6741cb23b1f46ef734ae8af8bf04ba5"
+    },
+    "showcase/sha256/build.json": {
+      "bytes": 3078,
+      "sha256": "7d365365ef712c7e6d9713c5063cdad69df45f22ddbf6d984472cc146a2bff65"
+    },
+    "showcase/sha256/drom.bin": {
+      "bytes": 4194304,
+      "sha256": "4a2803ee86c495c2bbd79bcecdb19b20f755f03b2675cdd5ead51865a81ff715"
+    },
+    "showcase/sha256/engine.elf": {
+      "bytes": 15784,
+      "sha256": "c7b0dbe9da21ada944059ad7a69e6f99f71847306427cff1a7d43906f71c2869"
+    },
+    "showcase/sha256/reference-output.bin": {
+      "bytes": 154,
+      "sha256": "893ee990705eda45fd62c25ce81b514ef354e85f9243f1d9046bb942b068d12e"
+    },
+    "showcase/sha256/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "9b5f46f4091557c9748867e09d9311ed5c41ad5d4b07a41af41e37bf7c5836a9"
+    },
+    "showcase/sha256/reference.json": {
+      "bytes": 1130,
+      "sha256": "dedeec6d19854f75c6b6d3987b1274f7233b785fff0c1c84862ba312bcb700dc"
+    },
+    "showcase/sha256/reference.tokens.u32": {
+      "bytes": 100744,
+      "sha256": "240ab36e288ef29fc4cd2ddd294854f28554db74a7fda6f1578ff1055b274ded"
+    },
+    "showcase/tictactoe/build.json": {
+      "bytes": 3181,
+      "sha256": "c6cacf466fb9820feac9844df8a27f9b32b85286acffdf69eb1399e66457287a"
+    },
+    "showcase/tictactoe/drom.bin": {
+      "bytes": 4194304,
+      "sha256": "72e5b0c2afad05035f4d607c814dfb48774103c81e2d2924f707af887f404612"
+    },
+    "showcase/tictactoe/engine.elf": {
+      "bytes": 16276,
+      "sha256": "5c6afb49f2f42e5013bcdfe127b09838fd70db08214ecf1656e3ff7b0652040e"
+    },
+    "showcase/tictactoe/moves.h": {
+      "bytes": 77,
+      "sha256": "af060eaacae55420b3d5aba210c33abb5b2c67b0260fe3c1544b00fc641b0318"
+    },
+    "showcase/tictactoe/reference-output.bin": {
+      "bytes": 211,
+      "sha256": "425cd97804a0714a010d3b733840f561e9e2376f8455827f501c63fab47188b4"
+    },
+    "showcase/tictactoe/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "98eb24538031b664ff8aff496a8be8a89298544410c2d3b17b5b970c1f243176"
+    },
+    "showcase/tictactoe/reference.json": {
+      "bytes": 1146,
+      "sha256": "76b3d16df5e0eb8beba7f164de6a468aee4c3ea18fb1d38d06352e159cdebeba"
+    },
+    "showcase/tictactoe/reference.tokens.u32": {
+      "bytes": 3583020,
+      "sha256": "0b5319070d9d52c63d081a5dc72ad87bc12537d3be377b792c56d40f14106a71"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/checkpoint-metadata.json": {
+      "bytes": 14075,
+      "sha256": "d173685e4cb5c690164b79966ee6674a582acd81efbf5cef9270f58919132f7f"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/full.exit.json": {
+      "bytes": 81,
+      "sha256": "962be4d6299971138bf0d815bb56edd5a08b244cabcb214245cd75e9455d232f"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/actual-output.bin": {
+      "bytes": 1116,
+      "sha256": "21b06dd95998fe9e2b9a91f187675ba7ceb2e05f6698d0339617416ea56de8f6"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/actual-ram.bin": {
+      "bytes": 65536,
+      "sha256": "bab62801e1d0362944b61c368229d8ca6e300c0fb952f116e5f2662336be68ce"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/actual-registers.json": {
+      "bytes": 1099,
+      "sha256": "59003dc42cf1f6f1c81cf3f20a1f2998c47d3b3c431fbf3a1a569c40397cca67"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/actual.tokens.u32": {
+      "bytes": 213186252,
+      "sha256": "72110de645a5ac4f917d6b7640a79c5b10650abbc3a3741c124457666ef03443"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/chunks.jsonl": {
+      "bytes": 1028961,
+      "sha256": "c9b0ba13d2c94d619923ed9b5033d05f72a4856577b76d15d32e621b2b1bef86"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/prefix-report.json": {
+      "bytes": 7178,
+      "sha256": "1438a2f8521faaf419321a479b0dc1abb5802665eedd254de2bb2752b177ed04"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/report.json": {
+      "bytes": 8369,
+      "sha256": "f05bbba0a2db4db3b40ea82bc325f6d3f09a22607683197d9089d147e4f4a0f6"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/main/restore-report.json": {
+      "bytes": 7181,
+      "sha256": "6132a1bcfd7ed1c3980ece483c7fa5e218dcc964f4cb8673c7008b3122705900"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/prefix.exit.json": {
+      "bytes": 81,
+      "sha256": "049cc2e3e7d91194e24af64105d80e98211f3586d06037acd15eedd644cf371d"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/restore.exit.json": {
+      "bytes": 81,
+      "sha256": "4d5ba7d64d8a1ff31c149a3a63a45989469bc108b3d8a084ed70144a4cc8987d"
+    },
+    "tiny-llm/ndot-story38-20261030-actual/sequence.json": {
+      "bytes": 29,
+      "sha256": "b42661ca5e264f4858c8e5d120e70e99939752b7087a199597628d987cd7693f"
+    },
+    "tiny-llm/ndot-story38-20261030/engine.elf": {
+      "bytes": 334836,
+      "sha256": "d3a50d37b122fc6c5f1858872347656483553596609d9601f6faf5373809e212"
+    },
+    "tiny-llm/ndot-story38-20261030/model.bin": {
+      "bytes": 299835,
+      "sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-output.bin": {
+      "bytes": 1116,
+      "sha256": "21b06dd95998fe9e2b9a91f187675ba7ceb2e05f6698d0339617416ea56de8f6"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/__init__.py": {
+      "bytes": 68,
+      "sha256": "4786ed47ead298c2a1bd5f0cca502016e70d6a6f91642ccadf35fcbdcdf100e6"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/check.py": {
+      "bytes": 3547,
+      "sha256": "7c39ff4b27b68c709b4de173dbf8d672ffd30cb202dd769a6bbdabe1e99bb125"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/chip8.py": {
+      "bytes": 15583,
+      "sha256": "cd1725a7e7d9759c302b55b8f67ebcf34b5c1c5f36154cd0de14334213ac751e"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/compile.py": {
+      "bytes": 7428,
+      "sha256": "59f9d3b846bb02c96f9092dce013b88b715e9a120a3501b3a07e3175b07a70d0"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/dense.py": {
+      "bytes": 1536,
+      "sha256": "03c7c40e12e7b4a2a3e99ac165dd750cd69243edb367bde9fd23cc06f3f200f1"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/dsl/__init__.py": {
+      "bytes": 88,
+      "sha256": "a4193f3b1414f14885aed791df7e6461edd781fcbba2e9ca7e4bef703bb795be"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/dsl/batch.py": {
+      "bytes": 3096,
+      "sha256": "60bb092f593f9e1f1f5daeb7ff09c81328185c224e7accf8e3e02f197e80d020"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/dsl/evaluate.py": {
+      "bytes": 5361,
+      "sha256": "10e8e9e830b73c954dc9a859e5c01e122fad9254984855b4e0a2f9fc1203d7da"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/dsl/graph.py": {
+      "bytes": 6100,
+      "sha256": "d8837ddcd34d3d63af475e3dfda1b592a04ec330e29f1f69dac462464e8f635c"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/dsl/lib.py": {
+      "bytes": 6333,
+      "sha256": "7a818ba849be440bf93c7e0a1e05f11a7efa9cf0a6f67de622f0dd1de923ca31"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/fuzz.py": {
+      "bytes": 2463,
+      "sha256": "064e3d01cc0d51fa7d5ad136e2fc9782f32970f28e0827119b24b88df90d8c13"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/games.py": {
+      "bytes": 17450,
+      "sha256": "d09cc5eef9996245a8353840d98ddc3f79d289a661fd247fbf1ade788ec0e529"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/hf_export.py": {
+      "bytes": 11044,
+      "sha256": "d07e1744685fe10a9e7984bdde0591dfa2ca188289c538c8c80f56e80be702e8"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/__init__.py": {
+      "bytes": 334,
+      "sha256": "789fb1c89aca2b3882fb036345594aba6c87ef829d5a9ed5f95c108d59e2fc1b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/arith_bench.py": {
+      "bytes": 48884,
+      "sha256": "521b913fba06d21e202cbb639b437ad40e8496bf09f5ba4fd9d8f1dd7b1e1e7a"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/batch.py": {
+      "bytes": 41716,
+      "sha256": "87e99217f900077b590896888a5777226666ef64f720494475bfc8325fc50796"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/bridge.py": {
+      "bytes": 11877,
+      "sha256": "d49b9b41669f7706c166b99ad8dab9c1c2d2ead17df93946642953b13d0e551b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/check.py": {
+      "bytes": 2114,
+      "sha256": "9b35e46ee7cf74ce86bf074008732ae60f3725b90bfc53ea79046a2ee46d9bf1"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/chip8_q35.py": {
+      "bytes": 62727,
+      "sha256": "10dcf03db9699fd8ea2e4901dd6bc4702a69ee1e5c86e420347092774263150b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/demo.py": {
+      "bytes": 6733,
+      "sha256": "c7a21f9bb6d9addda55916d897f34d41dadc26eb7941c314f9f28cf1fd64cc5c"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/emit.py": {
+      "bytes": 12321,
+      "sha256": "e3fc75021e5a6c94d2857017b051b5bf91f2ad527128b2c04873fbd1bb384134"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/evals.py": {
+      "bytes": 55950,
+      "sha256": "0dc3cabb3b65747234d779a71f9a0989d4ea1029737a9cdd19284e0d54d6e4e2"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/fast.py": {
+      "bytes": 13324,
+      "sha256": "d3a187cc9e74f71f931e2517f47e26cbf091518a976d881dd4327a161a46ab8b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/host.py": {
+      "bytes": 2005,
+      "sha256": "ea232d3098dabdb143846d5dd8438a2973e58370c52b19fd10ff41426e0f3ebb"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/ir.py": {
+      "bytes": 22607,
+      "sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/lib/__init__.py": {
+      "bytes": 94,
+      "sha256": "eb3400897d775fa5183d0deb234f359be8a06d5601f0a3ee810439889431fb1d"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/lib/asm.py": {
+      "bytes": 4956,
+      "sha256": "00be718b714e6f2a38314950293d803471b5222acbd0483fe460ef758b638c7b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/lib/bcd.py": {
+      "bytes": 5768,
+      "sha256": "d630ae7733970f0816d497e6a850dd46207fabfea9be242966297403e3eec2f5"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/lib/macros.py": {
+      "bytes": 7613,
+      "sha256": "1599b591225cda5e1e628f6ed3b4b5cf4b2260a2cad55c481d6297d0f62bd5ab"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/merge.py": {
+      "bytes": 14449,
+      "sha256": "9d50ccb12f230f90ed15b296a5ab54c38394777cc52212e7822ae4750a6f5c19"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/mute.py": {
+      "bytes": 4348,
+      "sha256": "5707acccfa57376a383077a1d2de1cc2d1344fe3f4671a027d7045d58a03771f"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/prims.py": {
+      "bytes": 9989,
+      "sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/record.py": {
+      "bytes": 8407,
+      "sha256": "d567e5068c1e9d9e8869c1e4f48289053dfe4e659ffd914e7d4ff9f593b8be36"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/report.py": {
+      "bytes": 11105,
+      "sha256": "a46137a6dd9e2e62f2998a6e7986c0aa225963083e09589b0b46111f55afdc80"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/spike.py": {
+      "bytes": 8692,
+      "sha256": "6fa2f370af7283f6ad540b2cd87f86933fca4b0b787a5e8ff4159822faf20450"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/spikes_pos.py": {
+      "bytes": 3060,
+      "sha256": "4351191d25ee954f22fb6f035e0efd4dd74d977b21098069b9eb944190f52768"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/spikes_replay.py": {
+      "bytes": 4313,
+      "sha256": "0659859db991ea6e15f75dac0958c37b87cde18278bf7acdb7685531a7968bdf"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/text_eval.py": {
+      "bytes": 28136,
+      "sha256": "8e9f8a4081f4853428549ceec35b0f3f0d15d6a3733ad58ce3c25b2de98a6324"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/q35/tiny.py": {
+      "bytes": 4913,
+      "sha256": "52620e1155ffc9068054239df165013d7586db7f3b44cdfd6c50963c0ceabc66"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/ref/__init__.py": {
+      "bytes": 73,
+      "sha256": "6c5927e9d68c4b6a765cc001556620ea119d14d88268f0bf89f6dfb39187b67e"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/ref/emu.py": {
+      "bytes": 9253,
+      "sha256": "f302eb9b3b3981eff6f750657797e82efa21aeedd9f7ad675fd132fafc48823a"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/ref/play.py": {
+      "bytes": 2310,
+      "sha256": "79027dd7e36ebbc91e7799032d503ca5b786f7550a7363abe5cc8bbdc102723b"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/ref/profile.py": {
+      "bytes": 1624,
+      "sha256": "db668ab65e48faad9933d783c6a539cd33438668f403aa13a725bcb01a31e4f1"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/__init__.py": {
+      "bytes": 88,
+      "sha256": "82c2a6b806f6debb9c1f5eb7d6cb8004b88788f763963458aa4f254670b114b1"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/asm.py": {
+      "bytes": 11339,
+      "sha256": "1e5c972a3441524ac1861d50e008dd3817a7c621f79d72abeb32a7b14887c6a2"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/batchcheck.py": {
+      "bytes": 3579,
+      "sha256": "93d02d3b2a04f7f835d0500b537ff234409dc1f5b97b163e5fbd21f727a89be7"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/bridge.py": {
+      "bytes": 7733,
+      "sha256": "06165bb9f8d0a6b390af0881429f20006d90e8b37757dfbfee2f106627cc0958"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/calc.py": {
+      "bytes": 9641,
+      "sha256": "0a7292ef49c50d57d3acfa3956429cb2779286334b45a412cde647d5d0e02281"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/chat.py": {
+      "bytes": 24666,
+      "sha256": "b1791197de659409fd900edd44f1de4e3a0263fbe242145ae6618524563c502e"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/core.py": {
+      "bytes": 64418,
+      "sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/elf.py": {
+      "bytes": 2200,
+      "sha256": "0bd591b7a7c6c4d9595e775767f603b2e9697005fd9b949f30ff84bb440a3b50"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/env/calc/gen_sled.py": {
+      "bytes": 523,
+      "sha256": "8d482df7e982bf03ef6b08a0d75b55d5600919612b199b2224e64c302507e363"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/env/mpy/scripts/s1.py": {
+      "bytes": 14,
+      "sha256": "698171d575287eabb23a471fd2e56c2e3f7555c8cce80d8492bc53765dd385a1"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/env/mpy/scripts/s5.py": {
+      "bytes": 409,
+      "sha256": "06498732e8100190a1e9dcbc093badb1949f9da0a444f45b29649a480adf89f0"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/evalarith.py": {
+      "bytes": 13623,
+      "sha256": "70ade05c9314ea2417c7c811c539ca6900cd0c70b6f4550450e5aa7ab084a3d2"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/execcheck.py": {
+      "bytes": 3110,
+      "sha256": "30b4d014be0bce5d3a8c8cdb1697cdb7a16bf4cefcffd4d184de710be747bbc5"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/fastexec.py": {
+      "bytes": 19355,
+      "sha256": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/firmware.py": {
+      "bytes": 2462,
+      "sha256": "f9911d826251a4ce6089bc4572ddcfdcbf24b807380be6681ac0cc474d5facff"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/fuzz.py": {
+      "bytes": 6362,
+      "sha256": "e58f7a1ae4f0c891ef742c9da179b88013f02dcdfe443aec914818cffd7d9e57"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/gpucheck.py": {
+      "bytes": 2812,
+      "sha256": "9775372694d0946a48e45daf79684e5ebd789562920bc8eea158567ff07ed290"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/hf.py": {
+      "bytes": 5151,
+      "sha256": "a1bdce19e6c3cdfb11a7e4904712462ebd0c3fbab3827309068c977f58f013b6"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/measure.py": {
+      "bytes": 6684,
+      "sha256": "793a6e7f266facace4f748869db1d1a4e6fd7be85ad9f625eea6e0f3c54e12a6"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/merge.py": {
+      "bytes": 10972,
+      "sha256": "8bd4e29173f17c5ce7e296af2fe3240ddc11249ab877ecad15540c81fc1cff06"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/programs.py": {
+      "bytes": 2736,
+      "sha256": "e63137ba7c3e53399e731a8a52f3aa0c42f04dbc6634bab4c70dfaa122cb60f5"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/ref.py": {
+      "bytes": 25235,
+      "sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/replay.py": {
+      "bytes": 3750,
+      "sha256": "94e98779e19330e528b8841531cb67f03fd324dabeeecc11045b9ac28608a836"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/rvbatch.py": {
+      "bytes": 9091,
+      "sha256": "109ca0fcba1f5864a8d423581517ed1be3627932697609a5ed322ec8cd48dd89"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/spec.py": {
+      "bytes": 7270,
+      "sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/textcheck.py": {
+      "bytes": 3567,
+      "sha256": "43d1f823609bd7b67e85518095b753caaa9eaadb5f4d0de0a883563cddb6ee51"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/timing.py": {
+      "bytes": 7166,
+      "sha256": "42441e2bea4aa5838ef5d35b056c16df16c9d2faf35443ece7c23de74d7854ca"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/tiny.py": {
+      "bytes": 5076,
+      "sha256": "6077bb168884747bf033f9834b6ad3ae9bd18913691de7cbbb7ec55b53f164fc"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/tinycheck.py": {
+      "bytes": 4181,
+      "sha256": "22b59d8c60adaa5e3bd1ac10fa6c5e3914140e35ecab39de9a645dd8ea5cf03f"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/rv/tritonexec.py": {
+      "bytes": 13438,
+      "sha256": "2df86254ccd1f4ee7ca1b64167a606bbaf90db0e3fcf9f88e4437ab3f2e8658f"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/session.py": {
+      "bytes": 2684,
+      "sha256": "2a05097bef1d6171a2df2fb0cb28133419e59c8c915dd1dc6bb24727f0708fae"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/spec.py": {
+      "bytes": 4022,
+      "sha256": "4241b494508c36b7ac1662ebb2f77ec94c6d6148f519897bd565f12232e11f2e"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/trace.py": {
+      "bytes": 3885,
+      "sha256": "b9582f41ca7b10f0743b0f734f78b7d90c62ec86a637083a998c2e42bd9c0d01"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-package/chipformer/web.py": {
+      "bytes": 9092,
+      "sha256": "de95a7c5e8edd3680840b62b6a52ab73b86eb33e09a9cb081c87c4e85ae580ec"
+    },
+    "tiny-llm/ndot-story38-20261030/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "bab62801e1d0362944b61c368229d8ca6e300c0fb952f116e5f2662336be68ce"
+    },
+    "tiny-llm/ndot-story38-20261030/reference.json": {
+      "bytes": 112293,
+      "sha256": "7b8fa51348ba3c10ccf8bcfef7fb1db8249250fb2eb8001f857995910bb92000"
+    },
+    "tiny-llm/ndot-story38-20261030/reference.tokens.u32": {
+      "bytes": 213186252,
+      "sha256": "72110de645a5ac4f917d6b7640a79c5b10650abbc3a3741c124457666ef03443"
+    },
+    "tiny-llm/ndot5-20261030/engine.elf": {
+      "bytes": 334624,
+      "sha256": "252929d25b5bb5896b20e017216e3709689d1980cf68b06798f714b771586a66"
+    },
+    "tiny-llm/ndot5-20261030/model.bin": {
+      "bytes": 299835,
+      "sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612"
+    },
+    "tiny-llm/ndot5-20261030/reference-output.bin": {
+      "bytes": 144,
+      "sha256": "34d69005fafd40a5da3584041826a9c482388a878465c51710338f212a4ffff6"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/__init__.py": {
+      "bytes": 68,
+      "sha256": "4786ed47ead298c2a1bd5f0cca502016e70d6a6f91642ccadf35fcbdcdf100e6"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/check.py": {
+      "bytes": 3547,
+      "sha256": "7c39ff4b27b68c709b4de173dbf8d672ffd30cb202dd769a6bbdabe1e99bb125"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/chip8.py": {
+      "bytes": 15583,
+      "sha256": "cd1725a7e7d9759c302b55b8f67ebcf34b5c1c5f36154cd0de14334213ac751e"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/compile.py": {
+      "bytes": 7428,
+      "sha256": "59f9d3b846bb02c96f9092dce013b88b715e9a120a3501b3a07e3175b07a70d0"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/dense.py": {
+      "bytes": 1536,
+      "sha256": "03c7c40e12e7b4a2a3e99ac165dd750cd69243edb367bde9fd23cc06f3f200f1"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/dsl/__init__.py": {
+      "bytes": 88,
+      "sha256": "a4193f3b1414f14885aed791df7e6461edd781fcbba2e9ca7e4bef703bb795be"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/dsl/batch.py": {
+      "bytes": 3096,
+      "sha256": "60bb092f593f9e1f1f5daeb7ff09c81328185c224e7accf8e3e02f197e80d020"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/dsl/evaluate.py": {
+      "bytes": 5361,
+      "sha256": "10e8e9e830b73c954dc9a859e5c01e122fad9254984855b4e0a2f9fc1203d7da"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/dsl/graph.py": {
+      "bytes": 6100,
+      "sha256": "d8837ddcd34d3d63af475e3dfda1b592a04ec330e29f1f69dac462464e8f635c"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/dsl/lib.py": {
+      "bytes": 6333,
+      "sha256": "7a818ba849be440bf93c7e0a1e05f11a7efa9cf0a6f67de622f0dd1de923ca31"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/fuzz.py": {
+      "bytes": 2463,
+      "sha256": "064e3d01cc0d51fa7d5ad136e2fc9782f32970f28e0827119b24b88df90d8c13"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/games.py": {
+      "bytes": 17450,
+      "sha256": "d09cc5eef9996245a8353840d98ddc3f79d289a661fd247fbf1ade788ec0e529"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/hf_export.py": {
+      "bytes": 11044,
+      "sha256": "d07e1744685fe10a9e7984bdde0591dfa2ca188289c538c8c80f56e80be702e8"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/__init__.py": {
+      "bytes": 334,
+      "sha256": "789fb1c89aca2b3882fb036345594aba6c87ef829d5a9ed5f95c108d59e2fc1b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/arith_bench.py": {
+      "bytes": 48884,
+      "sha256": "521b913fba06d21e202cbb639b437ad40e8496bf09f5ba4fd9d8f1dd7b1e1e7a"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/batch.py": {
+      "bytes": 41716,
+      "sha256": "87e99217f900077b590896888a5777226666ef64f720494475bfc8325fc50796"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/bridge.py": {
+      "bytes": 11877,
+      "sha256": "d49b9b41669f7706c166b99ad8dab9c1c2d2ead17df93946642953b13d0e551b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/check.py": {
+      "bytes": 2114,
+      "sha256": "9b35e46ee7cf74ce86bf074008732ae60f3725b90bfc53ea79046a2ee46d9bf1"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/chip8_q35.py": {
+      "bytes": 62727,
+      "sha256": "10dcf03db9699fd8ea2e4901dd6bc4702a69ee1e5c86e420347092774263150b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/demo.py": {
+      "bytes": 6733,
+      "sha256": "c7a21f9bb6d9addda55916d897f34d41dadc26eb7941c314f9f28cf1fd64cc5c"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/emit.py": {
+      "bytes": 12321,
+      "sha256": "e3fc75021e5a6c94d2857017b051b5bf91f2ad527128b2c04873fbd1bb384134"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/evals.py": {
+      "bytes": 55950,
+      "sha256": "0dc3cabb3b65747234d779a71f9a0989d4ea1029737a9cdd19284e0d54d6e4e2"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/fast.py": {
+      "bytes": 13324,
+      "sha256": "d3a187cc9e74f71f931e2517f47e26cbf091518a976d881dd4327a161a46ab8b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/host.py": {
+      "bytes": 2005,
+      "sha256": "ea232d3098dabdb143846d5dd8438a2973e58370c52b19fd10ff41426e0f3ebb"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/ir.py": {
+      "bytes": 22607,
+      "sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/lib/__init__.py": {
+      "bytes": 94,
+      "sha256": "eb3400897d775fa5183d0deb234f359be8a06d5601f0a3ee810439889431fb1d"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/lib/asm.py": {
+      "bytes": 4956,
+      "sha256": "00be718b714e6f2a38314950293d803471b5222acbd0483fe460ef758b638c7b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/lib/bcd.py": {
+      "bytes": 5768,
+      "sha256": "d630ae7733970f0816d497e6a850dd46207fabfea9be242966297403e3eec2f5"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/lib/macros.py": {
+      "bytes": 7613,
+      "sha256": "1599b591225cda5e1e628f6ed3b4b5cf4b2260a2cad55c481d6297d0f62bd5ab"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/merge.py": {
+      "bytes": 14449,
+      "sha256": "9d50ccb12f230f90ed15b296a5ab54c38394777cc52212e7822ae4750a6f5c19"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/mute.py": {
+      "bytes": 4348,
+      "sha256": "5707acccfa57376a383077a1d2de1cc2d1344fe3f4671a027d7045d58a03771f"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/prims.py": {
+      "bytes": 9989,
+      "sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/record.py": {
+      "bytes": 8407,
+      "sha256": "d567e5068c1e9d9e8869c1e4f48289053dfe4e659ffd914e7d4ff9f593b8be36"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/report.py": {
+      "bytes": 11105,
+      "sha256": "a46137a6dd9e2e62f2998a6e7986c0aa225963083e09589b0b46111f55afdc80"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/spike.py": {
+      "bytes": 8692,
+      "sha256": "6fa2f370af7283f6ad540b2cd87f86933fca4b0b787a5e8ff4159822faf20450"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/spikes_pos.py": {
+      "bytes": 3060,
+      "sha256": "4351191d25ee954f22fb6f035e0efd4dd74d977b21098069b9eb944190f52768"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/spikes_replay.py": {
+      "bytes": 4313,
+      "sha256": "0659859db991ea6e15f75dac0958c37b87cde18278bf7acdb7685531a7968bdf"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/text_eval.py": {
+      "bytes": 28136,
+      "sha256": "8e9f8a4081f4853428549ceec35b0f3f0d15d6a3733ad58ce3c25b2de98a6324"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/q35/tiny.py": {
+      "bytes": 4913,
+      "sha256": "52620e1155ffc9068054239df165013d7586db7f3b44cdfd6c50963c0ceabc66"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/ref/__init__.py": {
+      "bytes": 73,
+      "sha256": "6c5927e9d68c4b6a765cc001556620ea119d14d88268f0bf89f6dfb39187b67e"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/ref/emu.py": {
+      "bytes": 9253,
+      "sha256": "f302eb9b3b3981eff6f750657797e82efa21aeedd9f7ad675fd132fafc48823a"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/ref/play.py": {
+      "bytes": 2310,
+      "sha256": "79027dd7e36ebbc91e7799032d503ca5b786f7550a7363abe5cc8bbdc102723b"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/ref/profile.py": {
+      "bytes": 1624,
+      "sha256": "db668ab65e48faad9933d783c6a539cd33438668f403aa13a725bcb01a31e4f1"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/__init__.py": {
+      "bytes": 88,
+      "sha256": "82c2a6b806f6debb9c1f5eb7d6cb8004b88788f763963458aa4f254670b114b1"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/asm.py": {
+      "bytes": 11339,
+      "sha256": "1e5c972a3441524ac1861d50e008dd3817a7c621f79d72abeb32a7b14887c6a2"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/batchcheck.py": {
+      "bytes": 3579,
+      "sha256": "93d02d3b2a04f7f835d0500b537ff234409dc1f5b97b163e5fbd21f727a89be7"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/bridge.py": {
+      "bytes": 7733,
+      "sha256": "06165bb9f8d0a6b390af0881429f20006d90e8b37757dfbfee2f106627cc0958"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/calc.py": {
+      "bytes": 9641,
+      "sha256": "0a7292ef49c50d57d3acfa3956429cb2779286334b45a412cde647d5d0e02281"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/chat.py": {
+      "bytes": 24666,
+      "sha256": "b1791197de659409fd900edd44f1de4e3a0263fbe242145ae6618524563c502e"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/core.py": {
+      "bytes": 64418,
+      "sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/elf.py": {
+      "bytes": 2200,
+      "sha256": "0bd591b7a7c6c4d9595e775767f603b2e9697005fd9b949f30ff84bb440a3b50"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/env/calc/gen_sled.py": {
+      "bytes": 523,
+      "sha256": "8d482df7e982bf03ef6b08a0d75b55d5600919612b199b2224e64c302507e363"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/env/mpy/scripts/s1.py": {
+      "bytes": 14,
+      "sha256": "698171d575287eabb23a471fd2e56c2e3f7555c8cce80d8492bc53765dd385a1"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/env/mpy/scripts/s5.py": {
+      "bytes": 409,
+      "sha256": "06498732e8100190a1e9dcbc093badb1949f9da0a444f45b29649a480adf89f0"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/evalarith.py": {
+      "bytes": 13623,
+      "sha256": "70ade05c9314ea2417c7c811c539ca6900cd0c70b6f4550450e5aa7ab084a3d2"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/execcheck.py": {
+      "bytes": 3110,
+      "sha256": "30b4d014be0bce5d3a8c8cdb1697cdb7a16bf4cefcffd4d184de710be747bbc5"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/fastexec.py": {
+      "bytes": 19355,
+      "sha256": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/firmware.py": {
+      "bytes": 2462,
+      "sha256": "f9911d826251a4ce6089bc4572ddcfdcbf24b807380be6681ac0cc474d5facff"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/fuzz.py": {
+      "bytes": 6362,
+      "sha256": "e58f7a1ae4f0c891ef742c9da179b88013f02dcdfe443aec914818cffd7d9e57"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/gpucheck.py": {
+      "bytes": 2812,
+      "sha256": "9775372694d0946a48e45daf79684e5ebd789562920bc8eea158567ff07ed290"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/hf.py": {
+      "bytes": 5151,
+      "sha256": "a1bdce19e6c3cdfb11a7e4904712462ebd0c3fbab3827309068c977f58f013b6"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/measure.py": {
+      "bytes": 6684,
+      "sha256": "793a6e7f266facace4f748869db1d1a4e6fd7be85ad9f625eea6e0f3c54e12a6"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/merge.py": {
+      "bytes": 10972,
+      "sha256": "8bd4e29173f17c5ce7e296af2fe3240ddc11249ab877ecad15540c81fc1cff06"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/programs.py": {
+      "bytes": 2736,
+      "sha256": "e63137ba7c3e53399e731a8a52f3aa0c42f04dbc6634bab4c70dfaa122cb60f5"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/ref.py": {
+      "bytes": 25235,
+      "sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/replay.py": {
+      "bytes": 3750,
+      "sha256": "94e98779e19330e528b8841531cb67f03fd324dabeeecc11045b9ac28608a836"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/rvbatch.py": {
+      "bytes": 9091,
+      "sha256": "109ca0fcba1f5864a8d423581517ed1be3627932697609a5ed322ec8cd48dd89"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/spec.py": {
+      "bytes": 7270,
+      "sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/textcheck.py": {
+      "bytes": 3567,
+      "sha256": "43d1f823609bd7b67e85518095b753caaa9eaadb5f4d0de0a883563cddb6ee51"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/timing.py": {
+      "bytes": 7166,
+      "sha256": "42441e2bea4aa5838ef5d35b056c16df16c9d2faf35443ece7c23de74d7854ca"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/tiny.py": {
+      "bytes": 5076,
+      "sha256": "6077bb168884747bf033f9834b6ad3ae9bd18913691de7cbbb7ec55b53f164fc"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/tinycheck.py": {
+      "bytes": 4181,
+      "sha256": "22b59d8c60adaa5e3bd1ac10fa6c5e3914140e35ecab39de9a645dd8ea5cf03f"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/rv/tritonexec.py": {
+      "bytes": 13438,
+      "sha256": "2df86254ccd1f4ee7ca1b64167a606bbaf90db0e3fcf9f88e4437ab3f2e8658f"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/session.py": {
+      "bytes": 2684,
+      "sha256": "2a05097bef1d6171a2df2fb0cb28133419e59c8c915dd1dc6bb24727f0708fae"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/spec.py": {
+      "bytes": 4022,
+      "sha256": "4241b494508c36b7ac1662ebb2f77ec94c6d6148f519897bd565f12232e11f2e"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/trace.py": {
+      "bytes": 3885,
+      "sha256": "b9582f41ca7b10f0743b0f734f78b7d90c62ec86a637083a998c2e42bd9c0d01"
+    },
+    "tiny-llm/ndot5-20261030/reference-package/chipformer/web.py": {
+      "bytes": 9092,
+      "sha256": "de95a7c5e8edd3680840b62b6a52ab73b86eb33e09a9cb081c87c4e85ae580ec"
+    },
+    "tiny-llm/ndot5-20261030/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "b087e3d442bb803ab0269f0095989f10485dd88a6a4d2ef46f51d7745954ad6c"
+    },
+    "tiny-llm/ndot5-20261030/reference.json": {
+      "bytes": 15845,
+      "sha256": "51bf3162a81e5ecaf7f6ed37d90b3b30543398059a2f8e7387537071b48e9bd2"
+    },
+    "tiny-llm/ndot5-20261030/reference.tokens.u32": {
+      "bytes": 21693192,
+      "sha256": "05d260bc7435b7b22335cb14327229bb7718eea8c263b9874b6575e2a5c28ab7"
+    },
+    "tiny-llm/neural-stories/engine.elf": {
+      "bytes": 333744,
+      "sha256": "197388a66c479db1fdda53a21a69faae1a798e966341d17a2bffe033d8dd34d0"
+    },
+    "tiny-llm/neural-stories/model.bin": {
+      "bytes": 299835,
+      "sha256": "b1a57a6035118ed8ca99dbb6cbd46527d6ccdf349f86ab124f8e7e4767639612"
+    },
+    "tiny-llm/neural-stories/reference-output.bin": {
+      "bytes": 144,
+      "sha256": "34d69005fafd40a5da3584041826a9c482388a878465c51710338f212a4ffff6"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/__init__.py": {
+      "bytes": 68,
+      "sha256": "4786ed47ead298c2a1bd5f0cca502016e70d6a6f91642ccadf35fcbdcdf100e6"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/check.py": {
+      "bytes": 3547,
+      "sha256": "7c39ff4b27b68c709b4de173dbf8d672ffd30cb202dd769a6bbdabe1e99bb125"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/chip8.py": {
+      "bytes": 15583,
+      "sha256": "cd1725a7e7d9759c302b55b8f67ebcf34b5c1c5f36154cd0de14334213ac751e"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/compile.py": {
+      "bytes": 7428,
+      "sha256": "59f9d3b846bb02c96f9092dce013b88b715e9a120a3501b3a07e3175b07a70d0"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/dense.py": {
+      "bytes": 1536,
+      "sha256": "03c7c40e12e7b4a2a3e99ac165dd750cd69243edb367bde9fd23cc06f3f200f1"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/dsl/__init__.py": {
+      "bytes": 88,
+      "sha256": "a4193f3b1414f14885aed791df7e6461edd781fcbba2e9ca7e4bef703bb795be"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/dsl/batch.py": {
+      "bytes": 3096,
+      "sha256": "60bb092f593f9e1f1f5daeb7ff09c81328185c224e7accf8e3e02f197e80d020"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/dsl/evaluate.py": {
+      "bytes": 5361,
+      "sha256": "10e8e9e830b73c954dc9a859e5c01e122fad9254984855b4e0a2f9fc1203d7da"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/dsl/graph.py": {
+      "bytes": 6100,
+      "sha256": "d8837ddcd34d3d63af475e3dfda1b592a04ec330e29f1f69dac462464e8f635c"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/dsl/lib.py": {
+      "bytes": 6333,
+      "sha256": "7a818ba849be440bf93c7e0a1e05f11a7efa9cf0a6f67de622f0dd1de923ca31"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/fuzz.py": {
+      "bytes": 2463,
+      "sha256": "064e3d01cc0d51fa7d5ad136e2fc9782f32970f28e0827119b24b88df90d8c13"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/games.py": {
+      "bytes": 17450,
+      "sha256": "d09cc5eef9996245a8353840d98ddc3f79d289a661fd247fbf1ade788ec0e529"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/hf_export.py": {
+      "bytes": 11044,
+      "sha256": "d07e1744685fe10a9e7984bdde0591dfa2ca188289c538c8c80f56e80be702e8"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/__init__.py": {
+      "bytes": 334,
+      "sha256": "789fb1c89aca2b3882fb036345594aba6c87ef829d5a9ed5f95c108d59e2fc1b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/arith_bench.py": {
+      "bytes": 48884,
+      "sha256": "521b913fba06d21e202cbb639b437ad40e8496bf09f5ba4fd9d8f1dd7b1e1e7a"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/batch.py": {
+      "bytes": 41716,
+      "sha256": "87e99217f900077b590896888a5777226666ef64f720494475bfc8325fc50796"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/bridge.py": {
+      "bytes": 11877,
+      "sha256": "d49b9b41669f7706c166b99ad8dab9c1c2d2ead17df93946642953b13d0e551b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/check.py": {
+      "bytes": 2114,
+      "sha256": "9b35e46ee7cf74ce86bf074008732ae60f3725b90bfc53ea79046a2ee46d9bf1"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/chip8_q35.py": {
+      "bytes": 62727,
+      "sha256": "10dcf03db9699fd8ea2e4901dd6bc4702a69ee1e5c86e420347092774263150b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/demo.py": {
+      "bytes": 6733,
+      "sha256": "c7a21f9bb6d9addda55916d897f34d41dadc26eb7941c314f9f28cf1fd64cc5c"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/emit.py": {
+      "bytes": 12321,
+      "sha256": "e3fc75021e5a6c94d2857017b051b5bf91f2ad527128b2c04873fbd1bb384134"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/evals.py": {
+      "bytes": 55950,
+      "sha256": "0dc3cabb3b65747234d779a71f9a0989d4ea1029737a9cdd19284e0d54d6e4e2"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/fast.py": {
+      "bytes": 13324,
+      "sha256": "d3a187cc9e74f71f931e2517f47e26cbf091518a976d881dd4327a161a46ab8b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/host.py": {
+      "bytes": 2005,
+      "sha256": "ea232d3098dabdb143846d5dd8438a2973e58370c52b19fd10ff41426e0f3ebb"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/ir.py": {
+      "bytes": 22607,
+      "sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/lib/__init__.py": {
+      "bytes": 94,
+      "sha256": "eb3400897d775fa5183d0deb234f359be8a06d5601f0a3ee810439889431fb1d"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/lib/asm.py": {
+      "bytes": 4956,
+      "sha256": "00be718b714e6f2a38314950293d803471b5222acbd0483fe460ef758b638c7b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/lib/bcd.py": {
+      "bytes": 5768,
+      "sha256": "d630ae7733970f0816d497e6a850dd46207fabfea9be242966297403e3eec2f5"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/lib/macros.py": {
+      "bytes": 7613,
+      "sha256": "1599b591225cda5e1e628f6ed3b4b5cf4b2260a2cad55c481d6297d0f62bd5ab"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/merge.py": {
+      "bytes": 14449,
+      "sha256": "9d50ccb12f230f90ed15b296a5ab54c38394777cc52212e7822ae4750a6f5c19"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/mute.py": {
+      "bytes": 4348,
+      "sha256": "5707acccfa57376a383077a1d2de1cc2d1344fe3f4671a027d7045d58a03771f"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/prims.py": {
+      "bytes": 9989,
+      "sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/record.py": {
+      "bytes": 8407,
+      "sha256": "d567e5068c1e9d9e8869c1e4f48289053dfe4e659ffd914e7d4ff9f593b8be36"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/report.py": {
+      "bytes": 11105,
+      "sha256": "a46137a6dd9e2e62f2998a6e7986c0aa225963083e09589b0b46111f55afdc80"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/spike.py": {
+      "bytes": 8692,
+      "sha256": "6fa2f370af7283f6ad540b2cd87f86933fca4b0b787a5e8ff4159822faf20450"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/spikes_pos.py": {
+      "bytes": 3060,
+      "sha256": "4351191d25ee954f22fb6f035e0efd4dd74d977b21098069b9eb944190f52768"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/spikes_replay.py": {
+      "bytes": 4313,
+      "sha256": "0659859db991ea6e15f75dac0958c37b87cde18278bf7acdb7685531a7968bdf"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/text_eval.py": {
+      "bytes": 28136,
+      "sha256": "8e9f8a4081f4853428549ceec35b0f3f0d15d6a3733ad58ce3c25b2de98a6324"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/q35/tiny.py": {
+      "bytes": 4913,
+      "sha256": "52620e1155ffc9068054239df165013d7586db7f3b44cdfd6c50963c0ceabc66"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/ref/__init__.py": {
+      "bytes": 73,
+      "sha256": "6c5927e9d68c4b6a765cc001556620ea119d14d88268f0bf89f6dfb39187b67e"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/ref/emu.py": {
+      "bytes": 9253,
+      "sha256": "f302eb9b3b3981eff6f750657797e82efa21aeedd9f7ad675fd132fafc48823a"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/ref/play.py": {
+      "bytes": 2310,
+      "sha256": "79027dd7e36ebbc91e7799032d503ca5b786f7550a7363abe5cc8bbdc102723b"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/ref/profile.py": {
+      "bytes": 1624,
+      "sha256": "db668ab65e48faad9933d783c6a539cd33438668f403aa13a725bcb01a31e4f1"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/__init__.py": {
+      "bytes": 88,
+      "sha256": "82c2a6b806f6debb9c1f5eb7d6cb8004b88788f763963458aa4f254670b114b1"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/asm.py": {
+      "bytes": 11339,
+      "sha256": "1e5c972a3441524ac1861d50e008dd3817a7c621f79d72abeb32a7b14887c6a2"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/batchcheck.py": {
+      "bytes": 3579,
+      "sha256": "93d02d3b2a04f7f835d0500b537ff234409dc1f5b97b163e5fbd21f727a89be7"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/bridge.py": {
+      "bytes": 7733,
+      "sha256": "06165bb9f8d0a6b390af0881429f20006d90e8b37757dfbfee2f106627cc0958"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/calc.py": {
+      "bytes": 9641,
+      "sha256": "0a7292ef49c50d57d3acfa3956429cb2779286334b45a412cde647d5d0e02281"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/chat.py": {
+      "bytes": 24666,
+      "sha256": "b1791197de659409fd900edd44f1de4e3a0263fbe242145ae6618524563c502e"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/core.py": {
+      "bytes": 64418,
+      "sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/elf.py": {
+      "bytes": 2200,
+      "sha256": "0bd591b7a7c6c4d9595e775767f603b2e9697005fd9b949f30ff84bb440a3b50"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/env/calc/gen_sled.py": {
+      "bytes": 523,
+      "sha256": "8d482df7e982bf03ef6b08a0d75b55d5600919612b199b2224e64c302507e363"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/env/mpy/scripts/s1.py": {
+      "bytes": 14,
+      "sha256": "698171d575287eabb23a471fd2e56c2e3f7555c8cce80d8492bc53765dd385a1"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/env/mpy/scripts/s5.py": {
+      "bytes": 409,
+      "sha256": "06498732e8100190a1e9dcbc093badb1949f9da0a444f45b29649a480adf89f0"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/evalarith.py": {
+      "bytes": 13623,
+      "sha256": "70ade05c9314ea2417c7c811c539ca6900cd0c70b6f4550450e5aa7ab084a3d2"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/execcheck.py": {
+      "bytes": 3110,
+      "sha256": "30b4d014be0bce5d3a8c8cdb1697cdb7a16bf4cefcffd4d184de710be747bbc5"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/fastexec.py": {
+      "bytes": 19355,
+      "sha256": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/firmware.py": {
+      "bytes": 2462,
+      "sha256": "f9911d826251a4ce6089bc4572ddcfdcbf24b807380be6681ac0cc474d5facff"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/fuzz.py": {
+      "bytes": 6362,
+      "sha256": "e58f7a1ae4f0c891ef742c9da179b88013f02dcdfe443aec914818cffd7d9e57"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/gpucheck.py": {
+      "bytes": 2812,
+      "sha256": "9775372694d0946a48e45daf79684e5ebd789562920bc8eea158567ff07ed290"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/hf.py": {
+      "bytes": 5151,
+      "sha256": "a1bdce19e6c3cdfb11a7e4904712462ebd0c3fbab3827309068c977f58f013b6"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/measure.py": {
+      "bytes": 6684,
+      "sha256": "793a6e7f266facace4f748869db1d1a4e6fd7be85ad9f625eea6e0f3c54e12a6"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/merge.py": {
+      "bytes": 10972,
+      "sha256": "8bd4e29173f17c5ce7e296af2fe3240ddc11249ab877ecad15540c81fc1cff06"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/programs.py": {
+      "bytes": 2736,
+      "sha256": "e63137ba7c3e53399e731a8a52f3aa0c42f04dbc6634bab4c70dfaa122cb60f5"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/ref.py": {
+      "bytes": 25235,
+      "sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/replay.py": {
+      "bytes": 3750,
+      "sha256": "94e98779e19330e528b8841531cb67f03fd324dabeeecc11045b9ac28608a836"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/rvbatch.py": {
+      "bytes": 9091,
+      "sha256": "109ca0fcba1f5864a8d423581517ed1be3627932697609a5ed322ec8cd48dd89"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/spec.py": {
+      "bytes": 7270,
+      "sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/textcheck.py": {
+      "bytes": 3567,
+      "sha256": "43d1f823609bd7b67e85518095b753caaa9eaadb5f4d0de0a883563cddb6ee51"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/timing.py": {
+      "bytes": 7166,
+      "sha256": "42441e2bea4aa5838ef5d35b056c16df16c9d2faf35443ece7c23de74d7854ca"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/tiny.py": {
+      "bytes": 5076,
+      "sha256": "6077bb168884747bf033f9834b6ad3ae9bd18913691de7cbbb7ec55b53f164fc"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/tinycheck.py": {
+      "bytes": 4181,
+      "sha256": "22b59d8c60adaa5e3bd1ac10fa6c5e3914140e35ecab39de9a645dd8ea5cf03f"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/rv/tritonexec.py": {
+      "bytes": 13438,
+      "sha256": "2df86254ccd1f4ee7ca1b64167a606bbaf90db0e3fcf9f88e4437ab3f2e8658f"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/session.py": {
+      "bytes": 2684,
+      "sha256": "2a05097bef1d6171a2df2fb0cb28133419e59c8c915dd1dc6bb24727f0708fae"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/spec.py": {
+      "bytes": 4022,
+      "sha256": "4241b494508c36b7ac1662ebb2f77ec94c6d6148f519897bd565f12232e11f2e"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/trace.py": {
+      "bytes": 3885,
+      "sha256": "b9582f41ca7b10f0743b0f734f78b7d90c62ec86a637083a998c2e42bd9c0d01"
+    },
+    "tiny-llm/neural-stories/reference-package/chipformer/web.py": {
+      "bytes": 9092,
+      "sha256": "de95a7c5e8edd3680840b62b6a52ab73b86eb33e09a9cb081c87c4e85ae580ec"
+    },
+    "tiny-llm/neural-stories/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "12df2b61385c166fd54b3d6d8da94b8d6981eefb9dfddd75f4a798b812142353"
+    },
+    "tiny-llm/neural-stories/reference.json": {
+      "bytes": 35698,
+      "sha256": "88e5f3eedede932f3e055f5b5515c61cc96c1d2d87d6b9515de01593e16444e6"
+    },
+    "tiny-llm/neural-stories/reference.tokens.u32": {
+      "bytes": 64855096,
+      "sha256": "68c7738430dbc024b3d78711be5fee39f8e5c8b6c7cda5de45c8c8f76836efa5"
+    },
+    "tiny-qwen35/actual-covariance-20261030/checkpoint-metadata.json": {
+      "bytes": 14076,
+      "sha256": "0a978bd36d9112126077c936aa7643ec91a4b5979eba805f8089517da1ffb4d0"
+    },
+    "tiny-qwen35/actual-covariance-20261030/full.exit.json": {
+      "bytes": 104,
+      "sha256": "453448a24b71628d8e5c9be8f7a8e052dcfecf9367ccb9e680b59add44bdac02"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/actual-output.bin": {
+      "bytes": 176,
+      "sha256": "2f7a8ceed5bc71b7322e54ec539d8badf68d214c34d3f0c9178d715697d69ff0"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/actual-ram.bin": {
+      "bytes": 65536,
+      "sha256": "8e9b0dc050ff31e11899fd6a3dff17e70e8a46442d4db5edd0b1e8dd963e0e40"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/actual-registers.json": {
+      "bytes": 1048,
+      "sha256": "bdb544c481e39086e2463e6d84f2904971c75df25b9e59495ee0bb835b05e93c"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/actual.tokens.u32": {
+      "bytes": 143344020,
+      "sha256": "4f277a82f585f203f61e4f632e7b25a11a79664a4f9ce6e31d077a4dd70ef012"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/chunks.jsonl": {
+      "bytes": 688684,
+      "sha256": "cafc9f5bb3bafc50c2e7e89763a25ae025c6a3d1e65598abed8cf1ee95ffc71a"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/prefix-report.json": {
+      "bytes": 7177,
+      "sha256": "6a34110d3c55213cf9048c684f96488173e1e2205b77db27f9a327342b689a03"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/report.json": {
+      "bytes": 7373,
+      "sha256": "99c2d6eb0f33b816bab26401cc84b1c33462290cb1a3cfb82a8166b180f9377a"
+    },
+    "tiny-qwen35/actual-covariance-20261030/main/restore-report.json": {
+      "bytes": 7180,
+      "sha256": "96dda4be40242251d08283c82feb278a1c61c07b77bf10b76ae68e525cf14d67"
+    },
+    "tiny-qwen35/actual-covariance-20261030/pre-shutdown/actual.tokens.u32": {
+      "bytes": 65438720,
+      "sha256": "ff7dd82efa7f1adc56af1ec30c13b5dd68defaf02edfc8db8b852746e342fda1"
+    },
+    "tiny-qwen35/actual-covariance-20261030/pre-shutdown/checkpoint.pt": {
+      "bytes": 82797109,
+      "sha256": "cae4b92b719168d48a9f5c7b6957462505e51b929bbb5c1e273780b0d8a44773"
+    },
+    "tiny-qwen35/actual-covariance-20261030/prefix.exit.json": {
+      "bytes": 81,
+      "sha256": "0cf5a1abd8b1421eaf01303d2906f0ef51dab698d03d4582303050dc1c16230f"
+    },
+    "tiny-qwen35/actual-covariance-20261030/recovery-checkpoint.json": {
+      "bytes": 13426,
+      "sha256": "346869bb31b7b449aa39eb68ec5e33c983061974d854b91b77d9e0481637bdf0"
+    },
+    "tiny-qwen35/actual-covariance-20261030/restore.exit.json": {
+      "bytes": 81,
+      "sha256": "68602767eb3d15823475faf8eff0cd0e4afff9b1b8198905c39821bf8d3a5768"
+    },
+    "tiny-qwen35/actual-covariance-20261030/sequence.json": {
+      "bytes": 29,
+      "sha256": "b42661ca5e264f4858c8e5d120e70e99939752b7087a199597628d987cd7693f"
+    },
+    "tiny-qwen35/actual-covariance-20261030/stock.exit.json": {
+      "bytes": 81,
+      "sha256": "96bf2266395c8aedb01380efe9cac8f950425852e5a9f50f6d4b4f8c4b7c8615"
+    },
+    "tiny-qwen35/actual-covariance-20261030/stock/actual.tokens.u32": {
+      "bytes": 65536,
+      "sha256": "69052c7ff2e1079e5a1ed4ee353fae7a1fa9872cf178a3941c523ffb23100c77"
+    },
+    "tiny-qwen35/actual-covariance-20261030/stock/report.json": {
+      "bytes": 14823,
+      "sha256": "41f944a0c8b1c5e54c454052529be4ebd689c785aed2b1604d546929f12792d3"
+    },
+    "tiny-qwen35/trained-program/engine.elf": {
+      "bytes": 1733472,
+      "sha256": "c2d16c876271ce64ae3a5faee45654ac676b462e79751b0c60f71aa7aa9202f1"
+    },
+    "tiny-qwen35/trained-program/reference-output.bin": {
+      "bytes": 176,
+      "sha256": "2f7a8ceed5bc71b7322e54ec539d8badf68d214c34d3f0c9178d715697d69ff0"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/__init__.py": {
+      "bytes": 68,
+      "sha256": "4786ed47ead298c2a1bd5f0cca502016e70d6a6f91642ccadf35fcbdcdf100e6"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/check.py": {
+      "bytes": 3547,
+      "sha256": "7c39ff4b27b68c709b4de173dbf8d672ffd30cb202dd769a6bbdabe1e99bb125"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/chip8.py": {
+      "bytes": 15583,
+      "sha256": "cd1725a7e7d9759c302b55b8f67ebcf34b5c1c5f36154cd0de14334213ac751e"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/compile.py": {
+      "bytes": 7428,
+      "sha256": "59f9d3b846bb02c96f9092dce013b88b715e9a120a3501b3a07e3175b07a70d0"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/dense.py": {
+      "bytes": 1536,
+      "sha256": "03c7c40e12e7b4a2a3e99ac165dd750cd69243edb367bde9fd23cc06f3f200f1"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/dsl/__init__.py": {
+      "bytes": 88,
+      "sha256": "a4193f3b1414f14885aed791df7e6461edd781fcbba2e9ca7e4bef703bb795be"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/dsl/batch.py": {
+      "bytes": 3096,
+      "sha256": "60bb092f593f9e1f1f5daeb7ff09c81328185c224e7accf8e3e02f197e80d020"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/dsl/evaluate.py": {
+      "bytes": 5361,
+      "sha256": "10e8e9e830b73c954dc9a859e5c01e122fad9254984855b4e0a2f9fc1203d7da"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/dsl/graph.py": {
+      "bytes": 6100,
+      "sha256": "d8837ddcd34d3d63af475e3dfda1b592a04ec330e29f1f69dac462464e8f635c"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/dsl/lib.py": {
+      "bytes": 6333,
+      "sha256": "7a818ba849be440bf93c7e0a1e05f11a7efa9cf0a6f67de622f0dd1de923ca31"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/fuzz.py": {
+      "bytes": 2463,
+      "sha256": "064e3d01cc0d51fa7d5ad136e2fc9782f32970f28e0827119b24b88df90d8c13"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/games.py": {
+      "bytes": 17450,
+      "sha256": "d09cc5eef9996245a8353840d98ddc3f79d289a661fd247fbf1ade788ec0e529"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/hf_export.py": {
+      "bytes": 11044,
+      "sha256": "d07e1744685fe10a9e7984bdde0591dfa2ca188289c538c8c80f56e80be702e8"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/__init__.py": {
+      "bytes": 334,
+      "sha256": "789fb1c89aca2b3882fb036345594aba6c87ef829d5a9ed5f95c108d59e2fc1b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/arith_bench.py": {
+      "bytes": 48884,
+      "sha256": "521b913fba06d21e202cbb639b437ad40e8496bf09f5ba4fd9d8f1dd7b1e1e7a"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/batch.py": {
+      "bytes": 41716,
+      "sha256": "87e99217f900077b590896888a5777226666ef64f720494475bfc8325fc50796"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/bridge.py": {
+      "bytes": 11877,
+      "sha256": "d49b9b41669f7706c166b99ad8dab9c1c2d2ead17df93946642953b13d0e551b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/check.py": {
+      "bytes": 2114,
+      "sha256": "9b35e46ee7cf74ce86bf074008732ae60f3725b90bfc53ea79046a2ee46d9bf1"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/chip8_q35.py": {
+      "bytes": 62727,
+      "sha256": "10dcf03db9699fd8ea2e4901dd6bc4702a69ee1e5c86e420347092774263150b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/demo.py": {
+      "bytes": 6733,
+      "sha256": "c7a21f9bb6d9addda55916d897f34d41dadc26eb7941c314f9f28cf1fd64cc5c"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/emit.py": {
+      "bytes": 12321,
+      "sha256": "e3fc75021e5a6c94d2857017b051b5bf91f2ad527128b2c04873fbd1bb384134"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/evals.py": {
+      "bytes": 55950,
+      "sha256": "0dc3cabb3b65747234d779a71f9a0989d4ea1029737a9cdd19284e0d54d6e4e2"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/fast.py": {
+      "bytes": 13324,
+      "sha256": "d3a187cc9e74f71f931e2517f47e26cbf091518a976d881dd4327a161a46ab8b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/host.py": {
+      "bytes": 2005,
+      "sha256": "ea232d3098dabdb143846d5dd8438a2973e58370c52b19fd10ff41426e0f3ebb"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/ir.py": {
+      "bytes": 22607,
+      "sha256": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/lib/__init__.py": {
+      "bytes": 94,
+      "sha256": "eb3400897d775fa5183d0deb234f359be8a06d5601f0a3ee810439889431fb1d"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/lib/asm.py": {
+      "bytes": 4956,
+      "sha256": "00be718b714e6f2a38314950293d803471b5222acbd0483fe460ef758b638c7b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/lib/bcd.py": {
+      "bytes": 5768,
+      "sha256": "d630ae7733970f0816d497e6a850dd46207fabfea9be242966297403e3eec2f5"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/lib/macros.py": {
+      "bytes": 7613,
+      "sha256": "1599b591225cda5e1e628f6ed3b4b5cf4b2260a2cad55c481d6297d0f62bd5ab"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/merge.py": {
+      "bytes": 14449,
+      "sha256": "9d50ccb12f230f90ed15b296a5ab54c38394777cc52212e7822ae4750a6f5c19"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/mute.py": {
+      "bytes": 4348,
+      "sha256": "5707acccfa57376a383077a1d2de1cc2d1344fe3f4671a027d7045d58a03771f"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/prims.py": {
+      "bytes": 9989,
+      "sha256": "17646632e68711d2f13faf25c7ea1ff1429364c51d744d835ece00353f3bba01"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/record.py": {
+      "bytes": 8407,
+      "sha256": "d567e5068c1e9d9e8869c1e4f48289053dfe4e659ffd914e7d4ff9f593b8be36"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/report.py": {
+      "bytes": 11105,
+      "sha256": "a46137a6dd9e2e62f2998a6e7986c0aa225963083e09589b0b46111f55afdc80"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/spike.py": {
+      "bytes": 8692,
+      "sha256": "6fa2f370af7283f6ad540b2cd87f86933fca4b0b787a5e8ff4159822faf20450"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/spikes_pos.py": {
+      "bytes": 3060,
+      "sha256": "4351191d25ee954f22fb6f035e0efd4dd74d977b21098069b9eb944190f52768"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/spikes_replay.py": {
+      "bytes": 4313,
+      "sha256": "0659859db991ea6e15f75dac0958c37b87cde18278bf7acdb7685531a7968bdf"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/text_eval.py": {
+      "bytes": 28136,
+      "sha256": "8e9f8a4081f4853428549ceec35b0f3f0d15d6a3733ad58ce3c25b2de98a6324"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/q35/tiny.py": {
+      "bytes": 4913,
+      "sha256": "52620e1155ffc9068054239df165013d7586db7f3b44cdfd6c50963c0ceabc66"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/ref/__init__.py": {
+      "bytes": 73,
+      "sha256": "6c5927e9d68c4b6a765cc001556620ea119d14d88268f0bf89f6dfb39187b67e"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/ref/emu.py": {
+      "bytes": 9253,
+      "sha256": "f302eb9b3b3981eff6f750657797e82efa21aeedd9f7ad675fd132fafc48823a"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/ref/play.py": {
+      "bytes": 2310,
+      "sha256": "79027dd7e36ebbc91e7799032d503ca5b786f7550a7363abe5cc8bbdc102723b"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/ref/profile.py": {
+      "bytes": 1624,
+      "sha256": "db668ab65e48faad9933d783c6a539cd33438668f403aa13a725bcb01a31e4f1"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/__init__.py": {
+      "bytes": 88,
+      "sha256": "82c2a6b806f6debb9c1f5eb7d6cb8004b88788f763963458aa4f254670b114b1"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/asm.py": {
+      "bytes": 11339,
+      "sha256": "1e5c972a3441524ac1861d50e008dd3817a7c621f79d72abeb32a7b14887c6a2"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/batchcheck.py": {
+      "bytes": 3579,
+      "sha256": "93d02d3b2a04f7f835d0500b537ff234409dc1f5b97b163e5fbd21f727a89be7"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/bridge.py": {
+      "bytes": 7733,
+      "sha256": "06165bb9f8d0a6b390af0881429f20006d90e8b37757dfbfee2f106627cc0958"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/calc.py": {
+      "bytes": 9641,
+      "sha256": "0a7292ef49c50d57d3acfa3956429cb2779286334b45a412cde647d5d0e02281"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/chat.py": {
+      "bytes": 24666,
+      "sha256": "b1791197de659409fd900edd44f1de4e3a0263fbe242145ae6618524563c502e"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/core.py": {
+      "bytes": 64418,
+      "sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/elf.py": {
+      "bytes": 2200,
+      "sha256": "0bd591b7a7c6c4d9595e775767f603b2e9697005fd9b949f30ff84bb440a3b50"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/env/calc/gen_sled.py": {
+      "bytes": 523,
+      "sha256": "8d482df7e982bf03ef6b08a0d75b55d5600919612b199b2224e64c302507e363"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/env/mpy/scripts/s1.py": {
+      "bytes": 14,
+      "sha256": "698171d575287eabb23a471fd2e56c2e3f7555c8cce80d8492bc53765dd385a1"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/env/mpy/scripts/s5.py": {
+      "bytes": 409,
+      "sha256": "06498732e8100190a1e9dcbc093badb1949f9da0a444f45b29649a480adf89f0"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/evalarith.py": {
+      "bytes": 13623,
+      "sha256": "70ade05c9314ea2417c7c811c539ca6900cd0c70b6f4550450e5aa7ab084a3d2"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/execcheck.py": {
+      "bytes": 3110,
+      "sha256": "30b4d014be0bce5d3a8c8cdb1697cdb7a16bf4cefcffd4d184de710be747bbc5"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/fastexec.py": {
+      "bytes": 19355,
+      "sha256": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/firmware.py": {
+      "bytes": 2462,
+      "sha256": "f9911d826251a4ce6089bc4572ddcfdcbf24b807380be6681ac0cc474d5facff"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/fuzz.py": {
+      "bytes": 6362,
+      "sha256": "e58f7a1ae4f0c891ef742c9da179b88013f02dcdfe443aec914818cffd7d9e57"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/gpucheck.py": {
+      "bytes": 2812,
+      "sha256": "9775372694d0946a48e45daf79684e5ebd789562920bc8eea158567ff07ed290"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/hf.py": {
+      "bytes": 5151,
+      "sha256": "a1bdce19e6c3cdfb11a7e4904712462ebd0c3fbab3827309068c977f58f013b6"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/measure.py": {
+      "bytes": 6684,
+      "sha256": "793a6e7f266facace4f748869db1d1a4e6fd7be85ad9f625eea6e0f3c54e12a6"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/merge.py": {
+      "bytes": 10972,
+      "sha256": "8bd4e29173f17c5ce7e296af2fe3240ddc11249ab877ecad15540c81fc1cff06"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/programs.py": {
+      "bytes": 2736,
+      "sha256": "e63137ba7c3e53399e731a8a52f3aa0c42f04dbc6634bab4c70dfaa122cb60f5"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/ref.py": {
+      "bytes": 25235,
+      "sha256": "b06a3e07313ed409a8bab66e0cbb75f5e9dd99acda0f1b8dc147355400ba9638"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/replay.py": {
+      "bytes": 3750,
+      "sha256": "94e98779e19330e528b8841531cb67f03fd324dabeeecc11045b9ac28608a836"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/rvbatch.py": {
+      "bytes": 9091,
+      "sha256": "109ca0fcba1f5864a8d423581517ed1be3627932697609a5ed322ec8cd48dd89"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/spec.py": {
+      "bytes": 7270,
+      "sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/textcheck.py": {
+      "bytes": 3567,
+      "sha256": "43d1f823609bd7b67e85518095b753caaa9eaadb5f4d0de0a883563cddb6ee51"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/timing.py": {
+      "bytes": 7166,
+      "sha256": "42441e2bea4aa5838ef5d35b056c16df16c9d2faf35443ece7c23de74d7854ca"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/tiny.py": {
+      "bytes": 5076,
+      "sha256": "6077bb168884747bf033f9834b6ad3ae9bd18913691de7cbbb7ec55b53f164fc"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/tinycheck.py": {
+      "bytes": 4181,
+      "sha256": "22b59d8c60adaa5e3bd1ac10fa6c5e3914140e35ecab39de9a645dd8ea5cf03f"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/rv/tritonexec.py": {
+      "bytes": 13438,
+      "sha256": "2df86254ccd1f4ee7ca1b64167a606bbaf90db0e3fcf9f88e4437ab3f2e8658f"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/session.py": {
+      "bytes": 2684,
+      "sha256": "2a05097bef1d6171a2df2fb0cb28133419e59c8c915dd1dc6bb24727f0708fae"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/spec.py": {
+      "bytes": 4022,
+      "sha256": "4241b494508c36b7ac1662ebb2f77ec94c6d6148f519897bd565f12232e11f2e"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/trace.py": {
+      "bytes": 3885,
+      "sha256": "b9582f41ca7b10f0743b0f734f78b7d90c62ec86a637083a998c2e42bd9c0d01"
+    },
+    "tiny-qwen35/trained-program/reference-package/chipformer/web.py": {
+      "bytes": 9092,
+      "sha256": "de95a7c5e8edd3680840b62b6a52ab73b86eb33e09a9cb081c87c4e85ae580ec"
+    },
+    "tiny-qwen35/trained-program/reference-ram.bin": {
+      "bytes": 65536,
+      "sha256": "8e9b0dc050ff31e11899fd6a3dff17e70e8a46442d4db5edd0b1e8dd963e0e40"
+    },
+    "tiny-qwen35/trained-program/reference.json": {
+      "bytes": 74625,
+      "sha256": "89c70371e6b75e5df09f2234e70286dca4a7cfbe6c1ece6f5d0d573394f5289b"
+    },
+    "tiny-qwen35/trained-program/reference.tokens.u32": {
+      "bytes": 143344020,
+      "sha256": "4f277a82f585f203f61e4f632e7b25a11a79664a4f9ce6e31d077a4dd70ef012"
+    }
+  },
+  "omitted": {
+    "Doom": "Private game data and derived outputs are prohibited.",
+    "training": "Multi-GB training and quantization sweeps are unnecessary for retained-output checks.",
+    "trained tiny-Qwen weights": "Not needed to validate retained traces. Packed model data is already in the program ELF.",
+    "showcase GPU outputs": "Local/reference and explorer checks included; full showcase GPU exports omitted in v1."
+  },
+  "checkpoint_note": "pre-shutdown/checkpoint.pt is actual CPU circuit recurrent state, not trained guest weights. See THIRD_PARTY_NOTICES.md."
+}

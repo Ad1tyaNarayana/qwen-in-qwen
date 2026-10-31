@@ -28,3 +28,28 @@ SOFTWARE.
 `experiments/dmc-rv32/platform.c` derives from DMC100-Doom's platform stub and retains its GPL-2.0-or-later notice. DMC100-Doom is by Artur Bieniek, derived from id Software's Doom and Doomgeneric. The source used here is the Aspire PIXO port in atc1441/Vape_DOOM_ScreenShare, pinned in that experiment's README. Its COPYING and NOTICE accompany the adaptation. The other new glue files carry their licenses individually. A combined Doom executable remains subject to the engine's GPL terms.
 
 `experiments/doom-baremetal` includes Doom's GPL text and Zig compiler_rt's MIT notice for reproducing the linked runtime. No upstream engine binary, WAD, converted game-data pack, or WAD-bearing ELF is included. See the experiments' NOTICE files for corresponding-source and attribution requirements.
+
+# Directory licence map for release v1
+
+| Paths | Licence and release scope |
+| --- | --- |
+| Root, `tools/`, new release documentation, original guest programs, and experiment code without another notice | Root MIT licence. File-level notices take precedence. |
+| `vendor/qwenputer/` | Upstream Qwenputer MIT licence, included as `vendor/qwenputer/LICENSE`. `PIN.json` records commit `ca13310e2f9f788d1dd3feeea8213c1b0c23913c` and every source digest. No pretrained weights or upstream game assets are vendored. |
+| `experiments/dmc-rv32/` | DMC platform adaptation GPL-2.0-or-later, with COPYING and NOTICE. Other files retain their individual notices. Engine sources and game data are separate inputs. |
+| `experiments/doom-baremetal/` | Doom engine glue GPL-2.0-or-later; compiler runtime attribution is MIT. See COPYING, NOTICE, and file headers. |
+| `experiments/dmc-*`, `experiments/doom-showcase/` | New research tooling follows root MIT unless a file says otherwise. This does not relicense the engine or permit distribution of game data. Only source, hashes, and textual timing records enter the bundle policy. |
+| `experiments/tiny-llm-rv32/`, `tiny-llm-neural/`, `tiny-llm-ndot/`, `tiny-llm-ndot-fused/`, `tiny-llm-train/` | Root MIT for new work; llama2.c-derived inference structure and copied source retain llama2.c's MIT terms. llama2.c is pinned to `350e04fe35433e6d2941dce5a1f53308f87058eb` by the training record. |
+| `experiments/tiny-qwen35/` | New runtime and packing code follow root MIT. The tiny trained model is experimental work for this project, not pretrained Qwen weights. Training data obligations are separate. |
+| `experiments/showcase/`, `experiments/explorer/` | Root MIT for code and original program outputs. MNIST inputs retain their dataset attribution; see the MNIST note below. |
+| `experiments/audit/`, `blind-review/`, design records, and remaining experiment directories | Root MIT unless a file carries a separate licence. Historical documents preserve their original authorship and source references. |
+| Ignored release bundle: stories260K packed ROMs and reference packages | Model from karpathy/tinyllamas, MIT. Reference CPU source from Qwenputer, MIT. The bundled program ELF contains the packed model and tokenizer; training corpus is excluded. |
+| Ignored release bundle: tiny-Qwen program ELF | Contains the project's quantized tiny guest weights needed to bind the retained program. No separate trained PyTorch checkpoint is included. It was trained on TinyStories; see dataset terms below. |
+| Ignored release bundle: `pre-shutdown/checkpoint.pt` | Saved compiled CPU recurrent state needed by the existing recovery verifier, not a training checkpoint. No Doom state. Checksums detect corruption, not provenance. |
+
+TinyStories is distributed under CDLA-Sharing-1.0. The corpus is not included. See the [dataset's licence](https://huggingface.co/datasets/roneneldan/TinyStories/blob/main/LICENSE). Dataset terms must be reviewed before distributing new derived training data. The source model and code licences do not replace dataset terms.
+
+The stories260K weights come from [karpathy/tinyllamas](https://huggingface.co/karpathy/tinyllamas), under MIT. [llama2.c](https://github.com/karpathy/llama2.c) is MIT. Include these notices with a distributed bundle, alongside the root licence and Qwenputer's MIT text. A bundle does not contain a copy of the TinyStories corpus.
+
+MNIST is credited to Yann LeCun, Corinna Cortes, and Christopher J. C. Burges. The [MNIST dataset card](https://huggingface.co/datasets/ylecun/mnist) labels its licence MIT. The experiment downloads the original IDX distribution through a public mirror; retain attribution and review the mirror's distribution terms before public hosting. The bundle includes test images and labels needed for the existing 10,000-example check, plus trained integer parameters and predictions. This project does not claim ownership of the handwritten digits.
+
+Doom IWADs, WAD-derived ELF or NOR files, full traces, RAM, frames, pixel dumps, and screenshots are excluded from the release bundle. Owning or obtaining an IWAD does not grant this repository permission to redistribute it.

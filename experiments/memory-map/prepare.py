@@ -45,11 +45,23 @@ def prepare(upstream: Path, scratch: Path, ram_kib: int, drom_kib: int):
     for size, minimum in ((ram_kib, 16), (drom_kib, 8)):
         if size < minimum or size > 8192 or size & (size - 1):
             raise ValueError('Windows require power-of-two KiB sizes within their supported ranges.')
-    revision = subprocess.check_output(['git', '-C', str(upstream), 'rev-parse', 'HEAD'], text=True).strip()
-    if revision != REVISION:
-        raise ValueError(f'Expected {REVISION}, got {revision}')
-    if subprocess.check_output(['git', '-C', str(upstream), 'status', '--porcelain'], text=True):
-        raise ValueError('Use a clean pinned upstream checkout.')
+    if (upstream / '.git').exists():
+        revision = subprocess.check_output(['git', '-C', str(upstream), 'rev-parse', 'HEAD'], text=True).strip()
+        if revision != REVISION:
+            raise ValueError(f'Expected {REVISION}, got {revision}')
+        if subprocess.check_output(['git', '-C', str(upstream), 'status', '--porcelain'], text=True):
+            raise ValueError('Use a clean pinned upstream checkout.')
+    else:
+        # Offline release snapshot. Check every file before applying the same patches.
+        import json
+        pin = json.loads((upstream / 'PIN.json').read_text())
+        if pin['revision'] != REVISION:
+            raise ValueError('Wrong vendored upstream revision')
+        actual = {str(p.relative_to(upstream)): hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in upstream.rglob('*') if p.is_file()
+                  and p.name != 'PIN.json' and '__pycache__' not in p.parts and p.suffix != '.pyc'}
+        if actual != pin['files']:
+            raise ValueError('Vendored upstream content differs from PIN.json')
     source, destination = upstream / 'experimental/riscv/chipformer', scratch / 'chipformer'
     if destination.exists():
         raise ValueError(f'Choose a fresh scratch directory. Package already exists at {destination}.')

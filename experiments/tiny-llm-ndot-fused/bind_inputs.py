@@ -1,4 +1,8 @@
 """Bind the retained Mac and PC inputs and immutable runtime dependencies."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import base64
 from datetime import datetime,timezone
 import hashlib
@@ -14,10 +18,10 @@ files.extend('experiments/'+name for name in ('dmc-feedback-fusion/fusion.py','d
     'tiny-llm-ndot-fused/fusion.py','tiny-llm-ndot-fused/runtime.py','tiny-llm-ndot-fused/isolation.py','tiny-llm-ndot-fused/bench.py'))
 script="$ProgressPreference='SilentlyContinue'\n$ErrorActionPreference='Stop'\n$r=@{}\n"
 for name in files:
-    script+=f"$r['{name}']=(Get-FileHash -Algorithm SHA256 'C:/Users/Admin/qwenputer-games-work/repo/{name}').Hash.ToLowerInvariant()\n"
+    script+=f"$r['{name}']=(Get-FileHash -Algorithm SHA256 '{REMOTE_ROOT}/repo/{name}').Hash.ToLowerInvariant()\n"
 script+='$r | ConvertTo-Json\n'
 encoded=base64.b64encode(script.encode('utf-16-le')).decode()
-remote=json.loads(subprocess.check_output(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded]))
+remote=json.loads(subprocess.check_output(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded]))
 local={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in files}
 assert remote==local
 report=dict(status='pass',utc=datetime.now(timezone.utc).isoformat(),mac_pc_sha256_equal=True,files=local,

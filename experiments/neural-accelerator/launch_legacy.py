@@ -1,4 +1,8 @@
 """Sync and detach the sequential reduced-circuit legacy gate through ssh gpu."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 from datetime import datetime, timezone
@@ -7,13 +11,13 @@ import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[2]
-REMOTE = 'C:/Users/Admin/qwenputer-games-work'
+REMOTE = REMOTE_ROOT
 
 
 def sync(paths):
     archive = subprocess.Popen(['tar', '-cf', '-', *paths], cwd=ROOT, stdout=subprocess.PIPE)
     try:
-        subprocess.run(['ssh', 'gpu', f'tar -xf - -C {REMOTE}/repo'], stdin=archive.stdout, check=True)
+        subprocess.run(['ssh', SSH_HOST, f'tar -xf - -C {REMOTE}/repo'], stdin=archive.stdout, check=True)
     finally:
         archive.stdout.close()
     if archive.wait():
@@ -62,7 +66,7 @@ foreach ($width in @({widths})) {{
     remote_script = f'{REMOTE}/repo/{launch_file.relative_to(ROOT).as_posix()}'
     launcher = "$tokens=$null; $errors=$null; [System.Management.Automation.Language.Parser]::ParseFile('" + remote_script + "',[ref]$tokens,[ref]$errors) | Out-Null; if($errors.Count){throw ($errors | Out-String)}; Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='powershell -ExecutionPolicy Bypass -NoProfile -EncodedCommand " + encoded_child + "'} | ConvertTo-Json"
     encoded = base64.b64encode(launcher.encode('utf-16-le')).decode()
-    subprocess.run(['ssh', 'gpu', 'powershell -NoProfile -EncodedCommand ' + encoded], check=True)
+    subprocess.run(['ssh', SSH_HOST, 'powershell -NoProfile -EncodedCommand ' + encoded], check=True)
     print(base)
 
 

@@ -84,7 +84,10 @@ def main():
               "elapsed_seconds_one_run": elapsed,
               "timed_work": "PAD prefill, state injection, and stock greedy generate; excludes model compilation",
               "torch": torch.__version__, "transformers": __import__("transformers").__version__}
-    report["upstream_revision"] = subprocess.check_output(["git", "-C", str(ROOT / ".upstream/qwenputer"), "rev-parse", "HEAD"], text=True).strip()
+    upstream = ROOT / '.upstream/qwenputer'
+    report['upstream_revision'] = (json.loads((upstream/'PIN.json').read_text())['revision']
+        if (upstream/'PIN.json').exists() else subprocess.check_output(
+            ['git', '-C', str(upstream), 'rev-parse', 'HEAD'], text=True).strip())
     if args.firmware:
         report["firmware_sha256"] = __import__("hashlib").sha256(args.firmware.read_bytes()).hexdigest()
         report["bounded_prefix"] = True

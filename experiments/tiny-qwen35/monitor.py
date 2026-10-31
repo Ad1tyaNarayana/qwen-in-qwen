@@ -1,4 +1,8 @@
 """Copy small live worker reports without starting Python or GPU work on the PC."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 from datetime import datetime, timezone
 import json
@@ -10,13 +14,13 @@ from pack import ROOT
 
 
 def fetch(path):
-    result = subprocess.run(['ssh','-o','ConnectTimeout=10','gpu','type '+path.replace('/','\\')],
+    result = subprocess.run(['ssh','-o','ConnectTimeout=10',SSH_HOST,'type '+path.replace('/','\\')],
                             capture_output=True,timeout=20)
     return json.loads(result.stdout.decode('utf-8-sig')) if result.returncode == 0 else None
 
 
 def monitor(base):
-    assert base.startswith('C:/Users/Admin/qwenputer-games-work/artifacts/tiny-qwen35-')
+    assert base.startswith((REMOTE_ROOT + '/artifacts/tiny-qwen35-'))
     destination = ROOT/'.cache/tiny-qwen35/gpu-progress.json'
     while True:
         try:

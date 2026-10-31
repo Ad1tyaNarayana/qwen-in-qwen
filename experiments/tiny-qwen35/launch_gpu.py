@@ -1,4 +1,8 @@
 """Detach the exact-state neural and stock checks after the Mac gates pass."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import hashlib
@@ -10,7 +14,7 @@ from gate import gate
 from pack import HERE, ROOT
 from gpu_lock import locked
 
-REMOTE = 'C:/Users/Admin/qwenputer-games-work'
+REMOTE = REMOTE_ROOT
 PRIVATE = REMOTE+'/tiny-qwen35-runtime'
 
 
@@ -73,18 +77,18 @@ try {{
     paths += [relative+'/'+name for name in ['engine.elf','model.bin','reference.json','reference.tokens.u32']]
     # A private mirror prevents syncing over the other task's active source tree.
     windows_private = PRIVATE.replace('/','\\')
-    subprocess.run(['ssh','gpu',f'if not exist "{windows_private}" mkdir "{windows_private}"'],check=True)
+    subprocess.run(['ssh',SSH_HOST,f'if not exist "{windows_private}" mkdir "{windows_private}"'],check=True)
     archive = subprocess.Popen(['tar','--exclude=__pycache__','--exclude=._*','-cf','-',*paths],
                                cwd=ROOT,stdout=subprocess.PIPE,env={**__import__('os').environ,'COPYFILE_DISABLE':'1'})
     try:
-        subprocess.run(['ssh','gpu',f'tar -xf - -C {PRIVATE}'],stdin=archive.stdout,check=True)
+        subprocess.run(['ssh',SSH_HOST,f'tar -xf - -C {PRIVATE}'],stdin=archive.stdout,check=True)
     finally:
         archive.stdout.close()
     assert archive.wait() == 0
     child = base64.b64encode(f"& '{PRIVATE}/{launcher.relative_to(ROOT).as_posix()}'".encode('utf-16le')).decode()
     command = "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand "+child+"'} | ConvertTo-Json"
     encoded = base64.b64encode(command.encode('utf-16le')).decode()
-    result = subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],
+    result = subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],
                             capture_output=True,text=True,check=True)
     assert json.loads(result.stdout)['ReturnValue'] == 0,result.stdout
     report = dict(remote=base,private_source=PRIVATE,stdout=result.stdout,stderr=result.stderr,

@@ -1,4 +1,8 @@
 """Export gate reports and retain failed startup separately from accepted timing."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import json
 from pathlib import Path
@@ -8,7 +12,7 @@ p.add_argument('--base',required=True)
 p.add_argument('--extra',required=True)
 a=p.parse_args()
 for base in (a.base,a.extra):
-    assert base.startswith('C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-fused-')
+    assert base.startswith((REMOTE_ROOT + '/artifacts/tiny-llm-ndot-fused-'))
 out=Path(__file__).with_name('evidence')
 private=Path(__file__).resolve().parents[2]/('.cache/tiny-llm/'+a.base.rsplit('/',1)[-1]+'-actual')
 private.mkdir(parents=True,exist_ok=True)
@@ -16,7 +20,7 @@ private.mkdir(parents=True,exist_ok=True)
 
 def pull(base,files,directory):
     directory.mkdir(parents=True,exist_ok=True)
-    proc=subprocess.Popen(['ssh','gpu','tar -cf - -C '+base+' '+' '.join(files)],stdout=subprocess.PIPE)
+    proc=subprocess.Popen(['ssh',SSH_HOST,'tar -cf - -C '+base+' '+' '.join(files)],stdout=subprocess.PIPE)
     try:
         subprocess.run(['tar','-xf','-','-C',str(directory)],stdin=proc.stdout,check=True)
     finally:

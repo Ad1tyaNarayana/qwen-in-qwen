@@ -1,11 +1,15 @@
 """Read detached job progress through cmd and encoded PowerShell."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import subprocess
 p=argparse.ArgumentParser()
 p.add_argument('base')
 a=p.parse_args()
-assert a.base.startswith('C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-')
+assert a.base.startswith((REMOTE_ROOT + '/artifacts/tiny-llm-ndot-'))
 script=f'''$ProgressPreference='SilentlyContinue'
 $base='{a.base}'
 $r=@{{python=@(Get-CimInstance Win32_Process | Where-Object {{$_.Name -eq 'python.exe'}} | Select-Object ProcessId,CommandLine)}}
@@ -21,4 +25,4 @@ if(Test-Path "$base/$name") {{$r[$name]=[string]::Join(" ", [string[]]@(Get-Cont
 $r | ConvertTo-Json -Depth 5
 '''
 encoded=base64.b64encode(script.encode('utf-16-le')).decode()
-subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],check=True)
+subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],check=True)

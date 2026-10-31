@@ -13,8 +13,8 @@ def encoding(n=8, rd=3, r1=1, r2=2):
     return 0x4000000b | ({4: 0, 8: 1, 16: 2}[n] << 12) | rd << 7 | r1 << 15 | r2 << 20
 
 
-def main():
-    scratch = Path(tempfile.mkdtemp(prefix='isa-', dir=ROOT / '.cache/neural-accelerator'))
+def main(out=None):
+    scratch = Path(tempfile.mkdtemp(prefix='isa-'))
     manifest = prepare(scratch)
     from chipformer.rv import ref, spec as S
     import reference as R
@@ -155,10 +155,15 @@ def main():
     result = dict(status='pass', counts=counts, manifest=manifest,
                   scope='ISA and software records only; no neural execution',
                   upstream_record_inherited=R.Machine.__mro__[1].record is ref.Machine.record)
-    (Path(__file__).parent / 'isa-result.json').write_text(json.dumps(result, indent=2)+'\n')
+    ((out or scratch) / 'isa-result.json').write_text(json.dumps(result, indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k != 'manifest'}, indent=2))
 
 
 if __name__ == '__main__':
     (ROOT / '.cache/neural-accelerator').mkdir(parents=True, exist_ok=True)
     main()
+
+
+def test_isa(tmp_path):
+    """Run the complete directed, seeded, and exhaustive software ISA gate."""
+    main(tmp_path)

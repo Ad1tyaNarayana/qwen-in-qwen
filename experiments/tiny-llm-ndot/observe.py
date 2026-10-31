@@ -1,4 +1,8 @@
 """Decode a copied live GPU token prefix and compare it independently on Mac."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import json
@@ -13,13 +17,13 @@ parser.add_argument('--label',required=True)
 parser.add_argument('--evidence',type=Path,required=True)
 args=parser.parse_args()
 assert args.label.replace('-','').isalnum()
-base='C:/Users/Admin/qwenputer-games-work/artifacts/tiny-llm-ndot-'+args.label+'/main'
+base=(REMOTE_ROOT + '/artifacts/tiny-llm-ndot-')+args.label+'/main'
 script=f"$ProgressPreference='SilentlyContinue'; Copy-Item '{base}/actual.tokens.u32' '{base}/live.tokens.u32' -Force"
 encoded=base64.b64encode(script.encode('utf-16-le')).decode()
-subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],check=True)
+subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],check=True)
 directory=ROOT/'.cache/tiny-llm'/('ndot-live-'+args.label)
 directory.mkdir(exist_ok=True)
-stream=subprocess.Popen(['ssh','gpu',f'tar -cf - -C {base} live.tokens.u32'],stdout=subprocess.PIPE)
+stream=subprocess.Popen(['ssh',SSH_HOST,f'tar -cf - -C {base} live.tokens.u32'],stdout=subprocess.PIPE)
 subprocess.run(['tar','-xf','-','-C',str(directory)],stdin=stream.stdout,check=True)
 stream.stdout.close()
 assert stream.wait()==0

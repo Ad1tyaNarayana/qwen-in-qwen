@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this research software and the upstream Qwenputer project."
+title: "Qwenputer games: compiled RV32IM with NDOT and tiny language-model guests"
+authors:
+  - name: "Qwenputer games contributors"
+type: software
+license: MIT
+repository-code: "https://github.com/Ad1tyaNarayana/qwenputer-games"
+abstract: "Fixed Qwen3.5-architecture CPU weights, a neural dot-product accelerator, and exact retained-output checks for small guest programs."

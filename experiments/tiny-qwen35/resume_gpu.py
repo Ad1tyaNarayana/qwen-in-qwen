@@ -1,4 +1,8 @@
 """Resume a power-interrupted run from its retained actual GPU checkpoint."""
+import sys as _release_sys
+from pathlib import Path as _ReleasePath
+_release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
+from remote_config import SSH_HOST, REMOTE_ROOT, LOCK, TRAIN_ROOT
 import argparse
 import base64
 import hashlib
@@ -76,11 +80,11 @@ if($p.ExitCode -ne 0) {{throw ('Stock stage failed: '+$p.ExitCode)}}
     # Parse first; no GPU process is started by this check.
     parse = f"$e=$null;$t=$null;[Management.Automation.Language.Parser]::ParseFile('{target}',[ref]$t,[ref]$e)|Out-Null;if($e.Count){{$e|Out-String;exit 1}}"
     encoded = base64.b64encode(parse.encode('utf-16le')).decode()
-    subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],check=True)
+    subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],check=True)
     child = base64.b64encode(f"& '{target}'".encode('utf-16le')).decode()
     command = "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand "+child+"'} | ConvertTo-Json"
     encoded = base64.b64encode(command.encode('utf-16le')).decode()
-    result = subprocess.run(['ssh','gpu','powershell -NoProfile -EncodedCommand '+encoded],capture_output=True,text=True,check=True)
+    result = subprocess.run(['ssh',SSH_HOST,'powershell -NoProfile -EncodedCommand '+encoded],capture_output=True,text=True,check=True)
     assert json.loads(result.stdout)['ReturnValue'] == 0,result.stdout
     evidence = dict(offset=offset,checkpoint_sha256=saved['checkpoint_sha256'],
                     launcher_sha256=hashlib.sha256(launcher.read_bytes()).hexdigest(),
