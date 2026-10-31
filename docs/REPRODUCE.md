@@ -40,6 +40,18 @@ This records the historical environment; no Windows installation or GPU rerun wa
 
 Every claim prints `PASS`, `FAIL`, or `SKIPPED`, a reason, and elapsed seconds. Any `FAIL` produces a nonzero exit. An unavailable requested bundle is a failure, not a skip. `SKIPPED` never counts as a pass. `--json /tmp/results.json` saves a fresh machine-readable result. Do not use Python `-O`, which disables the existing assertions.
 
+Release preparation measured these end-to-end commands on the Mac described above, using a fresh clone and fresh external virtual environment. The original working cache was renamed and its path pointed at a nonexistent directory for all three runs. Bundle bytes were supplied separately from a local file. Installation time is not included. These are observed verification timings, not performance benchmarks.
+
+| Tier | PASS claims | FAIL claims | SKIPPED claims | Measured seconds |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 12 | 0 | 13 | 13.052 |
+| 1 | 22 | 0 | 5 | 70.921 |
+| 2 | 23 | 0 | 4 | 85.359 |
+
+The tier-2 result and full per-claim timings are recorded in [release validation](../release/VALIDATION.md). Counts describe claim rows, not individual assertions. The release attack-control row includes nine test cases. Full IR, float quality sweeps, Doom output checks, and GPU regeneration were not run. No timing is claimed for them.
+
+The tree policy limits individual files to 100 MiB. Bundle members are limited to 256 MiB, with at most 2 GiB expanded data. The builder also enforces a 2 GB compressed archive budget. `check_release` rejects absolute or escaping links, game data, Doom-derived executables/state/imagery, and common credential patterns. This is a release gate, not a claim that arbitrary secret formats can be detected.
+
 The full IR scripts were written as command-line `main()` functions, so pytest originally collected no tests. They now expose `test_isa` and `test_ir`. The ISA gate runs at tier 0. The complete neural IR gate is long and runs only with the explicit tier-2 option; collection alone does not establish neural IR correctness.
 
 ## Build and authenticate a bundle
