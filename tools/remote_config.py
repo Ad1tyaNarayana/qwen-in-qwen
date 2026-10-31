@@ -8,6 +8,10 @@ parser.add_argument('--remote-root')
 parser.add_argument('--remote-lock')
 parser.add_argument('--training-root')
 args, remaining = parser.parse_known_args()
+if '--help' in remaining or '-h' in remaining:
+    parser.description = 'Shared connection options for retained research launchers. Use worker --help for computation options.'
+    parser.print_help()
+    raise SystemExit(0)
 sys.argv[1:] = remaining
 
 

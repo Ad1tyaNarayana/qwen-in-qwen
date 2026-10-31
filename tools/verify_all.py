@@ -144,6 +144,7 @@ def main():
         else:
             record('complete neural IR gate', 'SKIPPED', 'Long CPU gate; tier 2 --full-ir, bounded to 3600s')
         record('Doom derived outputs', 'SKIPPED', 'Own IWAD and private regeneration required; tracked hashes/timings only, see docs/REPRODUCE.md')
+        record('floating-point quality agreement', 'SKIPPED', '291/327 is retained inspected-prompt evidence; float quality sweeps not rerun')
         record('full GPU reruns and model training', 'SKIPPED', 'Tier 3 manual Windows CUDA workflow; no GPU used')
     elapsed = time.perf_counter()-started
     counts = {status: sum(r['status'] == status for r in results) for status in ['PASS', 'FAIL', 'SKIPPED']}

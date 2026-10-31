@@ -31,7 +31,7 @@ def main():
     base=f'{REMOTE}/artifacts/checkpoint-integrity-{label}'
     repo=f'{REMOTE}/repo'
     owner=f'checkpoint-integrity-{label}'
-    # The caller acquires with ssh gpu mkdir before any work; never claim an existing hold.
+    # The caller acquires with SSH mkdir before any work; never claim an existing hold.
     assert owner in ps(("Get-Content '" + LOCK + "/owner.txt'"))
     script=f'''$ErrorActionPreference='Stop'
 $ProgressPreference='SilentlyContinue'

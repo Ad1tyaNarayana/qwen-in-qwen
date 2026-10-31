@@ -1,4 +1,4 @@
-"""Sync and detach the sequential reduced-circuit legacy gate through ssh gpu."""
+"""Sync and detach the sequential reduced-circuit legacy gate through the configured SSH host."""
 import sys as _release_sys
 from pathlib import Path as _ReleasePath
 _release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))

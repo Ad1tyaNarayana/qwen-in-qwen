@@ -100,7 +100,7 @@ def main():
         archive_bytes=bundle.stat().st_size, archive_sha256=sha(bundle), files=manifest,
         omitted={'Doom': 'Private game data and derived outputs are prohibited.',
                  'training': 'Multi-GB training and quantization sweeps are unnecessary for retained-output checks.',
-                 'trained tiny-Qwen weights': 'Not needed to validate retained traces. Packed model data is already in the program ELF.'},
+                 'separate trained PyTorch guest checkpoint': 'Not needed to validate retained traces. The required quantized guest weights are embedded in the program ELF.'},
         checkpoint_note='pre-shutdown/checkpoint.pt is actual CPU circuit recurrent state, not trained guest weights. See THIRD_PARTY_NOTICES.md.'), indent=2) + '\n')
     print(f'Bundle: {bundle.name}: {bundle.stat().st_size} bytes; {len(entries)} entries; expanded {sum(x["bytes"] for x in manifest.values())} bytes')
 

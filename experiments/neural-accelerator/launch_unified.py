@@ -1,4 +1,4 @@
-"""Tar-sync and detach Gate 1 on the existing ssh gpu environment."""
+"""Tar-sync and detach Gate 1 on the configured SSH environment."""
 import sys as _release_sys
 from pathlib import Path as _ReleasePath
 _release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))

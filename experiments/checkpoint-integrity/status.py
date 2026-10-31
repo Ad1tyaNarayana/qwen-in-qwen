@@ -1,4 +1,4 @@
-"""Read-only status for this task's detached GPU batch, via ssh gpu only."""
+"""Read-only status for this task's detached GPU batch, via the configured SSH host."""
 import sys as _release_sys
 from pathlib import Path as _ReleasePath
 _release_sys.path.insert(0, str(_ReleasePath(__file__).resolve().parents[2] / 'tools'))
