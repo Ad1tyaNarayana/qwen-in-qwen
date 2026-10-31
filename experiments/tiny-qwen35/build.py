@@ -21,7 +21,7 @@ def bindings():
 def build(out, image):
     out = out.resolve()
     out.mkdir(parents=True,exist_ok=True)
-    zig = next((ROOT/'.venv/lib').glob('python*/site-packages/ziglang/zig'))
+    zig = Path(__import__('ziglang').__file__).parent / ('zig.exe' if sys.platform == 'win32' else 'zig')
     flags = ['-O2','-fno-unroll-loops','-fno-vectorize','-fno-slp-vectorize','-fwrapv','-std=c11',
              '-I'+str(ROOT/'experiments/neural-accelerator')]
     subprocess.run(['clang',*flags,'-DNATIVE',str(HERE/'runtime.c'),'-o',str(out/'native')],check=True)
@@ -46,7 +46,7 @@ def link(out,image):
     assert binding['sources'] == bindings(), 'Runtime sources changed; rebuild the runtime object'
     assert binding['object_sha256'] == hashlib.sha256((out/'runtime.o').read_bytes()).hexdigest()
     assert binding['native_sha256'] == hashlib.sha256((out/'native').read_bytes()).hexdigest()
-    zig = next((ROOT/'.venv/lib').glob('python*/site-packages/ziglang/zig'))
+    zig = Path(__import__('ziglang').__file__).parent / ('zig.exe' if sys.platform == 'win32' else 'zig')
     assembly = image/'model.S'
     assembly.write_text('.section .model,"a",@progbits\n.global model_blob\nmodel_blob:\n.incbin '+
                         json.dumps(str(image/'model.bin'))+'\n')

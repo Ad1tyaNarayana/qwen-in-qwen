@@ -70,9 +70,9 @@ Commands below run inside `verify_all`'s disposable copy; direct research comman
 | Corrupt checkpoint rejection before state copy | `experiments/checkpoint-integrity/evidence/cpu-restore.json` | Tier 0: `experiments/checkpoint-integrity/test_restore.py` with CPU tensors |
 | Software NDOT ISA records and arithmetic | `experiments/neural-accelerator/isa-result.json` | Tier 0: pytest `test_isa.py`, including directed, seeded, and exhaustive arithmetic checks |
 | 38-position story, literal state, contiguous chunk timing and historical sources | `experiments/tiny-llm-ndot-fused/evidence/story-validation-20261031.json` | Tier 1: `verify_story.py --source-revision e7bd077` with bundle inputs |
-| 35,836,005-token tiny-Qwen run, power-off recovery, 16,384-token stock prefix | `experiments/tiny-qwen35/evidence/neural-validation.json` | Tier 1: `experiments/tiny-qwen35/verify_gpu.py` |
+| 35,836,005-token tiny-Qwen run, power-off recovery, 16,384-token stock prefix | `experiments/tiny-qwen35/evidence/neural-validation.json` | Tier 1: `experiments/tiny-qwen35/verify_gpu.py --source-revision e7bd077` |
 | Native/reference SHA-256, Life, tic-tac-toe, MNIST; 10,000-example integer classifier | `experiments/showcase/evidence/local-validation.json`, per-demo evidence | Tier 1: `experiments/showcase/verify_local.py` after native compilation |
-| All showcase GPU tokens, literal RAM/registers, bounded stock prefixes | Per-demo `experiments/showcase/*/evidence/` | Tier 1: `experiments/showcase/verify_gpu.py` |
+| All showcase GPU tokens, literal RAM/registers, bounded stock prefixes | Per-demo `experiments/showcase/*/evidence/` | Tier 1: `experiments/showcase/verify_gpu.py --source-revision e7bd077` |
 | Explorer graph exports, observed state, application arrays, corruption control | `experiments/explorer/data/`, `data-validation.json` | Tier 1: `verify_data.py` and `verify_showcase.py` |
 | Controlled same-network 3.0149× scalar/NDOT ratio and restore reports | `experiments/checkpoint-integrity/evidence/controlled-measurement.json` | Tier 1: `experiments/checkpoint-integrity/verify.py` |
 | Story export negative controls | `experiments/checkpoint-integrity/evidence/verifier-controls-20261031.json` | Tier 1: `test_verifier_exports.py --story-only`, nine checks; Doom controls excluded |

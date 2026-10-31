@@ -86,6 +86,7 @@ def main():
         run('Doom ROM corrected diagnosis', ['experiments/dmc-rom-fusion/check_diagnosis.py'])
         run('Doom feedback timing records', ['experiments/dmc-feedback-fusion/check_evidence.py'])
         run('checkpoint CPU corruption controls', ['experiments/checkpoint-integrity/test_restore.py'])
+        run('NDOT compiler intrinsic encodings', ['experiments/neural-accelerator/test_intrinsic.py'])
         run('NDOT ISA exhaustive software gate', ['-m', 'pytest', '-q', 'experiments/neural-accelerator/test_isa.py'])
         run('pytest ISA and IR collection', ['-m', 'pytest', '--collect-only', '-q',
             'experiments/neural-accelerator/test_isa.py', 'experiments/neural-accelerator/test_ir.py'])

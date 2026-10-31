@@ -64,11 +64,18 @@ def main():
     output = ROOT / '.cache/release'
     output.mkdir(parents=True, exist_ok=True)
     bundle = output / 'qwenputer-evidence-v1.tar.gz'
-    entries = allowlist(args.cache)
+    notices = {'LICENSE': ROOT/'LICENSE',
+               'THIRD_PARTY_NOTICES.md': ROOT/'THIRD_PARTY_NOTICES.md',
+               'QWENPUTER-LICENSE': ROOT/'vendor/qwenputer/LICENSE',
+               'LLAMA2C-LICENSE': ROOT/'release/licenses/llama2.c.txt'}
+    entries = sorted(allowlist(args.cache) + list(notices))
+
+    def source_for(relative):
+        return notices.get(relative, args.cache / relative)
     manifest = {}
     # Fail before writing when an allowlisted input is absent or a symlink.
     for relative in entries:
-        source = args.cache / relative
+        source = source_for(relative)
         if source.is_symlink() or not source.is_file():
             raise ValueError(f'Missing regular allowlisted input: {relative}')
         manifest[relative] = dict(bytes=source.stat().st_size, sha256=sha(source))
@@ -76,7 +83,7 @@ def main():
     with bundle.open('wb') as stream, gzip.GzipFile(fileobj=stream, mode='wb', mtime=0, filename='') as zipped:
         with tarfile.open(fileobj=zipped, mode='w') as archive:
             for relative in entries:
-                source = args.cache / relative
+                source = source_for(relative)
                 info = archive.gettarinfo(str(source), arcname=relative)
                 info.uid = info.gid = info.mtime = 0
                 info.uname = info.gname = ''

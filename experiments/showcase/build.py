@@ -30,7 +30,7 @@ def build(demo, scalar=False):
     if demo == 'mnist':
         import shutil
         shutil.copyfile(ROOT / '.cache/showcase/mnist-model/model.h', out / 'model.h')
-    zig = next((ROOT / '.venv/lib').glob('python*/site-packages/ziglang/zig'))
+    zig = Path(__import__('ziglang').__file__).parent / ('zig.exe' if sys.platform == 'win32' else 'zig')
     common = ['-O2','-fno-unroll-loops','-fno-vectorize','-fno-slp-vectorize','-fwrapv','-std=c11',
               '-I'+str(HERE),'-I'+str(out),'-I'+str(ROOT/'experiments/neural-accelerator')]
     if scalar:

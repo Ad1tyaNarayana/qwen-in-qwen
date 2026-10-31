@@ -4,12 +4,22 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+import subprocess
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 
 
-def verify(actual,demo,spec):
+def verify(actual,demo,spec,source_revision=None):
+    revision = (subprocess.check_output(['git', 'rev-parse', '--verify', source_revision+'^{commit}'],
+                cwd=ROOT, text=True).strip() if source_revision else None)
+
+    def source_digest(relative):
+        relative = relative.replace('\\', '/')
+        if revision:
+            return hashlib.sha256(subprocess.check_output(['git', 'show', revision+':'+relative], cwd=ROOT)).hexdigest()
+        return hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
+
     fixture=ROOT/'.cache/showcase'/demo
     reference=json.loads((fixture/'reference.json').read_text())
     build=json.loads((fixture/'build.json').read_text())
@@ -50,7 +60,7 @@ def verify(actual,demo,spec):
     assert report['compute_seconds']==chunks[-1]['compute_seconds']>0
     assert report['scripts']['experiments/showcase/gpu_worker.py']==sha(HERE/'gpu_worker.py')
     for relative,digest in report['scripts'].items():
-        assert sha(ROOT/relative.replace('\\','/'))==digest,relative
+        assert source_digest(relative)==digest,relative
     stock=actual/demo/'stock'
     stockreport=json.loads((stock/'report.json').read_text())
     stocktokens=np.fromfile(stock/'actual.tokens.u32',dtype='<u4')
@@ -87,7 +97,7 @@ def verify(actual,demo,spec):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('actual',type=Path);p.add_argument('--demo',nargs='+',default=['sha256','life','tictactoe','mnist','mnist-scalar']);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('actual',type=Path);p.add_argument('--source-revision', help='Resolve historical script bindings at this commit');p.add_argument('--demo',nargs='+',default=['sha256','life','tictactoe','mnist','mnist-scalar']);a=p.parse_args()
     sys.path.insert(0,str(ROOT/'.cache/showcase/sha256'))
     # Prepare an independent clean spec with the fixed map, never GPU state.
     sys.path.insert(0,str(ROOT/'experiments/neural-accelerator'))
@@ -95,4 +105,4 @@ if __name__=='__main__':
     import time
     prepare(ROOT/'.cache/showcase'/f'validation-package-{time.time_ns()}')
     from chipformer.rv import spec
-    for demo in a.demo:print(json.dumps(verify(a.actual.resolve(),demo,spec),indent=2))
+    for demo in a.demo:print(json.dumps(verify(a.actual.resolve(),demo,spec,a.source_revision),indent=2))

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import subprocess
 
 import numpy as np
 
@@ -25,7 +26,16 @@ def trace(actual, expected, count):
     return a
 
 
-def verify(program, actual):
+def verify(program, actual, source_revision=None):
+    revision = (subprocess.check_output(['git', 'rev-parse', '--verify', source_revision+'^{commit}'],
+                cwd=ROOT, text=True).strip() if source_revision else None)
+
+    def source_digest(relative):
+        relative = relative.replace('\\', '/')
+        if revision:
+            return hashlib.sha256(subprocess.check_output(['git', 'show', revision+':'+relative], cwd=ROOT)).hexdigest()
+        return digest(ROOT/relative)
+
     reference = json.loads((program/'reference.json').read_text())
     assert reference['status'] == 'pass'
     assert json.loads((actual/'sequence.json').read_text(encoding='utf-8-sig'))['complete']
@@ -89,7 +99,7 @@ def verify(program, actual):
         previous = end
     assert previous == reference['tokens']
     for name,sha in report['scripts'].items():
-        assert digest(ROOT/name.replace('\\','/')) == sha,name
+        assert source_digest(name) == sha,name
     stock = json.loads((actual/'stock/report.json').read_text())
     assert stock['status'] == 'pass' and stock['generated_tokens'] >= 16384 and stock['mismatches'] == 0
     assert stock['allocator_cap_bytes'] <= 15*2**30
@@ -130,5 +140,6 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--program',type=Path,required=True)
     p.add_argument('--actual',type=Path,required=True)
+    p.add_argument('--source-revision', help='Resolve historical script bindings at this commit')
     a = p.parse_args()
-    verify(a.program,a.actual)
+    verify(a.program,a.actual,a.source_revision)

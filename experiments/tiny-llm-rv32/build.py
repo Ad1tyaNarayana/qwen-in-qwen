@@ -46,7 +46,7 @@ def build(out, prompt, steps, context=64, zig=None, model=None, tokenizer=None,
         raise ValueError('Require prompt length <= steps <= context')
     (out / 'workload.h').write_text(f'#define RUN_STEPS {steps}\n#define PROMPT_LEN {len(tokens)}\n'
         'static const int prompt_tokens[] = {' + ','.join(map(str, tokens)) + '};\n')
-    zig = zig or next((ROOT / '.venv/lib').glob('python*/site-packages/ziglang/zig'), None)
+    zig = zig or Path(__import__('ziglang').__file__).parent / ('zig.exe' if sys.platform == 'win32' else 'zig')
     if zig is None or not Path(zig).is_file():
         raise FileNotFoundError('Missing zig; pass --zig pointing to an existing Zig binary')
     common = ['-O2', '-fno-unroll-loops', '-fno-vectorize', '-fno-slp-vectorize',

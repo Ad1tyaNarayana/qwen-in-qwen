@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import struct
 import subprocess
+import sys
 import tempfile
 from prepare import ROOT
 
@@ -13,7 +14,7 @@ def main():
     source.write_text('#include "ndot.h"\n'
                       'uint32_t four(uint32_t c,const int8_t*w,const int16_t*a){return ndot4(c,w,a);}\n'
                       'uint32_t eight(uint32_t c,const int8_t*w,const int16_t*a){return ndot8(c,w,a);}\n')
-    zig = next((ROOT / '.venv/lib').glob('python*/site-packages/ziglang/zig'))
+    zig = Path(__import__('ziglang').__file__).parent / ('zig.exe' if sys.platform == 'win32' else 'zig')
     command = [str(zig), 'cc', '-target', 'riscv32-freestanding', '-mcpu=generic_rv32+m',
                '-O2', '-c', '-I', str(Path(__file__).parent), str(source), '-o', str(out / 'intrinsic.o')]
     subprocess.run(command, check=True, capture_output=True)
