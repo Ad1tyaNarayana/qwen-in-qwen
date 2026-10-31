@@ -64,8 +64,7 @@ def main():
                 cases.append(('/'.join(map(str,tensor_path)),mutated))
             old=copy.deepcopy(original);del old['integrity'];cases.append(('legacy_without_checksum',old))
             metadata=copy.deepcopy(original)
-            if name=='doom': metadata['metadata']['offset']+=1
-            else: metadata['offset']+=1
+            metadata['offset']+=1
             cases.append(('offset',metadata))
             if 'compute_seconds' in original:
                 for key in ('compute_seconds','retained_worker_seconds'):

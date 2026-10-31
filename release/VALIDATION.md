@@ -52,4 +52,4 @@ Commit messages were edited after this validation to remove a co-author trailer,
 
 ## Doom split
 
-Doom-only experiments, the Doom article and its figures moved to the public [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom) repository. Their entries left `tracked-evidence.json`. The tier tables above predate this and were rerun afterward; the Doom output row is gone and the three executor rows were relabelled.
+Doom-only experiments, the Doom article and its figures moved to the public [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom) repository. Their entries left `tracked-evidence.json`. The tier tables above predate this. The Doom output row is gone, the three executor rows were relabelled, and Doom worker cases left the restore and export controls. A fresh clone afterward gave tier 0: 12 PASS, 0 FAIL, 12 SKIPPED; tier 1: 22 PASS, 0 FAIL, 4 SKIPPED; tier 2: 23 PASS, 0 FAIL, 3 SKIPPED.
