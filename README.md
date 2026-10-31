@@ -2,6 +2,10 @@
 
 **A CPU and a dot-product accelerator compiled into one fixed Qwen3.5 network, running tiny language models as ordinary programs.**
 
+![Zooming through the compiled network, from its layers to the CPU, the program and a tiny Qwen3.5 inside](docs/media/hero.gif)
+
+*Real views of the offline [Explorer](experiments/explorer/README.md), from the compiled network down to the generated text. Decoded values come from recorded runs.*
+
 ```text
 Qwen3.5-architecture network       fixed compiled weights, no pretrained weights
 └── Qwenputer RV32IM CPU           registers and RAM held in recurrent state
@@ -11,6 +15,10 @@ Qwen3.5-architecture network       fixed compiled weights, no pretrained weights
 
 [Qwenputer](https://github.com/divagr18/qwenputer) compiles a 32-bit RISC-V CPU into Qwen3.5 weights. This project adds a generic dot-product accelerator to that same network, then runs learned language models inside it. The model weights sit in the CPU's memory, not in the network. Changing the program and data changes what runs; the outer weights stay the same.
 
+![The 24,262 accelerator units highlighted inside the compiled network](docs/media/accelerator.png)
+
+*The accelerator's 24,262 units, placed by the compiler inside the same 65-layer network as the CPU.*
+
 ## Results
 
 | Program on the neural CPU | Output | CPU trace tokens | Mismatches |
@@ -18,7 +26,17 @@ Qwen3.5-architecture network       fixed compiled weights, no pretrained weights
 | stories260K, 38 positions | "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big" | 53,296,563 | 0 |
 | Tiny Qwen3.5, 1,510,800 parameters, six positions | "Once upon a time, there" | 35,836,005 | 0 |
 
+![The recorded story appearing token by token](docs/media/story.gif)
+
+*The real recorded tokens, including the split `g` + `ir` + `l`. Prerecorded and sped up about 1,190×; the run took 6.24 minutes per position.*
+
 Mismatches are against each run's independent reference, with literal final RAM and all three register copies checked. Complete SHA-256, Game of Life, tic-tac-toe and MNIST programs run on the same CPU network.
+
+| Game of Life | MNIST |
+| --- | --- |
+| ![Life board read from neural RAM](docs/media/life.png) | ![MNIST digit read from neural RAM with its ten logits](docs/media/mnist.png) |
+
+*Same network, different programs. The Life board and the MNIST digit are read back from the network's recurrent state.*
 
 One scalar and one NDOT run on the same network took 4,361.42 and 1,446.63 generation seconds, a measured 3.0149× accelerator gain for that workload. This is one run each, not a distribution.
 
@@ -63,6 +81,7 @@ A local path or HTTPS URL is accepted. The tracked manifest authenticates the ar
 - `experiments/`: implementations, verifiers and immutable evidence, listed in the [index](experiments/README.md).
 - `tools/`: release checks, bundle builder, and early milestone tools.
 - `docs/articles/`: result narrative and source map.
+- `docs/media/` and `media/`: README images and the [source for every visual](docs/media/README.md).
 - `vendor/qwenputer/`: hash-pinned MIT CPU/compiler source for offline verification.
 - `release/`: tracked evidence hashes and bundle manifest.
 - `artifacts/`: early CHIP-8 milestone traces and reports.
