@@ -69,3 +69,19 @@ Both actual ID sequences are `[403, 407, 261, 378, 432]`. Every token, final RAM
 This change edited `experiments/dmc-cuda/source/runtime.py`, `experiments/doom-showcase/showcase_worker.py`, `experiments/tiny-llm-ndot/worker.py`, `experiments/tiny-llm-neural/worker.py` and `experiments/tiny-llm-neural/reference.py`. Runs recorded before this change bind the SHA-256 of those files as they were at the time, including `experiments/dmc-cuda/SHA256SUMS.json`, `experiments/tiny-llm-neural/SHA256SUMS.json` and the reports of the Doom, stories260K, tiny Qwen3.5 and showcase runs. Those records are unchanged and remain correct for the source that produced them, but a verifier that compares them with the current working tree reports a mismatch.
 
 To reproduce a pre-change verification, check out commit `e7bd077`, which holds the bound versions. Do not rewrite historical hashes to match the current files. Runs made under this directory bind the updated files.
+
+## 2026-10-31 blind-review verifier controls
+
+The corrected story and Doom export verifiers pass the retained private artifacts.
+The story check resolves historical script bindings explicitly at `e7bd077`.
+Commit `9815ee1` holds both verifiers before this correction; historical reports
+remain unchanged. Fresh validations are linked from each experiment's README.
+
+`test_verifier_exports.py` accepts three unmodified controls and rejects eleven
+altered exports, including empty, deleted and reordered story journal rows,
+terminal-time disagreement, missing unified Doom RAM/registers, and altered
+registers. It requires the retained private `.cache/` files and fails if absent.
+
+```sh
+.venv/bin/python -B experiments/checkpoint-integrity/test_verifier_exports.py --out experiments/checkpoint-integrity/evidence/verifier-controls-20261031.json
+```

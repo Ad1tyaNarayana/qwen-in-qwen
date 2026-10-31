@@ -180,3 +180,19 @@ Scalar / NDOT4 generation time is **3.0149×**, one complete execution each. Thi
 
 Evidence: [controlled measurement](../checkpoint-integrity/evidence/controlled-measurement.json), independently checked by [verify.py](../checkpoint-integrity/verify.py).
 <!-- AUDIT_TIMING_CORRECTION_END -->
+
+## 2026-10-31 story-verifier correction
+
+The story verifier now requires a nonempty, contiguous journal with positive
+chunk sizes, full trace coverage, every chunk hash, monotonic cumulative timing,
+and a terminal time equal to the report. Historical evidence is unchanged.
+Commit `9815ee1` holds the verifier before this correction. Older reports retain
+their original source hashes. The retained checkpoint binds workers from `e7bd077`; select that
+revision explicitly for script-hash checks, following
+[Historical source bindings](../checkpoint-integrity/README.md#historical-source-bindings).
+All data checks still use the retained exports. The fresh result is
+[evidence/story-validation-20261031.json](evidence/story-validation-20261031.json).
+
+```sh
+.venv/bin/python -B experiments/tiny-llm-ndot-fused/verify_story.py --inputs .cache/tiny-llm/ndot-story38-20261030 --actual .cache/tiny-llm/ndot-story38-20261030-actual --source-revision e7bd077 --out experiments/tiny-llm-ndot-fused/evidence/story-validation-20261031.json
+```

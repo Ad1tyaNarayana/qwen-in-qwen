@@ -11,14 +11,19 @@ generated token. Pixels, traces and RAM stay private; only JSON evidence is kept
 | `unified-full` | Unified W=4 (`0e515bbb…`), graph-derived fusion | 6,342,933 | 0 | 1,693.11 | 1,715.49 |
 
 The historical run took 3,044.57 retained seconds on the original circuit, so
-`ff-full` is 2.105× faster for the executor change alone. `unified-full` uses a
+`ff-full` gives an observed 2.105× historical generation-time ratio on the same
+ELF, circuit and token trace. The historical run was interrupted and began from
+warm-up histories. This is consistent with the [controlled alternating-window
+experiment](../dmc-feedback-fusion/README.md), the better evidence for the fusion effect. `unified-full` uses a
 different, larger network and costs 17.07% more per token than `ff-full`.
 Both reach HALT and match the historical trace, frame and final RAM hashes.
+Run 1 has no final RAM or register export; unified Doom additionally passes
+literal Mac RAM and all three register-export comparisons.
 A 4,096-token stock `generate` prefix of the same ELF on the shared weights also
 matches. Doom's full frame was not run in stock `generate`.
 
 `verify_runs.py` recompares exported outputs with independent Mac references and
-writes `evidence/`. `unified_worker.py` is separate so `ff-full` stays bound to the
+writes a new evidence directory supplied with `--out`. `unified_worker.py` is separate so `ff-full` stays bound to the
 `showcase_worker.py` hash in its report. The walk harness and inputs are ready, but
 continuing frames 2 and 3 have not been run on the GPU.
 
@@ -192,4 +197,22 @@ copies evidence into ignored local storage. Adjust the source run name once.
 mkdir -p .cache/doom-showcase/export-walk-full
 ssh gpu 'tar -cf - -C C:/Users/Admin/qwenputer-games-work/artifacts/doom-showcase-verified-01/walk-full report.json progress.json sessions.json chunks.jsonl' \
   | tar -xf - -C .cache/doom-showcase/export-walk-full
+```
+
+## 2026-10-31 blind-review correction
+
+The historical 2.105× ratio above does not isolate the executor effect. Narrow
+chunk ranges show stable within-run throughput, not absence of GPU contention.
+Inspected execution data flow and output validation jointly support execution;
+hashes cannot prove provenance against someone replacing all the evidence.
+
+`verify_runs.py` now requires unified final RAM and register exports. Run 1's
+historically narrower coverage remains explicit. Historical reports and validation
+files are unchanged. Commit `9815ee1` holds the old verifier; source bindings
+remain tied to their recorded revisions, as described in
+[Historical source bindings](../checkpoint-integrity/README.md#historical-source-bindings).
+Fresh retained-artifact results are in `evidence/recheck-20261031/`:
+
+```sh
+.venv/bin/python -B experiments/doom-showcase/verify_runs.py --out experiments/doom-showcase/evidence/recheck-20261031
 ```

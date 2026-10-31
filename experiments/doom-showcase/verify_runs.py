@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Compare exported private GPU outputs with independent Mac references and write non-asset evidence."""
 import hashlib
+import argparse
 import json
 from pathlib import Path
 import statistics
@@ -19,6 +20,7 @@ def sha(path):
 
 
 def verify(name):
+    assert name in ('ff-full', 'unified-full'), name
     run = CACHE / f'export-{name}'
     report = json.loads((run / 'report.json').read_text())
     assert report['complete'] and report['halted'] and report['mismatches'] == 0 and 'error' not in report
@@ -49,19 +51,30 @@ def verify(name):
                   uninterrupted_end_to_end_seconds=report['uninterrupted_end_to_end_seconds'],
                   speedup_vs_historical_retained=HISTORICAL['compute_seconds_total'] / report['retained_chunk_seconds'],
                   historical_retained_seconds=HISTORICAL['compute_seconds_total'])
-    if (run / 'final-gpu-ram.bin').exists():
+    if name == 'unified-full':
         assert (run / 'final-gpu-ram.bin').read_bytes() == (OBSERVER / 'ram.bin').read_bytes()
         result['final_ram_bytes_equal_mac_observer'] = True
+        registers = json.loads((run / 'actual-registers.json').read_text())
+        reference = json.loads((ROOT / 'experiments/neural-accelerator/legacy-doom.json').read_text())['original']['regs']
+        assert set(registers) == {'regs.rs1', 'regs.rs2', 'regs.rd'}
+        assert all(values == reference for values in registers.values()), 'Final registers differ from reference'
+        result['all_three_register_copies_equal_reference'] = True
+        result['final_state_coverage'] = 'Literal final RAM and all 96 register values compared with Mac reference'
+    else:
+        result['final_state_coverage'] = 'Historical ff-full has no final RAM or register export; worker-reported RAM hash only'
+        if (run / 'final-gpu-ram.bin').exists():
+            assert (run / 'final-gpu-ram.bin').read_bytes() == (OBSERVER / 'ram.bin').read_bytes()
+            result['final_ram_bytes_equal_mac_observer'] = True
+    result['verifier_sha256'] = sha(Path(__file__))
     return result
 
 
 if __name__ == '__main__':
-    evidence = HERE / 'evidence'
-    evidence.mkdir(exist_ok=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--out', type=Path, required=True, help='New evidence directory; historical evidence is never overwritten')
+    evidence = parser.parse_args().out
+    evidence.mkdir(parents=True, exist_ok=False)
     for name in ('ff-full', 'unified-full'):
-        if (CACHE / f'export-{name}/report.json').exists():
-            result = verify(name)
-            (evidence / f'{name}-validation.json').write_text(json.dumps(result, indent=2) + '\n')
-            (evidence / f'{name}-report.json').write_bytes((CACHE / f'export-{name}/report.json').read_bytes())
-            (evidence / f'{name}-chunks.jsonl').write_bytes((CACHE / f'export-{name}/chunks.jsonl').read_bytes())
-            print(json.dumps(result, indent=2))
+        result = verify(name)
+        (evidence / f'{name}-validation.json').write_text(json.dumps(result, indent=2) + '\n')
+        print(json.dumps(result, indent=2))

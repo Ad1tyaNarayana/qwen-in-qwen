@@ -141,7 +141,7 @@ The copied audit scenarios now reject all seven changed checkpoints at restore. 
 
 The audit made the same distinction for output artifacts. Equality checks reject changed bytes. They cannot distinguish a genuine trace from a byte-identical copy. Source inspection and reference-free fresh runs strengthen execution evidence, while leaving remote execution attestation unestablished.
 
-**Blind review placeholder: pending. No result is claimed here.**
+A [blind review by GPT-6 Astra](../../experiments/blind-review/REPORT.md) at `ee2dd81` held all six claims, five with caveats and checkpoint integrity without. The reviewer did not open the earlier audit and chose not to read it afterwards. All 57 numeric checks matched, and a new independent guest produced identical 383-token fused and stock traces. The review found two verifier gaps and three overstated Doom sentences, which have since been fixed. It rechecked retained artifacts rather than regenerating the long historical runs. It establishes neither full stock LLM execution nor provenance against an adversary replacing the evidence.
 
 What remains is specific. Full guest inference through stock layers is unmeasured. Bounded equivalence checks are not a universal circuit proof. Integer quality needs prompts that were not used to choose its quantization. Larger models need a different memory and execution design. Longer autonomous runs need checkpoint integrity as well as exact output checks. The current result is a small inference program executing inside a compiled Qwen3.5-architecture network, with its complete-run claims tied to the compact fused executor and its stock evidence tied to bounded prefixes.
 

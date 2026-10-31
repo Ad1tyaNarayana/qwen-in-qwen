@@ -4,6 +4,8 @@ import hashlib
 import json
 import sys
 import re
+import math
+import subprocess
 from pathlib import Path
 import numpy as np
 
@@ -17,6 +19,7 @@ def main():
     p.add_argument('--inputs',type=Path,required=True)
     p.add_argument('--actual',type=Path,required=True)
     p.add_argument('--out',type=Path,required=True)
+    p.add_argument('--source-revision',help='Resolve historical checkpoint script bindings at this Git revision')
     a=p.parse_args()
     meta=json.loads((a.inputs/'reference.json').read_text())
     report=json.loads((a.actual/'main/report.json').read_text())
@@ -52,9 +55,16 @@ def main():
     assert observed==(a.inputs/'reference-output.bin').read_bytes()
     assert sha(a.actual/'main/actual-output.bin')==meta['output_sha256']
     chunks=[json.loads(x) for x in (a.actual/'main/chunks.jsonl').read_text().splitlines()]
+    assert chunks, 'Chunk journal is empty'
+    position=0;elapsed=0
     for chunk in chunks:
         end=chunk['end_offset'];begin=end-chunk['amount']
+        assert chunk['amount']>0 and begin==position and end<=len(actual), 'Chunk coverage is not contiguous'
+        assert math.isfinite(chunk['compute_seconds']) and chunk['compute_seconds']>=elapsed, 'Chunk timer decreased or is nonfinite'
         assert hashlib.sha256(actual[begin:end].tobytes()).hexdigest()==chunk['sha256']
+        position=end;elapsed=chunk['compute_seconds']
+    assert position==len(actual), 'Chunk journal does not cover the complete trace'
+    assert elapsed==report['compute_seconds'], 'Terminal chunk time differs from report'
     prefix=json.loads((a.actual/'main/prefix-report.json').read_text())
     restored=json.loads((a.actual/'main/restore-report.json').read_text())
     assert prefix['generated_tokens']==65536
@@ -65,8 +75,14 @@ def main():
     assert checkpoint['compute_seconds']==report['compute_seconds']
     assert checkpoint['token']==[spec.tok('HALT')]
     root=Path(__file__).resolve().parents[2]
+    revision=None
+    if a.source_revision:
+        revision=subprocess.check_output(['git','rev-parse','--verify',a.source_revision+'^{commit}'],cwd=root,text=True).strip()
     for relative,digest in checkpoint['binding']['scripts'].items():
-        assert sha(root/relative.replace('\\','/'))==digest,relative
+        relative=relative.replace('\\','/')
+        bound_sha=(hashlib.sha256(subprocess.check_output(['git','show',revision+':'+relative],cwd=root)).hexdigest()
+                   if revision else sha(root/relative))
+        assert bound_sha==digest,relative
     seconds=report['compute_seconds']
     summary=dict(status='pass',tokens=len(actual),mismatches=mismatches,positions=meta['steps'],
         prompt='Once',story_text=story_text,output=observed.decode(),output_source=report['output_source'],
@@ -75,7 +91,8 @@ def main():
         trace_sha256=sha(a.actual/'main/actual.tokens.u32'),ram_sha256=sha(a.actual/'main/actual-ram.bin'),
         checkpoint_metadata=json.loads((a.actual/'checkpoint-metadata.json').read_text()),
         sources={str(path):sha(path) for path in (a.inputs/'reference.json',a.actual/'main/report.json')},
-        checks='All actual trace tokens, literal final RAM bytes, 96 register values, guest output, chunk hashes and actual checkpoint restore boundaries',
+        verifier_sha256=sha(Path(__file__)),source_revision=revision,
+        checks='All actual trace tokens, literal final RAM bytes, 96 register values, guest output, complete contiguous chunk hashes and cumulative timing, and actual checkpoint restore boundaries',
         autonomous=True,reference_state_after_boot=False)
     a.out.write_text(json.dumps(summary,indent=2)+'\n')
     print(json.dumps({k:v for k,v in summary.items() if k!='checkpoint_metadata'},indent=2))

@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "source_revision": "e7bd077",
+  "verifier_sha256": {
+    "story": "c6df973e13f7d9c88f91b204ebeb0ab45daee85ffeac69f716e11b03f4b7017a",
+    "doom": "8d5b11f0f3b2499ecd20bfe8e81a651975f583ae86418b7278f02231cb72d273"
+  },
+  "results": {
+    "story_unmodified": {
+      "accepted": true
+    },
+    "story_empty_journal": {
+      "accepted": false,
+      "error": "AssertionError: Chunk journal is empty"
+    },
+    "story_deleted_row": {
+      "accepted": false,
+      "error": "AssertionError: Chunk coverage is not contiguous"
+    },
+    "story_reordered_rows": {
+      "accepted": false,
+      "error": "AssertionError: Chunk coverage is not contiguous"
+    },
+    "story_terminal_time_mismatch": {
+      "accepted": false,
+      "error": "AssertionError: Terminal chunk time differs from report"
+    },
+    "story_zero_amount": {
+      "accepted": false,
+      "error": "AssertionError: Chunk coverage is not contiguous"
+    },
+    "story_missing_tail": {
+      "accepted": false,
+      "error": "AssertionError: Chunk journal does not cover the complete trace"
+    },
+    "story_altered_chunk_hash": {
+      "accepted": false,
+      "error": "AssertionError: "
+    },
+    "story_decreasing_time": {
+      "accepted": false,
+      "error": "AssertionError: Chunk timer decreased or is nonfinite"
+    },
+    "doom_ff_full_unmodified": {
+      "accepted": true
+    },
+    "doom_unified_unmodified": {
+      "accepted": true
+    },
+    "doom_missing_ram": {
+      "accepted": false,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/f4/t5kvbdy505sfsghk8x02gyf40000gn/T/qwenputer-verifier-controls-eft6n88y/missing_ram/export-unified-full/final-gpu-ram.bin'"
+    },
+    "doom_missing_registers": {
+      "accepted": false,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/f4/t5kvbdy505sfsghk8x02gyf40000gn/T/qwenputer-verifier-controls-eft6n88y/missing_registers/export-unified-full/actual-registers.json'"
+    },
+    "doom_altered_registers": {
+      "accepted": false,
+      "error": "AssertionError: Final registers differ from reference"
+    }
+  }
+}

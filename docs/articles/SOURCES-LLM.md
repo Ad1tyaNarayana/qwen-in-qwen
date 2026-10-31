@@ -39,7 +39,7 @@ This ledger covers `tiny-llm-inside-qwen.md` and `figures-llm/`. Paths are relat
 | Qwen packing agreement 291/327 across six inspected prompts | `experiments/tiny-qwen35/evidence/summary.json` → `six_prompt_matches`, `six_prompt_predictions`; `covariance-quality.json`, `final-checks.json.limits` | Inspected prompts used during quantization tuning. Not an unseen benchmark. |
 | Showcase guests, exact full compact runs, bounded stock prefixes and same loaded stock weight hash | `experiments/showcase/evidence/summary.json`, `*-validation.json`, `weights.json`; `README.md` | Model-independent guest evidence for these programs. No LLM rate inferred from MNIST. |
 | Explorer direct-state versus trace reconstruction | `experiments/explorer/README.md`, `record.py`, `import_showcase.py`; `experiments/audit/REPORT.md`, explorer finding | Different provenance labels; the audit only checked its stated subset. |
-| Audit began on Opus 5.5 and continued by GPT-6.1 Sol; not blind | `experiments/audit/REPORT.md`, introduction and scope | Historical review provenance. Further blind review is pending, explicitly marked in article. |
+| Audit began on Opus 5.5 and continued by GPT-6.1 Sol; not blind | `experiments/audit/REPORT.md`, introduction and scope | Historical review provenance. The separate blind review is recorded below. |
 | Old restore accepted small checkpoint mutations | `experiments/audit/results/ckpt.json`, `REPORT.md` | Historical audit result remains unchanged. Later output equality did not prove integrity at restore. |
 | New checksum covers all saved tensors and metadata before GPU copy, explicit legacy rejection | `experiments/tiny-llm-ndot/checkpoint_integrity.py`, `worker.py`; other save/restore entry points listed in `experiments/checkpoint-integrity/README.md` | Code and local behavior checks. Integrity detects corruption, not hostile checksum replacement or execution provenance. |
 | Seven GPU mutations rejected, unmodified checkpoint exact continuation including registers | `experiments/checkpoint-integrity/evidence/gpu-mutations.json`; `mutation-bindings.json`; `gpu_ckpt.py` | Audit scenarios copied outside audit, with additional register check and acceptance assertions. The mutation suite is on the SHA guest, not the long LLM workload. |
@@ -64,3 +64,20 @@ From the repository root, run `.venv/bin/python docs/articles/figures-llm/make_f
 Large raw traces, ELF/model images, and tensor checkpoints remain private under `.cache/checkpoint-integrity/` and the new GPU artifact directory. The public scripts retain commands, input hashes, checks, and source bindings. Public JSON can be checked for arithmetic and consistency, but does not by itself reproduce or attest GPU execution.
 
 The earlier Doom article contains no 3.4×, 5.3×, or 1.86× claim. Its historical full-frame ratio remains qualified as a cross-network comparison where applicable. The dated LLM correction links the new controlled comparison without redefining those Doom measurements.
+
+## Blind-review follow-up, 2026-10-31
+
+The article's blind-review paragraph cites `experiments/blind-review/REPORT.md`
+(reviewed `ee2dd81`), `number-checks.json` (57 matches), and `gpu-summary.json`
+(the independent 383-token fused/stock guest). The reviewer did not open the
+earlier audit and declined to read it afterwards. All six claims held, five with
+caveats and checkpoint integrity without. Long historical runs were rechecked
+from retained artifacts, not regenerated. Full stock LLM execution and provenance
+against replacement of all evidence remain unestablished.
+
+The two verifier gaps are covered by
+`experiments/checkpoint-integrity/evidence/verifier-controls-20261031.json`,
+`experiments/tiny-llm-ndot-fused/evidence/story-validation-20261031.json`, and
+`experiments/doom-showcase/evidence/recheck-20261031/`. Doom's historical-ratio,
+contention and provenance wording is corrected in the article and Doom ledger.
+Historical source-bound reports remain unchanged.
