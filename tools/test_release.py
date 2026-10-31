@@ -70,3 +70,16 @@ def test_authenticated_archive_still_requires_every_file_digest(tmp_path, monkey
     with pytest.raises(ValueError, match='Bundle SHA-256 differs'):
         release_lib.unpack_verified(bundle, tmp_path/'not-extracted')
     assert not (tmp_path/'not-extracted').exists()
+
+
+def test_metadata_privacy_changes_only_home_paths():
+    from build_release_bundle import public_metadata
+    original = dict(elf_sha256='a'*64, drom_sha256='b'*64, count=7,
+                    commands=['/Users/sample/compiler', r'C:\Users\sample\compiler'],
+                    error="KeyError('final_registers')")
+    raw, count = public_metadata(json.dumps(original).encode())
+    result = json.loads(raw)
+    assert count == 2
+    assert result['commands'] == ['/REDACTED_HOME/compiler', r'/REDACTED_HOME\compiler']
+    assert {k: v for k, v in result.items() if k != 'commands'} == {
+        k: v for k, v in original.items() if k != 'commands'}

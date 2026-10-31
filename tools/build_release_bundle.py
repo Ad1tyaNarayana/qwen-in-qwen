@@ -1,6 +1,9 @@
 """Build the explicit allowlist of non-Doom verifier inputs, never whole cache trees."""
 import argparse
 import gzip
+import hashlib
+import io
+import re
 import json
 import tarfile
 from pathlib import Path
@@ -57,6 +60,34 @@ def allowlist(cache):
     return sorted(files)
 
 
+PUBLIC_METADATA = {
+    'checkpoint-integrity/actual-20261030a/scalar/full-initial-failure-report.json',
+    *(f'showcase/{demo}/build.json' for demo in
+      ['sha256', 'life', 'tictactoe', 'mnist', 'mnist-scalar']),
+}
+
+
+def public_metadata(raw):
+    """Redact home paths in new distribution copies, preserving all checked fields."""
+    pattern = re.compile(r"/Users/[^/\\\s'\"]+|[A-Za-z]:[/\\]+Users[/\\]+[^/\\\s'\"]+")
+    count = 0
+
+    def visit(value):
+        nonlocal count
+        if isinstance(value, str):
+            value, changes = pattern.subn('/REDACTED_HOME', value)
+            count += changes
+            return value
+        if isinstance(value, list):
+            return [visit(x) for x in value]
+        if isinstance(value, dict):
+            return {visit(k): visit(v) for k, v in value.items()}
+        return value
+
+    result = visit(json.loads(raw))
+    return ((json.dumps(result, indent=2)+'\n').encode() if count else raw), count
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cache', type=Path, default=ROOT / '.cache')
@@ -73,13 +104,20 @@ def main():
     def source_for(relative):
         return notices.get(relative, args.cache / relative)
     manifest = {}
+    redacted = {}
     # Fail before writing when an allowlisted input is absent or a symlink.
     for relative in entries:
         source = source_for(relative)
         if source.is_symlink() or not source.is_file():
             raise ValueError(f'Missing regular allowlisted input: {relative}')
         manifest[relative] = dict(bytes=source.stat().st_size, sha256=sha(source))
-        print(f'{source.stat().st_size:12d} {relative}')
+        if relative in PUBLIC_METADATA:
+            raw, count = public_metadata(source.read_bytes())
+            if count:
+                redacted[relative] = raw
+                manifest[relative] = dict(bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest(),
+                    source_sha256=sha(source), redacted_home_paths=count)
+        print(f'{manifest[relative]["bytes"]:12d} {relative}')
     with bundle.open('wb') as stream, gzip.GzipFile(fileobj=stream, mode='wb', mtime=0, filename='') as zipped:
         with tarfile.open(fileobj=zipped, mode='w') as archive:
             for relative in entries:
@@ -88,8 +126,12 @@ def main():
                 info.uid = info.gid = info.mtime = 0
                 info.uname = info.gname = ''
                 info.mode = 0o644
-                with source.open('rb') as f:
-                    archive.addfile(info, f)
+                if relative in redacted:
+                    info.size = len(redacted[relative])
+                    archive.addfile(info, io.BytesIO(redacted[relative]))
+                else:
+                    with source.open('rb') as f:
+                        archive.addfile(info, f)
     errors = scan_bundle(bundle)
     if errors:
         raise ValueError('\n'.join(errors))
@@ -101,6 +143,7 @@ def main():
         omitted={'Doom': 'Private game data and derived outputs are prohibited.',
                  'training': 'Multi-GB training and quantization sweeps are unnecessary for retained-output checks.',
                  'separate trained PyTorch guest checkpoint': 'Not needed to validate retained traces. The required quantized guest weights are embedded in the program ELF.'},
+        metadata_note='Six bundle-only JSON copies redact home-directory paths. source_sha256 binds the unchanged private input; sha256 binds the distributed copy. Numerical fields and verifier assertions are unchanged.',
         checkpoint_note='pre-shutdown/checkpoint.pt is actual CPU circuit recurrent state, not trained guest weights. See THIRD_PARTY_NOTICES.md.'), indent=2) + '\n')
     print(f'Bundle: {bundle.name}: {bundle.stat().st_size} bytes; {len(entries)} entries; expanded {sum(x["bytes"] for x in manifest.values())} bytes')
 
