@@ -1,11 +1,11 @@
 # Qwenputer inside Qwen
 
-**A CPU and a neural accelerator compiled into one fixed Qwen3.5 network, running tiny language models as ordinary programs.**
+**A CPU and a dot-product accelerator compiled into one fixed Qwen3.5 network, running tiny language models as ordinary programs.**
 
 ```text
 Qwen3.5-architecture network       fixed compiled weights, no pretrained weights
 └── Qwenputer RV32IM CPU           registers and RAM held in recurrent state
-    └── ndot neural accelerator    custom-0 dot-product instructions, same network
+    └── ndot accelerator           custom-0 dot-product instructions, same network
         └── your program           stories260K, tiny Qwen3.5, SHA-256, Life, MNIST
 ```
 
