@@ -10,7 +10,7 @@ The complete language-model runs in this article used the **compact fused execut
 
 ## Why dot products were the next step
 
-[Doom exposed the cost of the return path](doom-on-qwenputer.md). A guest instruction can need several neural transitions to serialize its result. In the established stock generation construction, the emitted token carries a late result back to early layers at the next position. Earlier recurrent layers cannot read a value that a later layer has yet to compute.
+[Doom exposed the cost of the return path](https://github.com/Ad1tyaNarayana/qwenputer-doom). A guest instruction can need several neural transitions to serialize its result. In the established stock generation construction, the emitted token carries a late result back to early layers at the next position. Earlier recurrent layers cannot read a value that a later layer has yet to compute.
 
 Replacing every output with a constant `STEP` token would discard that information. A direct tensor connection from the end of the network to its beginning would change the execution contract. The one-instruction design investigation did not find an accepted construction that eliminated the existing token return path.
 

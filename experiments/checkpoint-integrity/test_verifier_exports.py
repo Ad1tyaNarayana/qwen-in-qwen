@@ -47,7 +47,6 @@ def main():
         print(f'{label}: PASS ({"accepted" if accepted else "rejected"})')
 
     story = load('story_verifier', 'experiments/tiny-llm-ndot-fused/verify_story.py')
-    doom = load('doom_verifier', 'experiments/doom-showcase/verify_runs.py')
     source = ROOT / '.cache/tiny-llm/ndot-story38-20261030-actual'
     journal = (source / 'main/chunks.jsonl').read_text().splitlines()
     assert len(journal) > 2
@@ -86,28 +85,9 @@ def main():
             (target / 'main/chunks.jsonl').write_text('\n'.join(rows) + ('\n' if rows else ''))
             check('story_' + label, lambda: verify_story(target), False, error_text)
 
-        if not args.story_only:
-            cache = doom.CACHE
-            check('doom_ff_full_unmodified', lambda: doom.verify('ff-full'), True)
-            check('doom_unified_unmodified', lambda: doom.verify('unified-full'), True)
-            for label, omitted in [('missing_ram', {'final-gpu-ram.bin'}),
-                                   ('missing_registers', {'actual-registers.json'}),
-                                   ('altered_registers', {'actual-registers.json'})]:
-                doom.CACHE = temporary / label
-                target = doom.CACHE / 'export-unified-full'
-                link_tree(cache / 'export-unified-full', target, omitted)
-                if label == 'altered_registers':
-                    registers = json.loads((cache / 'export-unified-full/actual-registers.json').read_text())
-                    # Keep all three copies equal: equality among copies alone is insufficient.
-                    for values in registers.values():
-                        values[1] ^= 1
-                    (target / 'actual-registers.json').write_text(json.dumps(registers))
-                expected = {'missing_ram': 'final-gpu-ram.bin', 'missing_registers': 'actual-registers.json',
-                            'altered_registers': 'Final registers differ from reference'}[label]
-                check('doom_' + label, lambda: doom.verify('unified-full'), False, expected)
     args.out.write_text(json.dumps(dict(status='pass', source_revision='017c39c',
-        verifier_sha256=dict(story=story.sha(Path(story.__file__)), doom=doom.sha(Path(doom.__file__))),
-        scope='story only; Doom NOT checked' if args.story_only else 'story and Doom', results=results), indent=2) + '\n')
+        verifier_sha256=dict(story=story.sha(Path(story.__file__))),
+        scope='story only; Doom controls live in the Doom repository', results=results), indent=2) + '\n')
     print(f'All {len(results)} retained-export controls pass')
 
 

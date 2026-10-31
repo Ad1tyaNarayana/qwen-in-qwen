@@ -2,12 +2,15 @@
 
 An offline atlas of the unified W=4 CPU compiled into the Qwen3.5 architecture.
 It connects the actual compiler graph, generated CPU trace tokens, ELF symbols,
-and decoded neural recurrent state. All work is under this directory and is
-uncommitted. No upstream files, packages or other experiments were changed.
+and decoded neural recurrent state.
 
 ## Launch
 
-From the repository root, run:
+Online: <https://ad1tyanarayana.github.io/qwen-in-qwen/experiments/explorer/>. Append `#demo=tiny-qwen35` (or another manifest's `demo` id) to open a program directly.
+
+The site is the checked-in files served as-is; GitHub Pages publishes the repository root, and the root `index.html` redirects here. Outside `server.py` the explorer reads `data/manifests.json` and `data/recordings/` relative to the page. After changing `experiments/showcase/manifest/`, refresh the static copy with `python3 experiments/explorer/server.py --write-static`.
+
+To run it locally, from the repository root:
 
 ```sh
 python3 experiments/explorer/server.py

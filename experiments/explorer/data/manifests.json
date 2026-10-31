@@ -1,0 +1,317 @@
+[
+ {
+  "file": "tiny-qwen35.json",
+  "manifest": {
+   "demo": "tiny-qwen35",
+   "status": "neural-verified",
+   "network": "unified W=4 full-map; compiled outer network weights, not pretrained",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+   "constructor_binding": {
+    "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+    "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+    "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+    "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+    "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+    "reduced": true,
+    "stock_integer_counters": true,
+    "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+    "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+    "replacement_sites": [
+     "from chipformer.rv import ref as RF",
+     "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+     "    n_plain = len(srcs)",
+     "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+     "\"imm\": imm, \"r\": r, \"val\": val,"
+    ]
+   },
+   "elf_sha256": "c2d16c876271ce64ae3a5faee45654ac676b462e79751b0c60f71aa7aa9202f1",
+   "drom_image_sha256": "21ea4e55dbb76d4507480a70f6c78b53f8d20ce0b5d4ed7971144dc8c628556f",
+   "instruction_count": 25121038,
+   "trace_tokens": 35836005,
+   "mismatches": 0,
+   "outputs": "Once upon a time, there",
+   "output_source": "BYTE records from actual self-fed GPU trace",
+   "stock_hf_prefix_tokens_checked": 16384,
+   "generation_seconds": 10014.168106500378,
+   "timing_scope": "Retained generation calls; excludes setup, IO, comparisons, waits, power outage and discarded replayed work",
+   "quality_limitation": "291/327 float agreement on six inspected prompts. These prompts were used during quantization investigation and are not an unseen benchmark.",
+   "explorer_recording": "tiny-qwen35/tiny-qwen35-final.json",
+   "evidence_paths": [
+    "experiments/tiny-qwen35/evidence/neural-validation.json",
+    "experiments/tiny-qwen35/evidence/covariance-quality.json",
+    "experiments/explorer/data/tiny-qwen35-validation.json",
+    "experiments/showcase/evidence/weights.json"
+   ],
+   "weight_hash_scope": "Shared stock BF16 tensor hash bound to constructor generated_sha256; the outer CPU weights are compiled, not pretrained."
+  }
+ },
+ {
+  "file": "stories260k-38.json",
+  "manifest": {
+   "demo": "stories260K ndot 38-position story",
+   "status": "historical-verified",
+   "elf_sha256": "d3a50d37b122fc6c5f1858872347656483553596609d9601f6faf5373809e212",
+   "drom_image_sha256": "1886e6b6683a5668661145d91aebc0af51189c3b928ed1835c70c56d388100b9",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "weight_hash_scope": "retrospective stock emission from hash-bound constructor, not a hash of historical GPU tensor dumps",
+   "instruction_count": 36563797,
+   "trace_tokens": 53296563,
+   "mismatches": 0,
+   "generation_seconds": 14225.90152749946,
+   "tokens_per_second": 3746.445376201626,
+   "outputs": "Once upon a time, there was a little girl named Lily. She loved to play outside in the park. One day, she saw a big",
+   "output_source": "BYTE records from actual self-fed GPU trace",
+   "stock_hf_prefix_tokens_checked": 0,
+   "stock_note": "32,768 checked tokens exist for the related five-position ELF, not this 38-position ELF",
+   "evidence_paths": [
+    "experiments/tiny-llm-ndot-fused/evidence/story-validation.json",
+    "experiments/tiny-llm-ndot-fused/evidence/story-fixture.json",
+    "experiments/showcase/evidence/weights.json"
+   ],
+   "explorer_recording": "periodic-stories260k/fused-capture.json",
+   "timing_correction_2026_10_31": {
+    "historical_ratios": "3.4x mixes projection and measurement; 5.3x compares projections; 1.86x changes network and executor. None is a measured same-network accelerator gain.",
+    "controlled_five_position_evidence": "experiments/checkpoint-integrity/evidence/controlled-measurement.json",
+    "controlled_scalar_over_ndot_generation_ratio": 3.0148939902096714,
+    "scope": "One complete five-position execution per build, same unified W=4 network and compact fused executor. This ratio is not applied to the 38-position story. Stock remains bounded-prefix evidence."
+   }
+  }
+ },
+ {
+  "file": "life.json",
+  "manifest": {
+   "demo": "life",
+   "status": "verified",
+   "elf_sha256": "8b7fbc0697ccb6d67e7a2b4ccee63c19ac1ac9028829e7939ba7d47ad3d237d1",
+   "drom_image_sha256": "26bcba9062e72a9f466fcf27dcc4d1f4f36412191e354e1f243841ecc25cb8d6",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "instruction_count": 346545,
+   "trace_tokens": 403149,
+   "mismatches": 0,
+   "generation_seconds": 107.86046899997746,
+   "tokens_per_second": 3737.6900335940895,
+   "outputs": "Generation 0\n........................\n..#.....................\n...#....................\n.###....................\n........................\n...................##...\n...................##...\n........................\n........................\n..............###.......\n........................\n........................\n........................\n........................\n........................\n........................\nGeneration 1\n........................\n........................\n.#.#....................\n..##....................\n..#.....................\n...................##...\n...................##...\n........................\n...............#........\n...............#........\n...............#........\n........................\n........................\n........................\n........................\n........................\nGeneration 2\n........................\n........................\n...#....................\n.#.#....................\n..##....................\n...................##...\n...................##...\n........................\n........................\n..............###.......\n........................\n........................\n........................\n........................\n........................\n........................\nGeneration 3\n........................\n........................\n..#.....................\n...##...................\n..##....................\n...................##...\n...................##...\n........................\n...............#........\n...............#........\n...............#........\n........................\n........................\n........................\n........................\n........................\nGeneration 4\n........................\n........................\n...#....................\n....#...................\n..###...................\n...................##...\n...................##...\n........................\n........................\n..............###.......\n........................\n........................\n........................\n........................\n........................\n........................\n",
+   "output_source": "actual self-fed GPU BYTE records",
+   "stock_hf_prefix_tokens_checked": 4096,
+   "evidence_paths": [
+    "experiments/showcase/life/evidence/build.json",
+    "experiments/showcase/life/evidence/gpu-report.json",
+    "experiments/showcase/life/evidence/neural-validation.json",
+    "experiments/showcase/life/evidence/output.txt",
+    "experiments/showcase/life/evidence/reference.json",
+    "experiments/showcase/life/evidence/stock-report.json"
+   ],
+   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+   "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark",
+   "explorer_recording": "periodic-life/fused-capture.json"
+  }
+ },
+ {
+  "file": "mnist-scalar.json",
+  "manifest": {
+   "demo": "mnist-scalar",
+   "status": "verified",
+   "elf_sha256": "ef17af097e7d35ddad923212d14b56ef95afb09fd29a4ece8080a1c3887ff519",
+   "drom_image_sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "instruction_count": 560569,
+   "trace_tokens": 785128,
+   "mismatches": 0,
+   "generation_seconds": 210.05101309993188,
+   "tokens_per_second": 3737.7967780925433,
+   "outputs": "MNIST test 0\n                            \n                            \n                            \n                            \n      ##############+       \n            . ...  ##.      \n                  ##.       \n                 ##         \n                ##          \n              .##           \n             ###            \n            ##.             \n           ###              \n          .##               \nLabel 7 prediction 7\nMNIST test 1\n                            \n                            \n         +#######           \n        ###    ##+          \n              ###.          \n            .###            \n           +##+             \n          ###+              \n         ###+               \n        ###                 \n        ########+++#######. \n         ....+###+..        \n                            \n                            \nLabel 2 prediction 2\nMNIST test 2\n                            \n                            \n                 #.         \n                +#          \n               .#           \n               ##           \n              +#.           \n             .#+            \n             ##             \n            +#+             \n            ##.             \n           ##.              \n                            \n                            \nLabel 1 prediction 1\n",
+   "output_source": "actual self-fed GPU BYTE records",
+   "stock_hf_prefix_tokens_checked": 4096,
+   "evidence_paths": [
+    "experiments/showcase/mnist-scalar/evidence/build.json",
+    "experiments/showcase/mnist-scalar/evidence/gpu-report.json",
+    "experiments/showcase/mnist-scalar/evidence/neural-validation.json",
+    "experiments/showcase/mnist-scalar/evidence/output.txt",
+    "experiments/showcase/mnist-scalar/evidence/reference.json",
+    "experiments/showcase/mnist-scalar/evidence/stock-report.json"
+   ],
+   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+   "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+  }
+ },
+ {
+  "file": "mnist.json",
+  "manifest": {
+   "demo": "mnist",
+   "status": "verified",
+   "elf_sha256": "b744d36d9052347d2069528d473be2cd3c5bb81f53f4488c350532c744c89a75",
+   "drom_image_sha256": "826d70c1bbcb3e574d863a8d8372766a76ec92c2b18615b4334f88cf6a486de3",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "instruction_count": 121329,
+   "trace_tokens": 189092,
+   "mismatches": 0,
+   "generation_seconds": 50.590385999996215,
+   "tokens_per_second": 3737.7062116113157,
+   "outputs": "MNIST test 0\n                            \n                            \n                            \n                            \n      ##############+       \n            . ...  ##.      \n                  ##.       \n                 ##         \n                ##          \n              .##           \n             ###            \n            ##.             \n           ###              \n          .##               \nLabel 7 prediction 7\nMNIST test 1\n                            \n                            \n         +#######           \n        ###    ##+          \n              ###.          \n            .###            \n           +##+             \n          ###+              \n         ###+               \n        ###                 \n        ########+++#######. \n         ....+###+..        \n                            \n                            \nLabel 2 prediction 2\nMNIST test 2\n                            \n                            \n                 #.         \n                +#          \n               .#           \n               ##           \n              +#.           \n             .#+            \n             ##             \n            +#+             \n            ##.             \n           ##.              \n                            \n                            \nLabel 1 prediction 1\n",
+   "output_source": "actual self-fed GPU BYTE records",
+   "stock_hf_prefix_tokens_checked": 16384,
+   "evidence_paths": [
+    "experiments/showcase/mnist/evidence/build.json",
+    "experiments/showcase/mnist/evidence/fused-mac-validation.json",
+    "experiments/showcase/mnist/evidence/gpu-report.json",
+    "experiments/showcase/mnist/evidence/integer-bounds.json",
+    "experiments/showcase/mnist/evidence/neural-validation.json",
+    "experiments/showcase/mnist/evidence/output.txt",
+    "experiments/showcase/mnist/evidence/reference.json",
+    "experiments/showcase/mnist/evidence/stock-report.json",
+    "experiments/showcase/mnist/evidence/training.json"
+   ],
+   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+   "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark",
+   "explorer_recording": "periodic-mnist/fused-capture.json"
+  }
+ },
+ {
+  "file": "sha256.json",
+  "manifest": {
+   "demo": "sha256",
+   "status": "verified",
+   "elf_sha256": "c7b0dbe9da21ada944059ad7a69e6f99f71847306427cff1a7d43906f71c2869",
+   "drom_image_sha256": "4a2803ee86c495c2bbd79bcecdb19b20f755f03b2675cdd5ead51865a81ff715",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "instruction_count": 11191,
+   "trace_tokens": 25186,
+   "mismatches": 0,
+   "generation_seconds": 6.720754300011322,
+   "tokens_per_second": 3747.496021385214,
+   "outputs": "SHA256 empty\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\nSHA256 abc\nba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\n",
+   "output_source": "actual self-fed GPU BYTE records",
+   "stock_hf_prefix_tokens_checked": 4096,
+   "evidence_paths": [
+    "experiments/showcase/sha256/evidence/build.json",
+    "experiments/showcase/sha256/evidence/gpu-report.json",
+    "experiments/showcase/sha256/evidence/neural-validation.json",
+    "experiments/showcase/sha256/evidence/output.txt",
+    "experiments/showcase/sha256/evidence/reference.json",
+    "experiments/showcase/sha256/evidence/stock-report.json"
+   ],
+   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+   "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+  }
+ },
+ {
+  "file": "tictactoe.json",
+  "manifest": {
+   "demo": "tictactoe",
+   "status": "verified",
+   "elf_sha256": "5c6afb49f2f42e5013bcdfe127b09838fd70db08214ecf1656e3ff7b0652040e",
+   "drom_image_sha256": "72e5b0c2afad05035f4d607c814dfb48774103c81e2d2924f707af887f404612",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "instruction_count": 705245,
+   "trace_tokens": 895755,
+   "mismatches": 0,
+   "generation_seconds": 239.97101900000416,
+   "tokens_per_second": 3732.763246715156,
+   "outputs": "Human X, CPU O; squares 0..8\n...\n...\n...\n\nHuman 0\nX..\n...\n...\n\nCPU 4\nX..\n.O.\n...\n\nHuman 1\nXX.\n.O.\n...\n\nCPU 2\nXXO\n.O.\n...\n\nHuman 6\nXXO\n.O.\nX..\n\nCPU 3\nXXO\nOO.\nX..\n\nHuman 8\nXXO\nOO.\nX.X\n\nCPU 5\nXXO\nOOO\nX.X\n\nCPU wins\n",
+   "output_source": "actual self-fed GPU BYTE records",
+   "stock_hf_prefix_tokens_checked": 4096,
+   "evidence_paths": [
+    "experiments/showcase/tictactoe/evidence/build.json",
+    "experiments/showcase/tictactoe/evidence/gpu-report.json",
+    "experiments/showcase/tictactoe/evidence/neural-validation.json",
+    "experiments/showcase/tictactoe/evidence/output.txt",
+    "experiments/showcase/tictactoe/evidence/perfect-policy.json",
+    "experiments/showcase/tictactoe/evidence/reference.json",
+    "experiments/showcase/tictactoe/evidence/stock-report.json"
+   ],
+   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+   "timing_scope": "one complete autonomous execution; generation only; not repeated benchmark"
+  }
+ },
+ {
+  "file": "doom-first-frame-unified.json",
+  "manifest": {
+   "demo": "Doom first frame (unified network)",
+   "status": "verified",
+   "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+   "drom_image_sha256": "c1f2818d8890bf41a2c3343b5046cfade0dad7d557f2fb548d7488168bbd0003",
+   "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+   "network": "unified W=4 full-map",
+   "weight_hash_scope": "stock BF16 emission from the hash-bound constructor (generated_sha256 5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da), as for the other unified guests; the 4,096-token stock prefix hashed its actual loaded weights",
+   "instruction_count": 3885544,
+   "trace_tokens": 6342933,
+   "mismatches": 0,
+   "generation_seconds": 1693.106171399988,
+   "tokens_per_second": 3746.3291476607073,
+   "uninterrupted_wall_seconds": 1715.4851406999987,
+   "outputs": "320x240 E1M1 first frame, 25 strips, RGB565 SHA-256 6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+   "output_source": "actual GPU recurrent RAM strips and palette",
+   "stock_hf_prefix_tokens_checked": 4096,
+   "stock_note": "Prefix of the same ELF in stock Qwen3_5ForCausalLM.generate; the full frame ran in the compact fused executor, not stock generate",
+   "evidence_paths": [
+    "experiments/doom-showcase/evidence/unified-full-report.json",
+    "experiments/doom-showcase/evidence/unified-full-validation.json",
+    "experiments/doom-showcase/evidence/unified-full-chunks.jsonl",
+    "experiments/doom-showcase/evidence/stock-prefix-report.json",
+    "experiments/doom-showcase/evidence/stock-prefix-validation.json"
+   ],
+   "network_weight_evidence": "experiments/showcase/evidence/weights.json",
+   "timing_scope": "one complete autonomous uninterrupted execution; generation only; not repeated benchmark"
+  }
+ },
+ {
+  "file": "doom-first-frame.json",
+  "manifest": {
+   "demo": "Doom first frame",
+   "status": "historical-verified",
+   "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+   "drom_image_sha256": "c1f2818d8890bf41a2c3343b5046cfade0dad7d557f2fb548d7488168bbd0003",
+   "network_weight_sha256": "3aaf0b6eed10fe0581a5f4f440fc014bcf57d375cf1d1913f891c9fb5f33dab4",
+   "network": "original full-map circuit; different weights from unified W=4",
+   "weight_hash_scope": "retrospective original stock emission; historical GPU tensor dump not hashed",
+   "instruction_count": 3885544,
+   "trace_tokens": 6342933,
+   "mismatches": 0,
+   "generation_seconds": 3044.574422900019,
+   "tokens_per_second": 2083.3561998981218,
+   "outputs": "320x240 E1M1 first frame, 25 strips, RGB565 SHA-256 6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+   "output_source": "actual GPU recurrent RAM strips and palette",
+   "stock_hf_prefix_tokens_checked": 0,
+   "stock_note": "No matching-ELF historical stock prefix imported",
+   "evidence_paths": [
+    "experiments/dmc-cuda/evidence/full-report.json",
+    "experiments/dmc-cuda/evidence/independent-validation.json",
+    "experiments/showcase/evidence/weights-original.json"
+   ]
+  }
+ },
+ {
+  "file": "phase1.json",
+  "manifest": {
+   "demo": "Phase 1 stories260K five positions",
+   "status": "historical-verified",
+   "elf_sha256": "197388a66c479db1fdda53a21a69faae1a798e966341d17a2bffe033d8dd34d0",
+   "drom_image_sha256": "1886e6b6683a5668661145d91aebc0af51189c3b928ed1835c70c56d388100b9",
+   "network_weight_sha256": "3aaf0b6eed10fe0581a5f4f440fc014bcf57d375cf1d1913f891c9fb5f33dab4",
+   "network": "original full-map circuit; different weights from unified W=4",
+   "weight_hash_scope": "retrospective original stock emission; historical GPU tensor dump not hashed",
+   "instruction_count": 10756734,
+   "trace_tokens": 16213774,
+   "mismatches": 0,
+   "generation_seconds": 4217.671174000097,
+   "tokens_per_second": 3844.248005854528,
+   "outputs": "Once upon a time,",
+   "output_source": "Actual GPU trace BYTE records. Reference used only for comparison.",
+   "stock_hf_prefix_tokens_checked": 32675,
+   "stock_note": "Historical deadline-bounded exact prefix; original requested 100,000-token target was not completed",
+   "evidence_paths": [
+    "experiments/tiny-llm-neural/evidence/validation.json",
+    "experiments/tiny-llm-neural/evidence/reference.json",
+    "experiments/tiny-llm-neural/evidence/hf.json",
+    "experiments/showcase/evidence/weights-original.json"
+   ]
+  }
+ }
+]

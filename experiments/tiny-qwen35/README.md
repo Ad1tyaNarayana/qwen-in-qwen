@@ -1,19 +1,18 @@
-# A data-driven integer LLM runtime
+# The tiny Qwen3.5 inside the Qwen3.5
 
-This experiment implements a model-independent RV32IM and NDOT4 program for
-llama2.c and Qwen3.5 text models. Model geometry, layer types, weights, tables,
-tokenizer bytes, cache offsets, prompt tokens and the position budget live in
-DROM. `runtime.c` has no model-specific generated header. One compiled object
-and one native executable serve every image. Linking an ELF embeds a different
-DROM image; executable bytes must remain identical.
+This directory holds the language model that runs *inside* the compiled network, and the program that runs it.
 
-The measured results below record completed gates. The live controller state is
-`.cache/tiny-qwen35/progress.json`. Training uses the existing isolated
-`C:/Users/Admin/tiny-llm-train/.venv`, never the computer-runtime venv.
-`finish.py` continues through the Mac gates, neural run, and independent artifact
-validation. It stops on a failed gate. A random model is never accepted as the
-trained model. Neural and stock success remain unproven until
-`evidence/neural-validation.json` exists and passes.
+- **The model:** an 8-layer, 1,510,800-parameter Qwen3.5 (`Qwen3_5ForCausalLM`), trained from scratch on TinyStories. It uses Gated DeltaNet layers, with full attention at layers 3 and 7, the same hybrid layout as the 65-layer network it runs in. The weights, tokenizer and training log are on Hugging Face as [`Ayt1da/qwen-in-qwen-tiny`](https://huggingface.co/Ayt1da/qwen-in-qwen-tiny).
+- **The program:** a model-independent integer LLM runtime for RV32IM plus the `ndot4` accelerator. Model geometry, layer types, int8 weights, lookup tables, tokenizer bytes, cache offsets, prompt tokens and the position budget all live in a data image (DROM). `runtime.c` has no model-specific generated header. One compiled object and one native executable serve every model image, llama2.c and Qwen3.5 alike. Linking an ELF embeds a different DROM image; executable bytes stay identical.
+- **The result:** given the prompt `Once`, the compiled Qwen3.5-architecture CPU network generated all 35,836,005 trace tokens of this program with zero mismatches. The guest wrote ` upon a time, there`. All 65,536 RAM bytes and all three register copies match the independent reference.
+
+| | Outer network | This model |
+| --- | --- | --- |
+| Layers | 65: 64 DeltaNet + 1 full attention | 8: DeltaNet ×6, full attention at layers 3 and 7 |
+| Weights | compiled, never trained | trained, 60,000 steps |
+| Weights live in | the network | the CPU's RAM, as a 1,674,224-byte DROM image |
+
+The sections below are generated from the evidence files and record each completed gate. A random model is never accepted as the trained model, and a failed gate stops the pipeline.
 
 <!-- MEASURED_RESULTS_BEGIN -->
 ## Measured results
@@ -153,7 +152,7 @@ RV32/native output before it permits GPU execution.
 `launch_gpu.py` checks the accepted fusion source hashes and uses a private
 source mirror. It detaches a prefix, checkpoint restore, full neural execution,
 and 16,384-token stock prefix sequentially through WMI. Each stage acquires the
-shared atomic `C:/Users/Admin/gpu-lock`, writes its owner and expected duration,
+shared atomic lock file on the GPU host, writes its owner and expected duration,
 and checks for other Python jobs. A `finally` block releases that stage's lock
 on success or failure. The full neural worker has a 235-minute watchdog.
 Lock waits do not hold the GPU. The stock worker retains the 15 GiB cap, 512 MiB CUDA and
@@ -184,8 +183,32 @@ calls, in addition to the usual setup, I/O and lock waits.
 
 ## Reproduction
 
-Run from the repository root with the existing Mac venv. Large images, binaries,
-traces, checkpoints and copied packages stay in `.cache/tiny-qwen35/`.
+### Use the model
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tok = AutoTokenizer.from_pretrained("Ayt1da/qwen-in-qwen-tiny")
+model = AutoModelForCausalLM.from_pretrained("Ayt1da/qwen-in-qwen-tiny")
+out = model.generate(tok("Once", return_tensors="pt").input_ids, max_new_tokens=5, do_sample=False)
+print(out[0].tolist())  # [1, 402, 407, 261, 378, 941, 383]: Once upon a time, there
+```
+
+The float checkpoint gives the same greedy tokens as the in-CPU integer run for this prompt. The Hugging Face repository also has `in-cpu/drom-image.bin`, the exact 1,674,224-byte image the guest read (SHA-256 `95932990…d0c1365`). Its `model.safetensors` is the checkpoint bound by [calibration.json](evidence/calibration.json) (SHA-256 `b7929b5d…f87e626c`).
+
+### Check the retained run
+
+The [evidence bundle](https://github.com/Ad1tyaNarayana/qwen-in-qwen/releases/tag/evidence-v1) contains this run's complete actual and reference traces, final RAM and registers, output bytes, chunk journals, the program ELF and the pre-shutdown CPU checkpoint. From the repository root:
+
+```sh
+python tools/verify_all.py --tier 1 \
+  --bundle https://github.com/Ad1tyaNarayana/qwen-in-qwen/releases/download/evidence-v1/qwenputer-evidence-v1.tar.gz
+```
+
+### Rebuild from retained artifacts
+
+These commands need the retained working cache in `.cache/tiny-qwen35/`, which is not distributed. Large images, binaries,
+traces, checkpoints and copied packages stay there.
 The selected HF checkpoint is `training/hf/`; the selected DROM image, ELF and
 independent reference are in `trained-program/`. The fixed native executable
 and RV32 object are in `final-safe/runtime/`. Collected GPU artifacts are in
@@ -198,13 +221,13 @@ under `pre-shutdown/`. These paths are relative to that cache directory.
 .venv/bin/python experiments/tiny-qwen35/reference.py --build .cache/tiny-qwen35/final-safe/custom-0
 ```
 
-The retained training run uses `train.py` and `train_config.json` in
-`C:/Users/Admin/tiny-llm-train/tiny-qwen35-20261030`. `launch_train.py` refuses to
-overwrite its result directory or run while another Python process is present.
-It uses `ssh gpu` and WMI, with the training venv's interpreter. Its loop has a
-3,500-second cutoff and 60,000-step cap. Shard zero is validation; shards one
-through 49 supply training batches. No data or system package installation is
-part of reproduction after the retained dataset and environment exist.
+Training used `train.py` and `train_config.json` on the TinyStories shards and
+1,024-token tokenizer prepared by [tiny-llm-train](../tiny-llm-train/README.md).
+The loop has a 3,500-second cutoff and a 60,000-step cap. Shard zero is
+validation; shards one through 49 supply training batches. The original run
+used a separate Windows GPU host with its own isolated virtual environment,
+driven over SSH by `launch_train.py`. That script refuses to overwrite its
+result directory or to run while another Python process is present.
 
 The selected weight rounding uses CPU calibration on the first 64 retained
 held-out TinyStories excerpts, truncated to 64 tokens each. Only the resulting
@@ -220,8 +243,7 @@ checkpoint and tokenizer export:
   --out .cache/tiny-qwen35/calibration.pt
 ```
 
-The continuation command is below. Run only one copy. Reuse of an existing GPU
-artifact label is rejected.
+The full pipeline runs the Mac gates, the neural GPU run, and independent artifact validation. Run only one copy. Reuse of an existing GPU artifact label is rejected.
 
 ```sh
 .venv/bin/python experiments/tiny-qwen35/finish.py --label FRESH --quantization midpoint+covariance \
@@ -234,9 +256,4 @@ silently retried. Per-position instruction and trace counts come from actual
 reference execution. Dividing trace tokens by 3,735 tokens/s gives a projection,
 not a measured neural duration for this guest.
 
-All work runs inline under the supplied AGENTS.md. No independent agent review
-is claimed. Model the Domain led to the DROM layer records. Prove It Works led
-to literal old/new outputs and raw final-state comparisons. Fix Root Causes led
-to the higher-precision DeltaNet state and decay path. The append-only decision
-trail is [decisions.tsv](decisions.tsv). No commits, upstream edits, or excluded
-experiment-directory edits are made by this task.
+The append-only decision trail is [decisions.tsv](decisions.tsv).

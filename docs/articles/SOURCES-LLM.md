@@ -1,5 +1,7 @@
 # Evidence ledger for the tiny LLM article
 
+Doom-only paths cited below moved to [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom) and remain in this repository's history.
+
 This ledger covers `tiny-llm-inside-qwen.md` and `figures-llm/`. Paths are relative to the repository root. Numeric identifiers such as Qwen3.5, RV32IM, NDOT4, int8, BF16, and SHA-256 name architectures, operations, formats, or algorithms. They are not additional benchmark results. Dates identify records. Drawing coordinates, colors, and font sizes are layout choices.
 
 “Measured” includes execution counts, artifact sizes, exact comparisons, and constructor inventory. “Derived” means arithmetic on those records. “Projected” applies a bounded rate to a different workload. A complete run uses the compact fused executor unless stated otherwise. Ordinary stock `Qwen3_5ForCausalLM.generate` results are bounded prefixes, and the tiny Qwen3.5 stock prefix completes no guest prediction.

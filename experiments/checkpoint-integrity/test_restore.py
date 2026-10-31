@@ -36,16 +36,13 @@ def tensors(value,path=()):
 
 def main():
     results={}
-    modules=[('ndot','experiments/tiny-llm-ndot/worker.py'),('neural','experiments/tiny-llm-neural/worker.py'),('doom','experiments/doom-showcase/showcase_worker.py'),('legacy_doom','experiments/dmc-cuda/source/runtime.py')]
+    modules=[('ndot','experiments/tiny-llm-ndot/worker.py'),('neural','experiments/tiny-llm-neural/worker.py'),('legacy_doom','experiments/dmc-cuda/source/runtime.py')]
     for name,path in modules:
         module=load(name+'_worker',path)
         fr=machine();fused={'scratch_y':torch.zeros(3)}
         with tempfile.TemporaryDirectory() as directory:
             checkpoint=Path(directory)/'checkpoint.pt'
-            if name=='doom':
-                module.save_checkpoint(fr,fused,checkpoint,{'identity':{'fixture':'test'},'offset':12},np.zeros((2,2),dtype='<u2'),np.zeros((2,2),dtype=bool))
-                restore=lambda:module.restore_checkpoint(fr,fused,checkpoint,{'fixture':'test'})
-            elif name=='legacy_doom':
+            if name=='legacy_doom':
                 module.save_checkpoint(fr,12,checkpoint)
                 restore=lambda:module.restore_checkpoint(fr,checkpoint)
             else:
@@ -67,8 +64,7 @@ def main():
                 cases.append(('/'.join(map(str,tensor_path)),mutated))
             old=copy.deepcopy(original);del old['integrity'];cases.append(('legacy_without_checksum',old))
             metadata=copy.deepcopy(original)
-            if name=='doom': metadata['metadata']['offset']+=1
-            else: metadata['offset']+=1
+            metadata['offset']+=1
             cases.append(('offset',metadata))
             if 'compute_seconds' in original:
                 for key in ('compute_seconds','retained_worker_seconds'):

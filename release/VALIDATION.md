@@ -42,10 +42,18 @@ Tier 0 skips eight bundle-dependent claim rows plus stock CPU regeneration, full
 
 No full GPU execution or training was rerun. The inspected-prompt 291/327 quality result remains historical evidence. Doom output validation requires the user's own IWAD and locally regenerated private outputs; public readers can inspect hashes and timing arithmetic only. Hashes do not establish provenance. Historical full-run hours and bounded stock coverage are documented in the reproduction guide.
 
-The GitHub workflow is configured for a standard Linux CPU runner, but it has not run because nothing was pushed. Linux CUDA is untested. Before public hosting, the owner must choose the bundle location and review model/dataset redistribution notices, including TinyStories and MNIST attribution. No public download URL is claimed.
+The GitHub workflow later passed tier 0 on a standard Linux CPU runner: 12 PASS, 0 FAIL, 12 SKIPPED. Tiers 1 and 2 have not run on hosted CI. Linux CUDA is untested. Before public hosting, the owner must choose the bundle location and review model/dataset redistribution notices, including TinyStories and MNIST attribution. No public download URL is claimed.
 
 `git diff --stat tiny-llm -- '*/evidence/*' '*/data/*' 'docs/articles/*' '*/REPORT.md'` is empty. Historical reports, articles, evidence bytes, source hashes, and cited Git history are unchanged. The 24 absolute control symlinks were removed; runtime controls still construct their temporary inputs.
 
 ## Commit hashes
 
 Commit messages were edited after this validation to remove a co-author trailer, which changed 28 commit hashes, including the hash named above. File trees, authors and dates are unchanged, checked commit by commit. [The commit map](commit-map.json) lists every old and new hash. Evidence files and reports keep citing the old hashes. `experiments/blind-review/local_checks.py` and `verifier_controls.py` are historical records and still name the old hash, so run them against the map.
+
+## Doom split
+
+Doom-only experiments, the Doom article and its figures moved to the public [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom) repository. Their entries left `tracked-evidence.json`. The tier tables above predate this. The Doom output row is gone, the three executor rows were relabelled, and Doom worker cases left the restore and export controls. A fresh clone afterward gave tier 0: 12 PASS, 0 FAIL, 12 SKIPPED; tier 1: 22 PASS, 0 FAIL, 4 SKIPPED; tier 2: 23 PASS, 0 FAIL, 3 SKIPPED.
+
+## Publication
+
+The bundle pinned by `release/bundle-manifest.json` (SHA-256 `638764c2…c4b87b9c`) is hosted as a GitHub release asset: [evidence-v1](https://github.com/Ad1tyaNarayana/qwen-in-qwen/releases/tag/evidence-v1). The trained tiny-Qwen float checkpoint, tokenizer, DROM image and training log are published on Hugging Face as [`Ayt1da/qwen-in-qwen-tiny`](https://huggingface.co/Ayt1da/qwen-in-qwen-tiny). Its `model.safetensors` SHA-256 is `b7929b5d…f87e626c`, matching `experiments/tiny-qwen35/evidence/calibration.json`. Licence notes for TinyStories, stories260K and MNIST are in `THIRD_PARTY_NOTICES.md`. The evidence numbers above are unchanged by publication.
