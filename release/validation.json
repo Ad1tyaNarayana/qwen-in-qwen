@@ -563,7 +563,7 @@
     }
   ],
   "limitations": [
-    "Hosted GitHub CI has not run; no push was performed.",
+    "Hosted GitHub CI later passed tier 0: 12 PASS, 0 FAIL, 12 SKIPPED. Tiers 1 and 2 have not run on hosted CI.",
     "Linux CPU CI is configured but untested in this Mac session. Linux CUDA is untested.",
     "Full IR, Doom output verification, float quality sweeps, training and full GPU generation were not run."
   ]

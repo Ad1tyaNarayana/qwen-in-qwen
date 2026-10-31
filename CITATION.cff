@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "Please cite this research software and the upstream Qwenputer project."
-title: "Qwenputer inside Qwen: a compiled RV32IM CPU and accelerator running tiny language models"
+title: "Qwen in Qwen: a compiled RV32IM CPU and accelerator running tiny language models"
 authors:
-  - name: "Qwenputer inside Qwen contributors"
+  - name: "Qwen in Qwen contributors"
 type: software
 license: MIT
-repository-code: "https://github.com/Ad1tyaNarayana/qwenputer-inside-qwen"
+repository-code: "https://github.com/Ad1tyaNarayana/qwen-in-qwen"
 abstract: "Fixed Qwen3.5-architecture CPU weights, a neural dot-product accelerator, and exact retained-output checks for small guest programs."

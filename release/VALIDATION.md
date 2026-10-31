@@ -42,7 +42,7 @@ Tier 0 skips eight bundle-dependent claim rows plus stock CPU regeneration, full
 
 No full GPU execution or training was rerun. The inspected-prompt 291/327 quality result remains historical evidence. Doom output validation requires the user's own IWAD and locally regenerated private outputs; public readers can inspect hashes and timing arithmetic only. Hashes do not establish provenance. Historical full-run hours and bounded stock coverage are documented in the reproduction guide.
 
-The GitHub workflow is configured for a standard Linux CPU runner, but it has not run because nothing was pushed. Linux CUDA is untested. Before public hosting, the owner must choose the bundle location and review model/dataset redistribution notices, including TinyStories and MNIST attribution. No public download URL is claimed.
+The GitHub workflow later passed tier 0 on a standard Linux CPU runner: 12 PASS, 0 FAIL, 12 SKIPPED. Tiers 1 and 2 have not run on hosted CI. Linux CUDA is untested. Before public hosting, the owner must choose the bundle location and review model/dataset redistribution notices, including TinyStories and MNIST attribution. No public download URL is claimed.
 
 `git diff --stat tiny-llm -- '*/evidence/*' '*/data/*' 'docs/articles/*' '*/REPORT.md'` is empty. Historical reports, articles, evidence bytes, source hashes, and cited Git history are unchanged. The 24 absolute control symlinks were removed; runtime controls still construct their temporary inputs.
 

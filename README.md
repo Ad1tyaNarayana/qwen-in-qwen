@@ -1,4 +1,4 @@
-# Qwenputer inside Qwen
+# Qwen in Qwen
 
 **A CPU and a dot-product accelerator compiled into one fixed Qwen3.5 network, running tiny language models as ordinary programs.**
 
