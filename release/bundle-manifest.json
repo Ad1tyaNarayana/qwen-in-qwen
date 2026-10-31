@@ -1,9 +1,25 @@
 {
   "format": 1,
   "archive": "qwenputer-evidence-v1.tar.gz",
-  "archive_bytes": 237990555,
-  "archive_sha256": "17d802f51c8a84d59411bd7423913feb238297a2839f6b3098f666a576965efa",
+  "archive_bytes": 238003616,
+  "archive_sha256": "6cb1c01aca0db7c08aecd8d80ccf494c22bb90dd27cc3e4e1f54abcfeca2f20c",
   "files": {
+    "LICENSE": {
+      "bytes": 1085,
+      "sha256": "26ac524d1266dc131d9b3d9ede96644e36aecbfc91a64bef5ad096497d322303"
+    },
+    "LLAMA2C-LICENSE": {
+      "bytes": 1063,
+      "sha256": "e87b912002f04cdfa837eaf7f70548ab79b9cb62a285495edf575f3da875aec4"
+    },
+    "QWENPUTER-LICENSE": {
+      "bytes": 1191,
+      "sha256": "7e0b399bba31458734e2f87b27d3d76d5d8a128631a8fba67a9b4e57444a786f"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 6500,
+      "sha256": "c358c25c1d4a67dbcb7003c75f9c7727a5e4db4c6eee4a3d50adb96ee7961c7f"
+    },
     "checkpoint-integrity/actual-20261030a/mutations/report.json": {
       "bytes": 1270,
       "sha256": "b349538a979bb6ef6daf957920ca86e3eeabb4aa92ed96c2bf4e8fcf6baa5348"
@@ -2016,7 +2032,7 @@
   "omitted": {
     "Doom": "Private game data and derived outputs are prohibited.",
     "training": "Multi-GB training and quantization sweeps are unnecessary for retained-output checks.",
-    "trained tiny-Qwen weights": "Not needed to validate retained traces. Packed model data is already in the program ELF."
+    "separate trained PyTorch guest checkpoint": "Not needed to validate retained traces. The required quantized guest weights are embedded in the program ELF."
   },
   "checkpoint_note": "pre-shutdown/checkpoint.pt is actual CPU circuit recurrent state, not trained guest weights. See THIRD_PARTY_NOTICES.md."
 }
