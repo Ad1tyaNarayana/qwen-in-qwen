@@ -83,9 +83,9 @@ def main():
             record('tracked evidence integrity', 'FAIL', str(error), time.perf_counter()-begin)
         run('CHIP-8 retained traces and gameplay', ['tools/check_game.py'])
         run('fused state and timing evidence', ['experiments/tiny-llm-ndot-fused/check_evidence.py'])
-        run('Doom ROM historical checks', ['experiments/dmc-rom-fusion/check_evidence.py'])
-        run('Doom ROM corrected diagnosis', ['experiments/dmc-rom-fusion/check_diagnosis.py'])
-        run('Doom feedback timing records', ['experiments/dmc-feedback-fusion/check_evidence.py'])
+        run('fused executor ROM records', ['experiments/dmc-rom-fusion/check_evidence.py'])
+        run('fused executor race diagnosis', ['experiments/dmc-rom-fusion/check_diagnosis.py'])
+        run('fused executor feedback records', ['experiments/dmc-feedback-fusion/check_evidence.py'])
         run('checkpoint CPU corruption controls', ['experiments/checkpoint-integrity/test_restore.py'])
         run('NDOT compiler intrinsic encodings', ['experiments/neural-accelerator/test_intrinsic.py'])
         run('NDOT ISA exhaustive software gate', ['-m', 'pytest', '-q', 'experiments/neural-accelerator/test_isa.py'])
@@ -144,7 +144,6 @@ def main():
             run('complete neural IR gate', ['-m', 'pytest', '-q', 'experiments/neural-accelerator/test_ir.py'], timeout=3600)
         else:
             record('complete neural IR gate', 'SKIPPED', 'Long CPU gate; tier 2 --full-ir, bounded to 3600s')
-        record('Doom derived outputs', 'SKIPPED', 'Own IWAD and private regeneration required; tracked hashes/timings only, see docs/REPRODUCE.md')
         record('floating-point quality agreement', 'SKIPPED', '291/327 is retained inspected-prompt evidence; float quality sweeps not rerun')
         record('full GPU reruns and model training', 'SKIPPED', 'Tier 3 manual Windows CUDA workflow; no GPU used')
     elapsed = time.perf_counter()-started

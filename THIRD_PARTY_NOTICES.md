@@ -27,8 +27,6 @@ SOFTWARE.
 
 `experiments/dmc-rv32/platform.c` derives from DMC100-Doom's platform stub and retains its GPL-2.0-or-later notice. DMC100-Doom is by Artur Bieniek, derived from id Software's Doom and Doomgeneric. The source used here is the Aspire PIXO port in atc1441/Vape_DOOM_ScreenShare, pinned in that experiment's README. Its COPYING and NOTICE accompany the adaptation. The other new glue files carry their licenses individually. A combined Doom executable remains subject to the engine's GPL terms.
 
-`experiments/doom-baremetal` includes Doom's GPL text and Zig compiler_rt's MIT notice for reproducing the linked runtime. No upstream engine binary, WAD, converted game-data pack, or WAD-bearing ELF is included. See the experiments' NOTICE files for corresponding-source and attribution requirements.
-
 # Directory licence map for release v1
 
 | Paths | Licence and release scope |
@@ -36,8 +34,7 @@ SOFTWARE.
 | Root, `tools/`, new release documentation, original guest programs, and experiment code without another notice | Root MIT licence. File-level notices take precedence. |
 | `vendor/qwenputer/` | Upstream Qwenputer MIT licence, included as `vendor/qwenputer/LICENSE`. `PIN.json` records commit `ca13310e2f9f788d1dd3feeea8213c1b0c23913c` and every source digest. No pretrained weights or upstream game assets are vendored. |
 | `experiments/dmc-rv32/` | DMC platform adaptation GPL-2.0-or-later, with COPYING and NOTICE. Other files retain their individual notices. Engine sources and game data are separate inputs. |
-| `experiments/doom-baremetal/` | Doom engine glue GPL-2.0-or-later; compiler runtime attribution is MIT. See COPYING, NOTICE, and file headers. |
-| `experiments/dmc-*`, `experiments/doom-showcase/` | New research tooling follows root MIT unless a file says otherwise. This does not relicense the engine or permit distribution of game data. Only source, hashes, and textual timing records enter the bundle policy. |
+| `experiments/dmc-*` | New research tooling follows root MIT unless a file says otherwise. This does not relicense the engine or permit distribution of game data. Only source, hashes, and textual timing records enter the bundle policy. |
 | `experiments/tiny-llm-rv32/`, `tiny-llm-neural/`, `tiny-llm-ndot/`, `tiny-llm-ndot-fused/`, `tiny-llm-train/` | Root MIT for new work; llama2.c-derived inference structure and copied source retain llama2.c's MIT terms. llama2.c is pinned to `350e04fe35433e6d2941dce5a1f53308f87058eb` by the training record. |
 | `experiments/tiny-qwen35/` | New runtime and packing code follow root MIT. The tiny trained model is experimental work for this project, not pretrained Qwen weights. Training data obligations are separate. |
 | `experiments/showcase/`, `experiments/explorer/` | Root MIT for code and original program outputs. MNIST inputs retain their dataset attribution; see the MNIST note below. |

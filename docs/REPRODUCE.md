@@ -12,7 +12,7 @@ python3 -m venv /tmp/qwenputer-clean-venv
 /tmp/qwenputer-clean-venv/bin/python tools/verify_all.py --tier 0
 ```
 
-Replace the clone source with the eventual public URL. No new repository or release is published yet. The older public repository is `Ad1tyaNarayana/qwenputer-games`. Keep full Git history. Story bindings resolve workers at `e7bd077`; changing old hashes to match new code would invalidate the historical check.
+Replace the clone source with the eventual public URL. No new repository or release is published yet. Earlier milestones are public in `Ad1tyaNarayana/qwenputer-games` and `Ad1tyaNarayana/qwenputer-doom`. Keep full Git history. Story bindings resolve workers at `e7bd077`; changing old hashes to match new code would invalidate the historical check.
 
 Dependency installation uses the network. Tier 0 itself makes no network requests and needs no GPU. `vendor/qwenputer/PIN.json` supplies the pinned MIT CPU/compiler source offline. Checks run in disposable tracked-file copies, with their own empty `.cache` and vendored upstream. Existing verifiers may write reports inside those copies; retained evidence in the clone is untouched. Raw data verifiers keep their original assertions and tolerances.
 
@@ -78,13 +78,13 @@ Commands below run inside `verify_all`'s disposable copy; direct research comman
 | --- | --- | --- |
 | CHIP-8 input-dependent gameplay and retained compact/stock/CUDA traces | `artifacts/compact-game*`, `artifacts/hf-*` | Tier 0: `tools/check_game.py` |
 | Exact fused state comparisons and repeated bounded timings | `experiments/tiny-llm-ndot-fused/evidence/` | Tier 0: `check_evidence.py` in that directory |
-| Doom historical timing/race record consistency, without game-output verification | `experiments/dmc-rom-fusion/evidence/`, `dmc-feedback-fusion/evidence/` | Tier 0: `check_evidence.py`, `check_diagnosis.py`; the Doom output claim remains SKIPPED |
+| Fused executor timing and race record consistency, without game-output verification | `experiments/dmc-rom-fusion/evidence/`, `dmc-feedback-fusion/evidence/` | Tier 0: `check_evidence.py`, `check_diagnosis.py`; the Doom output claim remains SKIPPED |
 | Corrupt checkpoint rejection before state copy | `experiments/checkpoint-integrity/evidence/cpu-restore.json` | Tier 0: `experiments/checkpoint-integrity/test_restore.py` with CPU tensors |
 | Software NDOT ISA records and arithmetic | `experiments/neural-accelerator/isa-result.json` | Tier 0: pytest `test_isa.py`, including directed, seeded, and exhaustive arithmetic checks |
-| 38-position story, literal state, contiguous chunk timing and historical sources | `experiments/tiny-llm-ndot-fused/evidence/story-validation-20261031.json` | Tier 1: `verify_story.py --source-revision e7bd077` with bundle inputs |
-| 35,836,005-token tiny-Qwen run, power-off recovery, 16,384-token stock prefix | `experiments/tiny-qwen35/evidence/neural-validation.json` | Tier 1: `experiments/tiny-qwen35/verify_gpu.py --source-revision e7bd077` |
+| 38-position story, literal state, contiguous chunk timing and historical sources | `experiments/tiny-llm-ndot-fused/evidence/story-validation-20261031.json` | Tier 1: `verify_story.py --source-revision 017c39c` with bundle inputs |
+| 35,836,005-token tiny-Qwen run, power-off recovery, 16,384-token stock prefix | `experiments/tiny-qwen35/evidence/neural-validation.json` | Tier 1: `experiments/tiny-qwen35/verify_gpu.py --source-revision 017c39c` |
 | Native/reference SHA-256, Life, tic-tac-toe, MNIST; 10,000-example integer classifier | `experiments/showcase/evidence/local-validation.json`, per-demo evidence | Tier 1: `experiments/showcase/verify_local.py` after native compilation |
-| All showcase GPU tokens, literal RAM/registers, bounded stock prefixes | Per-demo `experiments/showcase/*/evidence/` | Tier 1: `experiments/showcase/verify_gpu.py --source-revision e7bd077` |
+| All showcase GPU tokens, literal RAM/registers, bounded stock prefixes | Per-demo `experiments/showcase/*/evidence/` | Tier 1: `experiments/showcase/verify_gpu.py --source-revision 017c39c` |
 | Explorer graph exports, observed state, application arrays, corruption control | `experiments/explorer/data/`, `data-validation.json` | Tier 1: `verify_data.py` and `verify_showcase.py` |
 | Controlled same-network 3.0149× scalar/NDOT ratio and restore reports | `experiments/checkpoint-integrity/evidence/controlled-measurement.json` | Tier 1: `experiments/checkpoint-integrity/verify.py` |
 | Story export negative controls | `experiments/checkpoint-integrity/evidence/verifier-controls-20261031.json` | Tier 1: `test_verifier_exports.py --story-only`, nine checks; Doom controls excluded |
@@ -109,12 +109,6 @@ The retained launch/collect/status scripts accept shared explicit options `--ssh
 
 Budget full generation from the measured evidence, not projected rates. Historical retained generation took 1.2115 hours for scalar five-position stories, 0.4018 hours for NDOT five-position stories, 3.9516 hours for the longer story, and 2.7817 hours for tiny Qwen. Setup, validation, IO, checkpoint/restart gaps, power-off time, and discarded replay are excluded. These are one run each. Their timings do not predict your machine's wall time.
 
-The unified Doom frame retained 0.4703 generation hours. The earlier DMC run retained 0.8457 hours and was interrupted. The 2.105× historical ratio is observed, not a controlled executor-only speedup. Full GPU reproduction also needs independent software references, memory guards, exact own-reference comparisons, and fresh output directories. Use the experiment READMEs and unchanged articles for the precise workload and worker sequence.
+## Doom
 
-## Keep Doom private
-
-The automatic release tiers always report Doom output verification as SKIPPED. A stranger can check tracked hashes, source bindings, and timing-record arithmetic. Without locally regenerated private inputs, those records do not establish actual frame pixels, full Doom token traces, final RAM, or their provenance.
-
-Supply your own local IWAD and engine source in a private directory. No game data download is provided. The existing [bare-metal port instructions](../experiments/doom-baremetal/README.md#build-and-reproduce) accept `--wad`, `--doomgeneric`, `--zig`, and `--out`. The [DMC port instructions](../experiments/dmc-rv32/README.md) describe its separate engine and conversion path. Keep all WAD-derived ELF/NOR files, traces, RAM, frames, and PNGs outside git and the bundle.
-
-For the unchanged retained Doom verifier, build the required local reference trace, strip observer, and actual run exports first. `experiments/doom-showcase/verify_runs.py` names its `TRACE`, `OBSERVER`, and `CACHE` inputs; these refer to private outputs. Its full and unified runs are separate checks. `test_verifier_exports.py --out /tmp/private-controls.json` preserves the original story-plus-Doom acceptance and rejection suite when those private inputs exist. The release's `--story-only` scope is printed explicitly and does not claim those Doom controls ran.
+Doom now lives in [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom), including its article, verifiers and reproduction notes. No game data is distributed here. `dmc-rom-fusion`, `dmc-feedback-fusion`, `dmc-cuda` and `dmc-rv32` stay in this repository because the LLM runs use their executor and helper code. Their names record where the work began.

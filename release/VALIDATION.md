@@ -49,3 +49,7 @@ The GitHub workflow is configured for a standard Linux CPU runner, but it has no
 ## Commit hashes
 
 Commit messages were edited after this validation to remove a co-author trailer, which changed 28 commit hashes, including the hash named above. File trees, authors and dates are unchanged, checked commit by commit. [The commit map](commit-map.json) lists every old and new hash. Evidence files and reports keep citing the old hashes. `experiments/blind-review/local_checks.py` and `verifier_controls.py` are historical records and still name the old hash, so run them against the map.
+
+## Doom split
+
+Doom-only experiments, the Doom article and its figures moved to the public [qwenputer-doom](https://github.com/Ad1tyaNarayana/qwenputer-doom) repository. Their entries left `tracked-evidence.json`. The tier tables above predate this and were rerun afterward; the Doom output row is gone and the three executor rows were relabelled.
