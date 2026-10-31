@@ -49,4 +49,4 @@ Doom data is excluded from git and the bundle. Doom output verification is alway
 - `vendor/qwenputer/`: hash-pinned MIT CPU/compiler source for offline verification.
 - `release/`: tracked evidence hashes and bundle manifest; bundle bytes remain under ignored `.cache/release/`.
 
-[Contributing](CONTRIBUTING.md), [citation](CITATION.cff), and [third-party licences](THIRD_PARTY_NOTICES.md) describe release obligations. Research reports retain their original source hashes and commit citations. Keep repository history when cloning; some checks explicitly resolve historical source bindings.
+[Contributing](CONTRIBUTING.md), [citation](CITATION.cff), and [third-party licences](THIRD_PARTY_NOTICES.md) describe release obligations. Research reports retain their original source hashes and commit citations. Keep repository history when cloning; some checks explicitly resolve historical source bindings. Commit hashes cited in reports, evidence and articles predate a commit-message edit; [the commit map](release/commit-map.json) gives each current hash, with identical file trees.

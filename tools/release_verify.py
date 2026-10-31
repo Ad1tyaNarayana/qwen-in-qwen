@@ -22,11 +22,11 @@ def main():
         module = load('experiments/tiny-llm-ndot-fused/verify_story.py')
         sys.argv = ['verify_story', '--inputs', str(cache/'tiny-llm/ndot-story38-20261030'),
                     '--actual', str(cache/'tiny-llm/ndot-story38-20261030-actual'),
-                    '--source-revision', 'e7bd077', '--out', str(cache/'story-validation.json')]
+                    '--source-revision', '017c39c', '--out', str(cache/'story-validation.json')]
         module.main()
     elif mode == 'qwen':
         module = load('experiments/tiny-qwen35/verify_gpu.py')
-        module.verify(cache/'tiny-qwen35/trained-program', cache/'tiny-qwen35/actual-covariance-20261030', source_revision='e7bd077')
+        module.verify(cache/'tiny-qwen35/trained-program', cache/'tiny-qwen35/actual-covariance-20261030', source_revision='017c39c')
     elif mode == 'showcase':
         # Rebuild native binaries on the verifier's platform. Never ship host executables.
         here = ROOT/'experiments/showcase'
@@ -45,7 +45,7 @@ def main():
         prepare(cache/'showcase/release-package')
         from chipformer.rv import spec
         for demo in ['sha256', 'life', 'tictactoe', 'mnist', 'mnist-scalar']:
-            module.verify(cache/'showcase/actual-20261030a', demo, spec, source_revision='e7bd077')
+            module.verify(cache/'showcase/actual-20261030a', demo, spec, source_revision='017c39c')
     elif mode == 'explorer-showcase':
         load('experiments/explorer/verify_showcase.py').main()
     elif mode == 'explorer':

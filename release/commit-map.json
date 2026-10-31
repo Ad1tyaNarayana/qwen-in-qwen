@@ -1,0 +1,173 @@
+{
+ "note": "Commit messages were edited on 2026-10-31 to remove a co-author trailer. File trees, authors and dates are unchanged. Reports and evidence cite the old hashes.",
+ "commits": [
+  {
+   "old": "6321bdeafecb715b77f311d41e6fc038e925f4b2",
+   "new": "7741a150c8ef3ba1cf3c38fed76da9d4f03febe3",
+   "tree": "e39f95dfc9a1dcf8c5d0b82dc6ce2463b38f77da",
+   "subject": "Doom speedup investigation: continuing-frame workload, GPU profile, ROM and feedback fusion, one-instruction design study"
+  },
+  {
+   "old": "86cb1f1b7c394bc3e55b6354e221a7eb4b42e7e1",
+   "new": "1a8138786b71ce1244cfc96637fe78e9bb7bb746",
+   "tree": "26eeabf6239148ebab1cdb7fa0fb02981004abc0",
+   "subject": "Tiny LLM inside Qwenputer: integer engine, custom model, first neural run, accelerator design and M1"
+  },
+  {
+   "old": "14e310d7406c16b156cca77608546e8b4b989fa6",
+   "new": "262375e9189fbf5b6464734fd9129c15041b8d58",
+   "tree": "f4e6e7bb1840419ffef1efbeaa66d76a462c1c45",
+   "subject": "Neural accelerator M2: W=4/W=8 ndot circuit passes exact checks; liveness-based width reduction"
+  },
+  {
+   "old": "eb10f503efa730c59db2c91738335f7f1efef0ee",
+   "new": "1692c374d03cc47f492872ed39f018832e8b8ea5",
+   "tree": "546fea13afb17a3eec9198bfca7d9fbd2b9ab740",
+   "subject": "Neural accelerator: legacy regression on reduced circuits passes; M3 stock-HF attempt stopped at cached/chunked state mismatch"
+  },
+  {
+   "old": "bffc5b43e79d357950e4bad51ac0e561193fb3ad",
+   "new": "4f3cd05cef8edf4260708195928a3b5568eec3a9",
+   "tree": "0c3ce338e41e359d94be20b11c3a8607400af807",
+   "subject": "Neural accelerator M3 and bounded M4 pass in stock Qwen3_5ForCausalLM.generate"
+  },
+  {
+   "old": "3788b170802690508a49743ba198a6f87c39435d",
+   "new": "3e87f81bd8c3f02256f83d0509f5727493005fe7",
+   "tree": "885a02827019ebd3e75209d3d7ccb0f7e5482591",
+   "subject": "Tiny LLM with neural accelerator: stories260K using NDOT4 runs on the neural CPU inside Qwen3.5 layers"
+  },
+  {
+   "old": "93651864b613b3e9ca328a70ce41eb638520d0be",
+   "new": "712bdbb0c6a2bef655fecf5ebc581d3d31fe75bd",
+   "tree": "67073e21fa233ce7bbdc82d4ec641701bbf7425b",
+   "subject": "Fused executor for the unified ndot circuit and a 38-position story on the neural CPU"
+  },
+  {
+   "old": "2f53b04514c4f41b9f1a88cd9f4d8ecaf8652629",
+   "new": "50875862f7db2bb5e31544b26c23e83562f14697",
+   "tree": "0bbc4c68dd39762f04f03fc6fbc5c08bb45ca820",
+   "subject": "Qwenputer Explorer: zoomable map from the compiled Qwen3.5 network to CPU, program and the inner tiny LLM"
+  },
+  {
+   "old": "e80b4cbea0cd1f59b2493da457431191c9add9e1",
+   "new": "545e82b2f6d85894b6d85798cba88c81e866bc19",
+   "tree": "4a723520fa812b543faf8f805f92f1bde559dda7",
+   "subject": "Showcase pack: SHA-256, Game of Life, tic-tac-toe and MNIST on one fixed neural CPU + accelerator"
+  },
+  {
+   "old": "ee18529bc0702a0768feb79ef4818fd5aa28a044",
+   "new": "4e6ec8d0c77d79dcaa4a64eb362cf88e25c608f5",
+   "tree": "3e409e70ed5d27b046a8a715c3e9096bedeaa185",
+   "subject": "Explorer: program gallery with shared weight hash, demo views and NDOT vs scalar comparison"
+  },
+  {
+   "old": "7e6ed340d5abddad6a425273b1391aeb0663407a",
+   "new": "7d89ecac5f00ede370440f513748c7d689f0f35c",
+   "tree": "273b3d80198932c84e3d7efee48f09f55fb4e4e9",
+   "subject": "Tiny Qwen3.5 inside Qwen: general runtime and a Qwen3.5-architecture model on the fixed CPU + accelerator"
+  },
+  {
+   "old": "7d3ee470ca11ed237d51f20a6a9f5725d4daa9d1",
+   "new": "4ad8e81806e1c6a1e7e6f7138d602dfdfde8b48b",
+   "tree": "872cf718727532e5c6302d22d6e9a55c9f35c5ad",
+   "subject": "Explorer: verified periodic neural snapshots and the tiny Qwen3.5 view"
+  },
+  {
+   "old": "4df34c661dd39ea9dd6c70ab2951b28e24f15e41",
+   "new": "2e30c51a26f32ccbaebfbe7d304aba9af838ea7c",
+   "tree": "3d704eb4be2640c4716c83fa57ca7a7b80c12cf5",
+   "subject": "Doom showcase and article: first frame at 2.1x on the original circuit and on the unified network"
+  },
+  {
+   "old": "e7bd0777c41ffa36c1f22602ac02663e4cb15bdb",
+   "new": "017c39c92706d1ff376889d482dd54cd48667087",
+   "tree": "45b908bda4c5d7f5b9acb3ea95ab005ff73a2626",
+   "subject": "Audit of 2e30c51: claims hold with caveats; no host leakage or baked-in answers found"
+  },
+  {
+   "old": "ee2dd8149731c73052611063adc90eaf2751556d",
+   "new": "13de3ac08024a9e4e58500ed5a0da8181fcbc971",
+   "tree": "10a4b9854b0936937af619f8c6af74421cb314ea",
+   "subject": "Checkpoint content integrity, controlled NDOT measurement, and the tiny LLM article"
+  },
+  {
+   "old": "9815ee181635ef1c2e96cac8d4c38111aa0a4024",
+   "new": "2424b03879204a1ae1137787d903b8396a701b53",
+   "tree": "0f566fcf2bdd1c8a9f169aeec305ccbd26df0d96",
+   "subject": "Blind review of 13de3ac by GPT-6 Astra: claims hold within stated bounds; two verifier gaps and three overstated Doom sentences"
+  },
+  {
+   "old": "0a6bc25b77035f0b93b757f78555dbe2d24bd1ab",
+   "new": "9765b3b244a0a39f167586782f7a774b981e1b16",
+   "tree": "12795b07bb8d612c9f5c5d5deb453ce5ab6e0756",
+   "subject": "Fix blind review findings: stricter verifiers and corrected Doom claims"
+  },
+  {
+   "old": "7ab381d9aa46d9336a043bc881348a7affd0a890",
+   "new": "3e1fd823a950b22a807f4a89521c905367667235",
+   "tree": "14f70809614c003938e0f8d7bff905c4298b0785",
+   "subject": "Add offline release verification, allowlisted bundle tooling, and reproduction guides"
+  },
+  {
+   "old": "ae4033bc73ae3d3df57587762a4c02c9315942ab",
+   "new": "060cf4a67e7a444f3dc4ee59bd1c25d7f4397bcd",
+   "tree": "0b4221c34e7de1e087405847a83e255f4b594983",
+   "subject": "Resolve retained source bindings explicitly and remove repository-venv build assumptions"
+  },
+  {
+   "old": "f40645627641e3ac4b44832a316cd9495e2fa1f0",
+   "new": "ce6828983aabf820e8d835b32952dd98cf7d378f",
+   "tree": "39dbdcc6125ebeb23ef13bc66330ea5332484c45",
+   "subject": "Expose explicit remote configuration and report unrerun quality claims"
+  },
+  {
+   "old": "6af5d5b45cbd5fcc5fbc01883f83208742d7c7ef",
+   "new": "c70764130ad891458771c0d57c03f5d79f336140",
+   "tree": "b3ae14105aa7085a5b2f9c9a87436ecafe4d824a",
+   "subject": "Test archive authentication and release-policy rejection controls"
+  },
+  {
+   "old": "c2a87b59f068cbfafebe05d06c1417f13e35e297",
+   "new": "b5c8dd8125d0a5b5059beef60af203b653a4e06c",
+   "tree": "b8e3dbed85003251b763d735a44a8f0c84da9079",
+   "subject": "Pin the complete non-Doom release bundle and bundled licence notices"
+  },
+  {
+   "old": "116cf84015889f4cf62b004f74bb2f303b048d1b",
+   "new": "a9e7df7b62f55db99264b8399a1d9de2f3c59c4c",
+   "tree": "d0e33d3258ffd320781de5dbed26711f622fc5bd",
+   "subject": "Redact home paths only in distributed metadata copies with both digests recorded"
+  },
+  {
+   "old": "3df88a69dddaeaec6c1ec44f1bfc693274189cee",
+   "new": "c8bfaed4656a64dd135be33cefa941ddedd2ec9c",
+   "tree": "8fde73294d16b1bae1ba46947c0bd24b3668012e",
+   "subject": "Derive reference-package filenames from the exact tracked source pin"
+  },
+  {
+   "old": "b33119c75e2dd80baa936a7afb43a016fb0c7947",
+   "new": "55c6de284d5ded593085e7b4e2a554e9a1da5016",
+   "tree": "3bf3ccc3b8a27db96480acb672aa49a6e10d43c0",
+   "subject": "Reject Windows archive paths as well as POSIX traversal"
+  },
+  {
+   "old": "296acb26615a19ea36df6288da2dc482b54783c6",
+   "new": "dd95759c45030b65f4098530debf5e6731eefb4a",
+   "tree": "5b6cf6e6d625ce1a9af81e2eebceb4e0b322af1c",
+   "subject": "Pin the privacy-reviewed release bundle"
+  },
+  {
+   "old": "63a40d811d210dff7f1e0af69f7a199c3de9e5d4",
+   "new": "7953d61d2eeca62c9af6b3f4758ae9699f01aa69",
+   "tree": "d5a68346a275af8bcfa0ebe0b2c1f60851dfa791",
+   "subject": "Record fresh-clone tier timings, cache isolation, and required negative controls"
+  },
+  {
+   "old": "a04365fc7f84e0fcea0eae4fc297b56458fac69b",
+   "new": "1de186d5d31606a6c3f4623c77d0fa806a8420f3",
+   "tree": "0f06aadd45e9663cf3f145b565dc9785db26bf34",
+   "subject": "Disclose debug paths in bundled ELFs and identifiers retained in history"
+  }
+ ]
+}

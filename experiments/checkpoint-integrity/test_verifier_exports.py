@@ -57,7 +57,7 @@ def main():
         def verify_story(actual):
             sys.argv = ['verify_story.py', '--inputs', str(ROOT / '.cache/tiny-llm/ndot-story38-20261030'),
                         '--actual', str(actual), '--out', str(temporary / 'story-validation.json'),
-                        '--source-revision', 'e7bd077']
+                        '--source-revision', '017c39c']
             story.main()
 
         check('story_unmodified', lambda: verify_story(source), True)
@@ -105,7 +105,7 @@ def main():
                 expected = {'missing_ram': 'final-gpu-ram.bin', 'missing_registers': 'actual-registers.json',
                             'altered_registers': 'Final registers differ from reference'}[label]
                 check('doom_' + label, lambda: doom.verify('unified-full'), False, expected)
-    args.out.write_text(json.dumps(dict(status='pass', source_revision='e7bd077',
+    args.out.write_text(json.dumps(dict(status='pass', source_revision='017c39c',
         verifier_sha256=dict(story=story.sha(Path(story.__file__)), doom=doom.sha(Path(doom.__file__))),
         scope='story only; Doom NOT checked' if args.story_only else 'story and Doom', results=results), indent=2) + '\n')
     print(f'All {len(results)} retained-export controls pass')

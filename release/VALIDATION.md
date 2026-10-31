@@ -45,3 +45,7 @@ No full GPU execution or training was rerun. The inspected-prompt 291/327 qualit
 The GitHub workflow is configured for a standard Linux CPU runner, but it has not run because nothing was pushed. Linux CUDA is untested. Before public hosting, the owner must choose the bundle location and review model/dataset redistribution notices, including TinyStories and MNIST attribution. No public download URL is claimed.
 
 `git diff --stat tiny-llm -- '*/evidence/*' '*/data/*' 'docs/articles/*' '*/REPORT.md'` is empty. Historical reports, articles, evidence bytes, source hashes, and cited Git history are unchanged. The 24 absolute control symlinks were removed; runtime controls still construct their temporary inputs.
+
+## Commit hashes
+
+Commit messages were edited after this validation to remove a co-author trailer, which changed 28 commit hashes, including the hash named above. File trees, authors and dates are unchanged, checked commit by commit. [The commit map](commit-map.json) lists every old and new hash. Evidence files and reports keep citing the old hashes. `experiments/blind-review/local_checks.py` and `verifier_controls.py` are historical records and still name the old hash, so run them against the map.
